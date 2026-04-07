@@ -50,6 +50,7 @@ class HelpDialog(QDialog):
         <body>
           <h1>🚀 JSON Bulk Importer - from AnkiVN with ❤️</h1>
           <p>Simple workflow: choose a note type, prepare JSON, preview it, then create or update cards.</p>
+          <p><b>Website:</b> <a href="https://ankivn.com">https://ankivn.com</a></p>
 
           <h2>1. Setup</h2>
           <ul>
@@ -113,6 +114,7 @@ class HelpDialog(QDialog):
         <body>
           <h1>🚀 JSON Bulk Importer - from AnkiVN with ❤️</h1>
           <p>Luồng dùng đơn giản: chọn note type, chuẩn bị JSON, xem trước rồi tạo hoặc cập nhật thẻ.</p>
+          <p><b>Website:</b> <a href="https://ankivn.com">https://ankivn.com</a></p>
 
           <h2>1. Thiết lập</h2>
           <ul>

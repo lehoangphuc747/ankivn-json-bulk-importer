@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+*.pyo
+*.Zone.Identifier
+AI_AGENT_CONTEXT.md

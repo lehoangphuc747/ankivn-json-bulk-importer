@@ -1,0 +1,31 @@
+{
+  "media_fields": {
+    "(Anki) Template học từ vựng của Admin Phúc [2026]": {
+      "id": "text",
+      "word": "text",
+      "meaning": "text",
+      "pos": "text",
+      "transliteration": "text",
+      "explain": "text",
+      "image": "image",
+      "example": "text",
+      "example_translated": "text",
+      "collocation": "text",
+      "synonym": "text",
+      "antonym": "text",
+      "audio_word": "text",
+      "audio_meaning": "text",
+      "audio_example": "text",
+      "tag_1": "text",
+      "tag_2": "text",
+      "tag_3": "text",
+      "tag_4": "text"
+    },
+    "(AnkiVN) Cloze": {
+      "Text": "text",
+      "Back": "text",
+      "Link": "text"
+    }
+  },
+  "lang": "en"
+}

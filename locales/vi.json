@@ -1,5 +1,5 @@
 {
-  "main_title": "Bulk Card Creator with Json",
+  "main_title": "JSON Bulk Importer - from AnkiVN with ❤️",
   "main_note_type": "Loại thẻ (Note Type):",
   "main_deck": "Bộ thẻ (Deck):",
   "main_smart_sync": "Smart Sync (khớp theo):",
@@ -18,6 +18,7 @@
   "btn_save_preset": "Lưu Preset",
   "btn_load_preset": "Nạp Preset",
   "btn_generate_guid": "Sinh GUID",
+  "btn_help": "Trợ giúp",
   "btn_history": "History",
   "btn_open_history_folder": "Mở thư mục History",
   "btn_add_deck_to_json": "📌 Thêm Deck vào JSON",
@@ -42,6 +43,15 @@
   "dlg_new_deck_prompt": "Nhập tên Deck mới:",
   "dlg_save_preset_title": "Lưu Preset",
   "dlg_save_preset_prompt": "Nhập tên preset:",
+
+  "help_title": "Trợ giúp & Hướng dẫn sử dụng",
+  "help_tab_en": "English",
+  "help_tab_vi": "Tiếng Việt",
+
+  "section_setup": "Thiết lập",
+  "section_tools": "Công cụ",
+  "section_json": "Dữ liệu JSON",
+  "section_actions": "Thao tác",
 
   "table_title": "Xem trước Bảng (Chỉnh sửa được)",
 

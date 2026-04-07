@@ -4,7 +4,7 @@ from typing import Any, List
 
 from aqt import mw
 from aqt.qt import (
-    QDialog, QVBoxLayout, QHBoxLayout, QLabel, QComboBox, QCheckBox,
+    QDialog, QVBoxLayout, QHBoxLayout, QGroupBox, QLabel, QComboBox, QCheckBox,
     QPlainTextEdit, QPushButton, QMessageBox, Qt,
     QInputDialog, QFileDialog, QApplication,
 )
@@ -16,6 +16,7 @@ from ..config import (
 )
 from ..core import create_cards_logic
 from ..i18n import _t, get_supported_langs, get_current_lang, set_lang
+from .help_dialog import HelpDialog
 from .config_dialog import MediaConfigDialog
 from .table_dialog import TablePreviewDialog
 
@@ -38,10 +39,9 @@ class BulkCardCreatorDialog(QDialog):
     def _setup_ui(self) -> None:
         layout = QVBoxLayout(self)
 
-        # --- Language Switcher ---
-        lang_row = QHBoxLayout()
-        lang_row.addStretch()
-        lang_row.addWidget(QLabel(_t("lang_label")))
+        # --- Header ---
+        header_row = QHBoxLayout()
+        header_row.addWidget(QLabel(_t("lang_label")))
         self.lang_combo = QComboBox()
         supported = get_supported_langs()
         current_lang = get_current_lang()
@@ -50,12 +50,20 @@ class BulkCardCreatorDialog(QDialog):
             if code == current_lang:
                 self.lang_combo.setCurrentIndex(self.lang_combo.count() - 1)
         self.lang_combo.currentIndexChanged.connect(self._on_lang_changed)
-        lang_row.addWidget(self.lang_combo)
-        layout.addLayout(lang_row)
+        header_row.addWidget(self.lang_combo)
+        header_row.addStretch()
 
-        # --- Note Type ---
-        layout.addWidget(QLabel(_t("main_note_type")))
+        help_btn = QPushButton(_t("btn_help"))
+        help_btn.clicked.connect(self._on_help)
+        header_row.addWidget(help_btn)
+        layout.addLayout(header_row)
+
+        # --- Setup ---
+        setup_group = QGroupBox(_t("section_setup"))
+        setup_layout = QVBoxLayout(setup_group)
+
         nt_row = QHBoxLayout()
+        nt_row.addWidget(QLabel(_t("main_note_type")))
         self.note_type_combo = QComboBox()
         self.note_type_combo.setEditable(True)
         self._load_note_types()
@@ -67,11 +75,10 @@ class BulkCardCreatorDialog(QDialog):
         media_cfg_btn.clicked.connect(self._on_media_config)
         nt_row.addWidget(media_cfg_btn)
 
-        layout.addLayout(nt_row)
+        setup_layout.addLayout(nt_row)
 
-        # --- Deck ---
-        layout.addWidget(QLabel(_t("main_deck")))
         deck_row = QHBoxLayout()
+        deck_row.addWidget(QLabel(_t("main_deck")))
         self.deck_combo = QComboBox()
         self.deck_combo.setEditable(True)
         self._load_decks()
@@ -81,17 +88,21 @@ class BulkCardCreatorDialog(QDialog):
         new_deck_btn.clicked.connect(self._on_new_deck)
         deck_row.addWidget(new_deck_btn)
 
-        layout.addLayout(deck_row)
+        setup_layout.addLayout(deck_row)
 
-        # --- Smart Sync ---
         sync_row = QHBoxLayout()
         sync_row.addWidget(QLabel(_t("main_smart_sync")))
         self.match_field_combo = QComboBox()
         self.match_field_combo.addItem(_t("main_smart_sync_none"))
         sync_row.addWidget(self.match_field_combo, stretch=1)
-        layout.addLayout(sync_row)
+        setup_layout.addLayout(sync_row)
 
-        # --- Presets ---
+        layout.addWidget(setup_group)
+
+        # --- Tools ---
+        tools_group = QGroupBox(_t("section_tools"))
+        tools_layout = QVBoxLayout(tools_group)
+
         preset_row = QHBoxLayout()
         preset_row.addWidget(QLabel(_t("main_preset")))
         self.preset_combo = QComboBox()
@@ -117,15 +128,20 @@ class BulkCardCreatorDialog(QDialog):
         history_btn.clicked.connect(self._on_open_history)
         preset_row.addWidget(history_btn)
 
-        layout.addLayout(preset_row)
+        tools_layout.addLayout(preset_row)
         self._load_presets()
 
         self.write_guid_checkbox = QCheckBox(_t("chk_write_guids"))
         self.write_guid_checkbox.setChecked(True)
         self.write_guid_checkbox.setToolTip(_t("tooltip_write_guids"))
-        layout.addWidget(self.write_guid_checkbox)
+        tools_layout.addWidget(self.write_guid_checkbox)
+
+        layout.addWidget(tools_group)
 
         # --- JSON Input ---
+        json_group = QGroupBox(_t("section_json"))
+        json_layout = QVBoxLayout(json_group)
+
         json_header = QHBoxLayout()
         json_header.addWidget(QLabel(_t("main_json_hint")), stretch=1)
 
@@ -142,13 +158,18 @@ class BulkCardCreatorDialog(QDialog):
         prompt_btn.clicked.connect(self._on_copy_prompt)
         json_header.addWidget(prompt_btn)
 
-        layout.addLayout(json_header)
+        json_layout.addLayout(json_header)
 
         self.json_input = QPlainTextEdit()
         self.json_input.setPlaceholderText(_t("main_json_placeholder"))
-        layout.addWidget(self.json_input)
+        json_layout.addWidget(self.json_input)
 
-        # --- Buttons ---
+        layout.addWidget(json_group)
+
+        # --- Actions ---
+        action_group = QGroupBox(_t("section_actions"))
+        action_layout = QHBoxLayout(action_group)
+
         btn_layout = QHBoxLayout()
 
         table_btn = QPushButton(_t("btn_view_table"))
@@ -163,7 +184,8 @@ class BulkCardCreatorDialog(QDialog):
         close_btn.clicked.connect(self.close)
         btn_layout.addWidget(close_btn)
 
-        layout.addLayout(btn_layout)
+        action_layout.addLayout(btn_layout)
+        layout.addWidget(action_group)
 
         # Autofill JSON for the first note type
         first_note_type = self.note_type_combo.currentText()
@@ -181,6 +203,10 @@ class BulkCardCreatorDialog(QDialog):
                 _t("lang_changed_title"),
                 _t("lang_changed"),
             )
+
+    def _on_help(self) -> None:
+        dialog = HelpDialog(self)
+        dialog.exec()
 
     # ---- helpers ----
 

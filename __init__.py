@@ -64,11 +64,11 @@ def show_dialog() -> None:
 
 
 # ---------------------------------------------------------------------------
-# Đăng ký menu "AnkiVN" > "Bulk Card Creator with Json"
+# Đăng ký menu "AnkiVN" > "🚀 JSON Bulk Importer - from AnkiVN with ❤️"
 # ---------------------------------------------------------------------------
 
 if mw and mw.form:
     ankivn_menu = get_or_create_ankivn_menu()
-    action = QAction("Bulk Card Creator with Json", mw)
+    action = QAction("JSON Bulk Importer - from AnkiVN with ❤️", mw)
     qconnect(action.triggered, show_dialog)
     ankivn_menu.addAction(action)

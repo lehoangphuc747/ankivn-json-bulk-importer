@@ -277,13 +277,6 @@ class BulkCardCreatorDialog(QDialog):
         json_group = QGroupBox(_t("section_json"))
         json_layout = QVBoxLayout(json_group)
 
-        json_header = QHBoxLayout()
-        hint = QLabel(_t("main_json_hint"))
-        hint.setWordWrap(True)
-        json_header.addWidget(hint, stretch=1)
-        json_layout.addLayout(json_header)
-
-        json_layout.addWidget(QLabel(_t("section_json_tools")))
         json_tools_row = QHBoxLayout()
         json_tools_row.setSpacing(6)
 

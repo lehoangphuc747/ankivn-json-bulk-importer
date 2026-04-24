@@ -291,24 +291,28 @@ class BulkCardCreatorDialog(QDialog):
             _t("btn_import_json"),
             self._on_import_json,
             _t("toolbar_import_json"),
+            flexible=False,
         )
         json_tools_row.addWidget(import_btn)
         export_btn = self._make_text_button(
             _t("btn_export_json"),
             self._on_export_json,
             _t("toolbar_export_json"),
+            flexible=False,
         )
         json_tools_row.addWidget(export_btn)
         table_btn = self._make_text_button(
             _t("btn_view_table"),
             self._on_view_as_table,
             _t("toolbar_view_table"),
+            flexible=False,
         )
         json_tools_row.addWidget(table_btn)
         prompt_btn = self._make_text_button(
             _t("btn_copy_prompt"),
             self._on_copy_prompt,
             _t("tooltip_copy_prompt"),
+            flexible=False,
         )
         json_tools_row.addWidget(prompt_btn)
         json_tools_row.addStretch()
@@ -368,13 +372,20 @@ class BulkCardCreatorDialog(QDialog):
         label: str,
         callback: Any,
         tooltip: Optional[str] = None,
+        flexible: bool = True,
     ) -> QPushButton:
         button = QPushButton(label)
-        button.setMinimumWidth(0)
-        button.setSizePolicy(
-            QSizePolicy.Policy.Ignored,
-            QSizePolicy.Policy.Fixed,
-        )
+        if flexible:
+            button.setMinimumWidth(0)
+            button.setSizePolicy(
+                QSizePolicy.Policy.Ignored,
+                QSizePolicy.Policy.Fixed,
+            )
+        else:
+            button.setSizePolicy(
+                QSizePolicy.Policy.Preferred,
+                QSizePolicy.Policy.Fixed,
+            )
         if tooltip:
             button.setToolTip(tooltip)
         button.clicked.connect(callback)

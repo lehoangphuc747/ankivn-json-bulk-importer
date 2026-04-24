@@ -1,13 +1,13 @@
 import json
 import os
-from typing import Any, List
+from typing import Any, List, Optional
 
 from aqt import mw
 from aqt.qt import (
     QDialog, QVBoxLayout, QHBoxLayout, QGroupBox, QLabel, QComboBox, QCheckBox,
     QPlainTextEdit, QPushButton, QMessageBox, Qt,
     QInputDialog, QFileDialog, QApplication, QSplitter, QWidget, QFontDatabase,
-    QToolButton, QScrollArea, QStyle,
+    QScrollArea, QStyle, QSize, QSizePolicy,
 )
 from anki.utils import guid64
 
@@ -38,22 +38,52 @@ class BulkCardCreatorDialog(QDialog):
         self._setup_ui()
 
     def _setup_ui(self) -> None:
-        # Bố cục chính của toàn bộ Dialog
         main_layout = QVBoxLayout(self)
         main_layout.setContentsMargins(10, 10, 10, 10)
+        main_layout.setSpacing(8)
 
-        # --- QSplitter chia màn hình Trái - Phải ---
         splitter = QSplitter(Qt.Orientation.Horizontal)
         main_layout.addWidget(splitter)
 
-        # ==========================================
-        # PANEL BÊN TRÁI (SIDEBAR)
-        # ==========================================
         left_panel = QWidget()
         left_layout = QVBoxLayout(left_panel)
-        left_layout.setContentsMargins(0, 0, 5, 0) # Lề phải 5px để cách thanh chia
+        left_layout.setContentsMargins(0, 0, 5, 0)
+        left_layout.setSpacing(8)
 
-        # --- Header (Ngôn ngữ & Trợ giúp) ---
+        self._build_header_bar(left_layout)
+        self._build_setup_panel(left_layout)
+        left_layout.addStretch()
+
+        right_panel = QWidget()
+        right_layout = QVBoxLayout(right_panel)
+        right_layout.setContentsMargins(5, 0, 0, 0)
+        right_layout.setSpacing(8)
+
+        self._build_json_workspace(right_layout)
+        self._build_action_bar(right_layout)
+
+        splitter.addWidget(left_panel)
+        splitter.addWidget(right_panel)
+        splitter.setCollapsible(0, False)
+        splitter.setCollapsible(1, False)
+        splitter.setStretchFactor(0, 1)
+        splitter.setStretchFactor(1, 2)
+        splitter.setSizes([300, 700])
+        left_panel.setMinimumWidth(0)
+        left_panel.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Expanding,
+        )
+        right_panel.setSizePolicy(
+            QSizePolicy.Policy.Expanding,
+            QSizePolicy.Policy.Expanding,
+        )
+
+        first_note_type = self.note_type_combo.currentText()
+        if first_note_type:
+            self._on_note_type_changed(first_note_type)
+
+    def _build_header_bar(self, parent_layout: QVBoxLayout) -> None:
         header_row = QHBoxLayout()
         header_row.addWidget(QLabel(_t("lang_label")))
         self.lang_combo = QComboBox()
@@ -66,235 +96,284 @@ class BulkCardCreatorDialog(QDialog):
         self.lang_combo.currentIndexChanged.connect(self._on_lang_changed)
         header_row.addWidget(self.lang_combo, stretch=1)
 
-        help_btn = QPushButton()
-        help_btn.setIcon(self.style().standardIcon(
-            QStyle.StandardPixmap.SP_DialogHelpButton
-        ))
-        help_btn.setFixedSize(24, 24)
-        help_btn.setToolTip(_t("btn_help"))
-        help_btn.clicked.connect(self._on_help)
+        help_btn = self._make_icon_button(
+            self.style().standardIcon(QStyle.StandardPixmap.SP_DialogHelpButton),
+            _t("btn_help"),
+            self._on_help,
+        )
         header_row.addWidget(help_btn)
-        left_layout.addLayout(header_row)
+        parent_layout.addLayout(header_row)
 
-        # --- Basic Setup Group ---
-        setup_group = QGroupBox(_t("section_basic_setup"))
-        setup_layout = QVBoxLayout(setup_group)
+    def _build_setup_panel(self, parent_layout: QVBoxLayout) -> None:
+        self.setup_panel = QWidget()
+        self.setup_panel.setMinimumWidth(0)
+        self.setup_panel.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Expanding,
+        )
+        setup_layout = QVBoxLayout(self.setup_panel)
+        setup_layout.setContentsMargins(0, 0, 0, 0)
+        setup_layout.setSpacing(5)
 
-        # Note Type
         setup_layout.addWidget(QLabel(_t("main_note_type")))
         nt_row = QHBoxLayout()
+        nt_row.setSpacing(5)
         self.note_type_combo = QComboBox()
+        self.note_type_combo.setMinimumWidth(0)
+        self.note_type_combo.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
         self.note_type_combo.setEditable(True)
         self._load_note_types()
         self.note_type_combo.currentTextChanged.connect(self._on_note_type_changed)
         nt_row.addWidget(self.note_type_combo, stretch=1)
-
         setup_layout.addLayout(nt_row)
 
-        # Deck
         setup_layout.addWidget(QLabel(_t("main_deck")))
         deck_row = QHBoxLayout()
+        deck_row.setSpacing(5)
         self.deck_combo = QComboBox()
+        self.deck_combo.setMinimumWidth(0)
+        self.deck_combo.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
         self.deck_combo.setEditable(True)
         self._load_decks()
         deck_row.addWidget(self.deck_combo, stretch=1)
 
-        new_deck_btn = QPushButton()
-        new_deck_btn.setIcon(self.style().standardIcon(
-            QStyle.StandardPixmap.SP_FileDialogNewFolder
-        ))
-        new_deck_btn.setFixedSize(24, 24)
-        new_deck_btn.setToolTip(_t("btn_new_deck"))
-        new_deck_btn.clicked.connect(self._on_new_deck)
+        new_deck_btn = self._make_icon_button(
+            self.style().standardIcon(QStyle.StandardPixmap.SP_FileDialogNewFolder),
+            _t("btn_new_deck"),
+            self._on_new_deck,
+        )
         deck_row.addWidget(new_deck_btn)
-
         setup_layout.addLayout(deck_row)
 
-        left_layout.addWidget(setup_group)
-
-        self.advanced_toggle = QToolButton()
-        self.advanced_toggle.setText(_t("section_advanced_collapsed"))
-        self.advanced_toggle.setCheckable(True)
-        self.advanced_toggle.setChecked(False)
-        self.advanced_toggle.setToolButtonStyle(
-            Qt.ToolButtonStyle.ToolButtonTextBesideIcon
-        )
-        self.advanced_toggle.setArrowType(Qt.ArrowType.RightArrow)
-        self.advanced_toggle.clicked.connect(self._on_toggle_advanced_tools)
-        left_layout.addWidget(self.advanced_toggle)
-
-        self.advanced_panel = QWidget()
-        advanced_layout = QVBoxLayout(self.advanced_panel)
-        advanced_layout.setContentsMargins(0, 0, 0, 0)
-
         sync_group = QGroupBox(_t("section_sync_update"))
+        self._make_sidebar_group_flexible(sync_group)
         sync_layout = QVBoxLayout(sync_group)
+        sync_layout.setContentsMargins(8, 8, 8, 8)
+        sync_layout.setSpacing(5)
         sync_layout.addWidget(QLabel(_t("main_smart_sync")))
         self.match_field_combo = QComboBox()
+        self.match_field_combo.setMinimumWidth(0)
+        self.match_field_combo.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
         self.match_field_combo.addItem(_t("main_smart_sync_none"))
         sync_layout.addWidget(self.match_field_combo)
 
-        self.write_guid_checkbox = QCheckBox(_t("chk_write_guids"))
+        self.write_guid_checkbox = QCheckBox(_t("chk_write_guids_short"))
+        self.write_guid_checkbox.setMinimumWidth(0)
+        self.write_guid_checkbox.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
         self.write_guid_checkbox.setChecked(True)
         self.write_guid_checkbox.setToolTip(_t("tooltip_write_guids"))
         sync_layout.addWidget(self.write_guid_checkbox)
 
-        sync_btn_row = QHBoxLayout()
-        generate_guid_btn = QPushButton(_t("btn_generate_guid"))
-        generate_guid_btn.clicked.connect(self._on_generate_guid)
-        sync_btn_row.addWidget(generate_guid_btn)
+        generate_guid_btn = self._make_text_button(
+            _t("btn_generate_guid_short"),
+            self._on_generate_guid,
+            _t("btn_generate_guid") + "\n" + _t("tooltip_generate_guid"),
+        )
+        sync_layout.addWidget(generate_guid_btn)
+        add_deck_btn = self._make_text_button(
+            _t("btn_add_deck_to_json_short"),
+            self._on_add_deck_to_json,
+            _t("btn_add_deck_to_json") + "\n" + _t("tooltip_add_deck_to_json"),
+        )
+        sync_layout.addWidget(add_deck_btn)
+        setup_layout.addWidget(sync_group)
 
-        add_deck_btn = QPushButton(_t("btn_add_deck_to_json"))
-        add_deck_btn.clicked.connect(self._on_add_deck_to_json)
-        sync_btn_row.addWidget(add_deck_btn)
-        sync_layout.addLayout(sync_btn_row)
-        advanced_layout.addWidget(sync_group)
-
-        media_ai_group = QGroupBox(_t("section_media_ai"))
-        media_ai_layout = QHBoxLayout(media_ai_group)
-        media_cfg_btn = QPushButton(_t("btn_media_config"))
-        media_cfg_btn.setToolTip(_t("tooltip_media_config"))
-        media_cfg_btn.clicked.connect(self._on_media_config)
+        media_ai_group = QGroupBox(_t("section_media"))
+        self._make_sidebar_group_flexible(media_ai_group)
+        media_ai_layout = QVBoxLayout(media_ai_group)
+        media_ai_layout.setContentsMargins(8, 8, 8, 8)
+        media_ai_layout.setSpacing(5)
+        media_cfg_btn = self._make_text_button(
+            _t("btn_media_config_short"),
+            self._on_media_config,
+            _t("btn_media_config") + "\n" + _t("tooltip_media_config"),
+        )
         media_ai_layout.addWidget(media_cfg_btn)
+        setup_layout.addWidget(media_ai_group)
 
-        prompt_btn = QPushButton(_t("btn_copy_prompt"))
-        prompt_btn.setToolTip(_t("tooltip_copy_prompt"))
-        prompt_btn.clicked.connect(self._on_copy_prompt)
-        media_ai_layout.addWidget(prompt_btn)
-        advanced_layout.addWidget(media_ai_group)
-
-        # --- Tools Group ---
         tools_group = QGroupBox(_t("section_presets_history"))
+        self._make_sidebar_group_flexible(tools_group)
         tools_layout = QVBoxLayout(tools_group)
-
-        # Row 1: Presets
+        tools_layout.setContentsMargins(8, 8, 8, 8)
+        tools_layout.setSpacing(5)
         tools_layout.addWidget(QLabel(_t("main_preset")))
-        preset_row = QHBoxLayout()
         self.preset_combo = QComboBox()
-        preset_row.addWidget(self.preset_combo, stretch=1)
-
-        load_preset_btn = QPushButton(_t("btn_load_preset"))
-        load_preset_btn.clicked.connect(self._on_load_preset)
-        preset_row.addWidget(load_preset_btn)
-
-        save_preset_btn = QPushButton(_t("btn_save_preset"))
-        save_preset_btn.clicked.connect(self._on_save_preset)
-        preset_row.addWidget(save_preset_btn)
-        tools_layout.addLayout(preset_row)
+        self.preset_combo.setMinimumWidth(0)
+        self.preset_combo.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
+        tools_layout.addWidget(self.preset_combo)
+        preset_btn_row = QHBoxLayout()
+        preset_btn_row.setSpacing(5)
+        load_preset_btn = self._make_text_button(
+            _t("btn_load_preset_short"), self._on_load_preset,
+            _t("btn_load_preset"),
+        )
+        preset_btn_row.addWidget(load_preset_btn)
+        save_preset_btn = self._make_text_button(
+            _t("btn_save_preset_short"), self._on_save_preset,
+            _t("btn_save_preset"),
+        )
+        preset_btn_row.addWidget(save_preset_btn)
+        tools_layout.addLayout(preset_btn_row)
         self._load_presets()
-
-        history_btn = QPushButton(_t("btn_history"))
-        history_btn.clicked.connect(self._on_open_history)
+        history_btn = self._make_text_button(
+            _t("btn_history"),
+            self._on_open_history,
+            _t("tooltip_open_history"),
+        )
         tools_layout.addWidget(history_btn)
-
-        advanced_layout.addWidget(tools_group)
+        setup_layout.addWidget(tools_group)
 
         deck_export_group = QGroupBox(_t("section_deck_export"))
+        self._make_sidebar_group_flexible(deck_export_group)
         deck_export_layout = QVBoxLayout(deck_export_group)
-        fetch_deck_btn = QPushButton(_t("btn_get_deck_data"))
-        fetch_deck_btn.setToolTip(_t("tooltip_get_deck_data"))
-        fetch_deck_btn.clicked.connect(self._on_fetch_deck_data)
+        deck_export_layout.setContentsMargins(8, 8, 8, 8)
+        deck_export_layout.setSpacing(5)
+        fetch_deck_btn = self._make_text_button(
+            _t("btn_get_deck_data_short"),
+            self._on_fetch_deck_data,
+            _t("btn_get_deck_data") + "\n" + _t("tooltip_get_deck_data"),
+        )
         deck_export_layout.addWidget(fetch_deck_btn)
-
-        self.include_stats_checkbox = QCheckBox(_t("chk_include_stats"))
+        self.include_stats_checkbox = QCheckBox(_t("chk_include_stats_short"))
+        self.include_stats_checkbox.setMinimumWidth(0)
+        self.include_stats_checkbox.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
         self.include_stats_checkbox.setToolTip(_t("tooltip_include_stats"))
         deck_export_layout.addWidget(self.include_stats_checkbox)
-        advanced_layout.addWidget(deck_export_group)
+        setup_layout.addWidget(deck_export_group)
+        setup_layout.addStretch()
 
-        self.advanced_scroll = QScrollArea()
-        self.advanced_scroll.setWidgetResizable(True)
-        self.advanced_scroll.setWidget(self.advanced_panel)
-        self.advanced_scroll.setVisible(False)
-        left_layout.addWidget(self.advanced_scroll, stretch=1)
-        left_layout.addStretch() # Đẩy các widget lên trên cùng
+        self.setup_scroll = QScrollArea()
+        self.setup_scroll.setWidgetResizable(True)
+        self.setup_scroll.setMinimumWidth(0)
+        self.setup_scroll.setSizePolicy(
+            QSizePolicy.Policy.Expanding,
+            QSizePolicy.Policy.Expanding,
+        )
+        self.setup_scroll.setHorizontalScrollBarPolicy(
+            Qt.ScrollBarPolicy.ScrollBarAlwaysOff
+        )
+        self.setup_scroll.setWidget(self.setup_panel)
+        parent_layout.addWidget(self.setup_scroll, stretch=1)
 
-        # ==========================================
-        # PANEL BÊN PHẢI (MAIN WORKSPACE)
-        # ==========================================
-        right_panel = QWidget()
-        right_layout = QVBoxLayout(right_panel)
-        right_layout.setContentsMargins(5, 0, 0, 0)
-
-        # --- JSON Input Area ---
+    def _build_json_workspace(self, parent_layout: QVBoxLayout) -> None:
         json_group = QGroupBox(_t("section_json"))
         json_layout = QVBoxLayout(json_group)
 
         json_header = QHBoxLayout()
-        json_header.addWidget(QLabel(_t("main_json_hint")), stretch=1)
+        hint = QLabel(_t("main_json_hint"))
+        hint.setWordWrap(True)
+        json_header.addWidget(hint, stretch=1)
 
-        import_btn = QPushButton(_t("btn_import_json"))
-        import_btn.clicked.connect(self._on_import_json)
+        import_btn = self._make_text_button(
+            _t("btn_import_json"), self._on_import_json
+        )
         json_header.addWidget(import_btn)
-
-        export_btn = QPushButton(_t("btn_export_json"))
-        export_btn.clicked.connect(self._on_export_json)
+        export_btn = self._make_text_button(
+            _t("btn_export_json"), self._on_export_json
+        )
         json_header.addWidget(export_btn)
-
-        table_btn = QPushButton(_t("btn_view_table"))
-        table_btn.clicked.connect(self._on_view_as_table)
+        table_btn = self._make_text_button(
+            _t("btn_view_table"), self._on_view_as_table
+        )
         json_header.addWidget(table_btn)
-
+        prompt_btn = self._make_text_button(
+            _t("btn_copy_prompt"),
+            self._on_copy_prompt,
+            _t("tooltip_copy_prompt"),
+        )
+        json_header.addWidget(prompt_btn)
         json_layout.addLayout(json_header)
 
         self.json_input = QPlainTextEdit()
         self.json_input.setPlaceholderText(_t("main_json_placeholder"))
-        
-        # Cài đặt Monospace Font cho khung nhập JSON
         fixed_font = QFontDatabase.systemFont(QFontDatabase.SystemFont.FixedFont)
         self.json_input.setFont(fixed_font)
-        
-        # Kết nối sự kiện gõ phím với hàm kiểm tra JSON
         self.json_input.textChanged.connect(self._validate_json_realtime)
-        
-        json_layout.addWidget(self.json_input)
-        right_layout.addWidget(json_group)
 
-        # --- Actions Group ---
+        json_layout.addWidget(self.json_input, stretch=1)
+        parent_layout.addWidget(json_group, stretch=1)
+
+    def _build_action_bar(self, parent_layout: QVBoxLayout) -> None:
         action_layout = QHBoxLayout()
         action_layout.setContentsMargins(0, 10, 0, 0)
-
-        action_layout.addStretch() # Đẩy nút Create và Close sang phải
+        action_layout.addStretch()
 
         self.create_btn = QPushButton(_t("btn_create_update"))
-        self.create_btn.setDefault(True) # Đặt làm nút mặc định để nổi bật (nhấn Enter là chạy)
-        self.create_btn.setMinimumSize(150, 35) # Làm nút to hơn
+        self.create_btn.setIcon(self.style().standardIcon(
+            QStyle.StandardPixmap.SP_DialogApplyButton
+        ))
+        self.create_btn.setDefault(True)
+        self.create_btn.setMinimumSize(170, 36)
         self.create_btn.clicked.connect(self._on_submit)
         action_layout.addWidget(self.create_btn)
 
         close_btn = QPushButton(_t("btn_close"))
-        close_btn.setMinimumHeight(35)
+        close_btn.setIcon(self.style().standardIcon(
+            QStyle.StandardPixmap.SP_DialogCancelButton
+        ))
+        close_btn.setMinimumHeight(36)
+        close_btn.setToolTip(_t("tooltip_close"))
         close_btn.clicked.connect(self.close)
         action_layout.addWidget(close_btn)
 
-        right_layout.addLayout(action_layout)
+        parent_layout.addLayout(action_layout)
 
-        # Đưa 2 panel vào Splitter
-        splitter.addWidget(left_panel)
-        splitter.addWidget(right_panel)
-        
-        # NGĂN CHẶN PANEL BỊ ẨN KHI KÉO QUÁ TAY
-        splitter.setCollapsible(0, False)
-        splitter.setCollapsible(1, False)
-        left_panel.setMinimumWidth(280) # Đảm bảo sidebar luôn rộng ít nhất 280px
-        
-        # Thiết lập tỷ lệ độ rộng mặc định (Ví dụ: Trái 35%, Phải 65%)
-        splitter.setStretchFactor(0, 0)
-        splitter.setStretchFactor(1, 1)
-        splitter.setSizes([320, 680])
+    def _make_icon_button(
+        self,
+        icon: Any,
+        tooltip: str,
+        callback: Any,
+        size: int = 28,
+    ) -> QPushButton:
+        button = QPushButton()
+        button.setIcon(icon)
+        button.setIconSize(QSize(size - 8, size - 8))
+        button.setFixedSize(size, size)
+        button.setToolTip(tooltip)
+        button.clicked.connect(callback)
+        return button
 
-        # Autofill JSON cho note type đầu tiên
-        first_note_type = self.note_type_combo.currentText()
-        if first_note_type:
-            self._on_note_type_changed(first_note_type)
+    def _make_text_button(
+        self,
+        label: str,
+        callback: Any,
+        tooltip: Optional[str] = None,
+    ) -> QPushButton:
+        button = QPushButton(label)
+        button.setMinimumWidth(0)
+        button.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
+        if tooltip:
+            button.setToolTip(tooltip)
+        button.clicked.connect(callback)
+        return button
 
-    def _on_toggle_advanced_tools(self, checked: bool) -> None:
-        self.advanced_scroll.setVisible(checked)
-        if checked:
-            self.advanced_toggle.setText(_t("section_advanced_expanded"))
-            self.advanced_toggle.setArrowType(Qt.ArrowType.DownArrow)
-        else:
-            self.advanced_toggle.setText(_t("section_advanced_collapsed"))
-            self.advanced_toggle.setArrowType(Qt.ArrowType.RightArrow)
+    def _make_sidebar_group_flexible(self, group: QGroupBox) -> None:
+        group.setMinimumWidth(0)
+        group.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
 
     def _validate_json_realtime(self) -> None:
         """Kiểm tra JSON realtime, nếu lỗi thì viền đỏ, nếu đúng thì viền xanh/bình thường."""
@@ -627,21 +706,32 @@ class BulkCardCreatorDialog(QDialog):
                     _t("prompt_audio_field", field=f)
                 )
 
-        prompt = (
-            f"{_t('prompt_expert')}\n\n"
-            f"{_t('prompt_format', fields=fields_str)}\n\n"
+        media_rules = "\n".join(
+            f"    <rule>{note}</rule>" for note in media_notes
         )
+        if not media_rules:
+            media_rules = f"    <rule>{_t('prompt_no_media_rules')}</rule>"
 
-        if media_notes:
-            prompt += f"{_t('prompt_note_important')}\n"
-            for note in media_notes:
-                prompt += f"- {note}\n"
-            prompt += "\n"
-
-        prompt += (
-            f"{_t('prompt_example')}\n"
-            f"[{{{example_obj}}}]\n\n"
-            f"{_t('prompt_json_only')}"
+        prompt = (
+            "<flashcard_json_prompt>\n"
+            f"  <role>{_t('prompt_expert')}</role>\n"
+            "  <input>\n"
+            f"    <quantity>{_t('prompt_quantity_placeholder')}</quantity>\n"
+            f"    <topic>{_t('prompt_topic_placeholder')}</topic>\n"
+            "  </input>\n"
+            "  <output_format>\n"
+            "    <type>json_array</type>\n"
+            f"    <fields>{fields_str}</fields>\n"
+            f"    <contract>{_t('prompt_format', fields=fields_str)}</contract>\n"
+            "  </output_format>\n"
+            "  <rules>\n"
+            f"{media_rules}\n"
+            "  </rules>\n"
+            "  <example><![CDATA[\n"
+            f"[{{{example_obj}}}]\n"
+            "  ]]></example>\n"
+            f"  <final_instruction>{_t('prompt_json_only')}</final_instruction>\n"
+            "</flashcard_json_prompt>"
         )
 
         clipboard = QApplication.clipboard()

@@ -4,13 +4,15 @@ from typing import Any
 from aqt import mw
 from aqt.qt import (
     QDialog, QVBoxLayout, QHBoxLayout, QPushButton, QCheckBox, 
-    QTextBrowser, Qt
+    QTextBrowser, Qt, QStyle,
 )
+
+from ..i18n import _t
 
 class WelcomeDialog(QDialog):
     def __init__(self, parent: Any = None) -> None:
         super().__init__(parent or mw)
-        self.setWindowTitle("Welcome to JSON Bulk Importer!")
+        self.setWindowTitle(_t("welcome_title"))
         self.setMinimumSize(600, 520)
         
         # Add flags to remove the context help button
@@ -80,12 +82,16 @@ class WelcomeDialog(QDialog):
         # Bottom row: Checkbox and Close button
         bottom_layout = QHBoxLayout()
         
-        self.dont_show_cb = QCheckBox("Don't show this again")
+        self.dont_show_cb = QCheckBox(_t("welcome_dont_show_again"))
         bottom_layout.addWidget(self.dont_show_cb)
         
         bottom_layout.addStretch()
         
-        self.close_btn = QPushButton("Close")
+        self.close_btn = QPushButton(_t("btn_close"))
+        self.close_btn.setIcon(self.style().standardIcon(
+            QStyle.StandardPixmap.SP_DialogCancelButton
+        ))
+        self.close_btn.setToolTip(_t("tooltip_close"))
         self.close_btn.setMinimumWidth(100)
         self.close_btn.clicked.connect(self.close)
         self.close_btn.setDefault(True)

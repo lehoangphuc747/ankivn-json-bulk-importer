@@ -7,7 +7,7 @@ from aqt.qt import (
     QPushButton, QMessageBox,
     QTableWidget, QTableWidgetItem, QHeaderView, QAbstractItemView, Qt,
     QApplication, QEvent,
-    QColor, QBrush, QTextBrowser, QLabel,
+    QColor, QBrush, QTextBrowser,
 )
 
 from ..i18n import _t
@@ -58,6 +58,7 @@ class TablePreviewDialog(QDialog):
 
     def _setup_ui(self) -> None:
         layout = QVBoxLayout(self)
+        layout.setSpacing(8)
 
         self.table = QTableWidget()
         self.table.setColumnCount(len(self._columns))
@@ -70,8 +71,10 @@ class TablePreviewDialog(QDialog):
             QAbstractItemView.SelectionBehavior.SelectItems
         )
         self.table.cellClicked.connect(self._on_cell_clicked)
+        self.table.currentCellChanged.connect(self._on_current_cell_changed)
         self.table.installEventFilter(self)
-        layout.addWidget(self.table)
+        self._default_edit_triggers = self.table.editTriggers()
+        layout.addWidget(self.table, stretch=1)
 
         # --- Preview Panel ---
         self.preview_panel = QTextBrowser()
@@ -79,33 +82,37 @@ class TablePreviewDialog(QDialog):
         self.preview_panel.setVisible(False)
         layout.addWidget(self.preview_panel)
 
-        btn_layout = QHBoxLayout()
+        footer_layout = QHBoxLayout()
+        footer_layout.setSpacing(6)
 
-        toggle_preview_btn = QPushButton(_t("btn_toggle_preview"))
-        toggle_preview_btn.clicked.connect(self._on_toggle_preview_mode)
-        btn_layout.addWidget(toggle_preview_btn)
+        self.toggle_preview_btn = QPushButton(_t("btn_toggle_preview"))
+        self.toggle_preview_btn.setToolTip(_t("tooltip_toggle_preview_mode"))
+        self.toggle_preview_btn.clicked.connect(self._on_toggle_preview_mode)
+        footer_layout.addWidget(self.toggle_preview_btn)
 
         paste_btn = QPushButton(_t("btn_paste_excel"))
         paste_btn.setToolTip(_t("tooltip_paste_excel"))
         paste_btn.clicked.connect(self._paste_from_clipboard)
-        btn_layout.addWidget(paste_btn)
+        footer_layout.addWidget(paste_btn)
 
         prefetch_btn = QPushButton(_t("btn_prefetch"))
         prefetch_btn.setToolTip(_t("tooltip_prefetch"))
         prefetch_btn.clicked.connect(self._on_prefetch_media)
-        btn_layout.addWidget(prefetch_btn)
+        footer_layout.addWidget(prefetch_btn)
 
-        btn_layout.addStretch()
+        footer_layout.addStretch()
 
         save_btn = QPushButton(_t("btn_save_update_json"))
+        save_btn.setToolTip(_t("tooltip_save_update_json"))
         save_btn.clicked.connect(self.accept)
-        btn_layout.addWidget(save_btn)
+        footer_layout.addWidget(save_btn)
 
         cancel_btn = QPushButton(_t("btn_cancel"))
+        cancel_btn.setToolTip(_t("tooltip_cancel"))
         cancel_btn.clicked.connect(self.reject)
-        btn_layout.addWidget(cancel_btn)
+        footer_layout.addWidget(cancel_btn)
 
-        layout.addLayout(btn_layout)
+        layout.addLayout(footer_layout)
 
     def eventFilter(self, obj: Any, event: Any) -> bool:
         if obj is self.table and event.type() == QEvent.Type.KeyPress:
@@ -118,19 +125,28 @@ class TablePreviewDialog(QDialog):
     def _on_toggle_preview_mode(self) -> None:
         """Chuyển đổi giữa Edit Mode và Preview Mode."""
         self._preview_mode = not self._preview_mode
+        self._update_preview_toggle()
         
         if self._preview_mode:
-            # Enter Preview Mode
             self.table.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
             self.preview_panel.setVisible(True)
-            # Show preview of first cell if any
-            if self.table.rowCount() > 0 and self.table.columnCount() > 0:
+            current = self.table.currentItem()
+            if current:
+                self._on_cell_clicked(current.row(), current.column())
+            elif self.table.rowCount() > 0 and self.table.columnCount() > 0:
                 self.table.setCurrentCell(0, 0)
                 self._on_cell_clicked(0, 0)
+            else:
+                self.preview_panel.clear()
         else:
-            # Exit Preview Mode - return to Edit Mode
-            self.table.setEditTriggers(QAbstractItemView.EditTrigger.DoubleClicked)
+            self.table.setEditTriggers(self._default_edit_triggers)
             self.preview_panel.setVisible(False)
+
+    def _update_preview_toggle(self) -> None:
+        if self._preview_mode:
+            self.toggle_preview_btn.setToolTip(_t("tooltip_toggle_edit_mode"))
+        else:
+            self.toggle_preview_btn.setToolTip(_t("tooltip_toggle_preview_mode"))
 
     def _on_cell_clicked(self, row: int, col: int) -> None:
         """Khi click cell trong Preview Mode, hiển thị HTML preview."""
@@ -144,6 +160,16 @@ class TablePreviewDialog(QDialog):
         
         html_content = item.text()
         self.preview_panel.setHtml(html_content)
+
+    def _on_current_cell_changed(
+        self,
+        current_row: int,
+        current_col: int,
+        previous_row: int,
+        previous_col: int,
+    ) -> None:
+        if self._preview_mode and current_row >= 0 and current_col >= 0:
+            self._on_cell_clicked(current_row, current_col)
 
     def _paste_from_clipboard(self) -> None:
         """Dán dữ liệu TSV (Excel/Sheets) vào bảng. Dòng đầu = header."""
@@ -183,7 +209,8 @@ class TablePreviewDialog(QDialog):
             for col_idx in range(len(headers)):
                 value = row_data[col_idx] if col_idx < len(row_data) else ""
                 self.table.setItem(
-                    row_idx, col_idx, QTableWidgetItem(value)
+                    row_idx, col_idx,
+                    self._make_table_item(headers[col_idx], value),
                 )
 
     def _on_prefetch_media(self) -> None:
@@ -228,7 +255,7 @@ class TablePreviewDialog(QDialog):
 
                 if err:
                     item.setBackground(err_bg)
-                    item.setToolTip(f"Error: {err}")
+                    item.setToolTip(_t("tooltip_media_error", error=err))
                     errors += 1
                 else:
                     item.setBackground(ok_bg)
@@ -245,9 +272,6 @@ class TablePreviewDialog(QDialog):
     def _populate_table(self, cards: List[dict]) -> None:
         """Điền dữ liệu từ list[dict] vào QTableWidget."""
         self.table.setRowCount(len(cards))
-        
-        # Tạo màu nền nhận diện cho cột Media
-        media_bg = QBrush(QColor(230, 247, 255)) # Xanh dương rất nhạt (Alice Blue)
 
         for row, card in enumerate(cards):
             for col_idx, col_name in enumerate(self._columns):
@@ -260,18 +284,20 @@ class TablePreviewDialog(QDialog):
                 else:
                     display = str(value) if value != "" else ""
 
-                item = QTableWidgetItem(display)
-                
-                # Nếu là trường Image/Audio thì tô màu nền và đặt tooltip
-                ftype = self._media_mappings.get(col_name, "text")
-                if ftype in ("image", "audio"):
-                    item.setBackground(media_bg)
-                    item.setToolTip(f"Đây là trường Media ({ftype})")
-
-                self.table.setItem(row, col_idx, item)
+                self.table.setItem(
+                    row, col_idx, self._make_table_item(col_name, display)
+                )
                 
         # Tự động điều chỉnh độ rộng cột dựa trên nội dung vừa điền
         self.table.resizeColumnsToContents()
+
+    def _make_table_item(self, col_name: str, display: str) -> QTableWidgetItem:
+        item = QTableWidgetItem(display)
+        ftype = self._media_mappings.get(col_name, "text")
+        if ftype in ("image", "audio"):
+            item.setBackground(QBrush(QColor(230, 247, 255)))
+            item.setToolTip(_t("tooltip_media_field", type=ftype))
+        return item
 
     def _table_to_cards(self) -> List[dict]:
         """Đọc dữ liệu từ bảng, chuyển ngược lại list[dict]."""

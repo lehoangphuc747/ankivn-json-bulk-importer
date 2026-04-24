@@ -1,7 +1,10 @@
 from typing import Any
 
 from aqt import mw
-from aqt.qt import QDialog, QVBoxLayout, QTabWidget, QTextBrowser, QPushButton, Qt
+from aqt.qt import (
+    QDialog, QVBoxLayout, QHBoxLayout, QTabWidget, QTextBrowser, QPushButton,
+    Qt, QStyle,
+)
 
 from ..i18n import _t
 
@@ -20,15 +23,23 @@ class HelpDialog(QDialog):
         self.setWindowFlags(flags)
 
         layout = QVBoxLayout(self)
+        layout.setContentsMargins(8, 8, 8, 8)
 
         tabs = QTabWidget()
         tabs.addTab(self._build_browser(self._build_en_html()), _t("help_tab_en"))
         tabs.addTab(self._build_browser(self._build_vi_html()), _t("help_tab_vi"))
         layout.addWidget(tabs)
 
+        footer_layout = QHBoxLayout()
+        footer_layout.addStretch()
         close_btn = QPushButton(_t("btn_close"))
+        close_btn.setIcon(self.style().standardIcon(
+            QStyle.StandardPixmap.SP_DialogCancelButton
+        ))
+        close_btn.setToolTip(_t("tooltip_close"))
         close_btn.clicked.connect(self.accept)
-        layout.addWidget(close_btn)
+        footer_layout.addWidget(close_btn)
+        layout.addLayout(footer_layout)
 
     def _build_browser(self, html: str) -> QTextBrowser:
         browser = QTextBrowser()

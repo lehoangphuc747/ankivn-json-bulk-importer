@@ -2,7 +2,7 @@ from typing import Any, List
 
 from aqt.qt import (
     QDialog, QVBoxLayout, QHBoxLayout, QLabel, QComboBox,
-    QPushButton, QGridLayout,
+    QPushButton, QGridLayout, QStyle,
 )
 
 from ..config import get_media_mappings, _get_config, _save_config
@@ -17,7 +17,7 @@ class MediaConfigDialog(QDialog):
     ) -> None:
         super().__init__(parent)
         self.setWindowTitle(_t("config_title", name=note_type_name))
-        self.setMinimumWidth(420)
+        self.setMinimumWidth(460)
         self._note_type_name = note_type_name
         self._field_names = field_names
         self._combos: List[QComboBox] = []
@@ -46,10 +46,18 @@ class MediaConfigDialog(QDialog):
         layout.addLayout(grid)
 
         btn_layout = QHBoxLayout()
+        btn_layout.addStretch()
         save_btn = QPushButton(_t("btn_save"))
+        save_btn.setIcon(self.style().standardIcon(
+            QStyle.StandardPixmap.SP_DialogApplyButton
+        ))
         save_btn.clicked.connect(self._on_save)
         btn_layout.addWidget(save_btn)
         cancel_btn = QPushButton(_t("btn_cancel"))
+        cancel_btn.setIcon(self.style().standardIcon(
+            QStyle.StandardPixmap.SP_DialogCancelButton
+        ))
+        cancel_btn.setToolTip(_t("tooltip_cancel"))
         cancel_btn.clicked.connect(self.reject)
         btn_layout.addWidget(cancel_btn)
         layout.addLayout(btn_layout)

@@ -151,38 +151,6 @@ class BulkCardCreatorDialog(QDialog):
         deck_row.addWidget(new_deck_btn)
         setup_layout.addLayout(deck_row)
 
-        json_tools_group = QGroupBox(_t("section_json_tools"))
-        self._make_sidebar_group_flexible(json_tools_group)
-        json_tools_layout = QVBoxLayout(json_tools_group)
-        json_tools_layout.setContentsMargins(8, 8, 8, 8)
-        json_tools_layout.setSpacing(5)
-
-        import_btn = self._make_text_button(
-            _t("btn_import_json"),
-            self._on_import_json,
-            _t("toolbar_import_json"),
-        )
-        json_tools_layout.addWidget(import_btn)
-        export_btn = self._make_text_button(
-            _t("btn_export_json"),
-            self._on_export_json,
-            _t("toolbar_export_json"),
-        )
-        json_tools_layout.addWidget(export_btn)
-        table_btn = self._make_text_button(
-            _t("btn_view_table"),
-            self._on_view_as_table,
-            _t("toolbar_view_table"),
-        )
-        json_tools_layout.addWidget(table_btn)
-        prompt_btn = self._make_text_button(
-            _t("btn_copy_prompt"),
-            self._on_copy_prompt,
-            _t("tooltip_copy_prompt"),
-        )
-        json_tools_layout.addWidget(prompt_btn)
-        setup_layout.addWidget(json_tools_group)
-
         sync_group = QGroupBox(_t("section_sync_update"))
         self._make_sidebar_group_flexible(sync_group)
         sync_layout = QVBoxLayout(sync_group)
@@ -314,6 +282,37 @@ class BulkCardCreatorDialog(QDialog):
         hint.setWordWrap(True)
         json_header.addWidget(hint, stretch=1)
         json_layout.addLayout(json_header)
+
+        json_layout.addWidget(QLabel(_t("section_json_tools")))
+        json_tools_row = QHBoxLayout()
+        json_tools_row.setSpacing(6)
+
+        import_btn = self._make_text_button(
+            _t("btn_import_json"),
+            self._on_import_json,
+            _t("toolbar_import_json"),
+        )
+        json_tools_row.addWidget(import_btn)
+        export_btn = self._make_text_button(
+            _t("btn_export_json"),
+            self._on_export_json,
+            _t("toolbar_export_json"),
+        )
+        json_tools_row.addWidget(export_btn)
+        table_btn = self._make_text_button(
+            _t("btn_view_table"),
+            self._on_view_as_table,
+            _t("toolbar_view_table"),
+        )
+        json_tools_row.addWidget(table_btn)
+        prompt_btn = self._make_text_button(
+            _t("btn_copy_prompt"),
+            self._on_copy_prompt,
+            _t("tooltip_copy_prompt"),
+        )
+        json_tools_row.addWidget(prompt_btn)
+        json_tools_row.addStretch()
+        json_layout.addLayout(json_tools_row)
 
         self.json_input = QPlainTextEdit()
         self.json_input.setPlaceholderText(_t("main_json_placeholder"))

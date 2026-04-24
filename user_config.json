@@ -27,5 +27,14 @@
       "Link": "text"
     }
   },
-  "lang": "en"
+  "lang": "en",
+  "presets": {
+    "132": {
+      "note_type": "!Dhamma",
+      "deck": "Bulk Card Creator",
+      "match_field": null,
+      "json_text": "[\n  {\n    \"id\": \"insert_your_content_here\",\n    \"word\": \"insert_your_content_here\",\n    \"ipa\": \"insert_your_content_here\",\n    \"vietnamese\": \"insert_your_content_here\",\n    \"explain\": \"insert_your_content_here\",\n    \"title\": \"insert_your_content_here\",\n    \"audio_word\": \"insert_your_content_here\",\n    \"audio_vietnamese\": \"insert_your_content_here\"\n  }\n]"
+    }
+  },
+  "welcome_shown": true
 }

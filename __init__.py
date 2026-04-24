@@ -1,4 +1,5 @@
 from aqt import mw
+from aqt import gui_hooks
 from aqt.qt import QAction, qconnect, QMenu
 
 
@@ -61,6 +62,27 @@ def show_dialog() -> None:
     from .gui.main_dialog import BulkCardCreatorDialog
     dialog = BulkCardCreatorDialog(mw)
     dialog.exec()
+
+# ---------------------------------------------------------------------------
+# Welcome Popup Hook
+# ---------------------------------------------------------------------------
+
+def check_and_show_welcome() -> None:
+    """Hiện Welcome dialog nếu người dùng lần đầu cài hoặc chưa bấm 'Don't show this again'."""
+    from .config import get_welcome_shown, set_welcome_shown
+    
+    if get_welcome_shown():
+        return
+
+    from .gui.welcome_dialog import WelcomeDialog
+    dialog = WelcomeDialog(mw)
+    dialog.exec()
+
+    if dialog.dont_show_again():
+        set_welcome_shown(True)
+
+# Gắn Welcome popup vào sự kiện profile_did_open (để không bị lag splash screen)
+gui_hooks.profile_did_open.append(check_and_show_welcome)
 
 
 # ---------------------------------------------------------------------------

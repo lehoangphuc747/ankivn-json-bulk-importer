@@ -67,7 +67,7 @@ class TablePreviewDialog(QDialog):
             QHeaderView.ResizeMode.Interactive
         )
         self.table.setSelectionBehavior(
-            QAbstractItemView.SelectionBehavior.SelectRows
+            QAbstractItemView.SelectionBehavior.SelectItems
         )
         self.table.cellClicked.connect(self._on_cell_clicked)
         self.table.installEventFilter(self)
@@ -245,6 +245,9 @@ class TablePreviewDialog(QDialog):
     def _populate_table(self, cards: List[dict]) -> None:
         """Điền dữ liệu từ list[dict] vào QTableWidget."""
         self.table.setRowCount(len(cards))
+        
+        # Tạo màu nền nhận diện cho cột Media
+        media_bg = QBrush(QColor(230, 247, 255)) # Xanh dương rất nhạt (Alice Blue)
 
         for row, card in enumerate(cards):
             for col_idx, col_name in enumerate(self._columns):
@@ -257,7 +260,18 @@ class TablePreviewDialog(QDialog):
                 else:
                     display = str(value) if value != "" else ""
 
-                self.table.setItem(row, col_idx, QTableWidgetItem(display))
+                item = QTableWidgetItem(display)
+                
+                # Nếu là trường Image/Audio thì tô màu nền và đặt tooltip
+                ftype = self._media_mappings.get(col_name, "text")
+                if ftype in ("image", "audio"):
+                    item.setBackground(media_bg)
+                    item.setToolTip(f"Đây là trường Media ({ftype})")
+
+                self.table.setItem(row, col_idx, item)
+                
+        # Tự động điều chỉnh độ rộng cột dựa trên nội dung vừa điền
+        self.table.resizeColumnsToContents()
 
     def _table_to_cards(self) -> List[dict]:
         """Đọc dữ liệu từ bảng, chuyển ngược lại list[dict]."""

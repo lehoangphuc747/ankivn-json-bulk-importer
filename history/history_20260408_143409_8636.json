@@ -1,0 +1,75 @@
+{
+  "note_type": "(AnkiVN) Cloze",
+  "deck": "Bulk Card Creator",
+  "match_field": null,
+  "created": 9,
+  "updated": 0,
+  "warnings": [],
+  "write_guid_backfill": true,
+  "cards": [
+    {
+      "Text": "<b>Complete the sentences with the correct form of the words in brackets:</b> <br><br> 6. My pen pal and I have {{c1::corresponded}} for three years. (correspondent)",
+      "Back": "<b>Cấu trúc:</b> <br> S + have/has + V3/ed (Thì Hiện tại hoàn thành). <br><br> <b>Giải thích:</b> <br> Sau trợ động từ 'have' ta cần một quá khứ phân từ (V3). Từ gốc 'correspondent' (danh từ: người viết thư) chuyển thành động từ 'correspond' -> V3 là 'corresponded'. <br><br> <b>Từ vựng:</b> <br> - Correspond (v): Trao đổi thư từ. <br> - Correspondent (n): Phóng viên hoặc người viết thư.",
+      "Audio": "",
+      "Link": "",
+      "__guid__": "vgd+LmP:dF"
+    },
+    {
+      "Text": "<b>Complete the sentences with the correct form of the words in brackets:</b> <br><br> 7. They speak English {{c1::well}}. (well)",
+      "Back": "<b>Cấu trúc:</b> <br> V + Adv (Trạng từ bổ nghĩa cho động từ). <br><br> <b>Giải thích:</b> <br> 'Speak' là động từ thường, nên cần một trạng từ để bổ nghĩa. 'Well' ở đây là trạng từ của 'Good'. <br><br> <b>Lưu ý:</b> <br> Không dùng 'good' vì 'good' là tính từ, chỉ đứng trước danh từ hoặc sau to-be.",
+      "Audio": "",
+      "Link": "",
+      "__guid__": "q!b`6{=CN;"
+    },
+    {
+      "Text": "<b>Complete the sentences with the correct form of the words in brackets:</b> <br><br> 8. Kuala Lumpur is the {{c1::largest}} city in Malaysia. (large)",
+      "Back": "<b>Cấu trúc:</b> <br> So sánh nhất với tính từ ngắn: the + adj-est. <br><br> <b>Giải thích:</b> <br> Dựa vào dấu hiệu 'the' và phạm vi so sánh 'in Malaysia', ta dùng dạng so sánh nhất của 'large' là 'largest'.",
+      "Audio": "",
+      "Link": "",
+      "__guid__": "O4;vZ4:Id)"
+    },
+    {
+      "Text": "<b>EXERCISE 22: Rewrite the following sentences beginning with the words given.</b> <br><br> 1. They have learnt English for three years. <br> They started {{c1::learning English three years ago}}.",
+      "Back": "<b>Cấu trúc biến đổi:</b> <br> S + have/has + V3 + for [khoảng thời gian] <br> -> S + started + V-ing + [khoảng thời gian] + ago. <br><br> <b>Giải thích:</b> <br> Chuyển từ thì Hiện tại hoàn thành sang Quá khứ đơn với động từ 'started'. Lưu ý giới từ 'for' phải đổi thành 'ago' đặt ở cuối câu.",
+      "Audio": "",
+      "Link": "",
+      "__guid__": "p2FYW(i=B&"
+    },
+    {
+      "Text": "<b>EXERCISE 22: Rewrite the following sentences beginning with the words given.</b> <br><br> 2. The weather is very cold now. And the children don't like it. <br> The children wish {{c1::the weather weren't (wasn't) very cold now}}.",
+      "Back": "<b>Cấu trúc:</b> <br> Câu ước ở hiện tại (Present Wish): S + wish + S + V2/ed / be -> were. <br><br> <b>Giải thích:</b> <br> Thực tế là 'is very cold' (khẳng định), nên câu ước phải dùng phủ định 'weren't' để diễn tả điều không có thật ở hiện tại. <br><br> <b>Ghi chú:</b> <br> 'Were' thường được dùng cho tất cả các ngôi trong câu ước để tăng tính trang trọng.",
+      "Audio": "",
+      "Link": "",
+      "__guid__": "H}{t1]h~-4"
+    },
+    {
+      "Text": "<b>EXERCISE 22: Rewrite the following sentences beginning with the words given.</b> <br><br> 3. The boys began to play volleyball at 4 pm. <br> The boys have {{c1::played/been playing volleyball since 4 pm}}.",
+      "Back": "<b>Cấu trúc biến đổi:</b> <br> S + began + to-V + at [mốc thời gian] <br> -> S + have/has + V3 + since [mốc thời gian]. <br><br> <b>Giải thích:</b> <br> Chuyển hành động bắt đầu trong quá khứ sang thì Hiện tại hoàn thành để chỉ sự kéo dài đến hiện tại. 'at 4 pm' đổi thành 'since 4 pm'.",
+      "Audio": "",
+      "Link": "",
+      "__guid__": "LW<rfAnvhH"
+    },
+    {
+      "Text": "<b>EXERCISE 22: Rewrite the following sentences beginning with the words given.</b> <br><br> 4. Her students don't have much time to study for their final exams. <br> Her students wish {{c1::they had much time to study for their final exams}}.",
+      "Back": "<b>Cấu trúc:</b> <br> Câu ước hiện tại: S + wish + S + V2/ed. <br><br> <b>Giải thích:</b> <br> Thực tế học sinh 'don't have' (phủ định), nên câu ước đổi sang khẳng định và lùi thì thành 'had'.",
+      "Audio": "",
+      "Link": "",
+      "__guid__": "jdgucfN?rt"
+    },
+    {
+      "Text": "<b>EXERCISE 22: Rewrite the following sentences beginning with the words given.</b> <br><br> 5. It's a pity we don't have a day off. <br> I wish {{c1::we had a day off}}.",
+      "Back": "<b>Cấu trúc:</b> <br> It's a pity (S + don't + V) -> S + wish + S + V2/ed. <br><br> <b>Giải thích:</b> <br> 'It's a pity' (Thật đáng tiếc) là dấu hiệu của một thực tế không như ý. Khi dùng 'wish', ta lùi động từ 'don't have' thành 'had'.",
+      "Audio": "",
+      "Link": "",
+      "__guid__": "OH5lKgEz4*"
+    },
+    {
+      "Text": "<b>EXERCISE 22: Rewrite the following sentences beginning with the words given.</b> <br><br> 6. When we were young, we lived in Ha Noi. <br> We {{c1::used to live in Ha Noi when we were young}}.",
+      "Back": "<b>Cấu trúc:</b> <br> S + used to + V-inf (Đã từng làm gì). <br><br> <b>Giải thích:</b> <br> 'Used to' dùng để diễn tả một thói quen hoặc trạng thái đã kết thúc trong quá khứ. <br><br> <b>Từ vựng:</b> <br> - Used to: Đã từng.",
+      "Audio": "",
+      "Link": "",
+      "__guid__": "OX4^FaR{x,"
+    }
+  ],
+  "timestamp": "2026-04-08T14:34:09"
+}

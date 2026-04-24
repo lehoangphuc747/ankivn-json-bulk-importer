@@ -1,0 +1,480 @@
+{
+  "note_type": "(AnkiVN) Cloze",
+  "deck": "ㅋㅋㅋㅎㅎㅎ",
+  "match_field": null,
+  "created": 78,
+  "updated": 0,
+  "warnings": [],
+  "write_guid_backfill": true,
+  "cards": [
+    {
+      "Text": "러시아 정부<br><br><b>Dịch:</b> {{c1::Chính phủ Nga}}",
+      "Back": "Dùng để chỉ <b>cơ quan hành pháp tối cao</b> của Liên bang Nga.",
+      "Audio": "러시아 정부",
+      "__guid__": "LpN6<SO*3H"
+    },
+    {
+      "Text": "한국을 향해 경고 메시지를 보내다<br><br><b>Dịch:</b> {{c1::Gửi thông điệp cảnh báo tới Hàn Quốc}}",
+      "Back": "Hành động <b>phát ngôn hoặc gửi tài liệu ngoại giao</b> nhằm cảnh báo về một vấn đề cụ thể.",
+      "Audio": "한국을 향해 경고 메시지를 보내다",
+      "__guid__": "fXC`*/s<WI"
+    },
+    {
+      "Text": "강도 높은 경고<br><br><b>Dịch:</b> {{c1::Cảnh báo mạnh mẽ}}",
+      "Back": "Lời cảnh báo mang tính chất <b>nghiêm trọng, quyết liệt</b>, thường đi kèm với hậu quả nếu không tuân thủ.",
+      "Audio": "강도 높은 경고",
+      "__guid__": "Gh_LLRCQ_|"
+    },
+    {
+      "Text": "러시아 외무차관<br><br><b>Dịch:</b> {{c1::Thứ trưởng Ngoại giao Nga}}",
+      "Back": "<b>Quan chức cấp cao</b> trong Bộ Ngoại giao Nga, phụ trách các vấn đề đối ngoại dưới quyền Bộ trưởng.",
+      "Audio": "러시아 외무차관",
+      "__guid__": "KoJ_/Ve1DV"
+    },
+    {
+      "Text": "타스통신과 인터뷰하다<br><br><b>Dịch:</b> {{c1::Phỏng vấn với hãng thông tấn TASS}}",
+      "Back": "Trả lời phỏng vấn của <b>TASS</b>, một trong những hãng thông tấn lớn và lâu đời nhất của Nga.",
+      "Audio": "타스통신과 인터뷰하다",
+      "__guid__": "qh#@fY3_`Y"
+    },
+    {
+      "Text": "살상 무기<br><br><b>Dịch:</b> {{c1::Vũ khí sát thương}}",
+      "Back": "Các loại vũ khí có khả năng <b>gây thương tích nặng hoặc gây tử vong</b> trực tiếp cho con người.",
+      "Audio": "살상 무기",
+      "__guid__": "qK^Y^G{uck"
+    },
+    {
+      "Text": "직간접적으로 공급하다<br><br><b>Dịch:</b> {{c1::Cung cấp trực tiếp hoặc gián tiếp}}",
+      "Back": "• <b>Trực tiếp:</b> Đưa vũ khí/hàng hóa thẳng từ nước này sang nước kia.<br>• <b>Gián tiếp:</b> Thông qua một nước thứ ba.",
+      "Audio": "직간접적으로 공급하다",
+      "__guid__": "JM;B5sjeJ<"
+    },
+    {
+      "Text": "용납할 수 없다<br><br><b>Dịch:</b> {{c1::Không thể chấp nhận}}",
+      "Back": "Thể hiện thái độ <b>kiên quyết phản đối</b>, không thể bỏ qua hoặc đồng tình.",
+      "Audio": "용납할 수 없다",
+      "__guid__": "mSwFiB_?au"
+    },
+    {
+      "Text": "경고를 무시하다<br><br><b>Dịch:</b> {{c1::Phớt lờ cảnh báo}}",
+      "Back": "Không để tâm, <b>không thực hiện theo</b> những gì đã được cảnh báo.",
+      "Audio": "경고를 무시하다",
+      "__guid__": "uH2/vRS54s"
+    },
+    {
+      "Text": "양국 관계<br><br><b>Dịch:</b> {{c1::Quan hệ song phương}}",
+      "Back": "Mối quan hệ <b>ngoại giao, chính trị, kinh tế...</b> giữa hai quốc gia.",
+      "Audio": "양국 관계",
+      "__guid__": "l5K0-:{&uC"
+    },
+    {
+      "Text": "심각한 타격을 입다<br><br><b>Dịch:</b> {{c1::Chịu tổn hại nghiêm trọng}}",
+      "Back": "Bị ảnh hưởng, thiệt hại nặng nề về <b>ngoại giao, kinh tế hoặc danh tiếng</b>.",
+      "Audio": "심각한 타격을 입다",
+      "__guid__": "ic7q>orX+c"
+    },
+    {
+      "Text": "보복 조치에 나서다<br><br><b>Dịch:</b> {{c1::Tiến hành biện pháp trả đũa}}",
+      "Back": "Thực hiện các hành động <b>đáp trả</b> nhằm gây thiệt hại cho đối phương.",
+      "Audio": "보복 조치에 나서다",
+      "__guid__": "yvSn:8}Mrv"
+    },
+    {
+      "Text": "압박하다<br><br><b>Dịch:</b> {{c1::Gây sức ép}}",
+      "Back": "Dùng quyền lực, đe dọa hoặc các biện pháp trừng phạt để <b>ép buộc đối phương</b> làm theo ý mình.",
+      "Audio": "압박하다",
+      "__guid__": "l^`k_JtMIg"
+    },
+    {
+      "Text": "그런 상황이 오지 않길 바란다<br><br><b>Dịch:</b> {{c1::Hy vọng tình huống đó không xảy ra}}",
+      "Back": "Thể hiện <b>mong muốn tránh khỏi</b> một viễn cảnh tồi tệ hoặc xung đột leo thang.",
+      "Audio": "그런 상황이 오지 않길 바란다",
+      "__guid__": "L%Ew2cI_8B"
+    },
+    {
+      "Text": "군사 지원 체계<br><br><b>Dịch:</b> {{c1::Hệ thống hỗ trợ quân sự}}",
+      "Back": "Mạng lưới, cơ chế hoặc quy trình cung cấp:<br>• <b>Vũ khí, đạn dược</b><br>• <b>Huấn luyện</b><br>• <b>Thông tin tình báo</b>",
+      "Audio": "군사 지원 체계",
+      "__guid__": "9>nZlh8]x"
+    },
+    {
+      "Text": "우선 지원 요구 목록 / PURL<br><br><b>Dịch:</b> {{c1::Danh sách yêu cầu hỗ trợ ưu tiên}}",
+      "Back": "Danh sách các loại <b>vũ khí, trang bị và vật tư quân sự</b> mà Ukraine đang cần gấp, do Ukraine lập ra.<br>Mỹ và đồng minh dùng làm <b>căn cứ để viện trợ</b>.",
+      "Audio": "우선 지원 요구 목록",
+      "__guid__": "QGAYvkkM_9"
+    },
+    {
+      "Text": "보복 대상<br><br><b>Dịch:</b> {{c1::Đối tượng trả đũa}}",
+      "Back": "Cá nhân, tổ chức hoặc quốc gia <b>bị nhắm tới</b> để thực hiện hành động đáp trả.",
+      "Audio": "보복 대상",
+      "__guid__": "y@A4-;tr-e"
+    },
+    {
+      "Text": "명시하다<br><br><b>Dịch:</b> {{c1::Nêu rõ / Chỉ rõ}}",
+      "Back": "Viết hoặc nói một cách <b>rõ ràng, cụ thể, không mập mờ</b> trong các văn bản hoặc phát ngôn.",
+      "Audio": "명시하다",
+      "__guid__": "v~sgYOe,w."
+    },
+    {
+      "Text": "정부가 진화에 나서다<br><br><b>Dịch:</b> {{c1::Chính phủ lên tiếng trấn an / xoa dịu}}",
+      "Back": "Hành động của chính phủ nhằm <b>làm dịu tình hình căng thẳng</b>, dập tắt dư luận tiêu cực.<br><i>(진화 nghĩa đen là <b>dập lửa</b>)</i>",
+      "Audio": "정부가 진화에 나서다",
+      "__guid__": "jcmV@X)AyX"
+    },
+    {
+      "Text": "외교부 당국자<br><br><b>Dịch:</b> {{c1::Quan chức Bộ Ngoại giao}}",
+      "Back": "Người nắm giữ chức vụ, có thẩm quyền <b>phát ngôn hoặc ra quyết định</b> trong Bộ Ngoại giao.",
+      "Audio": "외교부 당국자",
+      "__guid__": "A/ex6v@e?["
+    },
+    {
+      "Text": "정부 방침<br><br><b>Dịch:</b> {{c1::Chính sách của chính phủ}}",
+      "Back": "<b>Đường lối, phương hướng hoạt động</b> hoặc quy định do chính phủ đề ra.",
+      "Audio": "정부 방침",
+      "__guid__": "OO0:c_?Y`~"
+    },
+    {
+      "Text": "변화가 없다<br><br><b>Dịch:</b> {{c1::Không có thay đổi}}",
+      "Back": "Giữ nguyên <b>trạng thái, chính sách hoặc quan điểm</b> như cũ.",
+      "Audio": "변화가 없다",
+      "__guid__": "L.<y-.#]b="
+    },
+    {
+      "Text": "인도적 차원의 지원<br><br><b>Dịch:</b> {{c1::Hỗ trợ mang tính nhân đạo}}",
+      "Back": "Viện trợ nhằm mục đích <b>cứu trợ con người</b> (thuốc men, thực phẩm, y tế...).<br><i>Không liên quan đến quân sự.</i>",
+      "Audio": "인도적 차원의 지원",
+      "__guid__": "Hd9hM?FjcQ"
+    },
+    {
+      "Text": "지속하다<br><br><b>Dịch:</b> {{c1::Tiếp tục duy trì}}",
+      "Back": "Kéo dài một trạng thái, hành động nào đó, <b>không để bị gián đoạn</b>.",
+      "Audio": "지속하다",
+      "__guid__": "y!/!51F-*?"
+    },
+    {
+      "Text": "군사 협력<br><br><b>Dịch:</b> {{c1::Hợp tác quân sự}}",
+      "Back": "Việc hai hay nhiều quốc gia <b>cùng làm việc, hỗ trợ nhau</b> trong lĩnh vực quốc phòng.",
+      "Audio": "군사 협력",
+      "__guid__": "i{r4/k@y@>"
+    },
+    {
+      "Text": "안보리 결의<br><br><b>Dịch:</b> {{c1::Nghị quyết Hội đồng Bảo an}}",
+      "Back": "Quyết định chính thức do <b>Hội đồng Bảo an Liên Hợp Quốc</b> ban hành, mang tính <b>ràng buộc</b>.",
+      "Audio": "안보리 결의",
+      "__guid__": "IiBK5P&rMt"
+    },
+    {
+      "Text": "결의 위반<br><br><b>Dịch:</b> {{c1::Vi phạm nghị quyết}}",
+      "Back": "Hành động <b>không tuân thủ hoặc làm trái</b> với những điều đã được quy định trong nghị quyết của Liên Hợp Quốc.",
+      "Audio": "결의 위반",
+      "__guid__": "oN$M5o[8UQ"
+    },
+    {
+      "Text": "안보 위협<br><br><b>Dịch:</b> {{c1::Mối đe dọa an ninh}}",
+      "Back": "Các yếu tố, hành động gây <b>nguy hiểm đến sự an toàn, ổn định</b> của một quốc gia.",
+      "Audio": "안보 위협",
+      "__guid__": "oMu#>6[7;2"
+    },
+    {
+      "Text": "예의주시하다<br><br><b>Dịch:</b> {{c1::Theo dõi sát sao}}",
+      "Back": "Quan sát, chú ý một cách <b>cẩn thận, tỉ mỉ</b> diễn biến của một sự việc.",
+      "Audio": "예의주시하다",
+      "__guid__": "omj9QZoq=i"
+    },
+    {
+      "Text": "건물 구조 명칭<br><br><b>Dịch:</b> {{c1::Tên gọi cấu trúc tòa nhà}}",
+      "Back": "Các <b>thuật ngữ chuyên ngành</b> dùng để chỉ các bộ phận cấu tạo nên một công trình.",
+      "Audio": "건물 구조 명칭",
+      "__guid__": "pE>:4+(vhu"
+    },
+    {
+      "Text": "건물 용도<br><br><b>Dịch:</b> {{c1::Công năng / Mục đích sử dụng của tòa nhà}}",
+      "Back": "Mục đích thiết kế của công trình:<br>• <b>Nhà ở</b><br>• <b>Văn phòng</b><br>• <b>Thương mại</b>...",
+      "Audio": "건물 용도",
+      "__guid__": "ksgfkOyIUr"
+    },
+    {
+      "Text": "대청<br><br><b>Dịch:</b> {{c1::Sảnh lớn / Gian giữa}}",
+      "Back": "Không gian chính, <b>rộng rãi bằng sàn gỗ ở giữa</b> nhà Hanok truyền thống, dùng để sinh hoạt chung.",
+      "Audio": "대청",
+      "__guid__": "bYs|r/ekm/"
+    },
+    {
+      "Text": "쪽마루<br><br><b>Dịch:</b> {{c1::Hiên gỗ nhỏ}}",
+      "Back": "Dãy <b>hành lang bằng ván gỗ hẹp</b> gắn thêm ở mặt ngoài của căn phòng trong nhà truyền thống Hàn Quốc.",
+      "Audio": "쪽마루",
+      "__guid__": "z=?&Xw1oT%"
+    },
+    {
+      "Text": "처마<br><br><b>Dịch:</b> {{c1::Mái hiên}}",
+      "Back": "Phần rìa của mái nhà <b>nhô ra khỏi tường</b>, giúp che mưa che nắng.",
+      "Audio": "처마",
+      "__guid__": "C)|$x)`]fc"
+    },
+    {
+      "Text": "건축 재료<br><br><b>Dịch:</b> {{c1::Vật liệu kiến trúc / xây dựng}}",
+      "Back": "Các loại vật liệu dùng để xây dựng công trình:<br>• <b>Gỗ, đá</b><br>• <b>Thép, xi măng</b>...",
+      "Audio": "건축 재료",
+      "__guid__": "yU]sq*Bh$/"
+    },
+    {
+      "Text": "뼈대<br><br><b>Dịch:</b> {{c1::Khung xương / Kết cấu khung}}",
+      "Back": "Cấu trúc chịu lực chính của tòa nhà (<b>cột, dầm</b>).<br><i>Nghĩa bóng: <b>dàn ý, nền tảng</b>.</i>",
+      "Audio": "뼈대",
+      "__guid__": "Q?D<dr[iO1"
+    },
+    {
+      "Text": "우아하다<br><br><b>Dịch:</b> {{c1::Thanh lịch / Tao nhã}}",
+      "Back": "Vẻ đẹp <b>nhẹ nhàng, tinh tế</b> (thường miêu tả hình dáng, đường nét công trình kiến trúc).",
+      "Audio": "우아하다",
+      "__guid__": "bb)$sa5MMv"
+    },
+    {
+      "Text": "몸통<br><br><b>Dịch:</b> {{c1::Phần thân / Thân chính}}",
+      "Back": "<b>Phần không gian chính giữa</b> hoặc khối cấu trúc chính của công trình/sự vật.",
+      "Audio": "몸통",
+      "__guid__": "e5%#x!i8t+"
+    },
+    {
+      "Text": "몸통을 이루다<br><br><b>Dịch:</b> {{c1::Tạo nên phần thân / Cấu thành phần chính}}",
+      "Back": "Đóng vai trò là <b>thành phần cốt lõi</b>, tạo nên hình dáng chính.",
+      "Audio": "몸통을 이루다",
+      "__guid__": "uLi:Q/M8W*"
+    },
+    {
+      "Text": "곡선<br><br><b>Dịch:</b> {{c1::Đường cong}}",
+      "Back": "Đường nét <b>uốn lượn</b>, đặc trưng nổi bật trong thiết kế <b>mái nhà truyền thống Hàn Quốc</b>.",
+      "Audio": "곡선",
+      "__guid__": "ke6_P;=J;<"
+    },
+    {
+      "Text": "직선<br><br><b>Dịch:</b> {{c1::Đường thẳng}}",
+      "Back": "Đường nét <b>thẳng tắp, khỏe khoắn</b>, nét đặc trưng của nhiều <b>kiến trúc hiện đại</b>.",
+      "Audio": "직선",
+      "__guid__": "OL-3+XJkH:"
+    },
+    {
+      "Text": "돌로 만들어지다<br><br><b>Dịch:</b> {{c1::Được làm bằng đá}}",
+      "Back": "Sử dụng <b>đá</b> làm vật liệu chính để chế tác hoặc xây dựng.",
+      "Audio": "돌로 만들어지다",
+      "__guid__": "Ar<^UX1?cX"
+    },
+    {
+      "Text": "지붕을 뾰족하게 만들다<br><br><b>Dịch:</b> {{c1::Làm mái nhà chóp nhọn}}",
+      "Back": "Thiết kế phần mái có <b>hình dáng nhọn lên cao</b>.<br><i>Thường thấy ở kiến trúc <b>Gothic</b> hoặc vùng nhiều tuyết.</i>",
+      "Audio": "지붕을 뾰족하게 만들다",
+      "__guid__": "cH+?u5s;#i"
+    },
+    {
+      "Text": "건물의 기둥을 세우다<br><br><b>Dịch:</b> {{c1::Dựng cột nhà}}",
+      "Back": "Quá trình <b>đặt và cố định các cột trụ chịu lực</b>, bước quan trọng trong xây dựng truyền thống.",
+      "Audio": "건물의 기둥을 세우다",
+      "__guid__": "Nk8%Z,q(1O"
+    },
+    {
+      "Text": "원래 상태로 되돌리다<br><br><b>Dịch:</b> {{c1::Khôi phục / Trùng tu lại trạng thái ban đầu}}",
+      "Back": "Sửa chữa, phục dựng lại một công trình/vật phẩm về <b>đúng hình dáng, tình trạng vốn có</b>.",
+      "Audio": "원래 상태로 되돌리다",
+      "__guid__": "kErnY:O+fq"
+    },
+    {
+      "Text": "소실되다<br><br><b>Dịch:</b> {{c1::Bị thiêu rụi / Bị phá hủy}}",
+      "Back": "<b>Biến mất hoàn toàn</b> do hỏa hoạn, chiến tranh hoặc thiên tai.",
+      "Audio": "소실되다",
+      "__guid__": "m`AmgMyL|7"
+    },
+    {
+      "Text": "문화유산<br><br><b>Dịch:</b> {{c1::Di sản văn hóa}}",
+      "Back": "Những giá trị văn hóa do thế hệ trước để lại:<br>• <b>Vật thể:</b> Công trình, di vật<br>• <b>Phi vật thể:</b> Phong tục, nghệ thuật...",
+      "Audio": "문화유산",
+      "__guid__": "bGAY<sT;k6"
+    },
+    {
+      "Text": "문화 복합 시설<br><br><b>Dịch:</b> {{c1::Cơ sở phức hợp văn hóa}}",
+      "Back": "Tòa nhà hoặc khu vực <b>tích hợp nhiều không gian văn hóa</b>:<br>• Triển lãm<br>• Biểu diễn<br>• Thư viện...",
+      "Audio": "문화 복합 시설",
+      "__guid__": "IQ`.mY`R~a"
+    },
+    {
+      "Text": "건축 기술을 엿보다<br><br><b>Dịch:</b> {{c1::Có thể thấy / Hình dung được kỹ thuật kiến trúc}}",
+      "Back": "Thông qua công trình để <b>đánh giá trình độ kỹ thuật xây dựng</b> của thời kỳ đó.",
+      "Audio": "건축 기술을 엿보다",
+      "__guid__": "Aq<2YzE%~@"
+    },
+    {
+      "Text": "교량<br><br><b>Dịch:</b> {{c1::Cây cầu}}",
+      "Back": "Từ Hán Hàn chỉ các <b>công trình bắc qua sông, thung lũng</b>... cho phương tiện đi lại.<br><i>(Đồng nghĩa: <b>다리</b>)</i>",
+      "Audio": "교량",
+      "__guid__": "H~OhJ7kQP5"
+    },
+    {
+      "Text": "절벽 위의 교량<br><br><b>Dịch:</b> {{c1::Cây cầu trên vách đá}}",
+      "Back": "Cầu được xây dựng <b>kết nối giữa các vách núi dựng đứng</b>, đòi hỏi kỹ thuật cao.",
+      "Audio": "절벽 위의 교량",
+      "__guid__": "u}euJs_)VR"
+    },
+    {
+      "Text": "18세기<br><br><b>Dịch:</b> {{c1::Thế kỷ 18}}",
+      "Back": "Khoảng thời gian từ năm <b>1701 đến năm 1800</b>.",
+      "Audio": "18세기",
+      "__guid__": "P945p^IlkZ"
+    },
+    {
+      "Text": "경복궁<br><br><b>Dịch:</b> {{c1::Cảnh Phúc Cung}}",
+      "Back": "<b>Cung điện chính lớn nhất</b>, trung tâm chính trị của triều Joseon.<br><br><i>5대 고궁 số 1</i>",
+      "Audio": "경복궁",
+      "__guid__": "nj?!QP!j]X"
+    },
+    {
+      "Text": "창덕궁<br><br><b>Dịch:</b> {{c1::Xương Đức Cung}}",
+      "Back": "Cung điện <b>bảo tồn tốt nhất</b>, nổi tiếng với <b>Hậu viên (Huwon)</b>.<br>Là <b>Di sản Thế giới UNESCO</b>.<br><br><i>5대 고궁 số 2</i>",
+      "Audio": "창덕궁",
+      "__guid__": "F5Yi>Ep=ao"
+    },
+    {
+      "Text": "창경궁<br><br><b>Dịch:</b> {{c1::Xương Khánh Cung}}",
+      "Back": "Cung điện chủ yếu dành cho <b>thái hậu, vương hậu và thành viên hoàng tộc</b> sinh sống.<br><br><i>5대 고궁 số 3</i>",
+      "Audio": "창경궁",
+      "__guid__": "g])|1#In8R"
+    },
+    {
+      "Text": "덕수궁<br><br><b>Dịch:</b> {{c1::Đức Thọ Cung}}",
+      "Back": "Cung điện duy nhất có sự kết hợp độc đáo giữa:<br>• <b>Kiến trúc truyền thống Hàn Quốc</b><br>• <b>Tòa nhà phong cách phương Tây</b><br><br><i>5대 고궁 số 4</i>",
+      "Audio": "덕수궁",
+      "__guid__": "fMZnf@D|pU"
+    },
+    {
+      "Text": "경희궁<br><br><b>Dịch:</b> {{c1::Khánh Hy Cung}}",
+      "Back": "<b>Cung điện phụ (ly cung)</b> nằm ở phía Tây, thường dùng làm nơi <b>lánh nạn cho vua</b> trong tình huống khẩn cấp.<br><br><i>5대 고궁 số 5</i>",
+      "Audio": "경희궁",
+      "__guid__": "myC=8Z?16#"
+    },
+    {
+      "Text": "내적 타당성<br><br><b>Dịch:</b> {{c1::Tính giá trị nội tại (Internal validity)}}",
+      "Back": "Mức độ tin cậy để kết luận rằng <b>biến độc lập thực sự gây ra sự thay đổi</b> ở biến phụ thuộc trong thí nghiệm.",
+      "Audio": "내적 타당성",
+      "__guid__": "w/d5%w4Xus"
+    },
+    {
+      "Text": "외적 타당성<br><br><b>Dịch:</b> {{c1::Tính giá trị ngoại tại (External validity)}}",
+      "Back": "Mức độ mà <b>kết quả nghiên cứu có thể được áp dụng/mở rộng</b> ra ngoài thực tế (cho các nhóm người, môi trường khác).",
+      "Audio": "외적 타당성",
+      "__guid__": "HLxbLcyN}R"
+    },
+    {
+      "Text": "계획이 정적이다<br><br><b>Dịch:</b> {{c1::Kế hoạch mang tính tĩnh / kém linh hoạt}}",
+      "Back": "Kế hoạch <b>cứng nhắc, cố định</b>, ít có khả năng thay đổi hoặc điều chỉnh theo tình hình thực tế.",
+      "Audio": "계획이 정적이다",
+      "__guid__": "cSyX`,YfR8"
+    },
+    {
+      "Text": "제약<br><br><b>Dịch:</b> {{c1::Hạn chế / Rào cản}}",
+      "Back": "Những điều kiện, quy định hoặc yếu tố <b>cản trở, giới hạn</b> phạm vi hoạt động.",
+      "Audio": "제약",
+      "__guid__": "dxCQ?)}PUA"
+    },
+    {
+      "Text": "특허<br><br><b>Dịch:</b> {{c1::Bằng sáng chế}}",
+      "Back": "<b>Quyền độc quyền</b> do nhà nước cấp cho nhà sáng chế đối với một phát minh trong <b>thời gian nhất định</b>.",
+      "Audio": "특허",
+      "__guid__": "Ms$+Vv}#d6"
+    },
+    {
+      "Text": "광물<br><br><b>Dịch:</b> {{c1::Khoáng sản}}",
+      "Back": "<b>Tài nguyên thiên nhiên</b> có nguồn gốc từ vỏ Trái Đất.<br><i>Ví dụ: than, quặng sắt, vàng...</i>",
+      "Audio": "광물",
+      "__guid__": "D16SPD!]U&"
+    },
+    {
+      "Text": "채굴권<br><br><b>Dịch:</b> {{c1::Quyền khai thác}}",
+      "Back": "<b>Quyền hợp pháp</b> được cấp phép để tiến hành đào, khai thác tài nguyên dưới lòng đất.",
+      "Audio": "채굴권",
+      "__guid__": "z^,&UL|11H"
+    },
+    {
+      "Text": "광물 채굴권<br><br><b>Dịch:</b> {{c1::Quyền khai thác khoáng sản}}",
+      "Back": "Giấy phép đặc thù cho phép <b>khai thác khoáng sản</b> tại một khu vực nhất định.",
+      "Audio": "광물 채굴권",
+      "__guid__": "rr4Msv8XE0"
+    },
+    {
+      "Text": "학위 취득이 엄격하다<br><br><b>Dịch:</b> {{c1::Việc lấy bằng cấp rất khắt khe}}",
+      "Back": "Quá trình học tập, thi cử để đạt học vị đòi hỏi <b>tiêu chuẩn cao và đánh giá nghiêm ngặt</b>.<br><i>Ví dụ: cử nhân, thạc sĩ, tiến sĩ...</i>",
+      "Audio": "학위 취득이 엄격하다",
+      "__guid__": "C>SH#2WjK5"
+    },
+    {
+      "Text": "춘권<br><br><b>Dịch:</b> {{c1::Chả ram / Nem rán (Spring roll)}}",
+      "Back": "Món ăn gồm <b>nhân thịt, tôm, rau</b> cuốn trong lớp vỏ mỏng rồi <b>chiên giòn</b>.<br><i>Nguồn gốc từ ẩm thực <b>Trung Hoa</b>.</i>",
+      "Audio": "춘권",
+      "__guid__": "vC4vmR(_F4"
+    },
+    {
+      "Text": "기찻길<br><br><b>Dịch:</b> {{c1::Đường sắt / Đường ray}}",
+      "Back": "Tuyến đường <b>chuyên dụng lắp đặt đường ray</b> cho tàu hỏa chạy.",
+      "Audio": "기찻길",
+      "__guid__": "r8S>dGOnda"
+    },
+    {
+      "Text": "한복판 / 한가운데에<br><br><b>Dịch:</b> {{c1::Ngay chính giữa / Trung tâm}}",
+      "Back": "Vị trí nằm ở <b>tâm điểm, chính giữa lòng</b> một không gian, khu vực hoặc sự kiện.",
+      "Audio": "한복판",
+      "__guid__": "q*??i3s.Az"
+    },
+    {
+      "Text": "콧구멍<br><br><b>Dịch:</b> {{c1::Lỗ mũi}}",
+      "Back": "Hai lỗ trên mũi dùng để <b>hít thở</b>.<br><i>(Lưu ý chính tả: <b>콧구멍</b>, không phải 코구멍)</i>",
+      "Audio": "콧구멍",
+      "__guid__": "gQ[U5TX:*l"
+    },
+    {
+      "Text": "콧구멍 다리<br><br><b>Dịch:</b> {{c1::Cầu lỗ mũi}}",
+      "Back": "Tên gọi dân gian của <b>cầu ngầm (세월교)</b> có các cống thoát nước hình tròn san sát trông giống lỗ mũi.<br><i>Ví dụ nổi tiếng: cầu ở hồ <b>Soyanggang, Chuncheon</b>.</i>",
+      "Audio": "콧구멍 다리",
+      "__guid__": "G#*lIkF_C{"
+    },
+    {
+      "Text": "소양강<br><br><b>Dịch:</b> {{c1::Sông Soyang}}",
+      "Back": "Một <b>dòng sông lớn</b> chảy qua khu vực tỉnh Gangwon, nổi tiếng với <b>đập Soyanggang</b>.",
+      "Audio": "소양강",
+      "__guid__": "2$phq?${|"
+    },
+    {
+      "Text": "무지개 색깔<br><br><b>Dịch:</b> {{c1::Màu cầu vồng}}",
+      "Back": "Tập hợp các màu sắc sặc sỡ:<br><b>Đỏ - Cam - Vàng - Lục - Lam - Chàm - Tím</b>",
+      "Audio": "무지개 색깔",
+      "__guid__": "LAiYz_t[ig"
+    },
+    {
+      "Text": "분수 공연<br><br><b>Dịch:</b> {{c1::Biểu diễn nhạc nước / Đài phun nước}}",
+      "Back": "Màn trình diễn giải trí kết hợp giữa <b>nước, ánh sáng và âm nhạc</b>.",
+      "Audio": "분수 공연",
+      "__guid__": "j<q9hCM:Nu"
+    },
+    {
+      "Text": "장식이 정교하다<br><br><b>Dịch:</b> {{c1::Trang trí tinh xảo}}",
+      "Back": "Các chi tiết hoa văn, họa tiết được làm một cách <b>tỉ mỉ, kỹ lưỡng</b> và đạt độ thẩm mỹ rất cao.",
+      "Audio": "장식이 정교하다",
+      "__guid__": "q14k1RGfm1"
+    },
+    {
+      "Text": "수공예품<br><br><b>Dịch:</b> {{c1::Đồ thủ công mỹ nghệ}}",
+      "Back": "Các sản phẩm được làm <b>hoàn toàn bằng tay</b>, đòi hỏi kỹ năng điêu luyện và mang đậm <b>dấu ấn văn hóa</b>.",
+      "Audio": "수공예품",
+      "__guid__": "rZQagz/>33"
+    },
+    {
+      "Text": "정동진<br><br><b>Dịch:</b> {{c1::Jeongdongjin}}",
+      "Back": "Ga tàu và khu vực ven biển nổi tiếng ở <b>Gangneung</b>, được biết đến là điểm <b>ngắm bình minh tuyệt đẹp</b>.",
+      "Audio": "정동진",
+      "__guid__": "H+-9Gpgkgr"
+    },
+    {
+      "Text": "일출<br><br><b>Dịch:</b> {{c1::Bình minh / Mặt trời mọc}}",
+      "Back": "Hiện tượng <b>mặt trời bắt đầu nhô lên</b> khỏi đường chân trời.",
+      "Audio": "일출",
+      "__guid__": "Dbtd*!Udg-"
+    }
+  ],
+  "timestamp": "2026-04-10T19:07:08"
+}

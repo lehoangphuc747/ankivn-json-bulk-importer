@@ -1,0 +1,2712 @@
+{
+  "note_type": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+  "deck": "Bulk Card Creator",
+  "match_field": null,
+  "created": 150,
+  "updated": 0,
+  "warnings": [],
+  "write_guid_backfill": true,
+  "cards": [
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-001",
+      "word": "엽서",
+      "meaning": "bưu thiếp",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Tấm thiệp mỏng có in hình, không cần bỏ phong bì. Thường gửi lời chào ngắn khi đi du lịch.",
+      "example": "여행지에서 친구에게 <b>엽서</b>를 써요.",
+      "example_translated": "Tôi viết <b>bưu thiếp</b> cho bạn ở nơi du lịch.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "hA~x(NTf=-"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-002",
+      "word": "보내다",
+      "meaning": "gửi",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Động từ chung, nghĩa rộng — dùng cho mọi thứ gửi đi: thư, bưu kiện, email, tin nhắn...",
+      "example": "저는 가족에게 편지를 <b>보내요</b>.",
+      "example_translated": "Tôi <b>gửi</b> thư cho gia đình.",
+      "collocation": "",
+      "synonym": "부치다 (gửi qua bưu điện)",
+      "antonym": "받다 (nhận)",
+      "__guid__": "L[duLX4i9C"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-003",
+      "word": "부치다",
+      "meaning": "gửi (qua bưu điện)",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Nghĩa hẹp hơn 보내다 — chỉ dùng khi mang ra bưu điện để gửi đồ.",
+      "example": "저는 우체국에서 소포를 <b>부쳐요</b>.",
+      "example_translated": "Tôi <b>gửi</b> bưu kiện ở bưu điện.",
+      "collocation": "",
+      "synonym": "보내다 (gửi - nghĩa rộng)",
+      "antonym": "받다 (nhận)",
+      "__guid__": "yR=v>F^/DC"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-004",
+      "word": "엽서를 보내다",
+      "meaning": "gửi bưu thiếp",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 를 + Động từ\" — hành động gửi bưu thiếp cho ai đó.",
+      "example": "제주도에서 부모님께 <b>엽서를 보내요</b>.",
+      "example_translated": "Tôi <b>gửi bưu thiếp</b> cho bố mẹ từ Jeju.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "kv(Z>!Mj8o"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-005",
+      "word": "엽서를 부치다",
+      "meaning": "gửi bưu thiếp (qua bưu điện)",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 를 + Động từ\" — nhấn mạnh việc gửi qua dịch vụ bưu điện.",
+      "example": "오늘 우체국에서 <b>엽서를 부쳐요</b>.",
+      "example_translated": "Hôm nay tôi <b>gửi bưu thiếp</b> ở bưu điện.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Cl,#E$4)m+"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-006",
+      "word": "소포",
+      "meaning": "bưu kiện",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Gói hàng được đóng gói để gửi qua bưu điện (khác với thư mỏng).",
+      "example": "엄마가 저에게 <b>소포</b>를 보내요.",
+      "example_translated": "Mẹ gửi cho tôi một <b>bưu kiện</b>.",
+      "collocation": "",
+      "synonym": "택배 (hàng giao)",
+      "antonym": "",
+      "__guid__": "m&g:dpvIe6"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-007",
+      "word": "소포를 보내다",
+      "meaning": "gửi bưu kiện",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 를 + Động từ\" — hành động gửi gói hàng đi.",
+      "example": "저는 고향에 <b>소포를 보내요</b>.",
+      "example_translated": "Tôi <b>gửi bưu kiện</b> về quê.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "CH(`k^`^S{"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-008",
+      "word": "소포를 부치다",
+      "meaning": "gửi bưu kiện (qua bưu điện)",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 를 + Động từ\" — nhấn mạnh ra bưu điện để gửi.",
+      "example": "내일 우체국에서 <b>소포를 부쳐요</b>.",
+      "example_translated": "Ngày mai tôi <b>gửi bưu kiện</b> ở bưu điện.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "LVWXo:a2+`"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-009",
+      "word": "편지",
+      "meaning": "thư",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Lời nhắn được viết ra giấy, cho vào phong bì để gửi đi.",
+      "example": "친구가 저에게 긴 <b>편지</b>를 써요.",
+      "example_translated": "Bạn viết cho tôi một lá <b>thư</b> dài.",
+      "collocation": "편지를 쓰다 (viết thư), 편지를 보내다 (gửi thư)",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "B;4hgC$Z>^"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-010",
+      "word": "쓰다",
+      "meaning": "viết",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Dùng cho hành động viết chữ lên giấy, vở, bảng...",
+      "example": "저는 공책에 이름을 <b>써요</b>.",
+      "example_translated": "Tôi <b>viết</b> tên vào vở.",
+      "collocation": "",
+      "synonym": "적다 (ghi - ngắn gọn hơn)",
+      "antonym": "지우다 (xóa)",
+      "__guid__": "A&<0.OL/5G"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-011",
+      "word": "편지를 쓰다",
+      "meaning": "viết thư",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 를 + Động từ\" — hành động viết nội dung lá thư.",
+      "example": "저는 어머니께 <b>편지를 써요</b>.",
+      "example_translated": "Tôi <b>viết thư</b> cho mẹ.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "J-S0]n?_K$"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-012",
+      "word": "편지를 보내다",
+      "meaning": "gửi thư",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 를 + Động từ\" — hành động gửi lá thư đi.",
+      "example": "저는 친구에게 <b>편지를 보내요</b>.",
+      "example_translated": "Tôi <b>gửi thư</b> cho bạn.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "EZzjm2(,9<"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-013",
+      "word": "카드",
+      "meaning": "card, thiệp",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Thiệp có hình in sẵn, dùng để chúc mừng sinh nhật, Giáng Sinh, năm mới...",
+      "example": "동생에게 생일 <b>카드</b>를 줘요.",
+      "example_translated": "Tôi tặng <b>thiệp</b> sinh nhật cho em.",
+      "collocation": "생일 카드 (thiệp sinh nhật), 크리스마스 카드 (thiệp Giáng Sinh)",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Pi9G1d:i@L"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-014",
+      "word": "만들다",
+      "meaning": "làm, tạo",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Dùng khi tự tay tạo ra một sản phẩm (đồ ăn, đồ thủ công, bánh...).",
+      "example": "저는 주말에 빵을 <b>만들어요</b>.",
+      "example_translated": "Cuối tuần tôi <b>làm</b> bánh mì.",
+      "collocation": "",
+      "synonym": "제작하다 (chế tạo)",
+      "antonym": "",
+      "__guid__": "MX`1}0}bap"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-015",
+      "word": "카드를 만들다",
+      "meaning": "làm thiệp",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 를 + Động từ\" — tự tay làm thiệp thay vì mua.",
+      "example": "저는 친구에게 줄 <b>카드를 만들어요</b>.",
+      "example_translated": "Tôi <b>làm thiệp</b> để tặng bạn.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "xMiwv&kqN}"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-016",
+      "word": "서류",
+      "meaning": "hồ sơ, tài liệu",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Giấy tờ chính thức dùng cho công việc, học hành, thủ tục.",
+      "example": "저는 취직 <b>서류</b>를 준비해요.",
+      "example_translated": "Tôi chuẩn bị <b>hồ sơ</b> xin việc.",
+      "collocation": "취직 서류 (hồ sơ xin việc), 입학 서류 (hồ sơ nhập học)",
+      "synonym": "문서 (văn bản)",
+      "antonym": "",
+      "__guid__": "sP+42EO7bB"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-017",
+      "word": "서류를 보내다",
+      "meaning": "gửi hồ sơ",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 를 + Động từ\" — gửi giấy tờ quan trọng tới công ty, trường...",
+      "example": "저는 회사에 <b>서류를 보내요</b>.",
+      "example_translated": "Tôi <b>gửi hồ sơ</b> cho công ty.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "xnaNW.H$<8"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-018",
+      "word": "답장",
+      "meaning": "thư trả lời",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Thư/tin nhắn viết để hồi đáp thư đã nhận.",
+      "example": "저는 친구의 <b>답장</b>을 기다려요.",
+      "example_translated": "Tôi đang chờ <b>thư trả lời</b> của bạn.",
+      "collocation": "답장을 쓰다 (viết thư trả lời)",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "cX,zVW#sMG"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-019",
+      "word": "답장을 쓰다",
+      "meaning": "viết thư trả lời",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 를 + Động từ\" — viết nội dung hồi đáp lại.",
+      "example": "저는 선생님께 <b>답장을 써요</b>.",
+      "example_translated": "Tôi <b>viết thư trả lời</b> thầy cô.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "q85%E]o^vm"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-020",
+      "word": "우표",
+      "meaning": "tem",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Con tem nhỏ dán lên phong bì — là bằng chứng đã trả phí bưu điện.",
+      "example": "이 봉투에 <b>우표</b>가 있어요.",
+      "example_translated": "Phong bì này có <b>tem</b>.",
+      "collocation": "우표를 붙이다 (dán tem)",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "DJA8IdG1@="
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-021",
+      "word": "붙이다",
+      "meaning": "dán",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Gắn vật (giấy, tem, sticker...) lên bề mặt khác.",
+      "example": "저는 벽에 가족 사진을 <b>붙여요</b>.",
+      "example_translated": "Tôi <b>dán</b> ảnh gia đình lên tường.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "떼다 (gỡ ra)",
+      "__guid__": "HB(A2hkY|<"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-022",
+      "word": "우표를 붙이다",
+      "meaning": "dán tem",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 를 + Động từ\" — dán tem trước khi gửi thư.",
+      "example": "편지를 보내기 전에 <b>우표를 붙여요</b>.",
+      "example_translated": "Tôi <b>dán tem</b> trước khi gửi thư.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "wn90D6!t6u"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-023",
+      "word": "봉투",
+      "meaning": "phong bì",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Bao giấy dùng để bỏ thư, tài liệu vào trước khi gửi.",
+      "example": "<b>봉투</b> 안에 편지가 있어요.",
+      "example_translated": "Trong <b>phong bì</b> có thư.",
+      "collocation": "봉투에 넣다 (bỏ vào phong bì)",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "b=``+/X3Fz"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-024",
+      "word": "넣다",
+      "meaning": "cho vào, bỏ vào",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Đặt một vật vào bên trong một vật khác (túi, hộp, cặp...).",
+      "example": "저는 가방에 책을 <b>넣어요</b>.",
+      "example_translated": "Tôi <b>bỏ</b> sách vào cặp.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "빼다 (lấy ra), 꺼내다 (lấy ra)",
+      "__guid__": "OrhL}%$re8"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-025",
+      "word": "봉투에 우표를 붙이다",
+      "meaning": "dán tem lên phong bì",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 에 + Danh từ + 를 + Động từ\" — 에 chỉ vị trí dán.",
+      "example": "저는 <b>봉투에 우표를 붙여요</b>.",
+      "example_translated": "Tôi <b>dán tem lên phong bì</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "wZJ_M]-bDV"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-026",
+      "word": "봉투에 편지를 넣다",
+      "meaning": "cho thư vào phong bì",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 에 + Danh từ + 를 + Động từ\" — 에 chỉ nơi bỏ vào là bên trong.",
+      "example": "저는 <b>봉투에 편지를 넣어요</b>.",
+      "example_translated": "Tôi <b>cho thư vào phong bì</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Fp4xNmOA|S"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-027",
+      "word": "주소",
+      "meaning": "địa chỉ",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Nơi sống ghi đầy đủ (tỉnh, quận, tòa, phòng...), để gửi thư đến đúng chỗ.",
+      "example": "저는 종이에 <b>주소</b>를 적어요.",
+      "example_translated": "Tôi ghi <b>địa chỉ</b> lên tờ giấy.",
+      "collocation": "주소를 쓰다 (viết địa chỉ), 주소를 적다 (ghi địa chỉ)",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "kf<L.UoUF%"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-028",
+      "word": "주소를 쓰다",
+      "meaning": "viết địa chỉ",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 를 + Động từ\" — viết địa chỉ người nhận.",
+      "example": "저는 봉투에 <b>주소를 써요</b>.",
+      "example_translated": "Tôi <b>viết địa chỉ</b> lên phong bì.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "J;IqcyuD)A"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-029",
+      "word": "우편번호",
+      "meaning": "mã bưu chính",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Dãy số đại diện cho khu vực bưu điện, giúp thư được giao đúng chỗ nhanh hơn.<br>• 우편 = bưu chính + 번호 = số.",
+      "example": "저는 이 동네 <b>우편번호</b>를 알아요.",
+      "example_translated": "Tôi biết <b>mã bưu chính</b> của khu này.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "sr6$3-a~n5"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-030",
+      "word": "적다",
+      "meaning": "ghi",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Dùng khi ghi thông tin ngắn như số, tên, ngày — gọn và nhanh hơn 쓰다.",
+      "example": "저는 이름과 전화번호를 <b>적어요</b>.",
+      "example_translated": "Tôi <b>ghi</b> tên và số điện thoại.",
+      "collocation": "",
+      "synonym": "쓰다 (viết)",
+      "antonym": "지우다 (xóa)",
+      "__guid__": "C<J|*Z`r*P"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-031",
+      "word": "우편번호를 적다",
+      "meaning": "ghi mã bưu chính",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 를 + Động từ\" — ghi dãy số bưu chính lên bì thư.",
+      "example": "저는 봉투에 <b>우편번호를 적어요</b>.",
+      "example_translated": "Tôi <b>ghi mã bưu chính</b> lên phong bì.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "xYjAHO+Lt:"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-032",
+      "word": "귀하",
+      "meaning": "kính gửi",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Từ kính trọng đặt sau tên/chức danh người nhận trong thư, văn bản trang trọng.<br>• Tương đương \"Kính gửi Ông/Bà...\".",
+      "example": "봉투에 '김민수 <b>귀하</b>'를 적어요.",
+      "example_translated": "Tôi ghi \"<b>Kính gửi</b> Kim Minsu\" lên phong bì.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "GrDZHPpY;a"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-033",
+      "word": "홍길동 귀하",
+      "meaning": "Kính gửi ông Hồng Gildong",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Tên người nhận + 귀하\" — dùng ghi ở đầu thư hoặc trên phong bì trang trọng.",
+      "example": "저는 봉투에 '<b>홍길동 귀하</b>'를 써요.",
+      "example_translated": "Tôi viết \"<b>Kính gửi Hồng Gildong</b>\" lên phong bì.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "u31O[hqLEa"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-034",
+      "word": "최정우 귀하",
+      "meaning": "Kính gửi ông Choi Jung-woo",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Tên người nhận + 귀하\" — mẫu giống trên, chỉ thay tên.",
+      "example": "봉투 위에 '<b>최정우 귀하</b>'를 적어요.",
+      "example_translated": "Tôi ghi \"<b>Kính gửi Choi Jung-woo</b>\" lên phong bì.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "t]hfqpY:^0"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-035",
+      "word": "올림 / 드림",
+      "meaning": "kính thư",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Hai từ đứng cuối thư sau tên người viết, thể hiện khiêm nhường.<br>• 올림 trang trọng hơn 드림.",
+      "example": "저는 편지 끝에 '김민준 <b>올림</b>'을 써요.",
+      "example_translated": "Tôi viết \"Kim Minjun <b>kính thư</b>\" ở cuối thư.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "sg*L&-6nvr"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-036",
+      "word": "김민준 올림 / 드림",
+      "meaning": "Kính thư, Kim Minjun",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Tên người viết + 올림/드림\" — ký tên ở cuối thư trang trọng.",
+      "example": "편지 마지막에 '<b>김민준 올림</b>'을 적어요.",
+      "example_translated": "Ở cuối thư tôi ghi \"<b>Kim Minjun kính thư</b>\".",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "x3IMqd~i0N"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-037",
+      "word": "2동 701호",
+      "meaning": "Tòa số 2 phòng 701",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Cách viết địa chỉ chung cư ở Hàn Quốc.<br>• 동 = tòa nhà + 호 = phòng.",
+      "example": "저는 <b>2동 701호</b>에 살아요.",
+      "example_translated": "Tôi sống ở <b>phòng 701 tòa số 2</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "M&,Ql=nK(!"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::1. Chuẩn bị thư từ & đóng gói",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::1_Chuẩn_bị_thư_từ_đóng_gói"
+      ],
+      "id": "THTH-02-Bài-05-038",
+      "word": "209동 330호",
+      "meaning": "Tòa số 209 phòng 330",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Giống trên, dùng cho khu chung cư lớn có nhiều tòa nhà.<br>• 동 = tòa + 호 = phòng.",
+      "example": "친구가 <b>209동 330호</b>에 살아요.",
+      "example_translated": "Bạn tôi sống ở <b>phòng 330 tòa số 209</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "baJ<B4f)B/"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-039",
+      "word": "빠른우편",
+      "meaning": "chuyển phát nhanh",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Dịch vụ ưu tiên giao thư/đồ nhanh hơn thư thường.<br>• 빠르다 = nhanh + 우편 = bưu chính.",
+      "example": "저는 <b>빠른우편</b>으로 서류를 보내요.",
+      "example_translated": "Tôi gửi hồ sơ bằng <b>chuyển phát nhanh</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "봉투우편 (thư thường)",
+      "__guid__": "A_>rh$,!Z."
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-040",
+      "word": "빠른우편으로 보내다",
+      "meaning": "gửi bằng chuyển phát nhanh",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 으로 + Động từ\" — trợ từ 으로 chỉ phương tiện, cách thức.",
+      "example": "급해서 <b>빠른우편으로 보내요</b>.",
+      "example_translated": "Vì gấp nên tôi <b>gửi bằng chuyển phát nhanh</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "v&8DeEP6./"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-041",
+      "word": "등기",
+      "meaning": "thư bảo đảm",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Loại thư có ghi nhận — người nhận phải ký xác nhận khi nhận, an toàn hơn thư thường.",
+      "example": "<b>등기</b>는 안전하지만 조금 비싸요.",
+      "example_translated": "<b>Thư bảo đảm</b> thì an toàn nhưng hơi đắt.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "K6l^LJKw&m"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-042",
+      "word": "등기로 보내다",
+      "meaning": "gửi bằng thư bảo đảm",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 로 + Động từ\" — 로 dùng khi danh từ kết thúc bằng nguyên âm hoặc ㄹ.",
+      "example": "중요한 서류를 <b>등기로 보내요</b>.",
+      "example_translated": "Tôi <b>gửi</b> tài liệu quan trọng <b>bằng thư bảo đảm</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "cJf>.I9Ze,"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-043",
+      "word": "항공편",
+      "meaning": "đường hàng không",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Phương thức vận chuyển bằng máy bay — nhanh nhưng cước cao.<br>• 항공 = hàng không + 편 = chuyến, phương tiện.",
+      "example": "<b>항공편</b>은 빠르지만 비싸요.",
+      "example_translated": "<b>Đường hàng không</b> nhanh nhưng đắt.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "배편 (đường thủy)",
+      "__guid__": "A7N(AE0@+h"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-044",
+      "word": "항공편으로 소포를 보내다",
+      "meaning": "gửi bưu kiện bằng đường hàng không",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 으로 + Danh từ + 를 + Động từ\" — kết hợp phương tiện với đồ vật được gửi.",
+      "example": "저는 베트남으로 <b>항공편으로 소포를 보내요</b>.",
+      "example_translated": "Tôi <b>gửi bưu kiện</b> đi Việt Nam <b>bằng đường hàng không</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "IL,2<V-gY|"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-045",
+      "word": "항공편으로 보내다",
+      "meaning": "gửi bằng đường hàng không",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 으로 + Động từ\" — nhấn mạnh cách gửi bằng máy bay.",
+      "example": "급한 서류는 <b>항공편으로 보내요</b>.",
+      "example_translated": "Tài liệu gấp thì tôi <b>gửi bằng đường hàng không</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "배편으로 보내다 (gửi đường thủy)",
+      "__guid__": "L|UIu%qntk"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-046",
+      "word": "배편",
+      "meaning": "đường thủy, tàu thủy",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Phương thức vận chuyển bằng tàu biển — chậm nhưng rẻ.<br>• 배 = tàu + 편 = chuyến.",
+      "example": "<b>배편</b>은 느리지만 싸요.",
+      "example_translated": "<b>Đường thủy</b> chậm nhưng rẻ.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "항공편 (đường hàng không)",
+      "__guid__": "Dq/B#D{CzA"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-047",
+      "word": "배편으로 보내다",
+      "meaning": "gửi bằng đường thủy",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 으로 + Động từ\" — cách gửi bằng tàu biển, tốn thời gian nhưng tiết kiệm tiền.",
+      "example": "무거운 짐은 <b>배편으로 보내요</b>.",
+      "example_translated": "Hành lý nặng thì tôi <b>gửi bằng đường thủy</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "항공편으로 보내다 (gửi đường hàng không)",
+      "__guid__": "P//:!}G(.s"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-048",
+      "word": "배편이 싸다",
+      "meaning": "gửi đường thủy rẻ",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 이/가 + Tính từ\" — so sánh giá cước giữa các phương thức.",
+      "example": "항공편보다 <b>배편이 싸요</b>.",
+      "example_translated": "<b>Đường thủy rẻ</b> hơn hàng không.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "qg&Hmh$G.i"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-049",
+      "word": "봉투우편",
+      "meaning": "thư gửi phong bì thường",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Thư được bỏ trong phong bì, dán tem rồi gửi — cách gửi cơ bản nhất và rẻ nhất.<br>• 봉투 = phong bì + 우편 = bưu chính.",
+      "example": "<b>봉투우편</b>은 제일 싸요.",
+      "example_translated": "<b>Thư phong bì thường</b> là rẻ nhất.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "빠른우편 (chuyển phát nhanh)",
+      "__guid__": "A*OEZV&?0P"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-050",
+      "word": "우체국 택배",
+      "meaning": "dịch vụ chuyển phát nhanh bưu điện",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Dịch vụ giao hàng tận nơi của bưu điện Hàn Quốc.<br>• 우체국 = bưu điện + 택배 = giao hàng tận nhà.",
+      "example": "저는 <b>우체국 택배</b>를 자주 이용해요.",
+      "example_translated": "Tôi thường dùng <b>dịch vụ chuyển phát nhanh bưu điện</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "u#1jX#[_)c"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-051",
+      "word": "무게를 재다",
+      "meaning": "cân (đo trọng lượng)",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 를 + Động từ\" (무게 = trọng lượng, 재다 = đo).<br>• Dùng khi cân đồ vật, hành lý, thức ăn.",
+      "example": "우체국에서 소포 <b>무게를 재요</b>.",
+      "example_translated": "Tôi <b>cân</b> bưu kiện ở bưu điện.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "s3k`=.*}69"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-052",
+      "word": "정확한 무게를 알다",
+      "meaning": "biết chính xác trọng lượng",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• Định ngữ + \"Danh từ + 를 + Động từ\".<br>• 정확하다 = chính xác → 정확한 = \"chính xác\" bổ nghĩa cho danh từ.",
+      "example": "재 보면 <b>정확한 무게를 알아요</b>.",
+      "example_translated": "Cân thử thì <b>biết chính xác trọng lượng</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "G1{_M:H=dR"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-053",
+      "word": "2kg에 4000원",
+      "meaning": "4000 won cho 2kg",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Số lượng + 에 + Giá tiền\" — cách nói giá tính theo khối lượng.",
+      "example": "요금은 <b>2kg에 4000원</b>이에요.",
+      "example_translated": "Cước phí là <b>4000 won cho 2kg</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "hF@6]Y%,>U"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-054",
+      "word": "6주 정도",
+      "meaning": "khoảng 6 tuần",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Cụm chỉ thời gian ước lượng (6주 = 6 tuần + 정도 = khoảng).<br>• Dùng khi không biết chính xác.",
+      "example": "배편은 <b>6주 정도</b> 걸려요.",
+      "example_translated": "Đường thủy mất <b>khoảng 6 tuần</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Rhy0a519`3"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-055",
+      "word": "6주 정도 걸리다",
+      "meaning": "mất khoảng 6 tuần",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ thời gian + 걸리다\" — diễn tả thời gian cần để hoàn thành.",
+      "example": "한국에서 미국까지 <b>6주 정도 걸려요</b>.",
+      "example_translated": "Từ Hàn đến Mỹ <b>mất khoảng 6 tuần</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "ikXyZF@soY"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-056",
+      "word": "1주일 정도",
+      "meaning": "khoảng 1 tuần",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Cụm chỉ thời gian ước lượng (1주일 = 1 tuần + 정도 = khoảng).",
+      "example": "항공편은 <b>1주일 정도</b> 걸려요.",
+      "example_translated": "Đường hàng không mất <b>khoảng 1 tuần</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "l@$pDVH63l"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-057",
+      "word": "1주일 정도 걸리다",
+      "meaning": "mất khoảng 1 tuần",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ thời gian + 걸리다\" — dùng nói thời gian giao hàng, di chuyển.",
+      "example": "한국에서 베트남까지 <b>1주일 정도 걸려요</b>.",
+      "example_translated": "Từ Hàn Quốc đến Việt Nam <b>mất khoảng 1 tuần</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "yx5]MIn$!g"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-058",
+      "word": "4일 정도",
+      "meaning": "khoảng 4 ngày",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Cụm chỉ thời gian ước lượng (4일 = 4 ngày + 정도 = khoảng).",
+      "example": "빠른우편은 <b>4일 정도</b> 걸려요.",
+      "example_translated": "Chuyển phát nhanh mất <b>khoảng 4 ngày</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "A[ip_4-&SD"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::2. Giao dịch bưu điện & vận tải",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::2_Giao_dịch_bưu_điện_vận_tải"
+      ],
+      "id": "THTH-02-Bài-05-059",
+      "word": "2일 정도",
+      "meaning": "khoảng 2 ngày",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Cụm chỉ thời gian ước lượng (2일 = 2 ngày + 정도 = khoảng).",
+      "example": "국내 소포는 <b>2일 정도</b> 걸려요.",
+      "example_translated": "Bưu kiện trong nước mất <b>khoảng 2 ngày</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "M>z:|bS6;2"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-060",
+      "word": "말하기 대회",
+      "meaning": "cuộc thi nói",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Cuộc thi phát biểu, hùng biện — thường tổ chức ở trường học.<br>• 말하기 = nói + 대회 = cuộc thi.",
+      "example": "학교에서 <b>말하기 대회</b>가 있어요.",
+      "example_translated": "Ở trường có <b>cuộc thi nói</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "H@+</iWqgb"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-061",
+      "word": "말하기 대회에 참가하다",
+      "meaning": "tham gia cuộc thi nói",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 에 + 참가하다\" — trợ từ 에 chỉ sự kiện mà mình tham gia.",
+      "example": "저는 이번 주에 <b>말하기 대회에 참가해요</b>.",
+      "example_translated": "Tuần này tôi <b>tham gia cuộc thi nói</b>.",
+      "collocation": "",
+      "synonym": "말하기 대회에 나가다 (ra dự cuộc thi nói)",
+      "antonym": "",
+      "__guid__": "uRA#m)*e&h"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-062",
+      "word": "나가다",
+      "meaning": "đi ra, tham gia",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Nghĩa gốc \"đi ra ngoài\"; nghĩa mở rộng \"tham dự\" các cuộc thi, sự kiện.",
+      "example": "주말에 친구들과 밖에 <b>나가요</b>.",
+      "example_translated": "Cuối tuần tôi <b>đi ra</b> ngoài với bạn bè.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "들어가다 (đi vào)",
+      "__guid__": "dzhcJc8jPs"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-063",
+      "word": "말하기 대회에 나가다",
+      "meaning": "tham gia cuộc thi nói",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 에 + 나가다\" — nghĩa gần giống 참가하다 nhưng hội thoại hơn.",
+      "example": "저는 내일 <b>말하기 대회에 나가요</b>.",
+      "example_translated": "Ngày mai tôi <b>tham gia cuộc thi nói</b>.",
+      "collocation": "",
+      "synonym": "말하기 대회에 참가하다 (tham gia cuộc thi nói)",
+      "antonym": "",
+      "__guid__": "MnfilW52MA"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-064",
+      "word": "한국어능력시험",
+      "meaning": "kỳ thi năng lực tiếng Hàn",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Tên đầy đủ của TOPIK — kỳ thi đánh giá tiếng Hàn cho người nước ngoài.<br>• 능력 = năng lực + 시험 = kỳ thi.",
+      "example": "<b>한국어능력시험</b>은 어려워요.",
+      "example_translated": "<b>Kỳ thi năng lực tiếng Hàn</b> khó.",
+      "collocation": "",
+      "synonym": "TOPIK",
+      "antonym": "",
+      "__guid__": "O-l.M^vKf2"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-065",
+      "word": "한국어능력시험을 보다",
+      "meaning": "thi năng lực tiếng Hàn",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 을/를 + 보다\" — 시험을 보다 nghĩa là \"đi thi\", không phải \"nhìn kỳ thi\".",
+      "example": "저는 이번 달에 <b>한국어능력시험을 봐요</b>.",
+      "example_translated": "Tháng này tôi <b>thi năng lực tiếng Hàn</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "G4vkgbAW95"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-066",
+      "word": "1등",
+      "meaning": "hạng nhất",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Vị trí cao nhất trong thi đấu, kỳ thi (1 = một + 등 = hạng).",
+      "example": "저는 시험에서 <b>1등</b>을 받아요.",
+      "example_translated": "Tôi đạt <b>hạng nhất</b> trong kỳ thi.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "꼴찌 (hạng bét)",
+      "__guid__": "F--2:QzB8"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-067",
+      "word": "1등을 하다",
+      "meaning": "đạt hạng nhất",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 을/를 + 하다\" — ở đây 하다 mang nghĩa \"đạt được\".",
+      "example": "친구가 말하기 대회에서 <b>1등을 해요</b>.",
+      "example_translated": "Bạn tôi <b>đạt hạng nhất</b> cuộc thi nói.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "r-A,YA1DsR"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-068",
+      "word": "2등",
+      "meaning": "hạng nhì",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Vị trí thứ hai trong thi đấu, kỳ thi (2 = hai + 등 = hạng).",
+      "example": "저는 <b>2등</b>을 받아서 기뻐요.",
+      "example_translated": "Tôi được <b>hạng nhì</b> nên vui.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "qhItYlq*D^"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-069",
+      "word": "2등을 하다",
+      "meaning": "đạt hạng nhì",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 을/를 + 하다\" — đạt được vị trí nhì.",
+      "example": "언니가 대회에서 <b>2등을 해요</b>.",
+      "example_translated": "Chị gái <b>đạt hạng nhì</b> trong cuộc thi.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "P]_OgGjB0+"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-070",
+      "word": "3등",
+      "meaning": "hạng ba",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Vị trí thứ ba trong thi đấu, kỳ thi (3 = ba + 등 = hạng).",
+      "example": "동생이 <b>3등</b>을 받아요.",
+      "example_translated": "Em tôi đạt <b>hạng ba</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "v$WKr%?/e~"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-071",
+      "word": "3등을 하다",
+      "meaning": "đạt hạng ba",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 을/를 + 하다\" — đạt được vị trí ba.",
+      "example": "친구가 노래 대회에서 <b>3등을 해요</b>.",
+      "example_translated": "Bạn tôi <b>đạt hạng ba</b> ở cuộc thi hát.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "tDQU/y$Huh"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-072",
+      "word": "대학교",
+      "meaning": "trường đại học",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Nơi học bậc cao hơn cấp 3, thường kéo dài 4 năm.",
+      "example": "저는 서울 <b>대학교</b>에 다녀요.",
+      "example_translated": "Tôi học <b>trường đại học</b> Seoul.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "고등학교 (trường cấp 3)",
+      "__guid__": "vHF/.t&=qG"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-073",
+      "word": "합격하다",
+      "meaning": "thi đỗ, đậu",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Đạt kết quả đỗ trong một kỳ thi (đại học, xin việc, lấy bằng...).",
+      "example": "저는 열심히 공부해서 시험에 <b>합격해요</b>.",
+      "example_translated": "Tôi học chăm chỉ nên <b>đỗ</b> kỳ thi.",
+      "collocation": "",
+      "synonym": "붙다 (đậu - khẩu ngữ)",
+      "antonym": "떨어지다 (rớt)",
+      "__guid__": "sZ5`i{t6Q;"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-074",
+      "word": "대학교에 합격하다",
+      "meaning": "thi đỗ đại học",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 에 + Động từ\" — trợ từ 에 chỉ nơi đỗ vào.",
+      "example": "언니가 한국 <b>대학교에 합격해요</b>.",
+      "example_translated": "Chị gái <b>đỗ vào đại học</b> Hàn Quốc.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "rN;0GV2[KJ"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-075",
+      "word": "취직",
+      "meaning": "việc xin việc, có việc làm",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Việc tìm và nhận được công việc chính thức sau khi tốt nghiệp.",
+      "example": "요즘 <b>취직</b>이 정말 어려워요.",
+      "example_translated": "Dạo này <b>xin việc</b> thật sự rất khó.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "실직 (thất nghiệp)",
+      "__guid__": "MhUCqSbBWI"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-076",
+      "word": "필요하다",
+      "meaning": "cần thiết",
+      "pos": "Tính từ",
+      "explain": "<b>Cách dùng:</b><br>• Cần phải có, không thể thiếu.",
+      "example": "저는 지금 돈이 <b>필요해요</b>.",
+      "example_translated": "Bây giờ tôi <b>cần</b> tiền.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "불필요하다 (không cần thiết)",
+      "__guid__": "K=~7ca9Ccv"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-077",
+      "word": "취직에 필요하다",
+      "meaning": "cần thiết cho việc xin việc",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 에 + 필요하다\" — 에 chỉ mục đích cần đến.",
+      "example": "한국어는 <b>취직에 필요해요</b>.",
+      "example_translated": "Tiếng Hàn <b>cần thiết cho việc xin việc</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "c)IB+Yeh+u"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-078",
+      "word": "한국 회사",
+      "meaning": "công ty Hàn Quốc",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Công ty có trụ sở ở Hàn Quốc hoặc thuộc sở hữu của người Hàn.",
+      "example": "저는 <b>한국 회사</b>에서 일하고 싶어요.",
+      "example_translated": "Tôi muốn làm việc ở <b>công ty Hàn Quốc</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "ludrdO6Hx^"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-079",
+      "word": "한국 회사에 취직하다",
+      "meaning": "xin việc vào công ty Hàn Quốc",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 에 + 취직하다\" — trợ từ 에 chỉ nơi xin việc vào.",
+      "example": "저는 내년에 <b>한국 회사에 취직해요</b>.",
+      "example_translated": "Năm sau tôi <b>xin việc vào công ty Hàn Quốc</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "sO|a[wSuX@"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-080",
+      "word": "책",
+      "meaning": "sách",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Vật in có nhiều trang, dùng để đọc, học.",
+      "example": "저는 매일 한국어 <b>책</b>을 읽어요.",
+      "example_translated": "Tôi đọc <b>sách</b> tiếng Hàn mỗi ngày.",
+      "collocation": "책을 읽다 (đọc sách), 책을 빌리다 (mượn sách)",
+      "synonym": "도서 (sách vở)",
+      "antonym": "",
+      "__guid__": "ENNbiVMz*o"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-081",
+      "word": "빌리다",
+      "meaning": "mượn",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Xin dùng tạm đồ của người khác rồi trả lại sau.",
+      "example": "저는 친구에게 돈을 <b>빌려요</b>.",
+      "example_translated": "Tôi <b>mượn</b> tiền từ bạn.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "빌려주다 (cho mượn)",
+      "__guid__": "tyc+oSh-e+"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-082",
+      "word": "책을 빌리다",
+      "meaning": "mượn sách",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 을/를 + Động từ\" — mượn sách để đọc, thường từ thư viện.",
+      "example": "저는 도서관에서 한국어 <b>책을 빌려요</b>.",
+      "example_translated": "Tôi <b>mượn sách</b> tiếng Hàn ở thư viện.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "oS}Y+|~XDe"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-083",
+      "word": "즐겁다",
+      "meaning": "vui vẻ",
+      "pos": "Tính từ",
+      "explain": "<b>Cách dùng:</b><br>• Cảm giác thoải mái, hạnh phúc khi làm gì đó.",
+      "example": "친구와 함께 있어서 <b>즐거워요</b>.",
+      "example_translated": "Tôi <b>vui</b> vì được ở cùng bạn.",
+      "collocation": "",
+      "synonym": "기쁘다 (vui sướng), 재미있다 (thú vị)",
+      "antonym": "슬프다 (buồn)",
+      "__guid__": "hVf$GN0`-f"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-084",
+      "word": "지내다",
+      "meaning": "trải qua, sống",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Dùng khi kể về cuộc sống, thời gian đã/đang trải qua.<br>• Câu hỏi quen thuộc: 어떻게 지내요? (Bạn sống thế nào?).",
+      "example": "저는 서울에서 잘 <b>지내요</b>.",
+      "example_translated": "Tôi <b>sống</b> tốt ở Seoul.",
+      "collocation": "잘 지내다 (sống khỏe)",
+      "synonym": "살다 (sống)",
+      "antonym": "",
+      "__guid__": "mlpCyb[K5?"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-085",
+      "word": "즐겁게 지내다",
+      "meaning": "sống vui vẻ",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Tính từ + 게 + Động từ\" — 게 biến tính từ thành trạng từ (trả lời cho \"sống thế nào?\").",
+      "example": "저는 학교에서 <b>즐겁게 지내요</b>.",
+      "example_translated": "Tôi <b>sống vui vẻ</b> ở trường.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "KehBLmu?MS"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-086",
+      "word": "이번 해",
+      "meaning": "năm nay",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Cách nói \"năm này\" thân mật (이번 = lần này + 해 = năm).",
+      "example": "저는 <b>이번 해</b>에 졸업해요.",
+      "example_translated": "<b>Năm nay</b> tôi tốt nghiệp.",
+      "collocation": "",
+      "synonym": "올해 (năm nay)",
+      "antonym": "내년 (năm sau), 작년 (năm ngoái)",
+      "__guid__": "Jx%v+4gYt]"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-087",
+      "word": "개강하다",
+      "meaning": "khai giảng",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Bắt đầu học kỳ hoặc khóa học mới (개 = mở + 강 = giảng dạy).",
+      "example": "다음 주에 학교가 <b>개강해요</b>.",
+      "example_translated": "Tuần sau trường <b>khai giảng</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "종강하다 (kết thúc học kỳ)",
+      "__guid__": "l#=R686U>m"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-088",
+      "word": "한턱내다",
+      "meaning": "đãi, khao",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• Kết hợp \"한턱 (một chầu) + 내다 (trả tiền)\".<br>• Dùng khi có chuyện vui (đỗ thi, được việc...) trả tiền đãi mọi người.",
+      "example": "저는 시험에 합격해서 친구들에게 <b>한턱내요</b>.",
+      "example_translated": "Tôi đỗ kỳ thi rồi <b>đãi</b> bạn bè một chầu.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "GSC`fS$F|_"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-089",
+      "word": "합격해서 한턱내다",
+      "meaning": "đậu rồi đãi mọi người",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Vế lý do + -아/어서 + Vế kết quả\" — 해서 nêu lý do của việc khao.",
+      "example": "언니가 대학교에 <b>합격해서 한턱내요</b>.",
+      "example_translated": "Chị gái <b>đỗ đại học rồi đãi</b> mọi người một chầu.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "DVQ=N3$-L}"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-090",
+      "word": "진심",
+      "meaning": "sự chân thành, thật lòng",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Tấm lòng thật sự, không giả tạo (진 = thật + 심 = tâm).",
+      "example": "저는 <b>진심</b>으로 감사해요.",
+      "example_translated": "Tôi <b>thật lòng</b> biết ơn.",
+      "collocation": "진심으로 (một cách chân thành)",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "l=o]IsUjQe"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-091",
+      "word": "환영하다",
+      "meaning": "chào đón, hoan nghênh",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Tiếp đón ai đó nồng nhiệt khi họ đến nơi mới.",
+      "example": "선생님이 새 학생을 <b>환영해요</b>.",
+      "example_translated": "Thầy cô <b>chào đón</b> học sinh mới.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "OdgSZ1#r_h"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-092",
+      "word": "진심으로 환영하다",
+      "meaning": "chân thành chào đón",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 으로 + Động từ\" — 으로 biến danh từ thành trạng từ chỉ cách thức.",
+      "example": "학교가 신입생을 <b>진심으로 환영해요</b>.",
+      "example_translated": "Trường <b>chân thành chào đón</b> tân sinh viên.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "l-_x7RD%y@"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-093",
+      "word": "신입생",
+      "meaning": "tân sinh viên, học sinh mới",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Sinh viên/học sinh vừa mới vào trường (신 = mới + 입 = vào + 생 = học sinh).",
+      "example": "올해 <b>신입생</b>이 아주 많아요.",
+      "example_translated": "Năm nay <b>tân sinh viên</b> rất đông.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "졸업생 (học sinh tốt nghiệp)",
+      "__guid__": "LjM:O0{50i"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-094",
+      "word": "학생회관",
+      "meaning": "hội quán sinh viên",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Tòa nhà dành cho sinh viên ăn uống, họp nhóm, sinh hoạt câu lạc bộ.<br>• 학생 = học sinh + 회관 = hội quán.",
+      "example": "저는 친구와 <b>학생회관</b>에서 만나요.",
+      "example_translated": "Tôi gặp bạn ở <b>hội quán sinh viên</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "G0B+p7vDS#"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-095",
+      "word": "한국말",
+      "meaning": "tiếng Hàn",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Cách nói thân mật, đời thường của 한국어.<br>• 한국 = Hàn Quốc + 말 = tiếng/lời.",
+      "example": "저는 <b>한국말</b>을 조금 할 수 있어요.",
+      "example_translated": "Tôi có thể nói một chút <b>tiếng Hàn</b>.",
+      "collocation": "",
+      "synonym": "한국어 (tiếng Hàn - trang trọng)",
+      "antonym": "",
+      "__guid__": "j1*#grH{D$"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-096",
+      "word": "이야기하다",
+      "meaning": "nói chuyện",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Trò chuyện, trao đổi bằng lời với người khác.",
+      "example": "저는 가족과 매일 <b>이야기해요</b>.",
+      "example_translated": "Tôi <b>nói chuyện</b> với gia đình mỗi ngày.",
+      "collocation": "",
+      "synonym": "말하다 (nói)",
+      "antonym": "",
+      "__guid__": "ms]&CxeFcy"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-097",
+      "word": "한국말로 이야기하다",
+      "meaning": "nói chuyện bằng tiếng Hàn",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 로 + Động từ\" — 로 chỉ phương tiện, công cụ (ngôn ngữ dùng để nói).",
+      "example": "저는 친구와 <b>한국말로 이야기해요</b>.",
+      "example_translated": "Tôi <b>nói chuyện</b> với bạn <b>bằng tiếng Hàn</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "sn1~fBUtw]"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-098",
+      "word": "6개월",
+      "meaning": "6 tháng",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Khoảng thời gian 6 tháng (6 = sáu + 개월 = tháng — đơn vị đếm).",
+      "example": "저는 <b>6개월</b> 전에 한국에 왔어요.",
+      "example_translated": "<b>6 tháng</b> trước tôi đã đến Hàn Quốc.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Ks<OdlHQcj"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-099",
+      "word": "6개월 동안",
+      "meaning": "trong suốt 6 tháng",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ thời gian + 동안\" — diễn tả khoảng thời gian kéo dài liên tục.",
+      "example": "저는 <b>6개월 동안</b> 한국어를 배워요.",
+      "example_translated": "Tôi học tiếng Hàn <b>trong suốt 6 tháng</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "D]%]fE5#zv"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-100",
+      "word": "친구",
+      "meaning": "bạn bè",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Người cùng chơi, cùng học, cùng chia sẻ.",
+      "example": "저는 한국에서 <b>친구</b>가 많아요.",
+      "example_translated": "Tôi có nhiều <b>bạn</b> ở Hàn Quốc.",
+      "collocation": "친구를 사귀다 (kết bạn)",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "hEiEVuu;!k"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-101",
+      "word": "사귀다",
+      "meaning": "kết bạn, làm quen",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Trở nên thân với ai đó (có thể là bạn bè hoặc người yêu).",
+      "example": "저는 학교에서 새 친구를 <b>사귀어요</b>.",
+      "example_translated": "Tôi <b>kết bạn</b> mới ở trường.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "헤어지다 (chia tay)",
+      "__guid__": "r=M0x64lt;"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-102",
+      "word": "친구를 사귀다",
+      "meaning": "kết bạn",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 을/를 + Động từ\" — hành động làm quen và trở thành bạn.",
+      "example": "저는 한국에서 <b>친구를 사귀어요</b>.",
+      "example_translated": "Tôi <b>kết bạn</b> ở Hàn Quốc.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "NTKTM50nNJ"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-103",
+      "word": "한국",
+      "meaning": "Hàn Quốc",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Tên gọi quốc gia Hàn Quốc.",
+      "example": "저는 <b>한국</b>에 살아요.",
+      "example_translated": "Tôi sống ở <b>Hàn Quốc</b>.",
+      "collocation": "",
+      "synonym": "대한민국 (Đại Hàn Dân Quốc)",
+      "antonym": "",
+      "__guid__": "GN]<Sp$+Ek"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-104",
+      "word": "돌아가다",
+      "meaning": "quay trở về",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Trở lại nơi cũ như quê hương, nhà (돌다 = xoay + 가다 = đi).",
+      "example": "저는 주말에 고향으로 <b>돌아가요</b>.",
+      "example_translated": "Cuối tuần tôi <b>quay về</b> quê.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "떠나다 (rời đi)",
+      "__guid__": "Bu|:4N*QW^"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::3. Học tập, thi cử & đời sống sinh viên",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::3_Học_tập_thi_cử_đời_sống_sinh_viên"
+      ],
+      "id": "THTH-02-Bài-05-105",
+      "word": "한국으로 돌아가다",
+      "meaning": "quay trở về Hàn Quốc",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 으로 + Động từ\" — 으로 chỉ hướng, đích đến.",
+      "example": "저는 내년에 <b>한국으로 돌아가요</b>.",
+      "example_translated": "Năm sau tôi <b>quay trở về Hàn Quốc</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "C3!#JlfXuG"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-106",
+      "word": "그리고",
+      "meaning": "và",
+      "pos": "Phó từ liên kết",
+      "explain": "<b>Cách dùng:</b><br>• Nối hai câu có quan hệ bổ sung — dùng để liệt kê thêm thông tin.",
+      "example": "저는 학생이에요. <b>그리고</b> 회사원이에요.",
+      "example_translated": "Tôi là học sinh. <b>Và</b> cũng là nhân viên.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "z&5jTCB*qF"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-107",
+      "word": "그러나",
+      "meaning": "tuy nhiên",
+      "pos": "Phó từ liên kết",
+      "explain": "<b>Cách dùng:</b><br>• Nối hai câu tương phản — trang trọng hơn 하지만, hay dùng trong viết.",
+      "example": "열심히 공부해요. <b>그러나</b> 시험이 어려워요.",
+      "example_translated": "Tôi học chăm chỉ. <b>Tuy nhiên</b>, kỳ thi khó.",
+      "collocation": "",
+      "synonym": "하지만 (nhưng), 그렇지만 (thế nhưng)",
+      "antonym": "",
+      "__guid__": "fP1xRquNj}"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-108",
+      "word": "하지만",
+      "meaning": "nhưng",
+      "pos": "Phó từ liên kết",
+      "explain": "<b>Cách dùng:</b><br>• Nối hai câu tương phản — thông dụng trong hội thoại hằng ngày.",
+      "example": "피곤해요. <b>하지만</b> 공부해요.",
+      "example_translated": "Tôi mệt. <b>Nhưng</b> tôi vẫn học.",
+      "collocation": "",
+      "synonym": "그러나 (tuy nhiên), 그렇지만 (thế nhưng)",
+      "antonym": "",
+      "__guid__": "to~39Z;1>4"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-109",
+      "word": "그렇지만",
+      "meaning": "thế nhưng",
+      "pos": "Phó từ liên kết",
+      "explain": "<b>Cách dùng:</b><br>• Nối hai câu tương phản — mạnh và rõ hơn 하지만.",
+      "example": "비가 와요. <b>그렇지만</b> 학교에 가요.",
+      "example_translated": "Trời đang mưa. <b>Thế nhưng</b> tôi vẫn đi học.",
+      "collocation": "",
+      "synonym": "하지만 (nhưng), 그러나 (tuy nhiên)",
+      "antonym": "",
+      "__guid__": "ecVkvEt)Tb"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-110",
+      "word": "그런데",
+      "meaning": "tuy vậy, nhưng",
+      "pos": "Phó từ liên kết",
+      "explain": "<b>Cách dùng:</b><br>• Dùng để chuyển sang chủ đề mới hoặc tương phản nhẹ — rất phổ biến khi nói chuyện.",
+      "example": "오늘 날씨가 좋아요. <b>그런데</b> 조금 추워요.",
+      "example_translated": "Hôm nay thời tiết đẹp. <b>Nhưng</b> hơi lạnh.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "F,j%zXY8;E"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-111",
+      "word": "그래서",
+      "meaning": "vì vậy, cho nên",
+      "pos": "Phó từ liên kết",
+      "explain": "<b>Cách dùng:</b><br>• Nối quan hệ nguyên nhân — kết quả (\"Vì A → Cho nên B\").",
+      "example": "배가 고파요. <b>그래서</b> 밥을 먹어요.",
+      "example_translated": "Tôi đói. <b>Vì vậy</b> tôi ăn cơm.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "ilz}h^_2H&"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-112",
+      "word": "그러면 / 그럼",
+      "meaning": "vậy thì, thế thì",
+      "pos": "Phó từ liên kết",
+      "explain": "<b>Cách dùng:</b><br>• Nêu điều kiện hoặc kết luận từ điều vừa nói.<br>• 그럼 là dạng rút gọn của 그러면, đời thường hơn.",
+      "example": "시간이 없어요? <b>그럼</b> 택시를 타세요.",
+      "example_translated": "Bạn không có thời gian? <b>Vậy thì</b> hãy đi taxi.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Bc4sZ*t-#F"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-113",
+      "word": "길",
+      "meaning": "con đường",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Đường đi, phố xá.",
+      "example": "저는 <b>길</b>에서 친구를 만나요.",
+      "example_translated": "Tôi gặp bạn trên <b>đường</b>.",
+      "collocation": "길을 건너다 (băng qua đường), 길이 막히다 (đường bị tắc)",
+      "synonym": "도로 (đường xá)",
+      "antonym": "",
+      "__guid__": "x_nu*Y6Kxx"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-114",
+      "word": "건너다",
+      "meaning": "đi ngang qua, băng qua",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Đi từ bên này sang bên kia (đường, cầu, sông...).",
+      "example": "저는 다리를 <b>건너요</b>.",
+      "example_translated": "Tôi <b>đi qua</b> cầu.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "sx_fWYo5y"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-115",
+      "word": "길을 건너다",
+      "meaning": "băng qua đường",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 을/를 + 건너다\" — đi từ vỉa hè này sang vỉa hè kia.",
+      "example": "조심해서 <b>길을 건너요</b>.",
+      "example_translated": "Tôi cẩn thận <b>băng qua đường</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "oblp[~+1:2"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-116",
+      "word": "막히다",
+      "meaning": "bị tắc, bị nghẽn",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Dùng cho đường xá, ống nước... khi dòng chảy/giao thông không lưu thông được.",
+      "example": "출근 시간에 길이 <b>막혀요</b>.",
+      "example_translated": "Đường <b>bị tắc</b> vào giờ đi làm.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "뚫리다 (thông)",
+      "__guid__": "KRHaFN1xA."
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-117",
+      "word": "길이 막히다",
+      "meaning": "đường bị tắc",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 이/가 + 막히다\" — chủ ngữ là con đường, chỉ tình trạng tắc nghẽn.",
+      "example": "비 오는 날에 <b>길이 막혀요</b>.",
+      "example_translated": "Vào ngày mưa <b>đường bị tắc</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "f,n}.P8(`^"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-118",
+      "word": "빨간 불이다",
+      "meaning": "là đèn đỏ",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"빨간 불 (đèn đỏ) + 이다 (là)\".<br>• Báo hiệu phải dừng lại khi qua đường.",
+      "example": "지금 <b>빨간 불이에요</b>.",
+      "example_translated": "Bây giờ <b>là đèn đỏ</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "파란 불이다 (là đèn xanh)",
+      "__guid__": "rZNh/;tge2"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-119",
+      "word": "눈싸움",
+      "meaning": "chọi tuyết",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Trò chơi ném tuyết vào nhau vào mùa đông (눈 = tuyết + 싸움 = cuộc chiến).",
+      "example": "저는 겨울에 <b>눈싸움</b>을 좋아해요.",
+      "example_translated": "Tôi thích <b>chọi tuyết</b> vào mùa đông.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "KkmNDVXaav"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-120",
+      "word": "눈싸움을 하다",
+      "meaning": "chơi chọi tuyết",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 을/를 + 하다\" — hành động chơi ném tuyết.",
+      "example": "아이들이 공원에서 <b>눈싸움을 해요</b>.",
+      "example_translated": "Bọn trẻ <b>chọi tuyết</b> ở công viên.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "jS{Wdn~$cp"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-121",
+      "word": "눈썰매장",
+      "meaning": "sân trượt tuyết",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Nơi chơi trượt bằng xe trượt trên tuyết.<br>• 눈 = tuyết + 썰매 = xe trượt + 장 = sân bãi.",
+      "example": "겨울에 가족이 <b>눈썰매장</b>에 가요.",
+      "example_translated": "Mùa đông gia đình tôi đi <b>sân trượt tuyết</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "b_$GRF+3ZW"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-122",
+      "word": "눈사람",
+      "meaning": "người tuyết",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Hình người nặn bằng tuyết (눈 = tuyết + 사람 = người).",
+      "example": "어린이들은 <b>눈사람</b>을 아주 좋아해요.",
+      "example_translated": "Trẻ em rất thích <b>người tuyết</b>.",
+      "collocation": "눈사람을 만들다 (làm người tuyết)",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "QCx8Y*;}?$"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-123",
+      "word": "눈사람을 만들다",
+      "meaning": "làm người tuyết",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 을/를 + 만들다\" — nặn người tuyết bằng tuyết tươi.",
+      "example": "저는 친구들과 <b>눈사람을 만들어요</b>.",
+      "example_translated": "Tôi <b>làm người tuyết</b> với bạn bè.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "A&<;L#ZA9E"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-124",
+      "word": "2월말",
+      "meaning": "cuối tháng 2",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Khoảng 10 ngày cuối của tháng 2 (2월 = tháng 2 + 말 = cuối).",
+      "example": "<b>2월말</b>에 눈이 내려요.",
+      "example_translated": "<b>Cuối tháng 2</b> tuyết rơi.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "2월초 (đầu tháng 2)",
+      "__guid__": "C?y8smqdq-"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-125",
+      "word": "2월말이 되면",
+      "meaning": "nếu đến cuối tháng 2",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 이/가 되다 + -(으)면\" — điều kiện về thời gian tới một mốc nào đó.",
+      "example": "<b>2월말이 되면</b> 봄이 와요.",
+      "example_translated": "<b>Đến cuối tháng 2</b> thì mùa xuân về.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "s$&2Q&2PM+"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-126",
+      "word": "고장 나다",
+      "meaning": "hỏng hóc, hư",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"고장 (sự cố) + 나다 (xảy ra)\".<br>• Dùng cho máy móc, thiết bị điện tử bị hư.",
+      "example": "어제 컴퓨터가 <b>고장 났어요</b>.",
+      "example_translated": "Hôm qua máy tính tôi <b>bị hỏng</b>.",
+      "collocation": "",
+      "synonym": "망가지다 (bị hư hại)",
+      "antonym": "고치다 (sửa)",
+      "__guid__": "j_mM?r*P;7"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-127",
+      "word": "깨지다",
+      "meaning": "vỡ, bể",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Dùng cho vật dễ vỡ như kính, chén, cốc, gương.",
+      "example": "아침에 유리컵이 <b>깨져요</b>.",
+      "example_translated": "Sáng nay cốc thủy tinh <b>bị vỡ</b>.",
+      "collocation": "",
+      "synonym": "부서지다 (vỡ nát)",
+      "antonym": "",
+      "__guid__": "Z#HvFu1|7"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-128",
+      "word": "컵이 깨지다",
+      "meaning": "cốc bị vỡ",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 이/가 + 깨지다\" — chủ ngữ là vật bị vỡ.",
+      "example": "떨어져서 <b>컵이 깨져요</b>.",
+      "example_translated": "Rơi xuống nên <b>cốc bị vỡ</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Ik@xV!pZMC"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-129",
+      "word": "사진기",
+      "meaning": "máy ảnh",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Thiết bị dùng để chụp ảnh (사진 = ảnh + 기 = máy).",
+      "example": "저는 새 <b>사진기</b>를 사고 싶어요.",
+      "example_translated": "Tôi muốn mua <b>máy ảnh</b> mới.",
+      "collocation": "",
+      "synonym": "카메라 (camera)",
+      "antonym": "",
+      "__guid__": "O_vNo%}Y{Z"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-130",
+      "word": "인터넷",
+      "meaning": "internet",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Mạng toàn cầu để tìm thông tin, gửi tin nhắn, xem video...",
+      "example": "저는 <b>인터넷</b>을 매일 사용해요.",
+      "example_translated": "Tôi dùng <b>internet</b> mỗi ngày.",
+      "collocation": "인터넷에서 찾다 (tìm trên internet)",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "yt.Imf%8gc"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-131",
+      "word": "찾다",
+      "meaning": "tìm kiếm",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Cố gắng phát hiện, tra cứu thứ gì đó.",
+      "example": "저는 지갑을 <b>찾아요</b>.",
+      "example_translated": "Tôi đang <b>tìm</b> ví tiền.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Q(PTOfAT&F"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-132",
+      "word": "인터넷에서 찾다",
+      "meaning": "tìm trên internet",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 에서 + 찾다\" — 에서 chỉ nơi diễn ra hành động tìm kiếm.",
+      "example": "저는 맛있는 식당을 <b>인터넷에서 찾아요</b>.",
+      "example_translated": "Tôi <b>tìm</b> nhà hàng ngon <b>trên internet</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "le=4Fc({4^"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-133",
+      "word": "문자 메시지",
+      "meaning": "tin nhắn văn bản",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Tin nhắn chữ gửi qua điện thoại (문자 = chữ + 메시지 = tin nhắn).",
+      "example": "저는 친구에게 <b>문자 메시지</b>를 보내요.",
+      "example_translated": "Tôi gửi <b>tin nhắn</b> cho bạn.",
+      "collocation": "",
+      "synonym": "문자 (tin nhắn)",
+      "antonym": "",
+      "__guid__": "Shg_c;It}"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-134",
+      "word": "자세하다",
+      "meaning": "chi tiết, cụ thể",
+      "pos": "Tính từ",
+      "explain": "<b>Cách dùng:</b><br>• Rất kỹ càng, đầy đủ từng chi tiết nhỏ.",
+      "example": "선생님 설명이 아주 <b>자세해요</b>.",
+      "example_translated": "Lời giải thích của thầy rất <b>chi tiết</b>.",
+      "collocation": "자세하게 (một cách chi tiết)",
+      "synonym": "",
+      "antonym": "간단하다 (đơn giản)",
+      "__guid__": "kU#!xM)}r)"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-135",
+      "word": "취미",
+      "meaning": "sở thích",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Hoạt động yêu thích khi có thời gian rảnh.",
+      "example": "제 <b>취미</b>는 독서예요.",
+      "example_translated": "<b>Sở thích</b> của tôi là đọc sách.",
+      "collocation": "취미를 가지다 (có sở thích)",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "qqs)@RcVS&"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-136",
+      "word": "가지다",
+      "meaning": "có, sở hữu",
+      "pos": "Động từ",
+      "explain": "<b>Cách dùng:</b><br>• Có, mang theo, sở hữu.<br>• Thường dùng với sở thích, ước mơ, đồ dùng.",
+      "example": "저는 꿈을 <b>가져요</b>.",
+      "example_translated": "Tôi <b>có</b> ước mơ.",
+      "collocation": "",
+      "synonym": "있다 (có)",
+      "antonym": "",
+      "__guid__": "oG5&&faT;B"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-137",
+      "word": "취미를 가지다",
+      "meaning": "có sở thích",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 을/를 + 가지다\" — bắt đầu có và nuôi dưỡng một sở thích.",
+      "example": "저는 올해 새로운 <b>취미를 가져요</b>.",
+      "example_translated": "Năm nay tôi <b>có</b> một <b>sở thích</b> mới.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "jez3&3Y?V6"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-138",
+      "word": "수목원",
+      "meaning": "vườn cây",
+      "pos": "Danh từ",
+      "explain": "<b>Cách dùng:</b><br>• Khu vườn lớn trồng nhiều loại cây để nghiên cứu hoặc tham quan.<br>• 수목 = cây cối + 원 = vườn.",
+      "example": "주말에 가족과 <b>수목원</b>에 가요.",
+      "example_translated": "Cuối tuần tôi đi <b>vườn cây</b> với gia đình.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "HLD1#3keE/"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-139",
+      "word": "수목원을 산책하다",
+      "meaning": "đi dạo trong vườn cây",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc:</b><br>• \"Danh từ + 을/를 + 산책하다\" — đi bộ thong thả, thư giãn trong vườn.",
+      "example": "저는 아침에 <b>수목원을 산책해요</b>.",
+      "example_translated": "Buổi sáng tôi <b>đi dạo trong vườn cây</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "qYe]4*~8^<"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::4. Từ vựng khác",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::4_Từ_vựng_khác"
+      ],
+      "id": "THTH-02-Bài-05-140",
+      "word": "김치를 담그다",
+      "meaning": "muối kim chi",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cách dùng:</b><br>• Động từ 담그다 dùng riêng cho việc làm kimchi, dưa muối — không dùng cho món ăn khác.",
+      "example": "엄마가 매년 겨울에 <b>김치를 담가요</b>.",
+      "example_translated": "Mỗi mùa đông mẹ <b>muối kimchi</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "M3+vn}lrGN"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::5. Câu giao tiếp hoàn chỉnh",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::5_Câu_giao_tiếp_hoàn_chỉnh"
+      ],
+      "id": "THTH-02-Bài-05-141",
+      "word": "요금 얼마예요?",
+      "meaning": "Cước phí bao nhiêu vậy?",
+      "pos": "Câu",
+      "explain": "<b>Cách dùng:</b><br>• Câu hỏi giá tiền khi gửi hàng, mua vé...<br>• 요금 = cước phí + 얼마 = bao nhiêu + 예요 = là (dạng hỏi).",
+      "example": "저는 우체국에서 물어봐요. \"<b>요금 얼마예요?</b>\"",
+      "example_translated": "Tôi hỏi ở bưu điện: \"<b>Cước phí bao nhiêu vậy?</b>\"",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "i;mQ}q]Itc"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::5. Câu giao tiếp hoàn chỉnh",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::5_Câu_giao_tiếp_hoàn_chỉnh"
+      ],
+      "id": "THTH-02-Bài-05-142",
+      "word": "얼마나 걸려요?",
+      "meaning": "Mất bao lâu vậy?",
+      "pos": "Câu",
+      "explain": "<b>Cách dùng:</b><br>• Câu hỏi về thời gian cần (얼마나 = bao lâu + 걸리다 = tốn/mất thời gian).",
+      "example": "저는 소포를 보내요. \"<b>얼마나 걸려요?</b>\"",
+      "example_translated": "Tôi gửi bưu kiện. \"<b>Mất bao lâu vậy?</b>\"",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "LhpDITyien"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::5. Câu giao tiếp hoàn chỉnh",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::5_Câu_giao_tiếp_hoàn_chỉnh"
+      ],
+      "id": "THTH-02-Bài-05-143",
+      "word": "잘 가르쳐 주셔서 정말 고맙습니다.",
+      "meaning": "Cảm ơn rất nhiều vì đã dạy dỗ tận tình.",
+      "pos": "Câu",
+      "explain": "<b>Cách dùng:</b><br>• Câu cảm ơn kính ngữ — dùng khi chia tay thầy cô.<br>• 잘 = tốt + 가르치다 = dạy + -아/어 주시다 = làm giúp kính ngữ + 고맙다 = cảm ơn.",
+      "example": "학생이 선생님께 말해요. \"<b>잘 가르쳐 주셔서 정말 고맙습니다.</b>\"",
+      "example_translated": "Học trò nói với thầy: \"<b>Cảm ơn thầy vì đã dạy dỗ tận tình.</b>\"",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "OdtkgW^tlO"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::5. Câu giao tiếp hoàn chỉnh",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::5_Câu_giao_tiếp_hoàn_chỉnh"
+      ],
+      "id": "THTH-02-Bài-05-144",
+      "word": "많이 도와줘서 정말 고마워요.",
+      "meaning": "Thực sự cảm ơn vì đã giúp đỡ rất nhiều.",
+      "pos": "Câu",
+      "explain": "<b>Cách dùng:</b><br>• Câu cảm ơn thân mật với người ngang hàng.<br>• 많이 = nhiều + 돕다 = giúp + -아/어 주다 = làm giúp + 고맙다 = cảm ơn.",
+      "example": "저는 친구에게 말해요. \"<b>많이 도와줘서 정말 고마워요.</b>\"",
+      "example_translated": "Tôi nói với bạn: \"<b>Thực sự cảm ơn bạn vì đã giúp đỡ rất nhiều.</b>\"",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "t2&t_tVZ#j"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::5. Câu giao tiếp hoàn chỉnh",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::5_Câu_giao_tiếp_hoàn_chỉnh"
+      ],
+      "id": "THTH-02-Bài-05-145",
+      "word": "여기에 오시면 제가 한턱낼게요.",
+      "meaning": "Nếu bạn đến đây, tôi sẽ đãi một chầu.",
+      "pos": "Câu",
+      "explain": "<b>Cách dùng:</b><br>• Lời mời kèm lời hứa.<br>• 여기 = đây + 오다 = đến + -(으)면 = nếu + 한턱내다 = đãi/khao.",
+      "example": "저는 친구에게 말해요. \"<b>여기에 오시면 제가 한턱낼게요.</b>\"",
+      "example_translated": "Tôi nói với bạn: \"<b>Nếu bạn đến đây, tôi sẽ đãi một chầu.</b>\"",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "k*}x*e61E9"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::5. Câu giao tiếp hoàn chỉnh",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::5_Câu_giao_tiếp_hoàn_chỉnh"
+      ],
+      "id": "THTH-02-Bài-05-146",
+      "word": "감기 조심하세요.",
+      "meaning": "Hãy cẩn thận kẻo cảm cúm nhé.",
+      "pos": "Câu",
+      "explain": "<b>Cách dùng:</b><br>• Lời chúc cuối thư khi trời lạnh.<br>• 감기 = cảm cúm + 조심하다 = cẩn thận + -(으)세요 = dạng kính ngữ lịch sự.",
+      "example": "저는 편지 끝에 써요. \"<b>감기 조심하세요.</b>\"",
+      "example_translated": "Ở cuối thư tôi viết: \"<b>Hãy cẩn thận kẻo cảm cúm nhé.</b>\"",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "oic=9<J0x["
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::5. Câu giao tiếp hoàn chỉnh",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::5_Câu_giao_tiếp_hoàn_chỉnh"
+      ],
+      "id": "THTH-02-Bài-05-147",
+      "word": "누구에게서 한국어를 배웠습니까?",
+      "meaning": "Đã học tiếng Hàn từ ai vậy?",
+      "pos": "Câu",
+      "explain": "<b>Cách dùng:</b><br>• Câu hỏi trang trọng về người dạy.<br>• 누구 = ai + 에게서 = từ + 배우다 = học.",
+      "example": "선생님이 저에게 물어봐요. \"<b>누구에게서 한국어를 배웠습니까?</b>\"",
+      "example_translated": "Thầy hỏi tôi: \"<b>Đã học tiếng Hàn từ ai vậy?</b>\"",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "d&PpNjPw9B"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::5. Câu giao tiếp hoàn chỉnh",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::5_Câu_giao_tiếp_hoàn_chỉnh"
+      ],
+      "id": "THTH-02-Bài-05-148",
+      "word": "한국어를 얼마 동안 배웠습니까?",
+      "meaning": "Đã học tiếng Hàn trong bao lâu?",
+      "pos": "Câu",
+      "explain": "<b>Cách dùng:</b><br>• Câu hỏi trang trọng về thời gian học.<br>• 얼마 동안 = trong bao lâu + 배우다 = học.",
+      "example": "선생님이 저에게 물어봐요. \"<b>한국어를 얼마 동안 배웠습니까?</b>\"",
+      "example_translated": "Thầy hỏi tôi: \"<b>Đã học tiếng Hàn trong bao lâu?</b>\"",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "qUZ}{8~|pI"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::5. Câu giao tiếp hoàn chỉnh",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::5_Câu_giao_tiếp_hoàn_chỉnh"
+      ],
+      "id": "THTH-02-Bài-05-149",
+      "word": "한국어 공부가 어떻습니까?",
+      "meaning": "Việc học tiếng Hàn thế nào?",
+      "pos": "Câu",
+      "explain": "<b>Cách dùng:</b><br>• Câu hỏi trang trọng về cảm nhận khi học.<br>• 공부 = việc học + 어떻다 = thế nào.",
+      "example": "선생님이 저에게 물어봐요. \"<b>한국어 공부가 어떻습니까?</b>\"",
+      "example_translated": "Thầy hỏi tôi: \"<b>Việc học tiếng Hàn thế nào?</b>\"",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "l[bXlag!x>"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 05. Thư từ (편지)::5. Câu giao tiếp hoàn chỉnh",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_05_Thư_từ_편지::5_Câu_giao_tiếp_hoàn_chỉnh"
+      ],
+      "id": "THTH-02-Bài-05-150",
+      "word": "한국어를 잘하면 어떻게 할 거예요?",
+      "meaning": "Nếu giỏi tiếng Hàn thì sẽ làm gì?",
+      "pos": "Câu",
+      "explain": "<b>Cách dùng:</b><br>• Câu hỏi về dự định tương lai với điều kiện.<br>• 잘하다 = làm giỏi + -(으)면 = nếu + -(으)ㄹ 거예요 = sẽ.",
+      "example": "친구가 저에게 물어요. \"<b>한국어를 잘하면 어떻게 할 거예요?</b>\"",
+      "example_translated": "Bạn hỏi tôi: \"<b>Nếu giỏi tiếng Hàn thì sẽ làm gì?</b>\"",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "radWT90M$N"
+    }
+  ],
+  "timestamp": "2026-04-17T13:03:44"
+}

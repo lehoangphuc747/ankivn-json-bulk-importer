@@ -60,3 +60,16 @@ def save_batch_history(record: dict) -> str:
         json.dump(payload, f, indent=2, ensure_ascii=False)
 
     return file_path
+
+
+def get_welcome_shown() -> bool:
+    """Kiểm tra xem người dùng đã chọn 'Don't show this again' cho Welcome popup chưa."""
+    config = _get_config()
+    return config.get("welcome_shown", False)
+
+
+def set_welcome_shown(shown: bool) -> None:
+    """Lưu tuỳ chọn tắt Welcome popup vĩnh viễn."""
+    config = _get_config()
+    config["welcome_shown"] = shown
+    _save_config(config)

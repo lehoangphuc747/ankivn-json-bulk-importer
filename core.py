@@ -114,9 +114,15 @@ def create_cards_logic(
 
             guid = card_data.pop("__guid__", None)
             target_deck = card_data.pop("__deck__", None)
+            _ = card_data.pop("__notetype__", None)
             tags = card_data.pop("__tags__", [])
             if isinstance(tags, str):
                 tags = [tags]
+
+            # Xoá tất cả những field meta khác (có đuôi và đầu là __) để tránh lỗi
+            for key in list(card_data.keys()):
+                if key.startswith("__") and key.endswith("__"):
+                    card_data.pop(key, None)
 
             for key in list(card_data.keys()):
                 val = card_data[key]
@@ -226,3 +232,62 @@ def create_cards_logic(
 
     mw.reset()
     return created, updated, warnings
+
+def export_deck_to_json_logic(deck_name: str, include_stats: bool = False) -> Tuple[List[dict], str]:
+    """Xuất tất cả notes trong một deck ra định dạng List[dict] chuẩn của addon."""
+    from aqt import mw
+    if not mw or not mw.col:
+        raise RuntimeError("Anki collection is not open.")
+
+    col = mw.col
+    
+    # Tìm tất cả ID của các card nằm trong deck được chọn
+    query = f'"deck:{deck_name}"'
+    card_ids = col.find_cards(query)
+    
+    exported_notes = {}
+    note_type_name = ""
+    
+    for cid in card_ids:
+        try:
+            card = col.get_card(cid)
+            note = card.note()
+            
+            if not note_type_name:
+                note_type_name = note.model()["name"]
+            
+            # Tránh trùng lặp note (nếu 1 note tạo ra nhiều thẻ mặt trước/sau)
+            if note.id in exported_notes:
+                continue
+                
+            # Tạo dictionary chứa dữ liệu theo chuẩn JSON mà addon đang dùng
+            note_dict = {
+                "__guid__": note.guid,
+                "__deck__": deck_name,
+                "__notetype__": note.model()["name"],
+                "__tags__": note.tags,
+            }
+            
+            if include_stats:
+                # --- THÊM MỚI CÁC TRƯỜNG THỐNG KÊ ---
+                note_dict.update({
+                    "__created_at__": note.id,
+                    "__modified_at__": note.mod,
+                    "__reps__": card.reps,
+                    "__lapses__": card.lapses,
+                    "__ivl__": card.ivl,
+                    "__ease__": card.factor / 10 if hasattr(card, "factor") else 250,
+                })
+            
+            # Lấy nội dung của từng field (Front, Back, Image,...)
+            for field_name, field_value in note.items():
+                note_dict[field_name] = field_value
+                
+            exported_notes[note.id] = note_dict
+            
+        except Exception:
+            continue
+
+    # Trả về danh sách các note dưới dạng mảng và tên loại note của thẻ đầu tiên
+    return list(exported_notes.values()), note_type_name
+

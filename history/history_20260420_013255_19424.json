@@ -1,0 +1,2065 @@
+{
+  "note_type": "(Absplayer) Anki Note Type by Admin Phúc",
+  "deck": "Bulk Card Creator",
+  "match_field": null,
+  "created": 108,
+  "updated": 0,
+  "warnings": [
+    "Card #1: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #2: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #3: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #4: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #5: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #6: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #7: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #8: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #9: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #10: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #11: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #12: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #13: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #14: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #15: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #16: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #17: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #18: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #19: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #20: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #21: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #22: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #23: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #24: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #25: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #26: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #27: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #28: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #29: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #30: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #31: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #32: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #33: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #34: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #35: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #36: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #37: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #38: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #39: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #40: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #41: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #42: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #43: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #44: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #45: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #46: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #47: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #48: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #49: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #50: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #51: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #52: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #53: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #54: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #55: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #56: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #57: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #58: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #59: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #60: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #61: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #62: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #63: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #64: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #65: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #66: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #67: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #68: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #69: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #70: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #71: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #72: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #73: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #74: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #75: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #76: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #77: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #78: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #79: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #80: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #81: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #82: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #83: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #84: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #85: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #86: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #87: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #88: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #89: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #90: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #91: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #92: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #93: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #94: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #95: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #96: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #97: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #98: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #99: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #100: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #101: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #102: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #103: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #104: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #105: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #106: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #107: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']",
+    "Card #108: skipped unknown fields: ['id', 'word', 'meaning', 'pos', 'explain', 'example', 'example_translated', 'collocation', 'synonym', 'antonym']"
+  ],
+  "write_guid_backfill": true,
+  "cards": [
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::1. Xe buýt & Taxi (버스 & 택시)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::1_Xe_buýt_Taxi_버스_택시"
+      ],
+      "id": "THTH-02-Bài-06-001",
+      "word": "시내버스",
+      "meaning": "xe buýt nội thành",
+      "pos": "Danh từ",
+      "explain": "<b>시내</b> = nội thành (trong thành phố)<br><b>버스</b> = xe buýt<br><u>Ý chính</u>: dùng cho tuyến xe buýt chạy <i>trong</i> thành phố.",
+      "example": "저는 <b>시내버스</b>를 타요",
+      "example_translated": "Tôi đi <b>xe buýt nội thành</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "ds>B.@ziT?"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::1. Xe buýt & Taxi (버스 & 택시)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::1_Xe_buýt_Taxi_버스_택시"
+      ],
+      "id": "THTH-02-Bài-06-002",
+      "word": "시내버스를 타다",
+      "meaning": "đi xe buýt nội thành",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "매일 <b>시내버스</b>를 타고 학교에 가요",
+      "example_translated": "Mỗi ngày tôi đi học bằng <b>xe buýt nội thành</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "KQ0/i=[}P0"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::1. Xe buýt & Taxi (버스 & 택시)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::1_Xe_buýt_Taxi_버스_택시"
+      ],
+      "id": "THTH-02-Bài-06-003",
+      "word": "시외버스",
+      "meaning": "xe buýt ngoại thành",
+      "pos": "Danh từ",
+      "explain": "<b>시외</b> = ngoài thành phố<br><u>Ý chính</u>: xe buýt đi từ thành phố này sang khu vực khác (thường <i>liên tỉnh</i> / ngoại ô xa).",
+      "example": "저는 <b>시외버스</b>를 타고 가요",
+      "example_translated": "Tôi đi bằng <b>xe buýt ngoại thành</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "yqZ_[/z3p6"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::1. Xe buýt & Taxi (버스 & 택시)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::1_Xe_buýt_Taxi_버스_택시"
+      ],
+      "id": "THTH-02-Bài-06-004",
+      "word": "시외버스를 타고 가다",
+      "meaning": "đi bằng xe buýt ngoại thành",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "부산까지 <b>시외버스</b>를 타고 가요",
+      "example_translated": "Tôi đi Busan bằng <b>xe buýt ngoại thành</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "jt;DqF:&(7"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::1. Xe buýt & Taxi (버스 & 택시)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::1_Xe_buýt_Taxi_버스_택시"
+      ],
+      "id": "THTH-02-Bài-06-005",
+      "word": "마을버스",
+      "meaning": "xe buýt tuyến ngắn",
+      "pos": "Danh từ",
+      "explain": "<b>마을</b> = làng / khu dân cư nhỏ<br><u>Ý chính</u>: xe buýt nhỏ chạy quãng ngắn trong khu dân cư, hay nối ra <i>ga tàu</i> hoặc <i>trạm lớn</i>.",
+      "example": "저는 <b>마을버스</b>를 기다려요",
+      "example_translated": "Tôi chờ <b>xe buýt tuyến ngắn</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "m[3fE;`#K:"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::1. Xe buýt & Taxi (버스 & 택시)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::1_Xe_buýt_Taxi_버스_택시"
+      ],
+      "id": "THTH-02-Bài-06-006",
+      "word": "마을버스를 기다리다",
+      "meaning": "chờ xe buýt tuyến ngắn",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "정류장에서 <b>마을버스</b>를 기다려요",
+      "example_translated": "Tôi chờ <b>xe buýt tuyến ngắn</b> ở trạm.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "P@L>7@^2m,"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::1. Xe buýt & Taxi (버스 & 택시)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::1_Xe_buýt_Taxi_버스_택시"
+      ],
+      "id": "THTH-02-Bài-06-007",
+      "word": "셔틀버스",
+      "meaning": "xe buýt đưa đón, shuttle bus",
+      "pos": "Danh từ",
+      "explain": "<u>Ý chính</u>: xe đưa đón giữa <b>2 điểm cố định</b> (vd: <i>sân bay – khách sạn</i>, <i>trường – ký túc xá</i>). Thường chạy theo tuyến riêng.",
+      "example": "저는 <b>셔틀버스</b>를 이용해요",
+      "example_translated": "Tôi sử dụng <b>xe buýt đưa đón</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Oym.risN|w"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::1. Xe buýt & Taxi (버스 & 택시)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::1_Xe_buýt_Taxi_버스_택시"
+      ],
+      "id": "THTH-02-Bài-06-008",
+      "word": "셔틀버스를 이용하다",
+      "meaning": "sử dụng xe shuttle bus",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc</b>: <u>N을/를 이용하다</u> = sử dụng / tận dụng một phương tiện, dịch vụ, cách thức nào đó. <i>을/를</i> gắn vào danh từ đứng trước <b>이용하다</b>.<br><b>Thường dùng với</b>: xe buýt, tàu điện, dịch vụ, app, thẻ.<br><b>Ví dụ nhanh</b>:<br>• 버스를 이용하다 = sử dụng xe buýt<br>• 앱을 이용하다 = sử dụng ứng dụng<br>• 시설을 이용하다 = sử dụng cơ sở vật chất",
+      "example": "공항에서 <b>셔틀버스</b>를 이용했어요",
+      "example_translated": "Tôi đã dùng <b>xe shuttle bus</b> ở sân bay.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "h|=v_0fp?j"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::1. Xe buýt & Taxi (버스 & 택시)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::1_Xe_buýt_Taxi_버스_택시"
+      ],
+      "id": "THTH-02-Bài-06-009",
+      "word": "일반 택시",
+      "meaning": "taxi thường",
+      "pos": "Danh từ",
+      "explain": "<b>일반</b> = thông thường, phổ thông<br><u>Ý chính</u>: taxi tiêu chuẩn, loại phổ biến nhất.",
+      "example": "저는 <b>일반 택시</b>를 타요",
+      "example_translated": "Tôi đi <b>taxi thường</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "q:a2MZx3Sj"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::1. Xe buýt & Taxi (버스 & 택시)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::1_Xe_buýt_Taxi_버스_택시"
+      ],
+      "id": "THTH-02-Bài-06-010",
+      "word": "일반 택시를 타다",
+      "meaning": "đi taxi thường",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "늦어서 <b>일반 택시</b>를 탔어요",
+      "example_translated": "Vì muộn nên tôi đã đi <b>taxi thường</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "tn2ibc5i~h"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::1. Xe buýt & Taxi (버스 & 택시)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::1_Xe_buýt_Taxi_버스_택시"
+      ],
+      "id": "THTH-02-Bài-06-011",
+      "word": "콜택시",
+      "meaning": "taxi gọi tổng đài",
+      "pos": "Danh từ",
+      "explain": "<b>콜</b> = call<br><u>Ý chính</u>: taxi gọi trước qua <i>điện thoại</i> / <i>app</i>, không phải bắt dọc đường.",
+      "example": "저는 <b>콜택시</b>를 불러요",
+      "example_translated": "Tôi gọi <b>taxi gọi tổng đài</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "w2>BF*uDWW"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::1. Xe buýt & Taxi (버스 & 택시)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::1_Xe_buýt_Taxi_버스_택시"
+      ],
+      "id": "THTH-02-Bài-06-012",
+      "word": "콜택시를 부르다",
+      "meaning": "gọi taxi tổng đài",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc</b>: <u>N을/를 부르다</u> = gọi (người / phương tiện / dịch vụ) đến chỗ mình.<br><b>Chú ý</b>: <i>부르다</i> ở đây là “gọi”, <u>không phải</u> “hát”. <i>을/를</i> đánh dấu đối tượng được gọi.<br><b>Hay gặp với</b>: 택시, 사람, 이름.<br><b>Ví dụ nhanh</b>:<br>• 택시를 부르다 = gọi taxi<br>• 친구를 부르다 = gọi bạn<br>• 이름을 부르다 = gọi tên",
+      "example": "밤에 <b>콜택시</b>를 불렀어요",
+      "example_translated": "Buổi tối tôi đã gọi <b>taxi gọi tổng đài</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "lOuo_gy?0N"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::1. Xe buýt & Taxi (버스 & 택시)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::1_Xe_buýt_Taxi_버스_택시"
+      ],
+      "id": "THTH-02-Bài-06-013",
+      "word": "모범택시",
+      "meaning": "taxi cao cấp",
+      "pos": "Danh từ",
+      "explain": "<b>모범</b> mang sắc thái “chuẩn mực / cao cấp”.<br><u>Ý chính</u>: dịch vụ tốt hơn, xe đẹp hơn, giá thường cao hơn <i>taxi thường</i>.",
+      "example": "저는 <b>모범택시</b>를 타요",
+      "example_translated": "Tôi đi <b>taxi cao cấp</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "z}2T3PO<&a"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::1. Xe buýt & Taxi (버스 & 택시)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::1_Xe_buýt_Taxi_버스_택시"
+      ],
+      "id": "THTH-02-Bài-06-014",
+      "word": "모범택시를 타다",
+      "meaning": "đi taxi cao cấp",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "손님과 함께 <b>모범택시</b>를 탔어요",
+      "example_translated": "Tôi đi <b>taxi cao cấp</b> cùng khách.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Na?UZd{`4Y"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::1. Xe buýt & Taxi (버스 & 택시)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::1_Xe_buýt_Taxi_버스_택시"
+      ],
+      "id": "THTH-02-Bài-06-015",
+      "word": "리무진 택시",
+      "meaning": "taxi loại lớn",
+      "pos": "Danh từ",
+      "explain": "<u>Ý chính</u>: taxi cỡ lớn, “xịn” hơn taxi thường. Thường dùng khi đi <b>sân bay</b> hoặc chở <i>nhiều hành lý</i> / <i>nhiều người</i>.",
+      "example": "저는 <b>리무진 택시</b>를 예약해요",
+      "example_translated": "Tôi đặt <b>taxi loại lớn</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "nCaQW7h;Gg"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::1. Xe buýt & Taxi (버스 & 택시)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::1_Xe_buýt_Taxi_버스_택시"
+      ],
+      "id": "THTH-02-Bài-06-016",
+      "word": "리무진 택시를 예약하다",
+      "meaning": "đặt taxi limousine",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc</b>: <u>N을/를 예약하다</u> = đặt trước / đặt chỗ trước (dịch vụ, vé, phòng, phương tiện).<br><b>예약하다</b> = “đặt trước”. <i>을/를</i> đánh dấu thứ được đặt.<br><b>Thường dùng với</b>: 택시, 호텔, 표, 좌석, 식당.<br><b>Ví dụ nhanh</b>:<br>• 택시를 예약하다 = đặt taxi<br>• 호텔을 예약하다 = đặt khách sạn<br>• 표를 예약하다 = đặt vé",
+      "example": "호텔에서 <b>리무진 택시</b>를 예약했어요",
+      "example_translated": "Tôi đã đặt <b>taxi limousine</b> ở khách sạn.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Nfu7,WG>s("
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-017",
+      "word": "1번 출구",
+      "meaning": "cổng số 1, cửa ra số 1",
+      "pos": "Biểu hiện",
+      "explain": "<b>번</b> = số thứ tự<br><u>Mẹo</u>: đứng sau số để tạo “số …” (1번, 2번, 3번…).",
+      "example": "<b>1번 출구</b>에서 만나요",
+      "example_translated": "Gặp nhau ở <b>cửa ra số 1</b> nhé.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "z6Z9W!a;5T"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-018",
+      "word": "1호선",
+      "meaning": "tuyến số 1",
+      "pos": "Danh từ",
+      "explain": "<b>호선</b> = tuyến số (line tàu điện / subway).<br><u>Ý chính</u>: dùng để gọi tên từng tuyến theo số.<br><b>Ví dụ</b>: 1호선 = line 1, 2호선 = line 2.<br><b>Thường đi với</b>: <i>타다</i>, <i>갈아타다</i>.",
+      "example": "저는 <b>1호선</b>을 타요",
+      "example_translated": "Tôi đi <b>tuyến số 1</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "oA`o&?;)]o"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-019",
+      "word": "1호선을 타다",
+      "meaning": "đi tuyến số 1",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc</b>: <u>N을/를 타다</u> = lên / đi một phương tiện giao thông. <i>을/를</i> đánh dấu phương tiện được đi.<br><b>Thường dùng với</b>: 버스, 지하철, 택시, 기차, 비행기.<br><b>Ví dụ nhanh</b>:<br>• 버스를 타다 = đi xe buýt<br>• 지하철을 타다 = đi tàu điện<br>• 택시를 타다 = đi taxi",
+      "example": "회사에 가려고 <b>1호선</b>을 타요",
+      "example_translated": "Tôi đi <b>tuyến số 1</b> để đến công ty.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "O>UB@9AiPM"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-020",
+      "word": "2호선",
+      "meaning": "tuyến số 2",
+      "pos": "Danh từ",
+      "explain": "<b>호선</b> = tuyến số (line tàu điện / subway).<br><u>Ý chính</u>: gọi tên tuyến theo số.<br><b>Ví dụ</b>: 1호선 = line 1, 2호선 = line 2.<br><b>Thường đi với</b>: <i>타다</i>, <i>갈아타다</i>.",
+      "example": "저는 <b>2호선</b>을 타요",
+      "example_translated": "Tôi đi <b>tuyến số 2</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "C6VT;H//>b"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-021",
+      "word": "환승역",
+      "meaning": "ga trung chuyển",
+      "pos": "Danh từ",
+      "explain": "<b>환승</b> = chuyển tuyến / đổi phương tiện<br><b>역</b> = ga<br><u>Ý chính</u>: ga nơi bạn có thể đổi sang tuyến khác.",
+      "example": "저는 <b>환승역</b>에서 내려요",
+      "example_translated": "Tôi xuống ở <b>ga trung chuyển</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "yh3G.hay,"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-022",
+      "word": "환승역에서 내리다",
+      "meaning": "xuống ở ga trung chuyển",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc</b>: <u>N에서 내리다</u> = xuống tại / xuống ở (trạm/ga/địa điểm). <b>에서</b> chỉ nơi diễn ra hành động “xuống”.<br><b>Thường dùng với</b>: 역, 정류장, 터미널, 공항.<br><b>Ví dụ nhanh</b>:<br>• 역에서 내리다 = xuống ở ga<br>• 정류장에서 내리다 = xuống ở trạm xe buýt<br>• 다음 역에서 내리다 = xuống ở ga tiếp theo",
+      "example": "서울역 <b>환승역</b>에서 내렸어요",
+      "example_translated": "Tôi đã xuống ở <b>ga trung chuyển</b> Seoul Station.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "EMnEA!a8sj"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-023",
+      "word": "갈아타는 곳",
+      "meaning": "nơi đổi tuyến",
+      "pos": "Biểu hiện",
+      "explain": "<b>Gốc</b>: <u>갈아타다</u> = đổi xe / chuyển tàu.<br><u>Ý chính</u>: chỉ “chỗ” để đổi sang phương tiện khác.",
+      "example": "<b>갈아타는 곳</b>이 어디예요?",
+      "example_translated": "<b>Chỗ đổi tuyến</b> ở đâu?",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "lMozh2t,<F"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-024",
+      "word": "방면",
+      "meaning": "hướng, phía",
+      "pos": "Danh từ",
+      "explain": "<u>Ý chính</u>: đi sau tên địa điểm để chỉ “hướng di chuyển”.<br><b>Ví dụ</b>: 강남<br><b>방면</b> = hướng Gangnam.",
+      "example": "이 버스는 강남 <b>방면</b>으로 가요",
+      "example_translated": "Xe buýt này đi về <b>hướng</b> Gangnam.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Lmt*%zV_kv"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-025",
+      "word": "강남 방면으로 가다",
+      "meaning": "đi về hướng Gangnam",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "이 버스는 강남 <b>방면</b>으로 가요",
+      "example_translated": "Xe buýt này đi về <b>hướng</b> Gangnam.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "MkZ7~|sIji"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-026",
+      "word": "행",
+      "meaning": "chuyến đi về hướng...",
+      "pos": "Danh từ phụ thuộc",
+      "explain": "<u>Ý chính</u>: hậu tố gắn sau địa danh để nghĩa là “đi tới … / tuyến …”.<br><b>Ví dụ</b>: 부산<b>행</b> = chuyến (tàu/bus) đi Busan.",
+      "example": "저는 부산<b>행</b> 버스를 타요",
+      "example_translated": "Tôi đi xe buýt <b>tuyến</b> Busan.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Ko|@qDzn{c"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-027",
+      "word": "부산행 버스를 타다",
+      "meaning": "đi xe bus tuyến Busan",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "터미널에서 부산<b>행</b> 버스를 탔어요",
+      "example_translated": "Tôi đã đi xe bus <b>tuyến</b> Busan ở bến xe.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "cJ7c2l2<MR"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-028",
+      "word": "교통 카드",
+      "meaning": "thẻ giao thông",
+      "pos": "Danh từ",
+      "explain": "<u>Ý chính</u>: thẻ dùng để thanh toán khi đi xe buýt, tàu điện.<br><i>Gợi ý</i>: ở Hàn hay dùng <b>T-money</b> hoặc thẻ tương tự.",
+      "example": "저는 <b>교통 카드</b>로 계산해요",
+      "example_translated": "Tôi thanh toán bằng <b>thẻ giao thông</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "AumAO[!F%r"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-029",
+      "word": "교통 카드로 계산하다",
+      "meaning": "thanh toán bằng thẻ giao thông",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc</b>: <u>N(으)로 계산하다</u> = thanh toán / tính tiền bằng (phương tiện/công cụ/cách thức).<br><b>(으)로</b> = “bằng/cách”.<br><b>Quy tắc</b>:<br>• danh từ có patchim → <b>으로</b><br>• danh từ không có patchim → <b>로</b> <u>Ví dụ</u>: 카드 → 카드<b>로</b><br><b>Ví dụ nhanh</b>:<br>• 카드로 계산하다 = thanh toán bằng thẻ<br>• 현금으로 계산하다 = thanh toán bằng tiền mặt<br>• 휴대폰으로 계산하다 = thanh toán bằng điện thoại",
+      "example": "버스에서 <b>교통 카드</b>로 계산해요",
+      "example_translated": "Tôi thanh toán bằng <b>thẻ giao thông</b> trên xe buýt.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "y]bnwGftI~"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-030",
+      "word": "기본요금",
+      "meaning": "phí cơ bản",
+      "pos": "Danh từ",
+      "explain": "<b>기본</b> = cơ bản, ban đầu<br><b>요금</b> = tiền phí<br><u>Ý chính</u>: mức tiền tối thiểu phải trả khi bắt đầu sử dụng dịch vụ.",
+      "example": "<b>기본요금</b>이 얼마예요?",
+      "example_translated": "<b>Phí cơ bản</b> là bao nhiêu?",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "v1:2p6[_nz"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-031",
+      "word": "기본요금이 얼마예요?",
+      "meaning": "phí cơ bản là bao nhiêu?",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "택시 <b>기본요금</b>이 얼마예요?",
+      "example_translated": "<b>Phí mở cửa taxi</b> là bao nhiêu?",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "nRk74G6+ea"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-032",
+      "word": "노선도",
+      "meaning": "bản đồ lộ trình",
+      "pos": "Danh từ",
+      "explain": "<b>노선</b> = tuyến đường<br><b>도</b> = sơ đồ / bản đồ<br><u>Ý chính</u>: sơ đồ các tuyến xe buýt hoặc tàu điện.",
+      "example": "저는 지하철 <b>노선도</b>를 봐요",
+      "example_translated": "Tôi xem <b>bản đồ lộ trình</b> tàu điện.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "MM>])In>c="
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-033",
+      "word": "지하철 노선도를 보다",
+      "meaning": "xem bản đồ tàu điện",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "처음이라서 지하철 <b>노선도</b>를 봐요",
+      "example_translated": "Vì là lần đầu nên tôi xem <b>bản đồ tàu điện</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "EQzlW;`F-6"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-034",
+      "word": "골목",
+      "meaning": "ngõ, hẻm",
+      "pos": "Danh từ",
+      "explain": "<u>Ý chính</u>: con đường nhỏ nằm giữa các dãy nhà. Nhỏ hơn đường lớn, giống “ngõ/hẻm”.",
+      "example": "저는 <b>골목</b>으로 들어가요",
+      "example_translated": "Tôi đi vào <b>hẻm</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "N1bfG/w9f="
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-035",
+      "word": "골목으로 들어가다",
+      "meaning": "đi vào hẻm",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc</b>: <u>N(으)로 들어가다</u> = đi vào / tiến vào theo hướng (lối) nào đó. <b>(으)로</b> ở đây chỉ hướng/lối đi.<br><u>Nhấn nhẹ</u>: không chỉ “vào”, mà là “vào <i>bằng lối đó</i>”.<br><b>Ví dụ nhanh</b>:<br>• 문으로 들어가다 = đi vào bằng cửa<br>• 골목으로 들어가다 = đi vào hẻm<br>• 안으로 들어가다 = đi vào bên trong",
+      "example": "저 <b>골목</b>으로 들어가세요",
+      "example_translated": "Hãy đi vào con <b>hẻm</b> kia.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "GL:2kOE+y."
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-036",
+      "word": "모퉁이",
+      "meaning": "góc đường",
+      "pos": "Danh từ",
+      "explain": "<u>Ý chính</u>: “một góc cụ thể” của đường/tòa nhà (chỗ bẻ góc để quẹo).<br><i>Không phải</i> toàn bộ ngã ba/ngã tư, mà là “góc” ở mép đường.<br><b>Ví dụ dễ hình dung</b>:<br>• 편의점 모퉁이 = góc của cửa hàng tiện lợi<br>• 골목 모퉁이 = góc hẻm<br>• 모퉁이를 돌다 = quẹo ở góc đó",
+      "example": "저는 <b>모퉁이</b>에서 기다려요",
+      "example_translated": "Tôi chờ ở <b>góc đường</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "PeGcMXCd|~"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-037",
+      "word": "모퉁이에서 기다리다",
+      "meaning": "chờ ở góc đường",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "편의점 <b>모퉁이</b>에서 기다릴게요",
+      "example_translated": "Tôi sẽ chờ ở <b>góc đường</b> gần cửa hàng tiện lợi.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "y.voFSe2rD"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-038",
+      "word": "건널목",
+      "meaning": "lối qua đường, chỗ băng qua",
+      "pos": "Danh từ",
+      "explain": "<u>Ý chính</u>: chỗ người đi bộ băng qua đường một cách “chính thức”. Thường hiểu gần như vạch/điểm sang đường.<br><i>Gợi ý</i>: <b>건널목</b> là “địa điểm”, còn hành động băng qua là <b>건너다</b>.",
+      "example": "저는 <b>건널목</b>을 건너요",
+      "example_translated": "Tôi băng qua <b>chỗ sang đường</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Nuv8$4g43>"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-039",
+      "word": "건널목을 건너다",
+      "meaning": "băng qua chỗ sang đường",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc</b>: <u>N을/를 건너다</u> = băng qua / qua sang phía bên kia. <i>을/를</i> đánh dấu thứ bị băng qua.<br><b>Thường dùng với</b>: 길, 다리, 건널목, 강.<br><b>Ví dụ nhanh</b>:<br>• 길을 건너다 = băng qua đường<br>• 다리를 건너다 = qua cầu<br>• 강을 건너다 = qua sông",
+      "example": "<b>건널목</b>을 건너서 오른쪽으로 가세요",
+      "example_translated": "Qua <b>chỗ sang đường</b> rồi rẽ phải.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "F#ig52MUBB"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-040",
+      "word": "건너다",
+      "meaning": "băng qua, qua",
+      "pos": "Động từ",
+      "explain": "<u>Ý chính</u>: đi từ bên này sang bên kia (đường/cầu/sông/vạch sang đường…).<br><b>So sánh nhẹ</b>:<br>•<br><b>건너다</b> = tập trung vào hành động “qua”<br>•<br><b>건너가다</b> = nhấn mạnh “đi sang phía bên kia” (đích ở bên kia)",
+      "example": "길을 <b>건너요</b>",
+      "example_translated": "Tôi <b>băng qua</b> đường.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "m]xsZB)>Ze"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-041",
+      "word": "삼거리",
+      "meaning": "ngã ba",
+      "pos": "Danh từ",
+      "explain": "<b>삼</b> = ba<br><b>거리</b> = đường giao nhau<br><u>Ý chính</u>: chỗ giao của <b>3 hướng</b> đường.",
+      "example": "저는 <b>삼거리</b>에서 왼쪽으로 가요",
+      "example_translated": "Tôi đi sang trái ở <b>ngã ba</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "r%0C7vKf^;"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-042",
+      "word": "삼거리에서 왼쪽으로 가다",
+      "meaning": "đi sang trái ở ngã ba",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "<b>삼거리</b>에서 왼쪽으로 가면 돼요",
+      "example_translated": "Đến <b>ngã ba</b> thì đi sang trái là được.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "z4v45`g0qH"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-043",
+      "word": "사거리",
+      "meaning": "ngã tư",
+      "pos": "Danh từ",
+      "explain": "<b>사</b> = bốn<br><u>Ý chính</u>: chỗ giao nhau của <b>4 hướng</b> đường.",
+      "example": "우리는 <b>사거리</b>에서 만나요",
+      "example_translated": "Chúng tôi gặp nhau ở <b>ngã tư</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "gcJV8F;SGA"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-044",
+      "word": "사거리에서 만나다",
+      "meaning": "gặp nhau ở ngã tư",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "우리 <b>사거리</b>에서 만납시다",
+      "example_translated": "Chúng ta gặp nhau ở <b>ngã tư</b> nhé.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "qi|]H!:bOI"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-045",
+      "word": "버스 전용 도로",
+      "meaning": "đường dành riêng cho xe buýt",
+      "pos": "Danh từ",
+      "explain": "<b>전용</b> = dành riêng, chuyên dùng<br><u>Ý chính</u>: làn/đoạn đường chỉ dành cho xe buýt để giảm tắc đường và giúp xe chạy đúng giờ hơn.<br><i>Gợi ý</i>: thường gặp ở đô thị lớn (vd: Seoul); khu ít xe/đường nhỏ có thể không có.",
+      "example": "버스가 <b>버스 전용 도로</b>로 달려요",
+      "example_translated": "Xe buýt chạy trên <b>đường dành riêng cho xe buýt</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "wG<uIY2Heb"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::2. Biểu hiện giao thông (교통 관련 표현)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::2_Biểu_hiện_giao_thông_교통_관련_표현"
+      ],
+      "id": "THTH-02-Bài-06-046",
+      "word": "버스 전용 도로로 달리다",
+      "meaning": "chạy trên làn đường xe buýt",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "버스가 <b>버스 전용 도로</b>로 달려요",
+      "example_translated": "Xe buýt chạy trên <b>làn đường xe buýt</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "x=f&4B!X~b"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::3. Tòa nhà (건물)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::3_Tòa_nhà_건물"
+      ],
+      "id": "THTH-02-Bài-06-047",
+      "word": "마트",
+      "meaning": "siêu thị",
+      "pos": "Danh từ",
+      "explain": "<u>Ý chính</u>: cách nói ngắn, thông dụng của “siêu thị / mart”.",
+      "example": "저는 <b>마트</b>에 가요",
+      "example_translated": "Tôi đi <b>siêu thị</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "u|ZlzC><T0"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::3. Tòa nhà (건물)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::3_Tòa_nhà_건물"
+      ],
+      "id": "THTH-02-Bài-06-048",
+      "word": "마트에 가다",
+      "meaning": "đi siêu thị",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "저녁에 <b>마트</b>에 가요",
+      "example_translated": "Buổi tối tôi đi <b>siêu thị</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "N/5:MWdW@I"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::3. Tòa nhà (건물)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::3_Tòa_nhà_건물"
+      ],
+      "id": "THTH-02-Bài-06-049",
+      "word": "미용실",
+      "meaning": "tiệm làm tóc",
+      "pos": "Danh từ",
+      "explain": "<u>Ý chính</u>: nơi cắt/uốn/nhuộm tóc.<br><b>미용</b> = làm đẹp.",
+      "example": "저는 <b>미용실</b>에서 머리를 잘라요",
+      "example_translated": "Tôi cắt tóc ở <b>tiệm làm tóc</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "GITM+26XVx"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::3. Tòa nhà (건물)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::3_Tòa_nhà_건물"
+      ],
+      "id": "THTH-02-Bài-06-050",
+      "word": "미용실에서 머리를 자르다",
+      "meaning": "cắt tóc ở tiệm",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "주말에 <b>미용실</b>에서 머리를 잘랐어요",
+      "example_translated": "Cuối tuần tôi đã cắt tóc ở <b>tiệm</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "td,sU#=x%9"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::3. Tòa nhà (건물)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::3_Tòa_nhà_건물"
+      ],
+      "id": "THTH-02-Bài-06-051",
+      "word": "주유소",
+      "meaning": "trạm xăng",
+      "pos": "Danh từ",
+      "explain": "<u>Ý chính</u>: nơi đổ xăng/dầu cho xe.<br><b>주유</b> = tiếp nhiên liệu.",
+      "example": "저는 <b>주유소</b>에 들러요",
+      "example_translated": "Tôi ghé <b>trạm xăng</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "e|%i-FkAxH"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::3. Tòa nhà (건물)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::3_Tòa_nhà_건물"
+      ],
+      "id": "THTH-02-Bài-06-052",
+      "word": "주유소에 들르다",
+      "meaning": "ghé trạm xăng",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc</b>: <u>N에 들르다</u> = ghé vào/ghé qua một địa điểm trên đường đi. <b>에</b> chỉ nơi được ghé đến. <i>들르다</i> có sắc thái “ghé một lúc”, không ở lâu.<br><b>Ví dụ nhanh</b>:<br>• 편의점에 들르다 = ghé cửa hàng tiện lợi<br>• 카페에 들르다 = ghé quán cà phê<br>• 주유소에 들르다 = ghé trạm xăng",
+      "example": "가는 길에 <b>주유소</b>에 들렀어요",
+      "example_translated": "Trên đường đi tôi đã ghé <b>trạm xăng</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "nwd^($zEjk"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-053",
+      "word": "오른쪽으로 가다",
+      "meaning": "đi về bên phải",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "여기에서 <b>오른쪽</b>으로 가세요",
+      "example_translated": "Từ đây hãy đi sang <b>phải</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "qHT]Pxj-*Z"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-054",
+      "word": "우회전하다",
+      "meaning": "rẽ phải",
+      "pos": "Động từ",
+      "explain": "<b>우</b> = bên phải<br><b>회전</b> = quay/xoay<br><u>Ý chính</u>: “quay sang bên phải” (rẽ phải).<br><b>Hay dùng trong</b>: chỉ đường, lái xe, biển báo giao thông.<br><b>So với</b> <i>오른쪽으로 가다</i>: <u>우회전하다</u> cụ thể hơn vì nhấn vào hành động “rẽ” tại điểm giao/góc đường.",
+      "example": "다음 사거리에서 <b>우회전</b>하세요",
+      "example_translated": "Ở ngã tư tới hãy <b>rẽ phải</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Q+IO?+$83g"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-055",
+      "word": "사거리에서 우회전하다",
+      "meaning": "rẽ phải ở ngã tư",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "다음 사거리에서 <b>우회전</b>하면 돼요",
+      "example_translated": "Ở ngã tư tới <b>rẽ phải</b> là được.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "G(/5aVFTMY"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-056",
+      "word": "왼쪽으로 가다",
+      "meaning": "đi về bên trái",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "<b>왼쪽</b>으로 가면 돼요",
+      "example_translated": "Đi sang <b>trái</b> là được.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "u:&RgV6g(Z"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-057",
+      "word": "좌회전하다",
+      "meaning": "rẽ trái",
+      "pos": "Động từ",
+      "explain": "<b>좌</b> = bên trái<br><b>회전</b> = quay/xoay<br><u>Ý chính</u>: “quay sang bên trái” (rẽ trái).<br><b>Hay dùng trong</b>: chỉ đường, lái xe, biển báo giao thông.<br><b>So với</b> <i>왼쪽으로 가다</i>: <u>좌회전하다</u> cụ thể hơn vì nhấn vào hành động “rẽ” tại giao lộ/góc đường.",
+      "example": "여기서 <b>좌회전</b>하면 돼요",
+      "example_translated": "<b>Rẽ trái</b> ở đây là được.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "qr9qMn2yj)"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-058",
+      "word": "여기서 좌회전하다",
+      "meaning": "rẽ trái ở đây",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "여기서 <b>좌회전</b>해서 곧장 가세요",
+      "example_translated": "<b>Rẽ trái</b> ở đây rồi đi thẳng.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Hpo7iMM+2I"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-059",
+      "word": "똑바로 가다",
+      "meaning": "đi thẳng",
+      "pos": "Biểu hiện",
+      "explain": "<b>똑바로</b> = thẳng, ngay hàng (không lệch trái/phải).<br><u>Trong chỉ đường</u>: cứ đi thẳng phía trước, không rẽ giữa đường.<br><b>Sắc thái</b>: khẩu ngữ, tự nhiên trong giao tiếp hằng ngày.<br><b>So với</b> <i>직진하다</i>: đời thường hơn.",
+      "example": "쭉 <b>똑바로</b> 가세요",
+      "example_translated": "Cứ đi <b>thẳng</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "HS[I.1i_Dy"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-060",
+      "word": "직진하다",
+      "meaning": "đi thẳng",
+      "pos": "Động từ",
+      "explain": "<b>직진</b> = đi thẳng (từ Hán Hàn).<br><u>Ý chính</u>: đi thẳng về phía trước, không rẽ.<br><b>Hay gặp trong</b>: giao thông, chỉ đường, biển báo, lái xe → sắc thái “chuẩn” hơn.<br><b>Nói đơn giản</b>:<br>•<br><b>똑바로 가다</b> = đời thường<br>•<br><b>직진하다</b> = chuẩn kiểu giao thông",
+      "example": "신호등까지 <b>직진</b>하세요",
+      "example_translated": "<b>Đi thẳng</b> đến đèn giao thông.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "x5,th09(3w"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-061",
+      "word": "신호등",
+      "meaning": "đèn giao thông",
+      "pos": "Danh từ",
+      "explain": "<b>Tách nghĩa</b>:<br>•<br><b>신</b> = tín hiệu<br>•<br><b>호</b> = hiệu/dấu hiệu<br>•<br><b>등</b> = đèn<br><u>Ý chính</u>: đèn phát tín hiệu (đèn giao thông) để báo khi nào được đi, phải dừng, hoặc cần chú ý.",
+      "example": "<b>신호등</b> 앞에서 기다리세요",
+      "example_translated": "Hãy chờ trước <b>đèn giao thông</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "jyZW(!5FnH"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-062",
+      "word": "신호등까지 직진하다",
+      "meaning": "đi thẳng đến đèn giao thông",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "먼저 신호등까지 <b>직진</b>하세요",
+      "example_translated": "Trước hết hãy <b>đi thẳng</b> đến đèn giao thông.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "u~AtS{Hd_C"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-063",
+      "word": "곧장 가다",
+      "meaning": "đi thẳng một mạch",
+      "pos": "Biểu hiện",
+      "explain": "<b>곧장</b> = đi thẳng theo <u>một hướng duy nhất</u> (không rẽ, không vòng).<br><b>Sắc thái</b>: đi “liền một mạch”, hướng tới đích.<br><b>So sánh nhanh</b>:<br>•<br><b>똑바로 가다</b> = đi thẳng (đời thường)<br>•<br><b>직진하다</b> = đi thẳng (kiểu giao thông/biển báo)<br>•<br><b>곧장 가다</b> = đi thẳng một mạch tới đích (nhấn mạnh không đổi hướng)",
+      "example": "역까지 <b>곧장</b> 가다",
+      "example_translated": "<b>Đi thẳng một mạch</b> đến ga.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "A?H)d]4v4v"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-064",
+      "word": "역까지 곧장 가다",
+      "meaning": "đi thẳng một mạch đến ga",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "여기에서 역까지 <b>곧장</b> 가세요",
+      "example_translated": "Từ đây cứ <b>đi thẳng một mạch</b> đến ga.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "w,EB`<d1B,"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-065",
+      "word": "쭉 가다",
+      "meaning": "đi miết, đi thẳng tiếp",
+      "pos": "Biểu hiện",
+      "explain": "<b>쭉</b> = cảm giác kéo dài liên tục (cứ tiếp tục như vậy).<br><u>Trong chỉ đường</u>: cứ đi tiếp theo hướng hiện tại, chưa cần rẽ hay dừng lại.<br><b>Sắc thái</b>: khẩu ngữ, rất hay dùng khi nói chuyện (nghe như “cứ đi tiếp nữa đi”).<br><b>So sánh nhanh</b>:<br>•<br><b>똑바로 가다</b> = đi thẳng (trung tính)<br>•<br><b>곧장 가다</b> = đi thẳng một mạch tới đích<br>•<br><b>쭉 가다</b> = cứ đi tiếp theo hướng đó",
+      "example": "이 길로 <b>쭉</b> 가세요",
+      "example_translated": "Cứ <b>đi theo đường này</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "y+va[~^nzU"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-066",
+      "word": "이 길로 쭉 가다",
+      "meaning": "cứ đi theo con đường này",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "이 길로 <b>쭉</b> 가면 나와요",
+      "example_translated": "Cứ <b>đi đường này</b> sẽ ra tới nơi.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "N95119f.B("
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-067",
+      "word": "지나가다",
+      "meaning": "đi qua, đi ngang qua",
+      "pos": "Động từ",
+      "explain": "<u>Ý chính</u>: đi ngang qua một địa điểm rồi tiếp tục đi tiếp (không nhấn mạnh dừng lại).<br><b>Hay dùng</b>: chỉ đường, miêu tả lộ trình.<br><b>Ví dụ nhanh</b>:<br>• 학교를 지나가다 = đi qua trường học<br>• 은행을 지나가다 = đi qua ngân hàng",
+      "example": "학교를 <b>지나가다</b>",
+      "example_translated": "<b>Đi qua</b> trường học.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "DYK9~C$5/:"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-068",
+      "word": "학교를 지나가다",
+      "meaning": "đi qua trường học",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc</b>: <u>N을/를 지나가다</u> = đi ngang qua / đi vượt qua một địa điểm hoặc vật mốc. <i>을/를</i> đánh dấu nơi bị đi qua.<br><b>Thường dùng với</b>: 학교, 은행, 건물, 공원, 다리.<br><b>Ví dụ nhanh</b>:<br>• 학교를 지나가다 = đi qua trường học<br>• 은행을 지나가다 = đi qua ngân hàng<br>• 큰 건물을 지나가다 = đi qua tòa nhà lớn",
+      "example": "학교를 <b>지나가면</b> 바로 보여요",
+      "example_translated": "<b>Đi qua</b> trường là thấy ngay.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "gB-48on/8H"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-069",
+      "word": "건너가다",
+      "meaning": "băng qua, đi sang bên kia",
+      "pos": "Động từ",
+      "explain": "<b>Tách nghĩa</b>: 건너 (sang phía bên kia) + <b>가다</b> (đi).<br><u>Ý chính</u>: băng qua rồi <i>đi sang hẳn</i> phía bên kia (nhấn mạnh đích ở bên kia).<br><b>So với</b> <i>건너다</i>: <u>건너가다</u> nhấn mạnh “sang bên kia” rõ hơn.",
+      "example": "길을 <b>건너가다</b>",
+      "example_translated": "<b>Băng qua</b> đường.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "G(<y+o&_:J"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-070",
+      "word": "길을 건너가다",
+      "meaning": "băng qua đường",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc</b>: <u>N을/를 건너가다</u> = băng qua rồi đi sang phía bên kia. <i>을/를</i> đánh dấu nơi bị băng qua.<br><b>Khác nhẹ với</b> <u>N을/를 건너다</u>:<br>•<br><b>건너다</b> = tập trung vào hành động “qua”<br>•<br><b>건너가다</b> = tập trung vào việc “sang bên kia” sau khi qua<br><b>Ví dụ nhanh</b>:<br>• 길을 건너가다 = băng qua đường sang bên kia<br>• 다리를 건너가다 = đi qua cầu sang phía bên kia",
+      "example": "길을 <b>건너가서</b> 왼쪽으로 가세요",
+      "example_translated": "<b>Băng qua</b> đường rồi đi bên trái.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "KJ]cjwo8n:"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-071",
+      "word": "돌아가다",
+      "meaning": "quay lại, trở về",
+      "pos": "Động từ",
+      "explain": "<u>Ý chính</u>: quay trở lại chỗ trước đó / trở về nơi xuất phát (nơi cũ).<br><b>Trong chỉ đường</b> thường mang sắc thái:<br>• quay lại vì đi sai đường<br>• trở lại điểm trước đó rồi đi lại từ đầu<br><i>Lưu ý</i>: từ này cũng dùng cho “về nhà / về quê”, nhưng trong bài này hiểu là quay lại hướng cũ.",
+      "example": "다시 <b>돌아가다</b>",
+      "example_translated": "<b>Quay lại</b> lần nữa.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "IvjXr.3f5S"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-072",
+      "word": "다시 돌아가다",
+      "meaning": "quay lại lần nữa",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "길이 아니면 다시 <b>돌아가세요</b>",
+      "example_translated": "Nếu không đúng đường thì <b>quay lại</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Cf_Pvn*yWf"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-073",
+      "word": "유턴하다",
+      "meaning": "quay đầu xe",
+      "pos": "Động từ",
+      "explain": "<b>U-turn</b> (từ mượn).<br><u>Ý chính</u>: quay đầu xe để đi theo hướng ngược lại.<br><b>Hay dùng trong</b>: lái xe, biển báo giao thông, chỉ đường trên đường lớn.<br><b>Khác với</b> <i>돌아가다</i>:<br>•<br><b>돌아가다</b> = quay lại/trở về nói chung<br>•<br><b>유턴하다</b> = quay đầu xe theo nghĩa giao thông",
+      "example": "여기서 <b>유턴</b>할 수 없어요",
+      "example_translated": "Ở đây không được <b>quay đầu xe</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "kHh5-M95~<"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-074",
+      "word": "여기서 유턴하다",
+      "meaning": "quay đầu xe ở đây",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "여기서는 <b>유턴</b>하면 안 돼요",
+      "example_translated": "Ở đây không được <b>quay đầu xe</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "MX)7v]ywxz"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-075",
+      "word": "나가다",
+      "meaning": "đi ra",
+      "pos": "Động từ",
+      "explain": "<u>Ý chính</u>: đi ra ngoài, rời khỏi không gian bên trong để ra bên ngoài. Nhấn vào hướng di chuyển “từ trong → ra ngoài” hoặc “từ chỗ hiện tại → ra xa hơn”.<br><b>Đối lập</b>: <i>들어가다</i> = đi vào.<br><b>Ví dụ nhanh</b>:<br>• 방에서 나가다 = đi ra khỏi phòng<br>• 밖으로 나가다 = đi ra ngoài",
+      "example": "밖으로 <b>나가다</b>",
+      "example_translated": "<b>Đi ra</b> ngoài.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "uI4kr-rd(!"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-076",
+      "word": "밖으로 나가다",
+      "meaning": "đi ra ngoài",
+      "pos": "Biểu hiện",
+      "explain": "<b>Cấu trúc</b>: <u>N(으)로 나가다</u> = đi ra theo hướng/về phía nào đó.<br><b>밖으로</b> = ra phía bên ngoài → nói rõ hướng “ra ngoài”.<br><b>Ví dụ nhanh</b>:<br>• 문으로 나가다 = đi ra bằng cửa<br>• 밖으로 나가다 = đi ra ngoài<br>• 베란다로 나가다 = đi ra ban công",
+      "example": "문을 열고 밖으로 <b>나가세요</b>",
+      "example_translated": "Mở cửa rồi <b>đi ra ngoài</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "en1cIKWr/g"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-077",
+      "word": "나오다",
+      "meaning": "đi ra, bước ra",
+      "pos": "Động từ",
+      "explain": "<u>Ý chính</u>: cũng là “đi ra”, nhưng thường nhấn vào việc đi ra rồi <b>xuất hiện</b> ở chỗ người nói hoặc điểm được nhắc tới.<br><b>So sánh nhanh</b>:<br>•<br><b>나가다</b> = rời khỏi nơi bên trong (nhấn hướng rời đi)<br>•<br><b>나오다</b> = đi ra tới chỗ người nói/đích (nhấn việc “ra và xuất hiện”)<br><b>Ví dụ nhanh</b>:<br>• 밖으로 나오다 = đi ra ngoài và xuất hiện ở ngoài<br>• 2번 출구로 나오다 = đi ra bằng cửa số 2",
+      "example": "지하철역으로 <b>나오다</b>",
+      "example_translated": "<b>Đi ra</b> chỗ ga tàu điện.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "mRBwTNG)7Q"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::4. Phương hướng di chuyển (방향 이동)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::4_Phương_hướng_di_chuyển_방향_이동"
+      ],
+      "id": "THTH-02-Bài-06-078",
+      "word": "지하철역으로 나오다",
+      "meaning": "đi ra phía ga tàu điện",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "2번 출구로 <b>나오세요</b>",
+      "example_translated": "Hãy <b>đi ra</b> bằng cửa số 2.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "o,$D$I{[3L"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-079",
+      "word": "첫",
+      "meaning": "đầu tiên",
+      "pos": "Từ định danh",
+      "explain": "Dạng rút gọn của 첫째 hoặc dùng trước 번째. Thường đi trực tiếp trước danh từ hoặc trong cụm 첫 번째.",
+      "example": "<b>첫 번째</b>예요",
+      "example_translated": "Là <b>thứ nhất</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "wQs/#TR`nf"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-080",
+      "word": "첫 번째",
+      "meaning": "thứ nhất",
+      "pos": "Số thứ tự",
+      "explain": "Dùng để chỉ vị trí số 1 trong thứ tự. 첫 + 번째.",
+      "example": "<b>첫 번째</b> 질문입니다",
+      "example_translated": "Đây là câu hỏi <b>thứ nhất</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "vT}eOeZ)}5"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-081",
+      "word": "두 번째",
+      "meaning": "thứ hai",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 2 trong thứ tự.<br><b>Điểm quan trọng:</b> số thuần Hàn khi đứng trước danh từ hoặc <b>번째</b> thường đổi dạng. <b>둘 → 두</b> Vì vậy không nói <del>둘 번째</del> mà nói <b>두 번째</b>. → Nghĩa là “cái / lần / vị trí thứ hai”.",
+      "example": "<b>두 번째</b> 길에서 오른쪽으로 가세요",
+      "example_translated": "Ở đường <b>thứ hai</b> hãy rẽ phải.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "tw%(y|keVi"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-082",
+      "word": "세 번째",
+      "meaning": "thứ ba",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 3 trong thứ tự.<br><b>Điểm quan trọng:</b> số thuần Hàn khi đứng trước danh từ hoặc <b>번째</b> thường đổi dạng. <b>셋 → 세</b> Vì vậy không nói <del>셋 번째</del> mà nói <b>세 번째</b>. → Nghĩa là “cái / lần / vị trí thứ ba”.",
+      "example": "<b>세 번째</b> 역에서 내리세요",
+      "example_translated": "Hãy xuống ở ga <b>thứ ba</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "OeK26#a;o1"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-083",
+      "word": "네 번째",
+      "meaning": "thứ tư",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 4 trong thứ tự.<br><b>Điểm quan trọng:</b> số thuần Hàn khi đứng trước danh từ hoặc <b>번째</b> thường đổi dạng. <b>넷 → 네</b> Vì vậy không nói <del>넷 번째</del> mà nói <b>네 번째</b>. → Nghĩa là “cái / lần / vị trí thứ tư”.",
+      "example": "<b>네 번째</b> 페이지를 보세요",
+      "example_translated": "Hãy xem trang <b>thứ tư</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "p$Y__--5Ti"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-084",
+      "word": "다섯 번째",
+      "meaning": "thứ năm",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 5 trong thứ tự.",
+      "example": "<b>다섯 번째</b> 버스 정류장이에요",
+      "example_translated": "Đó là trạm xe buýt <b>thứ năm</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "K#jQa.Rqi_"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-085",
+      "word": "여섯 번째",
+      "meaning": "thứ sáu",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 6 trong thứ tự.",
+      "example": "<b>여섯 번째</b> 줄에 쓰세요",
+      "example_translated": "Hãy viết ở dòng <b>thứ sáu</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "jQsJMxZ*Qz"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-086",
+      "word": "일곱 번째",
+      "meaning": "thứ bảy",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 7 trong thứ tự.",
+      "example": "<b>일곱 번째</b> 사람이에요",
+      "example_translated": "Là người <b>thứ bảy</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "go0VfU{6sd"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-087",
+      "word": "여덟 번째",
+      "meaning": "thứ tám",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 8 trong thứ tự.",
+      "example": "<b>여덟 번째</b> 문장을 읽으세요",
+      "example_translated": "Hãy đọc câu <b>thứ tám</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "f%Em+gC!24"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-088",
+      "word": "아홉 번째",
+      "meaning": "thứ chín",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 9 trong thứ tự.",
+      "example": "<b>아홉 번째</b> 문제예요",
+      "example_translated": "Là câu <b>thứ chín</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "Ok(-)Q[d[@"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-089",
+      "word": "열 번째",
+      "meaning": "thứ mười",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 10 trong thứ tự.",
+      "example": "<b>열 번째</b>에서 멈추세요",
+      "example_translated": "Dừng ở chỗ <b>thứ mười</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "N7pBsNnmg<"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-090",
+      "word": "열한 번째",
+      "meaning": "thứ mười một",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 11 trong thứ tự. <b>열하나 → 열한</b> khi đứng trước <b>번째</b>. → Vì vậy nói <b>열한 번째</b>.",
+      "example": "<b>열한 번째</b> 사람이에요",
+      "example_translated": "Là người <b>thứ mười một</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "ne0XeaSGz2"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-091",
+      "word": "열두 번째",
+      "meaning": "thứ mười hai",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 12 trong thứ tự. <b>열둘 → 열두</b> khi đứng trước <b>번째</b>. → Vì vậy nói <b>열두 번째</b>.",
+      "example": "<b>열두 번째</b> 문제예요",
+      "example_translated": "Là câu <b>thứ mười hai</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "A0~p[QGUO$"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-092",
+      "word": "열세 번째",
+      "meaning": "thứ mười ba",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 13 trong thứ tự. <b>열셋 → 열세</b> khi đứng trước <b>번째</b>. → Vì vậy nói <b>열세 번째</b>.",
+      "example": "<b>열세 번째</b> 페이지예요",
+      "example_translated": "Đây là trang <b>thứ mười ba</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "e}EZ_iI+X>"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-093",
+      "word": "열네 번째",
+      "meaning": "thứ mười bốn",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 14 trong thứ tự. <b>열넷 → 열네</b> khi đứng trước <b>번째</b>. → Vì vậy nói <b>열네 번째</b>.",
+      "example": "<b>열네 번째</b> 줄이에요",
+      "example_translated": "Đây là dòng <b>thứ mười bốn</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "qc@xR<a:bv"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-094",
+      "word": "열다섯 번째",
+      "meaning": "thứ mười lăm",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 15 trong thứ tự.",
+      "example": "<b>열다섯 번째</b> 정류장이에요",
+      "example_translated": "Đó là trạm <b>thứ mười lăm</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "e?[:?1tit0"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-095",
+      "word": "열여섯 번째",
+      "meaning": "thứ mười sáu",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 16 trong thứ tự.",
+      "example": "<b>열여섯 번째</b> 학생이에요",
+      "example_translated": "Là học sinh <b>thứ mười sáu</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "oFaDP*UHiJ"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-096",
+      "word": "열일곱 번째",
+      "meaning": "thứ mười bảy",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 17 trong thứ tự.",
+      "example": "<b>열일곱 번째</b> 사람이 왔어요",
+      "example_translated": "Người <b>thứ mười bảy</b> đã đến.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "O>F+b`.zK^"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-097",
+      "word": "열여덟 번째",
+      "meaning": "thứ mười tám",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 18 trong thứ tự.",
+      "example": "<b>열여덟 번째</b> 문장을 읽으세요",
+      "example_translated": "Hãy đọc câu <b>thứ mười tám</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "fwUcR+/STB"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-098",
+      "word": "열아홉 번째",
+      "meaning": "thứ mười chín",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 19 trong thứ tự.",
+      "example": "<b>열아홉 번째</b> 번호예요",
+      "example_translated": "Là số <b>thứ mười chín</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "o$tF9lI8G<"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-099",
+      "word": "스무 번째",
+      "meaning": "thứ hai mươi",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 20 trong thứ tự.<br><b>Điểm quan trọng:</b> số thuần Hàn khi đứng trước danh từ hoặc <b>번째</b> có thể đổi dạng. <b>스물 → 스무</b> Vì vậy không nói <del>스물 번째</del> mà nói <b>스무 번째</b>. → Nghĩa là “cái / lần / vị trí thứ hai mươi”.",
+      "example": "<b>스무 번째</b> 문제예요",
+      "example_translated": "Là câu <b>thứ hai mươi</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "u^:D79qC^."
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-100",
+      "word": "서른 번째",
+      "meaning": "thứ ba mươi",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 30 trong thứ tự.",
+      "example": "<b>서른 번째</b> 날입니다",
+      "example_translated": "Là ngày <b>thứ ba mươi</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "hW{Dw%D?~3"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-101",
+      "word": "마흔 번째",
+      "meaning": "thứ bốn mươi",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 40 trong thứ tự.",
+      "example": "<b>마흔 번째</b> 사람이 왔어요",
+      "example_translated": "Người <b>thứ bốn mươi</b> đã đến.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "g)u+:Z`7O_"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-102",
+      "word": "쉰 번째",
+      "meaning": "thứ năm mươi",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 50 trong thứ tự.",
+      "example": "<b>쉰 번째</b> 번호예요",
+      "example_translated": "Là số <b>thứ năm mươi</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "h!mImaifV%"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-103",
+      "word": "예순 번째",
+      "meaning": "thứ sáu mươi",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 60 trong thứ tự.",
+      "example": "<b>예순 번째</b> 페이지를 펴세요",
+      "example_translated": "Hãy mở trang <b>thứ sáu mươi</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "jdEE5PDkCB"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-104",
+      "word": "일흔 번째",
+      "meaning": "thứ bảy mươi",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 70 trong thứ tự.<br><b>Điểm quan trọng:</b> không phải số thuần Hàn nào đứng trước <b>번째</b> cũng đổi dạng. Với <b>일흔</b>, dạng này <u>giữ nguyên</u> khi đi với <b>번째</b>. → Vì vậy nói <b>일흔 번째</b>.",
+      "example": "<b>일흔 번째</b> 사람이에요",
+      "example_translated": "Là người <b>thứ bảy mươi</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "n|,!<n-;ky"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-105",
+      "word": "여든 번째",
+      "meaning": "thứ tám mươi",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 80 trong thứ tự.<br><b>Điểm quan trọng:</b> với <b>여든</b>, dạng này <u>giữ nguyên</u> khi đứng trước <b>번째</b>. → Vì vậy nói <b>여든 번째</b>, không có dạng rút ngắn riêng như <b>두, 세, 네, 스무</b>.",
+      "example": "<b>여든 번째</b> 줄입니다",
+      "example_translated": "Đây là dòng <b>thứ tám mươi</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "nkRM:tsr/V"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-106",
+      "word": "백 번째",
+      "meaning": "thứ một trăm",
+      "pos": "Số thứ tự",
+      "explain": "Chỉ vị trí thứ 100 trong thứ tự. <b>백</b> là số Hán Hàn, không phải số thuần Hàn. Vì vậy khi đi với <b>번째</b>, nó <u>giữ nguyên dạng</u>. → Nói<br><b>백 번째</b> = thứ một trăm.",
+      "example": "<b>백 번째</b> 손님이에요",
+      "example_translated": "Là vị khách <b>thứ một trăm</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "wy>fIUiOly"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-107",
+      "word": "마지막",
+      "meaning": "cuối cùng",
+      "pos": "Danh từ / Biểu hiện",
+      "explain": "Chỉ thứ ở vị trí sau cùng, cuối hết. Có thể dùng như danh từ hoặc bổ nghĩa cho danh từ.",
+      "example": "<b>마지막</b> 역에서 내리다",
+      "example_translated": "Xuống ở ga <b>cuối cùng</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "GPRqkLBjGr"
+    },
+    {
+      "__deck__": "Tiếng Hàn Tổng Hợp::Quyển 02::Bài 06. Giao thông & Phương hướng (교통 & 방향)::5. Số thứ tự (서수사)",
+      "__notetype__": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "__tags__": [
+        "THTH::Quyển_02::Bài_06_Giao_thông_Phương_hướng_교통_방향::5_Số_thứ_tự_서수사"
+      ],
+      "id": "THTH-02-Bài-06-108",
+      "word": "마지막 역에서 내리다",
+      "meaning": "xuống ở ga cuối cùng",
+      "pos": "Biểu hiện",
+      "explain": "",
+      "example": "마지막 역에서 <b>내려요</b>",
+      "example_translated": "Tôi xuống ở <b>ga cuối cùng</b>.",
+      "collocation": "",
+      "synonym": "",
+      "antonym": "",
+      "__guid__": "HQ77|O7e%!"
+    }
+  ],
+  "timestamp": "2026-04-20T01:32:55"
+}

@@ -1,0 +1,54 @@
+{
+  "note_type": "(AnkiVN) Cloze",
+  "deck": "Bulk Card Creator",
+  "match_field": null,
+  "created": 6,
+  "updated": 0,
+  "warnings": [],
+  "write_guid_backfill": true,
+  "cards": [
+    {
+      "Text": "<h3>Rewrite the following sentences beginning with the words given. Viết lại những câu sau bắt đầu bằng những từ đã cho trước.</h3><br>They <b>have learnt</b> English <b>for three years</b>.<br><br>They started {{c1::<b>learning English three years ago</b>.}}",
+      "Back": "<h3>Cấu trúc biến đổi</h3><ul><li><b>S + have/has + V3/ed + for + khoảng thời gian</b></li><li>↔ <b>S + started/began + V-ing + khoảng thời gian + ago</b></li></ul><h3>Giải thích</h3>Chuyển từ thì Hiện tại hoàn thành (hành động kéo dài đến hiện tại) sang Quá khứ đơn (nhấn mạnh thời điểm bắt đầu hành động). Lưu ý đổi <b>for</b> thành <b>ago</b> và sử dụng V-ing sau <i>started</i>.<h3>Từ vựng</h3><i>Learnt</i> (V3 của learn): học.",
+      "Audio": "",
+      "Link": "",
+      "__guid__": "q+rtIb>ros"
+    },
+    {
+      "Text": "<h3>Rewrite the following sentences beginning with the words given. Viết lại những câu sau bắt đầu bằng những từ đã cho trước.</h3><br>The weather <b>is very cold</b> now. And the children <b>don’t like</b> it.<br><br>The children wish {{c1::<b>the weather weren't (were not) very cold</b>.}}",
+      "Back": "<h3>Cấu trúc Câu ước (Wish) ở hiện tại</h3><ul><li><b>S + wish(es) + S + V2/ed</b></li><li><b>To be:</b> Luôn dùng <b>were</b> cho tất cả các ngôi trong câu ước trái thực tế hiện tại.</li></ul><h3>Giải thích</h3>Diễn tả mong muốn trái ngược với thực tế. Thực tế là <i>is</i> (khẳng định) → Ước là <i>weren't</i> (phủ định).",
+      "Audio": "",
+      "Link": "",
+      "__guid__": "Q*hMb=)i+1"
+    },
+    {
+      "Text": "<h3>Rewrite the following sentences beginning with the words given. Viết lại những câu sau bắt đầu bằng những từ đã cho trước.</h3><br>The boys <b>began</b> to play volleyball <b>at 4 pm</b>.<br><br>The boys have {{c1::<b>played volleyball since 4 pm</b>.}}",
+      "Back": "<h3>Cấu trúc biến đổi</h3><ul><li><b>S + began/started + to-V/V-ing + at + mốc thời gian</b></li><li>↔ <b>S + have/has + V3/ed + since + mốc thời gian</b></li></ul><h3>Giải thích</h3>Chuyển từ mốc thời gian bắt đầu trong quá khứ sang Hiện tại hoàn thành để nhấn mạnh quá trình kéo dài từ đó đến nay.<h3>Từ vựng</h3><i>Volleyball:</i> môn bóng chuyền.",
+      "Audio": "",
+      "Link": "",
+      "__guid__": "vb(~-L>[4$"
+    },
+    {
+      "Text": "<h3>Rewrite the following sentences beginning with the words given. Viết lại những câu sau bắt đầu bằng những từ đã cho trước.</h3><br>Her students <b>don’t have</b> much time to study for their final exams.<br><br>Her students wish {{c1::<b>they had more time to study for their final exams</b>.}}",
+      "Back": "<h3>Cấu trúc Câu ước (Wish) ở hiện tại</h3><ul><li><b>S + wish(es) + S + V2/ed</b></li></ul><h3>Giải thích</h3>1. Thực tế phủ định (don't have) → Ước khẳng định (had).<br>2. <b>Have</b> lùi thì thành <b>Had</b>.<br>3. Chuyển <b>much time</b> thành <b>more time</b> để câu ước nghe tự nhiên hơn.<h3>Từ vựng</h3><i>Final exams:</i> các kỳ thi cuối kỳ.",
+      "Audio": "",
+      "Link": "",
+      "__guid__": "MH_NNVD8Gf"
+    },
+    {
+      "Text": "<h3>Rewrite the following sentences beginning with the words given. Viết lại những câu sau bắt đầu bằng những từ đã cho trước.</h3><br><b>It’s a pity</b> we <b>don’t have</b> a day off.<br><br>I wish {{c1::<b>we had a day off</b>.}}",
+      "Back": "<h3>Cấu trúc biến đổi</h3><ul><li><b>It's a pity (that) + S + V(hiện tại)</b></li><li>↔ <b>S + wish + S + V2/ed</b></li></ul><h3>Giải thích</h3>\"It's a pity\" (Thật đáng tiếc) thể hiện một sự thật gây thất vọng ở hiện tại. Câu ước tương ứng phải lùi thì: <i>don't have</i> → <i>had</i>.<h3>Từ vựng</h3><i>A day off:</i> một ngày nghỉ.",
+      "Audio": "",
+      "Link": "",
+      "__guid__": "rge4{^;hi0"
+    },
+    {
+      "Text": "<h3>Rewrite the following sentences beginning with the words given. Viết lại những câu sau bắt đầu bằng những từ đã cho trước.</h3><br>When we were young, we <b>lived</b> in Ha Noi.<br><br>We used to {{c1::<b>live in Ha Noi when we were young</b>.}}",
+      "Back": "<h3>Cấu trúc Thói quen quá khứ</h3><ul><li><b>S + used to + V-inf</b> (động từ nguyên mẫu)</li></ul><h3>Giải thích</h3>Dùng để diễn tả một hành động thường xuyên xảy ra trong quá khứ nhưng nay không còn nữa. Sau <i>used to</i>, động từ <b>lived</b> phải đưa về nguyên mẫu là <b>live</b>.",
+      "Audio": "",
+      "Link": "",
+      "__guid__": "j{2RbrsB<:"
+    }
+  ],
+  "timestamp": "2026-04-08T19:55:48"
+}

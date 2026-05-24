@@ -181,5 +181,10 @@
   "btn_search_note_type": "Search note type",
   "btn_search_deck": "Search deck",
   "title_search_note_type": "Search Note Type",
-  "title_search_deck": "Search Deck"
+  "title_search_deck": "Search Deck",
+  "tab_import": "Import Cards",
+  "tab_export": "Export Deck",
+  "tab_ai_helper": "AI Prompts",
+  "btn_load_to_import": "Load to Import Tab",
+  "btn_preview_deck": "Preview"
 }

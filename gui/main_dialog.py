@@ -14,6 +14,7 @@ from anki.utils import guid64
 from ..config import (
     get_media_mappings, get_presets, save_preset,
     get_history_dir, save_batch_history,
+    get_window_maximized, set_window_maximized,
 )
 from ..core import create_cards_logic, export_deck_to_json_logic
 from ..prompt import generate_ai_prompt
@@ -36,6 +37,11 @@ class BulkCardCreatorDialog(QDialog):
         flags |= Qt.WindowType.WindowMaximizeButtonHint
         flags &= ~Qt.WindowType.WindowContextHelpButtonHint
         self.setWindowFlags(flags)
+
+        if get_window_maximized():
+            maximized_state = getattr(Qt.WindowState, "WindowMaximized", None) or getattr(Qt, "WindowMaximized", None)
+            if maximized_state is not None:
+                self.setWindowState(self.windowState() | maximized_state)
 
         self._setup_ui()
 
@@ -1008,3 +1014,12 @@ class BulkCardCreatorDialog(QDialog):
             
         except Exception as e:
             QMessageBox.critical(self, _t("title_deck_export_error"), str(e))
+
+    def done(self, r: int) -> None:
+        set_window_maximized(self.isMaximized())
+        super().done(r)
+
+    def closeEvent(self, event) -> None:
+        set_window_maximized(self.isMaximized())
+        super().closeEvent(event)
+

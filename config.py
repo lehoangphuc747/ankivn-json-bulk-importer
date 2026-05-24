@@ -103,3 +103,17 @@ def set_welcome_shown(shown: bool) -> None:
     config = _get_config()
     config["welcome_shown"] = shown
     _save_config(config)
+
+
+def get_window_maximized() -> bool:
+    """Kiểm tra xem lần trước cửa sổ có được phóng to (maximize) không."""
+    config = _get_config()
+    return config.get("window_maximized", False)
+
+
+def set_window_maximized(maximized: bool) -> None:
+    """Lưu trạng thái phóng to cửa sổ."""
+    config = _get_config()
+    config["window_maximized"] = maximized
+    _save_config(config)
+

@@ -34,6 +34,12 @@
       "deck": "Bulk Card Creator",
       "match_field": null,
       "json_text": "[\n  {\n    \"id\": \"insert_your_content_here\",\n    \"word\": \"insert_your_content_here\",\n    \"ipa\": \"insert_your_content_here\",\n    \"vietnamese\": \"insert_your_content_here\",\n    \"explain\": \"insert_your_content_here\",\n    \"title\": \"insert_your_content_here\",\n    \"audio_word\": \"insert_your_content_here\",\n    \"audio_vietnamese\": \"insert_your_content_here\"\n  }\n]"
+    },
+    "123": {
+      "note_type": "(Anki) Template học từ vựng của Admin Phúc [2026]",
+      "deck": "Bulk Card Creator",
+      "match_field": null,
+      "json_text": "[\n  {\n    \"id\": \"insert_your_content_here\",\n    \"word\": \"insert_your_content_here\",\n    \"meaning\": \"insert_your_content_here\",\n    \"pos\": \"insert_your_content_here\",\n    \"transliteration\": \"insert_your_content_here\",\n    \"explain\": \"insert_your_content_here\",\n    \"image\": \"insert_your_content_here\",\n    \"example\": \"insert_your_content_here\",\n    \"example_translated\": \"insert_your_content_here\",\n    \"collocation\": \"insert_your_content_here\",\n    \"synonym\": \"insert_your_content_here\",\n    \"antonym\": \"insert_your_content_here\",\n    \"audio_word\": \"insert_your_content_here\",\n    \"audio_meaning\": \"insert_your_content_here\",\n    \"audio_example\": \"insert_your_content_here\",\n    \"tag_1\": \"insert_your_content_here\",\n    \"tag_2\": \"insert_your_content_here\",\n    \"tag_3\": \"insert_your_content_here\",\n    \"tag_4\": \"insert_your_content_here\"\n  }\n]"
     }
   },
   "welcome_shown": true

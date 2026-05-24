@@ -25,6 +25,25 @@ from .table_dialog import TablePreviewDialog
 from .search_dialog import SearchSelectDialog
 
 
+class ClickableComboBox(QComboBox):
+    def __init__(self, parent: Any = None, callback: Any = None) -> None:
+        super().__init__(parent)
+        self.callback = callback
+        self.setEditable(False)
+
+    def showPopup(self) -> None:
+        if self.callback:
+            self.callback()
+        else:
+            super().showPopup()
+
+    def mousePressEvent(self, event: Any) -> None:
+        if self.callback:
+            self.callback()
+        else:
+            super().mousePressEvent(event)
+
+
 class BulkCardCreatorDialog(QDialog):
 
     def __init__(self, parent: Any = None) -> None:
@@ -124,46 +143,27 @@ class BulkCardCreatorDialog(QDialog):
         setup_layout.setSpacing(5)
 
         setup_layout.addWidget(QLabel(_t("main_note_type")))
-        nt_row = QHBoxLayout()
-        nt_row.setSpacing(5)
-        self.note_type_combo = QComboBox()
+        self.note_type_combo = ClickableComboBox(self, self._on_search_note_type)
         self.note_type_combo.setMinimumWidth(0)
         self.note_type_combo.setSizePolicy(
             QSizePolicy.Policy.Ignored,
             QSizePolicy.Policy.Fixed,
         )
-        self.note_type_combo.setEditable(True)
         self._load_note_types()
         self.note_type_combo.currentTextChanged.connect(self._on_note_type_changed)
-        nt_row.addWidget(self.note_type_combo, stretch=1)
-
-        search_note_type_btn = self._make_icon_button(
-            self.style().standardIcon(QStyle.StandardPixmap.SP_FileDialogContentsView),
-            _t("btn_search_note_type"),
-            self._on_search_note_type,
-        )
-        nt_row.addWidget(search_note_type_btn)
-        setup_layout.addLayout(nt_row)
+        setup_layout.addWidget(self.note_type_combo)
 
         setup_layout.addWidget(QLabel(_t("main_deck")))
         deck_row = QHBoxLayout()
         deck_row.setSpacing(5)
-        self.deck_combo = QComboBox()
+        self.deck_combo = ClickableComboBox(self, self._on_search_deck)
         self.deck_combo.setMinimumWidth(0)
         self.deck_combo.setSizePolicy(
             QSizePolicy.Policy.Ignored,
             QSizePolicy.Policy.Fixed,
         )
-        self.deck_combo.setEditable(True)
         self._load_decks()
         deck_row.addWidget(self.deck_combo, stretch=1)
-
-        search_deck_btn = self._make_icon_button(
-            self.style().standardIcon(QStyle.StandardPixmap.SP_FileDialogContentsView),
-            _t("btn_search_deck"),
-            self._on_search_deck,
-        )
-        deck_row.addWidget(search_deck_btn)
 
         new_deck_btn = self._make_icon_button(
             self.style().standardIcon(QStyle.StandardPixmap.SP_FileDialogNewFolder),

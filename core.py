@@ -1,4 +1,4 @@
-from typing import Any, List, Tuple, Optional
+from typing import Any, List, Tuple, Optional, Callable
 
 from aqt import mw
 from aqt.utils import showInfo
@@ -19,12 +19,13 @@ def _note_field_str(value: Any) -> str:
     return str(value)
 
 
-def create_new_model(name: str, sample_card: dict) -> Optional[NotetypeDict]:
-    if not mw or not mw.col:
-        showInfo(_t("core_open_collection"))
-        return None
+def create_new_model(name: str, sample_card: dict, col: Optional[Any] = None) -> Optional[NotetypeDict]:
+    if not col:
+        if not mw or not mw.col:
+            print(_t("core_open_collection"))
+            return None
+        col = mw.col
 
-    col = mw.col
     model = col.models.new(name)
 
     col.models.addField(model, col.models.new_field("Front"))
@@ -43,11 +44,12 @@ def create_new_model(name: str, sample_card: dict) -> Optional[NotetypeDict]:
     )
     model["css"] = (
         ".card { font-family: arial; font-size: 20px; "
-        "text-align: center; color: black; background-color: white; }"
+        "text-align: center; }"
     )
     col.models.addTemplate(model, template)
     col.models.save(model)
     return model
+
 
 
 def create_cards_logic(
@@ -56,16 +58,21 @@ def create_cards_logic(
     cards: List[dict],
     match_field: Optional[str] = None,
     media_mappings: Optional[dict] = None,
+    on_progress_start: Optional[Callable[[str], None]] = None,
+    on_progress_update: Optional[Callable[[str], None]] = None,
+    on_progress_finish: Optional[Callable[[], None]] = None,
+    col: Optional[Any] = None,
 ) -> Tuple[int, int, List[str]]:
     """Tạo mới hoặc cập nhật thẻ dựa trên __guid__ hoặc Smart Sync (match_field).
 
     Returns:
         (created_count, updated_count, warnings)
     """
-    if not mw or not mw.col:
-        raise RuntimeError(_t("core_collection_not_init"))
+    if not col:
+        if not mw or not mw.col:
+            raise RuntimeError(_t("core_collection_not_init"))
+        col = mw.col
 
-    col = mw.col
     deck_id = col.decks.id(deck_name)
 
     model = col.models.by_name(note_type_name)
@@ -74,7 +81,7 @@ def create_cards_logic(
             raise ValueError(
                 _t("core_notetype_not_found", name=note_type_name)
             )
-        model = create_new_model(note_type_name, cards[0])
+        model = create_new_model(note_type_name, cards[0], col=col)
         if not model:
             raise ValueError(
                 _t("core_notetype_create_fail", name=note_type_name)
@@ -100,15 +107,22 @@ def create_cards_logic(
 
     media_dir = col.media.dir()
 
-    mw.checkpoint("Bulk Card Creator")
-    mw.progress.start(label=_t("core_processing"), immediate=True)
+    if mw:
+        mw.checkpoint("Bulk Card Creator")
+
+    if on_progress_start:
+        on_progress_start(_t("core_processing"))
+    elif mw and getattr(mw, "progress", None):
+        mw.progress.start(label=_t("core_processing"), immediate=True)
 
     try:
         total = len(cards)
         for i, card in enumerate(cards):
-            mw.progress.update(
-                label=_t("core_processing_card", current=i + 1, total=total)
-            )
+            label = _t("core_processing_card", current=i + 1, total=total)
+            if on_progress_update:
+                on_progress_update(label)
+            elif mw and getattr(mw, "progress", None):
+                mw.progress.update(label=label)
 
             card_data = dict(card)
 
@@ -228,10 +242,15 @@ def create_cards_logic(
                 created += 1
 
     finally:
-        mw.progress.finish()
+        if on_progress_finish:
+            on_progress_finish()
+        elif mw and getattr(mw, "progress", None):
+            mw.progress.finish()
 
-    mw.reset()
+    if mw:
+        mw.reset()
     return created, updated, warnings
+
 
 def export_deck_to_json_logic(deck_name: str, include_stats: bool = False) -> Tuple[List[dict], str]:
     """Xuất tất cả notes trong một deck ra định dạng List[dict] chuẩn của addon."""
@@ -248,46 +267,69 @@ def export_deck_to_json_logic(deck_name: str, include_stats: bool = False) -> Tu
     exported_notes = {}
     note_type_name = ""
     
-    for cid in card_ids:
-        try:
-            card = col.get_card(cid)
-            note = card.note()
-            
-            if not note_type_name:
-                note_type_name = note.model()["name"]
-            
-            # Tránh trùng lặp note (nếu 1 note tạo ra nhiều thẻ mặt trước/sau)
-            if note.id in exported_notes:
+    # Chunk card IDs to avoid SQLite query limit
+    chunk_size = 900
+    model_cache = {}
+    
+    for i in range(0, len(card_ids), chunk_size):
+        chunk = card_ids[i:i + chunk_size]
+        placeholders = ",".join("?" for _ in chunk)
+        # Query cards and notes in a single SQL query
+        rows = col.db.all(f"""
+            SELECT c.id, c.nid, c.reps, c.lapses, c.ivl, c.factor,
+                   n.guid, n.mid, n.mod, n.tags, n.flds
+            FROM cards c
+            JOIN notes n ON c.nid = n.id
+            WHERE c.id IN ({placeholders})
+        """, *chunk)
+        
+        for row in rows:
+            cid, nid, reps, lapses, ivl, factor, guid, mid, mod, tags_str, flds_str = row
+            if nid in exported_notes:
                 continue
                 
-            # Tạo dictionary chứa dữ liệu theo chuẩn JSON mà addon đang dùng
+            if mid not in model_cache:
+                model_cache[mid] = col.models.get(mid)
+            model = model_cache[mid]
+            if not model:
+                continue
+                
+            if not note_type_name:
+                note_type_name = model["name"]
+                
+            # Convert space-separated tag string to list, falling back safely
+            if hasattr(col.tags, "split"):
+                tags = col.tags.split(tags_str)
+            else:
+                tags = [t for t in tags_str.strip().split(" ") if t]
+            
             note_dict = {
-                "__guid__": note.guid,
+                "__guid__": guid,
                 "__deck__": deck_name,
-                "__notetype__": note.model()["name"],
-                "__tags__": note.tags,
+                "__notetype__": model["name"],
+                "__tags__": tags,
             }
             
             if include_stats:
-                # --- THÊM MỚI CÁC TRƯỜNG THỐNG KÊ ---
+                ease = factor / 10 if factor else 250
                 note_dict.update({
-                    "__created_at__": note.id,
-                    "__modified_at__": note.mod,
-                    "__reps__": card.reps,
-                    "__lapses__": card.lapses,
-                    "__ivl__": card.ivl,
-                    "__ease__": card.factor / 10 if hasattr(card, "factor") else 250,
+                    "__created_at__": nid,
+                    "__modified_at__": mod,
+                    "__reps__": reps,
+                    "__lapses__": lapses,
+                    "__ivl__": ivl,
+                    "__ease__": ease,
                 })
-            
-            # Lấy nội dung của từng field (Front, Back, Image,...)
-            for field_name, field_value in note.items():
-                note_dict[field_name] = field_value
                 
-            exported_notes[note.id] = note_dict
-            
-        except Exception:
-            continue
+            # Split fields
+            field_values = flds_str.split("\x1f")
+            field_names = [f["name"] for f in model["flds"]]
+            for idx, val in enumerate(field_values):
+                if idx < len(field_names):
+                    note_dict[field_names[idx]] = val
+                    
+            exported_notes[nid] = note_dict
 
-    # Trả về danh sách các note dưới dạng mảng và tên loại note của thẻ đầu tiên
     return list(exported_notes.values()), note_type_name
+
 

@@ -9,17 +9,47 @@ _HISTORY_DIR = os.path.join(os.path.dirname(__file__), "history")
 
 def _get_config() -> dict:
     if os.path.isfile(_CONFIG_PATH):
+        if os.path.getsize(_CONFIG_PATH) == 0:
+            return {"media_fields": {}, "presets": {}}
         try:
             with open(_CONFIG_PATH, "r", encoding="utf-8") as f:
                 return json.load(f)
-        except Exception:
-            pass
+        except Exception as e:
+            try:
+                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                corrupt_backup = f"{_CONFIG_PATH}.corrupt_{timestamp}"
+                os.replace(_CONFIG_PATH, corrupt_backup)
+                backup_name = os.path.basename(corrupt_backup)
+            except Exception:
+                backup_name = "unknown (backup failed)"
+            
+            msg = (
+                f"Configuration file is corrupted (invalid JSON) and has been backed up to {backup_name}.\n"
+                f"A default configuration will be used. Error details: {e}"
+            )
+            from aqt import mw
+            if mw and getattr(mw, "col", None) is not None:
+                from aqt.utils import showWarning
+                showWarning(msg)
+            else:
+                print(msg)
     return {"media_fields": {}, "presets": {}}
 
 
 def _save_config(config: dict) -> None:
-    with open(_CONFIG_PATH, "w", encoding="utf-8") as f:
-        json.dump(config, f, indent=2, ensure_ascii=False)
+    tmp_path = _CONFIG_PATH + ".tmp"
+    try:
+        with open(tmp_path, "w", encoding="utf-8") as f:
+            json.dump(config, f, indent=2, ensure_ascii=False)
+        os.replace(tmp_path, _CONFIG_PATH)
+    except Exception as e:
+        if os.path.exists(tmp_path):
+            try:
+                os.remove(tmp_path)
+            except Exception:
+                pass
+        raise e
+
 
 
 def get_media_mappings(note_type_name: str) -> dict:

@@ -16,6 +16,7 @@ from ..config import (
     get_history_dir, save_batch_history,
 )
 from ..core import create_cards_logic, export_deck_to_json_logic
+from ..prompt import generate_ai_prompt
 from ..i18n import _t, get_supported_langs, get_current_lang, set_lang
 from .help_dialog import HelpDialog
 from .config_dialog import MediaConfigDialog
@@ -397,14 +398,24 @@ class BulkCardCreatorDialog(QDialog):
         if not text:
             self.json_input.setStyleSheet("") # Trống thì bình thường
             return
-            
+
+        from aqt.theme import theme_manager
+        is_night = False
+        try:
+            is_night = theme_manager.night_mode
+        except Exception:
+            pass
+
         try:
             json.loads(text)
             # Nếu JSON hợp lệ: Viền xanh lá mỏng
-            self.json_input.setStyleSheet("QPlainTextEdit { border: 2px solid #4CAF50; border-radius: 4px; }")
+            valid_color = "#81C784" if is_night else "#4CAF50"
+            self.json_input.setStyleSheet(f"QPlainTextEdit {{ border: 2px solid {valid_color}; border-radius: 4px; }}")
         except json.JSONDecodeError:
             # Nếu JSON lỗi: Viền đỏ báo hiệu
-            self.json_input.setStyleSheet("QPlainTextEdit { border: 2px solid #F44336; border-radius: 4px; }")
+            invalid_color = "#EF5350" if is_night else "#F44336"
+            self.json_input.setStyleSheet(f"QPlainTextEdit {{ border: 2px solid {invalid_color}; border-radius: 4px; }}")
+
 
     # ---- language ----
 
@@ -706,49 +717,7 @@ class BulkCardCreatorDialog(QDialog):
             field_names = ["Front", "Back"]
 
         media_map = get_media_mappings(note_type_name)
-
-        fields_str = ", ".join(f'"{f}"' for f in field_names)
-        example_obj = ", ".join(f'"{f}": "..."' for f in field_names)
-
-        media_notes: List[str] = []
-        for f in field_names:
-            ft = media_map.get(f, "text")
-            if ft == "image":
-                media_notes.append(
-                    _t("prompt_image_field", field=f)
-                )
-            elif ft == "audio":
-                media_notes.append(
-                    _t("prompt_audio_field", field=f)
-                )
-
-        media_rules = "\n".join(
-            f"    <rule>{note}</rule>" for note in media_notes
-        )
-        if not media_rules:
-            media_rules = f"    <rule>{_t('prompt_no_media_rules')}</rule>"
-
-        prompt = (
-            "<flashcard_json_prompt>\n"
-            f"  <role>{_t('prompt_expert')}</role>\n"
-            "  <input>\n"
-            f"    <quantity>{_t('prompt_quantity_placeholder')}</quantity>\n"
-            f"    <topic>{_t('prompt_topic_placeholder')}</topic>\n"
-            "  </input>\n"
-            "  <output_format>\n"
-            "    <type>json_array</type>\n"
-            f"    <fields>{fields_str}</fields>\n"
-            f"    <contract>{_t('prompt_format', fields=fields_str)}</contract>\n"
-            "  </output_format>\n"
-            "  <rules>\n"
-            f"{media_rules}\n"
-            "  </rules>\n"
-            "  <example><![CDATA[\n"
-            f"[{{{example_obj}}}]\n"
-            "  ]]></example>\n"
-            f"  <final_instruction>{_t('prompt_json_only')}</final_instruction>\n"
-            "</flashcard_json_prompt>"
-        )
+        prompt = generate_ai_prompt(field_names, media_map)
 
         clipboard = QApplication.clipboard()
         if clipboard:
@@ -757,6 +726,7 @@ class BulkCardCreatorDialog(QDialog):
                 self, _t("title_copied"),
                 _t("msg_prompt_copied"),
             )
+
 
     def _on_media_config(self) -> None:
         note_type_name = self.note_type_combo.currentText()
@@ -892,6 +862,9 @@ class BulkCardCreatorDialog(QDialog):
             created, updated, warnings = create_cards_logic(
                 deck_name, note_type_name, cards,
                 match_field=match_field, media_mappings=mappings,
+                on_progress_start=lambda label: mw.progress.start(label=label, immediate=True) if (mw and getattr(mw, "progress", None)) else None,
+                on_progress_update=lambda label: mw.progress.update(label=label) if (mw and getattr(mw, "progress", None)) else None,
+                on_progress_finish=lambda: mw.progress.finish() if (mw and getattr(mw, "progress", None)) else None,
             )
         except Exception as e:
             QMessageBox.critical(self, _t("title_error"), str(e))

@@ -85,6 +85,15 @@ class BulkCardCreatorDialog(QDialog):
         self.prompt_tab = self._build_prompt_tab()
         self.tabs.addTab(self.prompt_tab, _t("tab_ai_helper"))
 
+        # Load initial values
+        self._load_note_types()
+        self._load_decks()
+        self._load_presets()
+
+        first_note_type = self.note_type_combo.currentText()
+        if first_note_type:
+            self._on_note_type_changed(first_note_type)
+
     def _build_import_tab(self) -> QWidget:
         widget = QWidget()
         layout = QVBoxLayout(widget)

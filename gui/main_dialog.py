@@ -196,8 +196,8 @@ class BulkCardCreatorDialog(QDialog):
         
         preview_layout.addWidget(QLabel(_t("table_title") or "Bảng xem trước (Live Preview):"))
         self.live_table_preview = QTableWidget()
-        self.live_table_preview.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
-        self.live_table_preview.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
+        self.live_table_preview.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectItems)
+        self.live_table_preview.itemChanged.connect(self._on_live_table_cell_changed)
         preview_layout.addWidget(self.live_table_preview, stretch=1)
 
         splitter.addWidget(json_panel)
@@ -205,7 +205,8 @@ class BulkCardCreatorDialog(QDialog):
         splitter.setCollapsible(0, False)
         splitter.setCollapsible(1, False)
         splitter.setStretchFactor(0, 1)
-        splitter.setStretchFactor(1, 1)
+        splitter.setStretchFactor(1, 2)
+        splitter.setSizes([350, 600])
         
         layout.addWidget(splitter, stretch=1)
 
@@ -1029,50 +1030,92 @@ class BulkCardCreatorDialog(QDialog):
                 self._on_open_history()
 
     def _update_live_table(self, cards: List[dict]) -> None:
-        self.live_table_preview.clear()
-        if not cards or not isinstance(cards, list):
-            self.live_table_preview.setRowCount(0)
-            self.live_table_preview.setColumnCount(0)
+        if getattr(self, "_is_updating_table", False):
             return
 
-        seen: dict = {}
-        for card in cards:
-            if isinstance(card, dict):
-                for key in card:
-                    if key not in seen:
-                        seen[key] = True
+        self._is_updating_table = True
+        self.live_table_preview.blockSignals(True)
+        try:
+            self.live_table_preview.clear()
+            if not cards or not isinstance(cards, list):
+                self.live_table_preview.setRowCount(0)
+                self.live_table_preview.setColumnCount(0)
+                return
 
-        from .table_dialog import META_KEY_ORDER
-        meta_cols = [k for k in META_KEY_ORDER if k in seen]
-        content_cols = [k for k in seen if k not in META_KEY_ORDER]
-        columns = meta_cols + content_cols
+            seen: dict = {}
+            for card in cards:
+                if isinstance(card, dict):
+                    for key in card:
+                        if key not in seen:
+                            seen[key] = True
 
-        self.live_table_preview.setColumnCount(len(columns))
-        self.live_table_preview.setHorizontalHeaderLabels(columns)
-        self.live_table_preview.setRowCount(len(cards))
+            from .table_dialog import META_KEY_ORDER
+            meta_cols = [k for k in META_KEY_ORDER if k in seen]
+            content_cols = [k for k in seen if k not in META_KEY_ORDER]
+            columns = meta_cols + content_cols
 
-        note_type_name = self.note_type_combo.currentText()
-        media_mappings = get_media_mappings(note_type_name) or {}
+            self.live_table_preview.setColumnCount(len(columns))
+            self.live_table_preview.setHorizontalHeaderLabels(columns)
+            self.live_table_preview.setRowCount(len(cards))
 
-        for row, card in enumerate(cards):
-            if not isinstance(card, dict):
-                continue
-            for col_idx, col_name in enumerate(columns):
-                value = card.get(col_name, "")
-                if col_name == "__tags__" and isinstance(value, list):
-                    display = ", ".join(str(v) for v in value)
-                elif isinstance(value, (dict, list)):
-                    display = json.dumps(value, ensure_ascii=False)
-                else:
-                    display = str(value) if value != "" else ""
+            note_type_name = self.note_type_combo.currentText()
+            media_mappings = get_media_mappings(note_type_name) or {}
 
-                item = QTableWidgetItem(display)
-                ftype = media_mappings.get(col_name, "text")
-                if ftype in ("image", "audio"):
-                    item.setBackground(QBrush(QColor(230, 247, 255)))
-                self.live_table_preview.setItem(row, col_idx, item)
+            for row, card in enumerate(cards):
+                if not isinstance(card, dict):
+                    continue
+                for col_idx, col_name in enumerate(columns):
+                    value = card.get(col_name, "")
+                    if col_name == "__tags__" and isinstance(value, list):
+                        display = ", ".join(str(v) for v in value)
+                    elif isinstance(value, (dict, list)):
+                        display = json.dumps(value, ensure_ascii=False)
+                    else:
+                        display = str(value) if value != "" else ""
 
-        self.live_table_preview.resizeColumnsToContents()
+                    item = QTableWidgetItem(display)
+                    ftype = media_mappings.get(col_name, "text")
+                    if ftype in ("image", "audio"):
+                        item.setBackground(QBrush(QColor(230, 247, 255)))
+                    self.live_table_preview.setItem(row, col_idx, item)
+
+            self.live_table_preview.resizeColumnsToContents()
+        finally:
+            self.live_table_preview.blockSignals(False)
+            self._is_updating_table = False
+
+    def _on_live_table_cell_changed(self, item: QTableWidgetItem) -> None:
+        if getattr(self, "_is_updating_table", False):
+            return
+
+        self._is_updating_table = True
+        try:
+            cards = []
+            columns = []
+            for col in range(self.live_table_preview.columnCount()):
+                header_item = self.live_table_preview.horizontalHeaderItem(col)
+                columns.append(header_item.text() if header_item else f"Field{col}")
+
+            for row in range(self.live_table_preview.rowCount()):
+                card = {}
+                for col_idx, col_name in enumerate(columns):
+                    cell_item = self.live_table_preview.item(row, col_idx)
+                    text = cell_item.text().strip() if cell_item else ""
+                    if not text:
+                        continue
+                    if col_name == "__tags__":
+                        card[col_name] = [t.strip() for t in text.split(",") if t.strip()]
+                    else:
+                        card[col_name] = text
+                if card:
+                    cards.append(card)
+
+            formatted_json = json.dumps(cards, indent=2, ensure_ascii=False)
+            self.json_input.setPlainText(formatted_json)
+        except Exception:
+            pass
+        finally:
+            self._is_updating_table = False
 
     def _on_export_deck_changed(self, deck_name: str) -> None:
         if not deck_name:

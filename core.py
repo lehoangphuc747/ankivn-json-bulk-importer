@@ -91,6 +91,9 @@ def create_cards_logic(
     updated = 0
     warnings: List[str] = []
 
+    # Cache cho các model đã tra cứu theo tên
+    model_cache: dict = {note_type_name: model}
+
     # Smart Sync: xây cache {field_value: note_id} để tìm note theo nội dung field
     match_cache: dict = {}
     if match_field and model:
@@ -128,7 +131,7 @@ def create_cards_logic(
 
             guid = card_data.pop("__guid__", None)
             target_deck = card_data.pop("__deck__", None)
-            _ = card_data.pop("__notetype__", None)
+            card_notetype = card_data.pop("__notetype__", None)
             tags = card_data.pop("__tags__", [])
             if isinstance(tags, str):
                 tags = [tags]
@@ -137,6 +140,22 @@ def create_cards_logic(
             for key in list(card_data.keys()):
                 if key.startswith("__") and key.endswith("__"):
                     card_data.pop(key, None)
+
+            # Xác định model cho card này: ưu tiên __notetype__ trong JSON
+            if card_notetype and isinstance(card_notetype, str) and card_notetype.strip():
+                card_notetype = card_notetype.strip()
+                if card_notetype not in model_cache:
+                    found = col.models.by_name(card_notetype)
+                    if found:
+                        model_cache[card_notetype] = found
+                    else:
+                        warnings.append(
+                            _t("core_skip_unknown_create",
+                               index=i + 1, keys=[f"__notetype__={card_notetype} not found, using default"])
+                        )
+                card_model = model_cache.get(card_notetype, model)
+            else:
+                card_model = model
 
             for key in list(card_data.keys()):
                 val = card_data[key]
@@ -209,7 +228,7 @@ def create_cards_logic(
                 updated += 1
 
             else:
-                note = col.new_note(model)
+                note = col.new_note(card_model)
 
                 if guid:
                     note.guid = guid

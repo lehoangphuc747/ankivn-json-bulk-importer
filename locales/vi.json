@@ -174,5 +174,12 @@
 
   "lang_label": "🌐 Ngôn ngữ:",
   "lang_changed": "Ngôn ngữ đã được thay đổi.\nVui lòng đóng và mở lại Addon để áp dụng.",
-  "lang_changed_title": "Thay đổi ngôn ngữ"
+  "lang_changed_title": "Thay đổi ngôn ngữ",
+  "btn_select": "Chọn",
+  "search_label": "Tìm kiếm:",
+  "search_placeholder": "Nhập từ khóa để tìm...",
+  "btn_search_note_type": "Tìm loại thẻ",
+  "btn_search_deck": "Tìm bộ thẻ",
+  "title_search_note_type": "Tìm kiếm Loại thẻ (Note Type)",
+  "title_search_deck": "Tìm kiếm Bộ thẻ (Deck)"
 }

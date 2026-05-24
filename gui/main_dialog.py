@@ -21,6 +21,7 @@ from ..i18n import _t, get_supported_langs, get_current_lang, set_lang
 from .help_dialog import HelpDialog
 from .config_dialog import MediaConfigDialog
 from .table_dialog import TablePreviewDialog
+from .search_dialog import SearchSelectDialog
 
 
 class BulkCardCreatorDialog(QDialog):
@@ -129,6 +130,13 @@ class BulkCardCreatorDialog(QDialog):
         self._load_note_types()
         self.note_type_combo.currentTextChanged.connect(self._on_note_type_changed)
         nt_row.addWidget(self.note_type_combo, stretch=1)
+
+        search_note_type_btn = self._make_icon_button(
+            self.style().standardIcon(QStyle.StandardPixmap.SP_FileDialogContentsView),
+            _t("btn_search_note_type"),
+            self._on_search_note_type,
+        )
+        nt_row.addWidget(search_note_type_btn)
         setup_layout.addLayout(nt_row)
 
         setup_layout.addWidget(QLabel(_t("main_deck")))
@@ -143,6 +151,13 @@ class BulkCardCreatorDialog(QDialog):
         self.deck_combo.setEditable(True)
         self._load_decks()
         deck_row.addWidget(self.deck_combo, stretch=1)
+
+        search_deck_btn = self._make_icon_button(
+            self.style().standardIcon(QStyle.StandardPixmap.SP_FileDialogContentsView),
+            _t("btn_search_deck"),
+            self._on_search_deck,
+        )
+        deck_row.addWidget(search_deck_btn)
 
         new_deck_btn = self._make_icon_button(
             self.style().standardIcon(QStyle.StandardPixmap.SP_FileDialogNewFolder),
@@ -464,6 +479,28 @@ class BulkCardCreatorDialog(QDialog):
 
         self.deck_combo.addItem(name)
         self.deck_combo.setCurrentText(name)
+
+    def _on_search_note_type(self) -> None:
+        if not mw or not mw.col:
+            return
+        items = sorted([model["name"] for model in mw.col.models.all()])
+        current = self.note_type_combo.currentText().strip()
+        dialog = SearchSelectDialog(_t("title_search_note_type"), items, current, parent=self)
+        if dialog.exec():
+            selected = dialog.get_selected()
+            if selected:
+                self.note_type_combo.setCurrentText(selected)
+
+    def _on_search_deck(self) -> None:
+        if not mw or not mw.col:
+            return
+        items = ["Bulk Card Creator"] + sorted([deck.name for deck in mw.col.decks.all_names_and_ids() if deck.name != "Bulk Card Creator"])
+        current = self.deck_combo.currentText().strip()
+        dialog = SearchSelectDialog(_t("title_search_deck"), items, current, parent=self)
+        if dialog.exec():
+            selected = dialog.get_selected()
+            if selected:
+                self.deck_combo.setCurrentText(selected)
 
     def _load_presets(self) -> None:
         self.preset_combo.clear()

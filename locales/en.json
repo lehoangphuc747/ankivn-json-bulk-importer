@@ -174,5 +174,12 @@
 
   "lang_label": "🌐 Language:",
   "lang_changed": "Language has been changed.\nPlease close and reopen the Addon to apply.",
-  "lang_changed_title": "Language Changed"
+  "lang_changed_title": "Language Changed",
+  "btn_select": "Select",
+  "search_label": "Search:",
+  "search_placeholder": "Type to search...",
+  "btn_search_note_type": "Search note type",
+  "btn_search_deck": "Search deck",
+  "title_search_note_type": "Search Note Type",
+  "title_search_deck": "Search Deck"
 }

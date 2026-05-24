@@ -181,10 +181,5 @@
   "btn_search_note_type": "Tìm loại thẻ",
   "btn_search_deck": "Tìm bộ thẻ",
   "title_search_note_type": "Tìm kiếm Loại thẻ (Note Type)",
-  "title_search_deck": "Tìm kiếm Bộ thẻ (Deck)",
-  "tab_import": "Nhập thẻ (Import)",
-  "tab_export": "Xuất thẻ (Export)",
-  "tab_ai_helper": "Trợ lý AI (Prompts)",
-  "btn_load_to_import": "Nạp sang Tab Nhập",
-  "btn_preview_deck": "Xem trước"
+  "title_search_deck": "Tìm kiếm Bộ thẻ (Deck)"
 }

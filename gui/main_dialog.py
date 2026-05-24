@@ -8,7 +8,6 @@ from aqt.qt import (
     QPlainTextEdit, QPushButton, QMessageBox, Qt,
     QInputDialog, QFileDialog, QApplication, QSplitter, QWidget, QFontDatabase,
     QScrollArea, QStyle, QSize, QSizePolicy,
-    QTabWidget, QTableWidget, QTableWidgetItem, QHeaderView, QAbstractItemView, QColor, QBrush,
 )
 from anki.utils import guid64
 
@@ -50,7 +49,7 @@ class BulkCardCreatorDialog(QDialog):
     def __init__(self, parent: Any = None) -> None:
         super().__init__(parent or mw)
         self.setWindowTitle(_t("main_title"))
-        self.setMinimumSize(950, 600)
+        self.setMinimumSize(700, 500)
 
         flags = self.windowFlags()
         flags |= Qt.WindowType.WindowMinimizeButtonHint
@@ -70,37 +69,48 @@ class BulkCardCreatorDialog(QDialog):
         main_layout.setContentsMargins(10, 10, 10, 10)
         main_layout.setSpacing(8)
 
-        self.tabs = QTabWidget()
-        main_layout.addWidget(self.tabs)
+        splitter = QSplitter(Qt.Orientation.Horizontal)
+        main_layout.addWidget(splitter)
 
-        # Tab 1: Nhập thẻ (Import)
-        self.import_tab = self._build_import_tab()
-        self.tabs.addTab(self.import_tab, _t("tab_import"))
+        left_panel = QWidget()
+        left_layout = QVBoxLayout(left_panel)
+        left_layout.setContentsMargins(0, 0, 5, 0)
+        left_layout.setSpacing(8)
 
-        # Tab 2: Xuất thẻ (Export)
-        self.export_tab = self._build_export_tab()
-        self.tabs.addTab(self.export_tab, _t("tab_export"))
+        self._build_header_bar(left_layout)
+        self._build_setup_panel(left_layout)
+        left_layout.addStretch()
 
-        # Tab 3: Trợ lý AI (Prompts)
-        self.prompt_tab = self._build_prompt_tab()
-        self.tabs.addTab(self.prompt_tab, _t("tab_ai_helper"))
+        right_panel = QWidget()
+        right_layout = QVBoxLayout(right_panel)
+        right_layout.setContentsMargins(5, 0, 0, 0)
+        right_layout.setSpacing(8)
 
-        # Load initial values
-        self._load_note_types()
-        self._load_decks()
-        self._load_presets()
+        self._build_json_workspace(right_layout)
+        self._build_action_bar(right_layout)
+
+        splitter.addWidget(left_panel)
+        splitter.addWidget(right_panel)
+        splitter.setCollapsible(0, False)
+        splitter.setCollapsible(1, False)
+        splitter.setStretchFactor(0, 1)
+        splitter.setStretchFactor(1, 2)
+        splitter.setSizes([300, 700])
+        left_panel.setMinimumWidth(0)
+        left_panel.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Expanding,
+        )
+        right_panel.setSizePolicy(
+            QSizePolicy.Policy.Expanding,
+            QSizePolicy.Policy.Expanding,
+        )
 
         first_note_type = self.note_type_combo.currentText()
         if first_note_type:
             self._on_note_type_changed(first_note_type)
 
-    def _build_import_tab(self) -> QWidget:
-        widget = QWidget()
-        layout = QVBoxLayout(widget)
-        layout.setContentsMargins(10, 10, 10, 10)
-        layout.setSpacing(8)
-
-        # 1. Header Row (Language & Help)
+    def _build_header_bar(self, parent_layout: QVBoxLayout) -> None:
         header_row = QHBoxLayout()
         header_row.addWidget(QLabel(_t("lang_label")))
         self.lang_combo = QComboBox()
@@ -119,65 +129,207 @@ class BulkCardCreatorDialog(QDialog):
             self._on_help,
         )
         header_row.addWidget(help_btn)
-        layout.addLayout(header_row)
+        parent_layout.addLayout(header_row)
 
-        # 2. Config Row (Note Type & Deck)
-        cfg_row = QHBoxLayout()
-        cfg_row.setSpacing(10)
+    def _build_setup_panel(self, parent_layout: QVBoxLayout) -> None:
+        self.setup_panel = QWidget()
+        self.setup_panel.setMinimumWidth(0)
+        self.setup_panel.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Expanding,
+        )
+        setup_layout = QVBoxLayout(self.setup_panel)
+        setup_layout.setContentsMargins(0, 0, 0, 0)
+        setup_layout.setSpacing(5)
 
-        # Note Type
-        nt_layout = QVBoxLayout()
-        nt_layout.setSpacing(2)
-        nt_layout.addWidget(QLabel(_t("main_note_type")))
+        setup_layout.addWidget(QLabel(_t("main_note_type")))
         self.note_type_combo = ClickableComboBox(self, self._on_search_note_type)
-        self.note_type_combo.setMinimumWidth(200)
+        self.note_type_combo.setMinimumWidth(0)
+        self.note_type_combo.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
+        self._load_note_types()
         self.note_type_combo.currentTextChanged.connect(self._on_note_type_changed)
-        nt_layout.addWidget(self.note_type_combo)
-        cfg_row.addLayout(nt_layout, stretch=1)
+        setup_layout.addWidget(self.note_type_combo)
 
-        # Deck
-        deck_layout = QVBoxLayout()
-        deck_layout.setSpacing(2)
-        deck_layout.addWidget(QLabel(_t("main_deck")))
-        deck_input_row = QHBoxLayout()
-        deck_input_row.setSpacing(5)
+        setup_layout.addWidget(QLabel(_t("main_deck")))
+        deck_row = QHBoxLayout()
+        deck_row.setSpacing(5)
         self.deck_combo = ClickableComboBox(self, self._on_search_deck)
-        self.deck_combo.setMinimumWidth(200)
-        deck_input_row.addWidget(self.deck_combo, stretch=1)
+        self.deck_combo.setMinimumWidth(0)
+        self.deck_combo.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
+        self._load_decks()
+        deck_row.addWidget(self.deck_combo, stretch=1)
 
         new_deck_btn = self._make_icon_button(
             self.style().standardIcon(QStyle.StandardPixmap.SP_FileDialogNewFolder),
             _t("btn_new_deck"),
             self._on_new_deck,
         )
-        deck_input_row.addWidget(new_deck_btn)
-        deck_layout.addLayout(deck_input_row)
-        cfg_row.addLayout(deck_layout, stretch=1)
-        
-        layout.addLayout(cfg_row)
+        deck_row.addWidget(new_deck_btn)
+        setup_layout.addLayout(deck_row)
 
-        # 3. Main Splitter (JSON thô | Live Preview Table)
-        splitter = QSplitter(Qt.Orientation.Horizontal)
-        
-        # Left Panel (JSON Input & tools)
-        json_panel = QWidget()
-        json_layout = QVBoxLayout(json_panel)
-        json_layout.setContentsMargins(0, 0, 0, 0)
-        json_layout.setSpacing(5)
+        sync_group = QGroupBox(_t("section_sync_update"))
+        self._make_sidebar_group_flexible(sync_group)
+        sync_layout = QVBoxLayout(sync_group)
+        sync_layout.setContentsMargins(8, 8, 8, 8)
+        sync_layout.setSpacing(5)
+        sync_layout.addWidget(QLabel(_t("main_smart_sync")))
+        self.match_field_combo = QComboBox()
+        self.match_field_combo.setMinimumWidth(0)
+        self.match_field_combo.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
+        self.match_field_combo.addItem(_t("main_smart_sync_none"))
+        sync_layout.addWidget(self.match_field_combo)
 
-        # JSON tools row
+        self.write_guid_checkbox = QCheckBox(_t("chk_write_guids_short"))
+        self.write_guid_checkbox.setMinimumWidth(0)
+        self.write_guid_checkbox.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
+        self.write_guid_checkbox.setChecked(True)
+        self.write_guid_checkbox.setToolTip(_t("tooltip_write_guids"))
+        sync_layout.addWidget(self.write_guid_checkbox)
+
+        generate_guid_btn = self._make_text_button(
+            _t("btn_generate_guid_short"),
+            self._on_generate_guid,
+            _t("btn_generate_guid") + "\n" + _t("tooltip_generate_guid"),
+        )
+        sync_layout.addWidget(generate_guid_btn)
+        add_deck_btn = self._make_text_button(
+            _t("btn_add_deck_to_json_short"),
+            self._on_add_deck_to_json,
+            _t("btn_add_deck_to_json") + "\n" + _t("tooltip_add_deck_to_json"),
+        )
+        sync_layout.addWidget(add_deck_btn)
+        setup_layout.addWidget(sync_group)
+
+        media_ai_group = QGroupBox(_t("section_media"))
+        self._make_sidebar_group_flexible(media_ai_group)
+        media_ai_layout = QVBoxLayout(media_ai_group)
+        media_ai_layout.setContentsMargins(8, 8, 8, 8)
+        media_ai_layout.setSpacing(5)
+        media_cfg_btn = self._make_text_button(
+            _t("btn_media_config_short"),
+            self._on_media_config,
+            _t("btn_media_config") + "\n" + _t("tooltip_media_config"),
+        )
+        media_ai_layout.addWidget(media_cfg_btn)
+        setup_layout.addWidget(media_ai_group)
+
+        tools_group = QGroupBox(_t("section_presets_history"))
+        self._make_sidebar_group_flexible(tools_group)
+        tools_layout = QVBoxLayout(tools_group)
+        tools_layout.setContentsMargins(8, 8, 8, 8)
+        tools_layout.setSpacing(5)
+        tools_layout.addWidget(QLabel(_t("main_preset")))
+        self.preset_combo = QComboBox()
+        self.preset_combo.setMinimumWidth(0)
+        self.preset_combo.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
+        tools_layout.addWidget(self.preset_combo)
+        preset_btn_row = QHBoxLayout()
+        preset_btn_row.setSpacing(5)
+        load_preset_btn = self._make_text_button(
+            _t("btn_load_preset_short"), self._on_load_preset,
+            _t("btn_load_preset"),
+        )
+        preset_btn_row.addWidget(load_preset_btn)
+        save_preset_btn = self._make_text_button(
+            _t("btn_save_preset_short"), self._on_save_preset,
+            _t("btn_save_preset"),
+        )
+        preset_btn_row.addWidget(save_preset_btn)
+        tools_layout.addLayout(preset_btn_row)
+        self._load_presets()
+        history_btn = self._make_text_button(
+            _t("btn_history"),
+            self._on_open_history,
+            _t("tooltip_open_history"),
+        )
+        tools_layout.addWidget(history_btn)
+        setup_layout.addWidget(tools_group)
+
+        deck_export_group = QGroupBox(_t("section_deck_export"))
+        self._make_sidebar_group_flexible(deck_export_group)
+        deck_export_layout = QVBoxLayout(deck_export_group)
+        deck_export_layout.setContentsMargins(8, 8, 8, 8)
+        deck_export_layout.setSpacing(5)
+        fetch_deck_btn = self._make_text_button(
+            _t("btn_get_deck_data_short"),
+            self._on_fetch_deck_data,
+            _t("btn_get_deck_data") + "\n" + _t("tooltip_get_deck_data"),
+        )
+        deck_export_layout.addWidget(fetch_deck_btn)
+        self.include_stats_checkbox = QCheckBox(_t("chk_include_stats_short"))
+        self.include_stats_checkbox.setMinimumWidth(0)
+        self.include_stats_checkbox.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
+        self.include_stats_checkbox.setToolTip(_t("tooltip_include_stats"))
+        deck_export_layout.addWidget(self.include_stats_checkbox)
+        setup_layout.addWidget(deck_export_group)
+        setup_layout.addStretch()
+
+        self.setup_scroll = QScrollArea()
+        self.setup_scroll.setWidgetResizable(True)
+        self.setup_scroll.setMinimumWidth(0)
+        self.setup_scroll.setSizePolicy(
+            QSizePolicy.Policy.Expanding,
+            QSizePolicy.Policy.Expanding,
+        )
+        self.setup_scroll.setHorizontalScrollBarPolicy(
+            Qt.ScrollBarPolicy.ScrollBarAlwaysOff
+        )
+        self.setup_scroll.setWidget(self.setup_panel)
+        parent_layout.addWidget(self.setup_scroll, stretch=1)
+
+    def _build_json_workspace(self, parent_layout: QVBoxLayout) -> None:
+        json_group = QGroupBox(_t("section_json"))
+        json_layout = QVBoxLayout(json_group)
+
         json_tools_row = QHBoxLayout()
         json_tools_row.setSpacing(6)
-        
-        import_btn = self._make_text_button(_t("btn_import_json"), self._on_import_json, _t("toolbar_import_json"), flexible=False)
-        json_tools_row.addWidget(import_btn)
-        
-        export_btn = self._make_text_button(_t("btn_export_json"), self._on_export_json, _t("toolbar_export_json"), flexible=False)
-        json_tools_row.addWidget(export_btn)
-        
-        prompt_btn = self._make_text_button(_t("btn_copy_prompt"), self._on_copy_prompt, _t("tooltip_copy_prompt"), flexible=False)
-        json_tools_row.addWidget(prompt_btn)
 
+        import_btn = self._make_text_button(
+            _t("btn_import_json"),
+            self._on_import_json,
+            _t("toolbar_import_json"),
+            flexible=False,
+        )
+        json_tools_row.addWidget(import_btn)
+        export_btn = self._make_text_button(
+            _t("btn_export_json"),
+            self._on_export_json,
+            _t("toolbar_export_json"),
+            flexible=False,
+        )
+        json_tools_row.addWidget(export_btn)
+        table_btn = self._make_text_button(
+            _t("btn_view_table"),
+            self._on_view_as_table,
+            _t("toolbar_view_table"),
+            flexible=False,
+        )
+        json_tools_row.addWidget(table_btn)
+        prompt_btn = self._make_text_button(
+            _t("btn_copy_prompt"),
+            self._on_copy_prompt,
+            _t("tooltip_copy_prompt"),
+            flexible=False,
+        )
+        json_tools_row.addWidget(prompt_btn)
         json_tools_row.addStretch()
         json_layout.addLayout(json_tools_row)
 
@@ -186,201 +338,34 @@ class BulkCardCreatorDialog(QDialog):
         fixed_font = QFontDatabase.systemFont(QFontDatabase.SystemFont.FixedFont)
         self.json_input.setFont(fixed_font)
         self.json_input.textChanged.connect(self._validate_json_realtime)
+
         json_layout.addWidget(self.json_input, stretch=1)
-        
-        # Right Panel (Live Preview Table)
-        preview_panel = QWidget()
-        preview_layout = QVBoxLayout(preview_panel)
-        preview_layout.setContentsMargins(0, 0, 0, 0)
-        preview_layout.setSpacing(5)
-        
-        preview_layout.addWidget(QLabel(_t("table_title") or "Bảng xem trước (Live Preview):"))
-        self.live_table_preview = QTableWidget()
-        self.live_table_preview.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectItems)
-        self.live_table_preview.itemChanged.connect(self._on_live_table_cell_changed)
-        preview_layout.addWidget(self.live_table_preview, stretch=1)
+        parent_layout.addWidget(json_group, stretch=1)
 
-        splitter.addWidget(json_panel)
-        splitter.addWidget(preview_panel)
-        splitter.setCollapsible(0, False)
-        splitter.setCollapsible(1, False)
-        splitter.setStretchFactor(0, 1)
-        splitter.setStretchFactor(1, 2)
-        splitter.setSizes([350, 600])
-        
-        layout.addWidget(splitter, stretch=1)
-
-        # 4. Advanced Config (Group Box)
-        advanced_group = QGroupBox(_t("section_advanced_collapsed") or "Công cụ nâng cao")
-        adv_layout = QHBoxLayout(advanced_group)
-        adv_layout.setContentsMargins(8, 8, 8, 8)
-        adv_layout.setSpacing(10)
-
-        # Smart Sync
-        sync_layout = QVBoxLayout()
-        sync_layout.setSpacing(2)
-        sync_layout.addWidget(QLabel(_t("main_smart_sync")))
-        self.match_field_combo = QComboBox()
-        self.match_field_combo.addItem(_t("main_smart_sync_none"))
-        adv_layout.addLayout(sync_layout, stretch=1)
-
-        # Options Checklist
-        opts_layout = QVBoxLayout()
-        self.write_guid_checkbox = QCheckBox(_t("chk_write_guids_short"))
-        self.write_guid_checkbox.setChecked(True)
-        self.write_guid_checkbox.setToolTip(_t("tooltip_write_guids"))
-        opts_layout.addWidget(self.write_guid_checkbox)
-        
-        generate_guid_btn = self._make_text_button(_t("btn_generate_guid_short"), self._on_generate_guid, _t("tooltip_generate_guid"))
-        opts_layout.addWidget(generate_guid_btn)
-        adv_layout.addLayout(opts_layout, stretch=1)
-
-        # Media & Presets
-        media_preset_layout = QVBoxLayout()
-        media_preset_layout.setSpacing(2)
-        media_cfg_btn = self._make_text_button(_t("btn_media_config_short"), self._on_media_config, _t("tooltip_media_config"))
-        media_preset_layout.addWidget(media_cfg_btn)
-        
-        # Presets dropdown
-        preset_row = QHBoxLayout()
-        preset_row.setSpacing(5)
-        self.preset_combo = QComboBox()
-        preset_row.addWidget(self.preset_combo, stretch=1)
-        
-        load_preset_btn = self._make_text_button(_t("btn_load_preset_short"), self._on_load_preset, _t("btn_load_preset"))
-        preset_row.addWidget(load_preset_btn)
-        
-        save_preset_btn = self._make_text_button(_t("btn_save_preset_short"), self._on_save_preset, _t("btn_save_preset"))
-        preset_row.addWidget(save_preset_btn)
-        
-        media_preset_layout.addLayout(preset_row)
-        adv_layout.addLayout(media_preset_layout, stretch=2)
-
-        # History & Deck Tools
-        hist_deck_layout = QVBoxLayout()
-        hist_deck_layout.setSpacing(2)
-        history_btn = self._make_text_button(_t("btn_history"), self._on_open_history, _t("tooltip_open_history"))
-        hist_deck_layout.addWidget(history_btn)
-        
-        add_deck_btn = self._make_text_button(_t("btn_add_deck_to_json_short"), self._on_add_deck_to_json, _t("tooltip_add_deck_to_json"))
-        hist_deck_layout.addWidget(add_deck_btn)
-        
-        adv_layout.addLayout(hist_deck_layout, stretch=1)
-
-        layout.addWidget(advanced_group)
-
-        # 5. Action Row
+    def _build_action_bar(self, parent_layout: QVBoxLayout) -> None:
         action_layout = QHBoxLayout()
+        action_layout.setContentsMargins(0, 10, 0, 0)
         action_layout.addStretch()
 
         self.create_btn = QPushButton(_t("btn_create_update"))
-        self.create_btn.setIcon(self.style().standardIcon(QStyle.StandardPixmap.SP_DialogApplyButton))
+        self.create_btn.setIcon(self.style().standardIcon(
+            QStyle.StandardPixmap.SP_DialogApplyButton
+        ))
         self.create_btn.setDefault(True)
         self.create_btn.setMinimumSize(170, 36)
         self.create_btn.clicked.connect(self._on_submit)
         action_layout.addWidget(self.create_btn)
 
         close_btn = QPushButton(_t("btn_close"))
-        close_btn.setIcon(self.style().standardIcon(QStyle.StandardPixmap.SP_DialogCancelButton))
+        close_btn.setIcon(self.style().standardIcon(
+            QStyle.StandardPixmap.SP_DialogCancelButton
+        ))
         close_btn.setMinimumHeight(36)
         close_btn.setToolTip(_t("tooltip_close"))
         close_btn.clicked.connect(self.close)
         action_layout.addWidget(close_btn)
 
-        layout.addLayout(action_layout)
-
-        return widget
-
-    def _build_export_tab(self) -> QWidget:
-        widget = QWidget()
-        layout = QVBoxLayout(widget)
-        layout.setContentsMargins(10, 10, 10, 10)
-        layout.setSpacing(8)
-
-        # 1. Deck Source Row
-        source_layout = QHBoxLayout()
-        source_layout.setSpacing(10)
-        
-        source_layout.addWidget(QLabel(_t("main_deck")))
-        self.export_deck_combo = ClickableComboBox(self, self._on_search_export_deck)
-        self.export_deck_combo.setMinimumWidth(250)
-        self.export_deck_combo.currentTextChanged.connect(self._on_export_deck_changed)
-        source_layout.addWidget(self.export_deck_combo, stretch=1)
-
-        self.export_include_stats_checkbox = QCheckBox(_t("chk_include_stats_short"))
-        self.export_include_stats_checkbox.setToolTip(_t("tooltip_include_stats"))
-        self.export_include_stats_checkbox.stateChanged.connect(lambda: self._on_export_deck_changed(self.export_deck_combo.currentText()))
-        source_layout.addWidget(self.export_include_stats_checkbox)
-
-        source_layout.addStretch()
-        layout.addLayout(source_layout)
-
-        # 2. Preview Table
-        layout.addWidget(QLabel(_t("table_title") or "Bảng xem trước (Live Preview):"))
-        self.export_preview_table = QTableWidget()
-        self.export_preview_table.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
-        self.export_preview_table.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
-        layout.addWidget(self.export_preview_table, stretch=1)
-
-        # 3. Actions Row
-        action_layout = QHBoxLayout()
-        action_layout.addStretch()
-
-        self.export_load_to_import_btn = QPushButton(_t("btn_load_to_import") or "Nạp sang Tab Nhập")
-        self.export_load_to_import_btn.setIcon(self.style().standardIcon(QStyle.StandardPixmap.SP_ArrowLeft))
-        self.export_load_to_import_btn.clicked.connect(self._on_export_load_to_import)
-        action_layout.addWidget(self.export_load_to_import_btn)
-
-        self.export_save_file_btn = QPushButton(_t("btn_export_json") or "Lưu thành File JSON")
-        self.export_save_file_btn.setIcon(self.style().standardIcon(QStyle.StandardPixmap.SP_DialogSaveButton))
-        self.export_save_file_btn.clicked.connect(self._on_export_save_file)
-        self.export_save_file_btn.setDefault(True)
-        self.export_save_file_btn.setMinimumHeight(36)
-        action_layout.addWidget(self.export_save_file_btn)
-
-        layout.addLayout(action_layout)
-
-        return widget
-
-    def _build_prompt_tab(self) -> QWidget:
-        widget = QWidget()
-        layout = QVBoxLayout(widget)
-        layout.setContentsMargins(10, 10, 10, 10)
-        layout.setSpacing(8)
-
-        # 1. Note Type selection
-        selection_layout = QHBoxLayout()
-        selection_layout.setSpacing(10)
-        selection_layout.addWidget(QLabel(_t("main_note_type")))
-        self.prompt_note_type_combo = ClickableComboBox(self, self._on_search_prompt_note_type)
-        self.prompt_note_type_combo.setMinimumWidth(250)
-        self.prompt_note_type_combo.currentTextChanged.connect(self._update_prompt_text)
-        selection_layout.addWidget(self.prompt_note_type_combo, stretch=1)
-        selection_layout.addStretch()
-        layout.addLayout(selection_layout)
-
-        # 2. Prompt Text Area
-        layout.addWidget(QLabel(_t("btn_copy_prompt") or "Prompt mẫu cho AI (ChatGPT/Claude/Gemini):"))
-        self.prompt_text_area = QPlainTextEdit()
-        self.prompt_text_area.setReadOnly(True)
-        fixed_font = QFontDatabase.systemFont(QFontDatabase.SystemFont.FixedFont)
-        self.prompt_text_area.setFont(fixed_font)
-        layout.addWidget(self.prompt_text_area, stretch=1)
-
-        # 3. Actions Row
-        action_layout = QHBoxLayout()
-        action_layout.addStretch()
-
-        self.prompt_copy_btn = QPushButton(_t("btn_copy_prompt") or "Sao chép Prompt")
-        self.prompt_copy_btn.setIcon(self.style().standardIcon(QStyle.StandardPixmap.SP_FileDialogContentsView))
-        self.prompt_copy_btn.clicked.connect(self._on_copy_prompt_tab)
-        self.prompt_copy_btn.setMinimumHeight(36)
-        self.prompt_copy_btn.setDefault(True)
-        action_layout.addWidget(self.prompt_copy_btn)
-
-        layout.addLayout(action_layout)
-
-        return widget
+        parent_layout.addLayout(action_layout)
 
     def _make_icon_button(
         self,
@@ -443,19 +428,14 @@ class BulkCardCreatorDialog(QDialog):
             pass
 
         try:
-            cards = json.loads(text)
+            json.loads(text)
             # Nếu JSON hợp lệ: Viền xanh lá mỏng
             valid_color = "#81C784" if is_night else "#4CAF50"
             self.json_input.setStyleSheet(f"QPlainTextEdit {{ border: 2px solid {valid_color}; border-radius: 4px; }}")
-            if isinstance(cards, list):
-                self._update_live_table(cards)
-            else:
-                self.live_table_preview.setRowCount(0)
         except json.JSONDecodeError:
             # Nếu JSON lỗi: Viền đỏ báo hiệu
             invalid_color = "#EF5350" if is_night else "#F44336"
             self.json_input.setStyleSheet(f"QPlainTextEdit {{ border: 2px solid {invalid_color}; border-radius: 4px; }}")
-            self.live_table_preview.setRowCount(0)
 
 
     # ---- language ----
@@ -478,27 +458,17 @@ class BulkCardCreatorDialog(QDialog):
 
     def _load_note_types(self) -> None:
         self.note_type_combo.clear()
-        if hasattr(self, "prompt_note_type_combo"):
-            self.prompt_note_type_combo.clear()
         if mw and mw.col:
             for model in mw.col.models.all():
                 self.note_type_combo.addItem(model["name"])
-                if hasattr(self, "prompt_note_type_combo"):
-                    self.prompt_note_type_combo.addItem(model["name"])
 
     def _load_decks(self) -> None:
         self.deck_combo.clear()
-        if hasattr(self, "export_deck_combo"):
-            self.export_deck_combo.clear()
         if mw and mw.col:
             self.deck_combo.addItem("Bulk Card Creator")
-            if hasattr(self, "export_deck_combo"):
-                self.export_deck_combo.addItem("Bulk Card Creator")
             for deck in mw.col.decks.all_names_and_ids():
                 if deck.name != "Bulk Card Creator":
                     self.deck_combo.addItem(deck.name)
-                    if hasattr(self, "export_deck_combo"):
-                        self.export_deck_combo.addItem(deck.name)
 
     def _on_new_deck(self) -> None:
         name, ok = QInputDialog.getText(
@@ -511,17 +481,10 @@ class BulkCardCreatorDialog(QDialog):
         for i in range(self.deck_combo.count()):
             if self.deck_combo.itemText(i) == name:
                 self.deck_combo.setCurrentIndex(i)
-                if hasattr(self, "export_deck_combo"):
-                    idx = self.export_deck_combo.findText(name)
-                    if idx >= 0:
-                        self.export_deck_combo.setCurrentIndex(idx)
                 return
 
         self.deck_combo.addItem(name)
         self.deck_combo.setCurrentText(name)
-        if hasattr(self, "export_deck_combo"):
-            self.export_deck_combo.addItem(name)
-            self.export_deck_combo.setCurrentText(name)
 
     def _on_search_note_type(self) -> None:
         if not mw or not mw.col:
@@ -544,28 +507,6 @@ class BulkCardCreatorDialog(QDialog):
             selected = dialog.get_selected()
             if selected:
                 self.deck_combo.setCurrentText(selected)
-
-    def _on_search_export_deck(self) -> None:
-        if not mw or not mw.col:
-            return
-        items = ["Bulk Card Creator"] + sorted([deck.name for deck in mw.col.decks.all_names_and_ids() if deck.name != "Bulk Card Creator"])
-        current = self.export_deck_combo.currentText().strip()
-        dialog = SearchSelectDialog(_t("title_search_deck"), items, current, parent=self)
-        if dialog.exec():
-            selected = dialog.get_selected()
-            if selected:
-                self.export_deck_combo.setCurrentText(selected)
-
-    def _on_search_prompt_note_type(self) -> None:
-        if not mw or not mw.col:
-            return
-        items = sorted([model["name"] for model in mw.col.models.all()])
-        current = self.prompt_note_type_combo.currentText().strip()
-        dialog = SearchSelectDialog(_t("title_search_note_type"), items, current, parent=self)
-        if dialog.exec():
-            selected = dialog.get_selected()
-            if selected:
-                self.prompt_note_type_combo.setCurrentText(selected)
 
     def _load_presets(self) -> None:
         self.preset_combo.clear()
@@ -1029,227 +970,50 @@ class BulkCardCreatorDialog(QDialog):
             if msg_box.clickedButton() == open_btn:
                 self._on_open_history()
 
-    def _update_live_table(self, cards: List[dict]) -> None:
-        if getattr(self, "_is_updating_table", False):
-            return
-
-        self._is_updating_table = True
-        self.live_table_preview.blockSignals(True)
-        try:
-            self.live_table_preview.clear()
-            if not cards or not isinstance(cards, list):
-                self.live_table_preview.setRowCount(0)
-                self.live_table_preview.setColumnCount(0)
-                return
-
-            seen: dict = {}
-            for card in cards:
-                if isinstance(card, dict):
-                    for key in card:
-                        if key not in seen:
-                            seen[key] = True
-
-            from .table_dialog import META_KEY_ORDER
-            meta_cols = [k for k in META_KEY_ORDER if k in seen]
-            content_cols = [k for k in seen if k not in META_KEY_ORDER]
-            columns = meta_cols + content_cols
-
-            self.live_table_preview.setColumnCount(len(columns))
-            self.live_table_preview.setHorizontalHeaderLabels(columns)
-            self.live_table_preview.setRowCount(len(cards))
-
-            note_type_name = self.note_type_combo.currentText()
-            media_mappings = get_media_mappings(note_type_name) or {}
-
-            for row, card in enumerate(cards):
-                if not isinstance(card, dict):
-                    continue
-                for col_idx, col_name in enumerate(columns):
-                    value = card.get(col_name, "")
-                    if col_name == "__tags__" and isinstance(value, list):
-                        display = ", ".join(str(v) for v in value)
-                    elif isinstance(value, (dict, list)):
-                        display = json.dumps(value, ensure_ascii=False)
-                    else:
-                        display = str(value) if value != "" else ""
-
-                    item = QTableWidgetItem(display)
-                    ftype = media_mappings.get(col_name, "text")
-                    if ftype in ("image", "audio"):
-                        item.setBackground(QBrush(QColor(230, 247, 255)))
-                    self.live_table_preview.setItem(row, col_idx, item)
-
-            self.live_table_preview.resizeColumnsToContents()
-        finally:
-            self.live_table_preview.blockSignals(False)
-            self._is_updating_table = False
-
-    def _on_live_table_cell_changed(self, item: QTableWidgetItem) -> None:
-        if getattr(self, "_is_updating_table", False):
-            return
-
-        self._is_updating_table = True
-        try:
-            cards = []
-            columns = []
-            for col in range(self.live_table_preview.columnCount()):
-                header_item = self.live_table_preview.horizontalHeaderItem(col)
-                columns.append(header_item.text() if header_item else f"Field{col}")
-
-            for row in range(self.live_table_preview.rowCount()):
-                card = {}
-                for col_idx, col_name in enumerate(columns):
-                    cell_item = self.live_table_preview.item(row, col_idx)
-                    text = cell_item.text().strip() if cell_item else ""
-                    if not text:
-                        continue
-                    if col_name == "__tags__":
-                        card[col_name] = [t.strip() for t in text.split(",") if t.strip()]
-                    else:
-                        card[col_name] = text
-                if card:
-                    cards.append(card)
-
-            formatted_json = json.dumps(cards, indent=2, ensure_ascii=False)
-            self.json_input.setPlainText(formatted_json)
-        except Exception:
-            pass
-        finally:
-            self._is_updating_table = False
-
-    def _on_export_deck_changed(self, deck_name: str) -> None:
+    def _on_fetch_deck_data(self) -> None:
+        deck_name = self.deck_combo.currentText().strip()
+        include_stats = self.include_stats_checkbox.isChecked()
         if not deck_name:
-            self.export_preview_table.setRowCount(0)
-            return
-        try:
-            if not mw or not mw.col:
-                return
-            deck = mw.col.decks.by_name(deck_name)
-            if not deck:
-                self.export_preview_table.setRowCount(0)
-                return
-
-            cards_data, _ = export_deck_to_json_logic(deck_name, include_stats=self.export_include_stats_checkbox.isChecked())
-            self._update_export_table(cards_data)
-        except Exception:
-            self.export_preview_table.setRowCount(0)
-
-    def _update_export_table(self, cards: List[dict]) -> None:
-        self.export_preview_table.clear()
-        if not cards:
-            self.export_preview_table.setRowCount(0)
-            self.export_preview_table.setColumnCount(0)
-            return
-
-        seen: dict = {}
-        for card in cards:
-            for key in card:
-                if key not in seen:
-                    seen[key] = True
-
-        from .table_dialog import META_KEY_ORDER
-        meta_cols = [k for k in META_KEY_ORDER if k in seen]
-        content_cols = [k for k in seen if k not in META_KEY_ORDER]
-        columns = meta_cols + content_cols
-
-        self.export_preview_table.setColumnCount(len(columns))
-        self.export_preview_table.setHorizontalHeaderLabels(columns)
-        self.export_preview_table.setRowCount(len(cards))
-
-        for row, card in enumerate(cards):
-            for col_idx, col_name in enumerate(columns):
-                value = card.get(col_name, "")
-                if col_name == "__tags__" and isinstance(value, list):
-                    display = ", ".join(str(v) for v in value)
-                elif isinstance(value, (dict, list)):
-                    display = json.dumps(value, ensure_ascii=False)
-                else:
-                    display = str(value) if value != "" else ""
-
-                self.export_preview_table.setItem(row, col_idx, QTableWidgetItem(display))
-
-        self.export_preview_table.resizeColumnsToContents()
-
-    def _on_export_save_file(self) -> None:
-        deck_name = self.export_deck_combo.currentText().strip()
-        if not deck_name:
-            return
-
-        path, _ = QFileDialog.getSaveFileName(
-            self, _t("btn_export_json"), f"{deck_name}.json",
-            "JSON Files (*.json);;All Files (*)"
-        )
-        if not path:
-            return
-
-        try:
-            cards_data, _ = export_deck_to_json_logic(deck_name, include_stats=self.export_include_stats_checkbox.isChecked())
-            if not cards_data:
-                QMessageBox.information(self, _t("title_result"), _t("msg_deck_export_empty", deck=deck_name))
-                return
-
-            with open(path, "w", encoding="utf-8") as f:
-                json.dump(cards_data, f, indent=2, ensure_ascii=False)
-
-            QMessageBox.information(
-                self, _t("title_export"),
-                _t("msg_saved_to", path=path),
+            QMessageBox.warning(
+                self, _t("title_error"), _t("msg_select_deck_for_export")
             )
-        except Exception as e:
-            QMessageBox.critical(self, _t("title_export_error"), str(e))
-
-    def _on_export_load_to_import(self) -> None:
-        deck_name = self.export_deck_combo.currentText().strip()
-        if not deck_name:
             return
-
+            
         try:
-            cards_data, found_note_type = export_deck_to_json_logic(deck_name, include_stats=self.export_include_stats_checkbox.isChecked())
+            # Gọi hàm xử lý lấy data
+            cards_data, found_note_type = export_deck_to_json_logic(deck_name, include_stats=include_stats)
+            
             if not cards_data:
-                QMessageBox.information(self, _t("title_result"), _t("msg_deck_export_empty", deck=deck_name))
+                QMessageBox.information(
+                    self,
+                    _t("title_result"),
+                    _t("msg_deck_export_empty", deck=deck_name),
+                )
                 return
-
-            # Load Note Type if found
+                
+            # Đổi loại Note Type tương ứng với deck vừa lấy
             if found_note_type:
                 idx = self.note_type_combo.findText(found_note_type)
                 if idx >= 0:
                     self.note_type_combo.setCurrentIndex(idx)
+                else:
+                    self.note_type_combo.addItem(found_note_type)
+                    self.note_type_combo.setCurrentText(found_note_type)
 
+            # Chuyển đổi mảng dict thành chuỗi JSON đẹp
             json_text = json.dumps(cards_data, indent=2, ensure_ascii=False)
+            
+            # Ghi đè vào ô nhập text JSON của giao diện
             self.json_input.setPlainText(json_text)
-            self.tabs.setCurrentIndex(0) # Switch back to Import tab
+            
+            QMessageBox.information(
+                self,
+                _t("title_result"),
+                _t("msg_deck_export_done", count=len(cards_data), deck=deck_name),
+            )
+            
         except Exception as e:
             QMessageBox.critical(self, _t("title_deck_export_error"), str(e))
-
-    def _update_prompt_text(self) -> None:
-        note_type_name = self.prompt_note_type_combo.currentText()
-        if not note_type_name:
-            self.prompt_text_area.clear()
-            return
-        field_names: List[str] = []
-        if mw and mw.col:
-            model = mw.col.models.by_name(note_type_name)
-            if model:
-                field_names = [f['name'] for f in model['flds']]
-
-        if not field_names:
-            field_names = ["Front", "Back"]
-
-        media_map = get_media_mappings(note_type_name)
-        prompt = generate_ai_prompt(field_names, media_map)
-        self.prompt_text_area.setPlainText(prompt)
-
-    def _on_copy_prompt_tab(self) -> None:
-        prompt = self.prompt_text_area.toPlainText()
-        if not prompt:
-            return
-        clipboard = QApplication.clipboard()
-        if clipboard:
-            clipboard.setText(prompt)
-            QMessageBox.information(
-                self, _t("title_copied"),
-                _t("msg_prompt_copied"),
-            )
 
     def done(self, r: int) -> None:
         set_window_maximized(self.isMaximized())

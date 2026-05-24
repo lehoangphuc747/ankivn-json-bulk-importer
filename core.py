@@ -270,13 +270,14 @@ def export_deck_to_json_logic(deck_name: str, include_stats: bool = False) -> Tu
     # Chunk card IDs to avoid SQLite query limit
     chunk_size = 900
     model_cache = {}
+    deck_name_cache = {}
     
     for i in range(0, len(card_ids), chunk_size):
         chunk = card_ids[i:i + chunk_size]
         placeholders = ",".join("?" for _ in chunk)
         # Query cards and notes in a single SQL query
         rows = col.db.all(f"""
-            SELECT c.id, c.nid, c.reps, c.lapses, c.ivl, c.factor,
+            SELECT c.id, c.nid, c.did, c.reps, c.lapses, c.ivl, c.factor,
                    n.guid, n.mid, n.mod, n.tags, n.flds
             FROM cards c
             JOIN notes n ON c.nid = n.id
@@ -284,7 +285,7 @@ def export_deck_to_json_logic(deck_name: str, include_stats: bool = False) -> Tu
         """, *chunk)
         
         for row in rows:
-            cid, nid, reps, lapses, ivl, factor, guid, mid, mod, tags_str, flds_str = row
+            cid, nid, did, reps, lapses, ivl, factor, guid, mid, mod, tags_str, flds_str = row
             if nid in exported_notes:
                 continue
                 
@@ -296,6 +297,12 @@ def export_deck_to_json_logic(deck_name: str, include_stats: bool = False) -> Tu
                 
             if not note_type_name:
                 note_type_name = model["name"]
+
+            # Lấy tên deck thực tế của card (giữ nguyên vị trí sub-deck)
+            if did not in deck_name_cache:
+                deck_obj = col.decks.get(did)
+                deck_name_cache[did] = deck_obj["name"] if deck_obj else deck_name
+            actual_deck_name = deck_name_cache[did]
                 
             # Convert space-separated tag string to list, falling back safely
             if hasattr(col.tags, "split"):
@@ -305,7 +312,7 @@ def export_deck_to_json_logic(deck_name: str, include_stats: bool = False) -> Tu
             
             note_dict = {
                 "__guid__": guid,
-                "__deck__": deck_name,
+                "__deck__": actual_deck_name,
                 "__notetype__": model["name"],
                 "__tags__": tags,
             }

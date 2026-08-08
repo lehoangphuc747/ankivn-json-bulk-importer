@@ -2,6 +2,13 @@
 
 Anki addon thuần Python (không webview/React). Chạy **trong Anki**, không có test runner, lint hay typecheck. Mọi xác minh đều phải qua Anki thật: cài addon → restart Anki → menu `AnkiVN` → mở dialog → import thử JSON.
 
+## Vị trí & workflow
+
+- **Repo (dev):** `D:\Vibe Coding\Anki Addons\ankivn-json-bulk-importer` — ngoài `addons21`, chỉ là nơi phát triển.
+- **Bản cài đang chạy trong Anki:** `C:\Users\ADMIN\AppData\Roaming\Anki2\addons21\json_bulk_importer` — giải nén từ `.ankiaddon` (có `__init__.py` ở root). **Không sửa code trực tiếp ở đây**; sửa ở repo rồi build + cài lại.
+- Flow: sửa code trong `src/` → `uvx aadt build -d local` → Anki: Tools → Add-ons → Install from file → chọn `dist/*.ankiaddon` → restart Anki.
+- Anki nhận diện addon bằng `__init__.py` ở root thư mục addon; repo theo layout `src/` nên **không được** để trực tiếp trong `addons21`.
+
 ## Kiến trúc (cấu trúc `src/` theo AADT)
 
 Toàn bộ source nằm trong `src/json_bulk_importer/` (package module_name trong `addon.json`). Các đường dẫn dưới đây là tương đối với package đó.
@@ -18,7 +25,8 @@ Toàn bộ source nằm trong `src/json_bulk_importer/` (package module_name tro
 ## Dữ liệu runtime
 
 - `user_config.json` + `history/` nằm ở **repo root**, ngoài `src/` → tự động bị loại khỏi package khi build.
-- Trong bản cài Anki, chúng được tạo ở ngay thư mục addon (`os.path.dirname(__file__)` trong `config.py`).
+- Trong bản cài Anki (`addons21\json_bulk_importer\`), chúng được tạo ở ngay thư mục addon (`os.path.dirname(__file__)` trong `config.py`).
+- Khi cài bản mới, folder addon được tạo mới (dữ liệu trống) → nếu muốn giữ presets/history, copy `user_config.json` + `history/` từ bản cài cũ sang bản mới.
 
 ## Meta keys (pop trước khi gán field)
 
@@ -58,7 +66,7 @@ uvx aadt build -d all
 ```
 
 - **Bắt buộc có git tag** (`vX.Y.Z`) — aadt lấy version từ `git describe --tags`; nếu repo có git nhưng chưa có tag, fallback của aadt v1.7.0 bị lỗi. Đặt tag trước khi build: `git tag v0.1.0 && git push --tags`.
-- Output vào `dist/<repo_name>-<version>...ankiaddon` (bị gitignore). Cài qua Anki: Tools → Add-ons → Install from file.
+- Output vào `dist/<repo_name>-<version>...ankiaddon` (bị gitignore). Cài qua Anki: Tools → Add-ons → Install from file. Anki sẽ giải nén thành folder `json_bulk_importer` trong `addons21`.
 - `manifest.json` do aadt sinh từ `addon.json` (thay `meta.json` cũ — đã bỏ). Version point: `min_anki_version`/`tested_anki_version` dạng SemVer.
 - `aadt` tự loại khỏi package: `user_config.json`, `history/` (vì ngoài `src/`), `hold.py`, `.git`, `dist/`, `build/`.
 - Muốn đổi version: tạo tag mới (không sửa trong build).

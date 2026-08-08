@@ -825,12 +825,23 @@ class BulkCardCreatorDialog(QDialog):
         if not note_type_name or not mw or not mw.col:
             return
 
+        deck_name = self.deck_combo.currentText().strip()
+        meta_keys = {
+            "__notetype__": note_type_name,
+            "__deck__": deck_name,
+            "__tags__": [],
+            "__guid__": "",
+        }
+
         model = mw.col.models.by_name(note_type_name)
         if not model:
-            template = [{"Front": "insert_your_content_here", "Back": "insert_your_content_here"}]
+            template_dict = dict(meta_keys)
+            template_dict["Front"] = "insert_your_content_here"
+            template_dict["Back"] = "insert_your_content_here"
+            template = [template_dict]
             field_names = ["Front", "Back"]
         else:
-            template_dict = {}
+            template_dict = dict(meta_keys)
             field_names = []
             for fld in model['flds']:
                 template_dict[fld['name']] = "insert_your_content_here"

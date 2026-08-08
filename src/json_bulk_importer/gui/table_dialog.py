@@ -15,7 +15,7 @@ from ..media import smart_download_media
 from .theme import apply_theme
 
 
-META_KEY_ORDER = ["__guid__", "__deck__", "__tags__"]
+META_KEY_ORDER = ["__guid__", "__deck__", "__notetype__", "__tags__"]
 
 
 class TablePreviewDialog(QDialog):

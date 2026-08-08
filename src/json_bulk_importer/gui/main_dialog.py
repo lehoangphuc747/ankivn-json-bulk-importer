@@ -129,7 +129,7 @@ class BulkCardCreatorDialog(QDialog):
         header_row.addWidget(self.lang_combo, stretch=1)
 
         help_btn = self._make_icon_button(
-            get_icon("circle-question-mark"),
+            get_icon("wrench"),
             _t("btn_help"),
             self._on_help,
         )

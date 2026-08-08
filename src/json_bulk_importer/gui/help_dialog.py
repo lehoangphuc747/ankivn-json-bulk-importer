@@ -7,7 +7,7 @@ from aqt.qt import (
 )
 
 from ..i18n import _t
-from .resources import get_icon, svg_img_html
+from .resources import get_icon
 
 
 class HelpDialog(QDialog):
@@ -49,7 +49,7 @@ class HelpDialog(QDialog):
         return browser
 
     def _build_en_html(self) -> str:
-        return self._with_heading_icons("""
+        return """
         <html>
         <head>
           <style>
@@ -61,7 +61,7 @@ class HelpDialog(QDialog):
           </style>
         </head>
         <body>
-          <h1>@@ICON_ROCKET@@ JSON Bulk Importer - from AnkiVN with @@ICON_HEART@@</h1>
+          <h1>🚀 JSON Bulk Importer - from AnkiVN with ❤️</h1>
           <p>Simple workflow: choose a note type, prepare JSON, preview it, then create or update cards.</p>
           <p><b>Website:</b> <a href="https://ankivn.com">https://ankivn.com</a></p>
 
@@ -110,10 +110,10 @@ class HelpDialog(QDialog):
           </ul>
         </body>
         </html>
-        """)
+        """
 
     def _build_vi_html(self) -> str:
-        return self._with_heading_icons("""
+        return """
         <html>
         <head>
           <style>
@@ -125,7 +125,7 @@ class HelpDialog(QDialog):
           </style>
         </head>
         <body>
-          <h1>@@ICON_ROCKET@@ JSON Bulk Importer - from AnkiVN with @@ICON_HEART@@</h1>
+          <h1>🚀 JSON Bulk Importer - from AnkiVN with ❤️</h1>
           <p>Luồng dùng đơn giản: chọn note type, chuẩn bị JSON, xem trước rồi tạo hoặc cập nhật thẻ.</p>
           <p><b>Website:</b> <a href="https://ankivn.com">https://ankivn.com</a></p>
 
@@ -174,12 +174,4 @@ class HelpDialog(QDialog):
           </ul>
         </body>
         </html>
-        """)
-
-    def _with_heading_icons(self, html: str) -> str:
-        """Thay placeholder icon trong tiêu đề bằng thẻ <img> SVG."""
-        return (
-            html
-            .replace("@@ICON_ROCKET@@", svg_img_html("rocket", 22))
-            .replace("@@ICON_HEART@@", svg_img_html("heart", 16))
-        )
+        """

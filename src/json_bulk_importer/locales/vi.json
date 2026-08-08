@@ -1,5 +1,5 @@
 {
-  "main_title": "JSON Bulk Importer - from AnkiVN",
+  "main_title": "JSON Bulk Importer - from AnkiVN with ❤️",
   "main_note_type": "Loại thẻ (Note Type):",
   "main_deck": "Bộ thẻ (Deck):",
   "main_smart_sync": "Smart Sync (khớp theo):",
@@ -172,7 +172,7 @@
   "prompt_quantity_placeholder": "[SỐ_LƯỢNG]",
   "prompt_topic_placeholder": "[CHỦ_ĐỀ]",
 
-  "lang_label": "Ngôn ngữ:",
+  "lang_label": "🌐 Ngôn ngữ:",
   "lang_changed": "Ngôn ngữ đã được thay đổi.\nVui lòng đóng và mở lại Addon để áp dụng.",
   "lang_changed_title": "Thay đổi ngôn ngữ",
   "btn_select": "Chọn",

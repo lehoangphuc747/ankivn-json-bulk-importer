@@ -1,4 +1,3 @@
-import base64
 import os
 from typing import Optional
 
@@ -45,21 +44,3 @@ def get_icon(icon_name: str) -> QIcon:
     if not pixmap.loadFromData(svg.encode("utf-8")):
         return QIcon()
     return QIcon(pixmap)
-
-
-def svg_img_html(icon_name: str, size: int = 18) -> str:
-    """Trả về thẻ <img> data-URI nhúng icon SVG cho QTextBrowser.
-
-    Tô màu nét theo theme hiện tại để hiển thị rõ cả dark lẫn light mode.
-    """
-    svg = _read_svg(icon_name)
-    if not svg:
-        return ""
-    svg = svg.replace(_STROKE_COLOR, _current_stroke_color())
-    data_uri = "data:image/svg+xml;base64," + base64.b64encode(
-        svg.encode("utf-8")
-    ).decode("ascii")
-    return (
-        f'<img src="{data_uri}" width="{size}" height="{size}" '
-        f'style="vertical-align: middle;">'
-    )

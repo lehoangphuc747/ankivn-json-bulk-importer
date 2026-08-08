@@ -23,7 +23,7 @@ from .help_dialog import HelpDialog
 from .config_dialog import MediaConfigDialog
 from .table_dialog import TablePreviewDialog
 from .search_dialog import SearchSelectDialog
-from .resources import get_icon, svg_img_html
+from .resources import get_icon
 
 
 class ClickableComboBox(QComboBox):
@@ -114,10 +114,7 @@ class BulkCardCreatorDialog(QDialog):
 
     def _build_header_bar(self, parent_layout: QVBoxLayout) -> None:
         header_row = QHBoxLayout()
-        lang_label = QLabel()
-        lang_label.setTextFormat(Qt.TextFormat.RichText)
-        lang_label.setText(svg_img_html("globe", 16) + " " + _t("lang_label"))
-        header_row.addWidget(lang_label)
+        header_row.addWidget(QLabel(_t("lang_label")))
         self.lang_combo = QComboBox()
         supported = get_supported_langs()
         current_lang = get_current_lang()
@@ -128,8 +125,8 @@ class BulkCardCreatorDialog(QDialog):
         self.lang_combo.currentIndexChanged.connect(self._on_lang_changed)
         header_row.addWidget(self.lang_combo, stretch=1)
 
-        help_btn = self._make_icon_button(
-            get_icon("wrench"),
+        help_btn = self._make_emoji_button(
+            "🛠️",
             _t("btn_help"),
             self._on_help,
         )
@@ -170,8 +167,8 @@ class BulkCardCreatorDialog(QDialog):
         self._load_decks()
         deck_row.addWidget(self.deck_combo, stretch=1)
 
-        new_deck_btn = self._make_icon_button(
-            get_icon("folder-plus"),
+        new_deck_btn = self._make_emoji_button(
+            "🎴",
             _t("btn_new_deck"),
             self._on_new_deck,
         )
@@ -372,17 +369,18 @@ class BulkCardCreatorDialog(QDialog):
 
         parent_layout.addLayout(action_layout)
 
-    def _make_icon_button(
+    def _make_emoji_button(
         self,
-        icon: Any,
+        emoji: str,
         tooltip: str,
         callback: Any,
         size: int = 28,
     ) -> QPushButton:
-        button = QPushButton()
-        button.setIcon(icon)
-        button.setIconSize(QSize(size - 8, size - 8))
+        button = QPushButton(emoji)
         button.setFixedSize(size, size)
+        font = button.font()
+        font.setPixelSize(size - 8)
+        button.setFont(font)
         button.setToolTip(tooltip)
         button.clicked.connect(callback)
         return button

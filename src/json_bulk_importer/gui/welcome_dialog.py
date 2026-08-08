@@ -8,7 +8,7 @@ from aqt.qt import (
 )
 
 from ..i18n import _t
-from .resources import get_icon, svg_img_html
+from .resources import get_icon
 
 class WelcomeDialog(QDialog):
     def __init__(self, parent: Any = None) -> None:
@@ -34,8 +34,8 @@ class WelcomeDialog(QDialog):
         <div style="font-family: 'Segoe UI', Arial, sans-serif; padding: 10px; line-height: 1.6;">
             
             <div style="text-align: center; margin-bottom: 20px;">
-                <h2 style="color: #0078d7; margin-bottom: 5px; font-size: 24px;">@@ICON_PARTY@@ Chào mừng bạn đến với<br>JSON Bulk Importer</h2>
-                <p style="font-style: italic; margin-top: 0; font-size: 15px;">— from AnkiVN with @@ICON_HEART@@ —</p>
+                <h2 style="color: #0078d7; margin-bottom: 5px; font-size: 24px;">🎉 Chào mừng bạn đến với<br>JSON Bulk Importer</h2>
+                <p style="font-style: italic; margin-top: 0; font-size: 15px;">— from AnkiVN with ❤️ —</p>
             </div>
 
             <p style="font-size: 15px;">
@@ -48,7 +48,7 @@ class WelcomeDialog(QDialog):
 
             <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
 
-            <h3 style="color: #0078d7; margin-bottom: 10px; font-size: 18px;">@@ICON_HAND@@ Kết nối với mình:</h3>
+            <h3 style="color: #0078d7; margin-bottom: 10px; font-size: 18px;">👋 Kết nối với mình:</h3>
             <ul style="font-size: 15px; margin-top: 0; padding-left: 25px;">
                 <li style="margin-bottom: 5px;"><b>Facebook:</b> <a href="https://www.facebook.com/tui.la.phuc747/" style="color: #0078d7; text-decoration: none;">tui.la.phuc747</a></li>
                 <li style="margin-bottom: 5px;"><b>TikTok:</b> <a href="https://www.tiktok.com/@phuclee.anki" style="color: #0078d7; text-decoration: none;">@phuclee.anki</a></li>
@@ -56,8 +56,8 @@ class WelcomeDialog(QDialog):
             </ul>
 
             <div style="border: 2px dashed #d81b60; padding: 15px; border-radius: 8px; margin: 25px 0;">
-                <h3 style="color: #d81b60; margin-top: 0; text-align: center; font-size: 18px;">@@ICON_HEART@@ Đôi lời về việc Donate</h3>
-                <p style="text-align: center; font-size: 16px; font-weight: bold; color: #d81b60; margin: 10px 0;">"Tui hông nhận donate đâu nha!"</p>
+                <h3 style="color: #d81b60; margin-top: 0; text-align: center; font-size: 18px;">💖 Đôi lời về việc Donate</h3>
+                <p style="text-align: center; font-size: 16px; font-weight: bold; color: #d81b60; margin: 10px 0;">"Tui hông nhận donate đâu nha!" 😆</p>
                 <p style="font-size: 15px;">
                     Nếu bạn thấy Add-on này hữu ích và có nhã ý ủng hộ, xin hãy dùng số tiền đó để làm những việc ý nghĩa hơn như: quan tâm, giúp đỡ gia đình, bố mẹ, những người xung quanh, gửi về <b>Mặt trận Tổ quốc Việt Nam</b>, cúng dường, hoặc đóng góp cho các quỹ thiện nguyện.
                 </p>
@@ -68,25 +68,16 @@ class WelcomeDialog(QDialog):
             </div>
 
             <p style="text-align: center; font-size: 15px; margin-top: 15px;">
-                @@ICON_STAR@@ Nếu bạn thấy Add-on có ích, xin đừng quên <b>cho tui 1 Thumbs Up (Upvote)</b> tại đây nhé:<br>
-                <a href="https://ankiweb.net/shared/info/829928463" style="color: #0078d7; text-decoration: none; font-weight: bold; font-size: 16px;">@@ICON_FLAME@@ Đánh giá trên AnkiWeb @@ICON_FLAME@@</a>
+                ⭐ Nếu bạn thấy Add-on có ích, xin đừng quên <b>cho tui 1 Thumbs Up (Upvote)</b> tại đây nhé:<br>
+                <a href="https://ankiweb.net/shared/info/829928463" style="color: #0078d7; text-decoration: none; font-weight: bold; font-size: 16px;">🔥 Đánh giá trên AnkiWeb 🔥</a>
             </p>
 
             <p style="text-align: center; font-size: 16px; color: #0078d7; font-weight: bold; margin-top: 20px;">
-                @@ICON_SPARKLES@@ Chúc cả nhà học hành ngày càng tiến bộ, luôn vui vẻ, khoẻ mạnh và bình an! @@ICON_SPARKLES@@
+                ✨ Chúc cả nhà học hành ngày càng tiến bộ, luôn vui vẻ, khoẻ mạnh và bình an! ✨
             </p>
             
         </div>
         """
-        html_content = (
-            html_content
-            .replace("@@ICON_PARTY@@", svg_img_html("party-popper", 26))
-            .replace("@@ICON_HEART@@", svg_img_html("heart", 18))
-            .replace("@@ICON_HAND@@", svg_img_html("hand", 20))
-            .replace("@@ICON_STAR@@", svg_img_html("star", 16))
-            .replace("@@ICON_FLAME@@", svg_img_html("flame", 16))
-            .replace("@@ICON_SPARKLES@@", svg_img_html("sparkles", 18))
-        )
         self.browser.setHtml(html_content)
         layout.addWidget(self.browser)
 

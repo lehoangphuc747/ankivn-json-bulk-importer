@@ -18,7 +18,7 @@ Toàn bộ source nằm trong `src/json_bulk_importer/` (package module_name tro
 - `gui/*` — chỉ điều phối/validate input và gọi core; **không** để logic DB/media trong dialog. Gồm: `main_dialog.py` (dialog chính + sidebar), `config_dialog.py` (media fields), `stats_dialog.py` (chọn stat kèm khi Lấy Deck), `table_dialog.py` (xem/sửa JSON dạng bảng), `search_dialog.py`, `help_dialog.py`, `theme.py`, `resources.py`.
 - `core.py` — logic Anki DB: `create_cards_logic()`, `create_new_model()`, `export_deck_to_json_logic()`.
 - `media.py` — `smart_download_media()`, `resolve_media_in_text()` (`[media:...]` legacy), `MEDIA_PATTERN`.
-- `config.py` — điểm duy nhất ghi `user_config.json` (media_fields, presets, lang, welcome_shown, window_maximized, window_geometry). Writes atomic qua file `.tmp` + `os.replace`. Preset/history **phải** qua API ở đây, không tự ghi file trong UI.
+- `config.py` — điểm duy nhất ghi `user_config.json` (media_fields, presets, lang, window_maximized, window_geometry). Writes atomic qua file `.tmp` + `os.replace`. Preset/history **phải** qua API ở đây, không tự ghi file trong UI.
 - `i18n.py` — `_t(key, **kwargs)`; locale nạp từ `locales/{vi,en}.json`.
 - `prompt.py` — sinh XML prompt cho AI; `generate_ai_prompt()` nhận role/topic tùy chọn (lấp `<role>`, topic chỉ xuất hiện dưới dạng `<topic>` block khi có giá trị); nếu role bỏ trống dùng placeholder i18n.
 - `gui/prompt_dialog.py` — dialog nhập role + chủ đề (tùy chọn) trước khi copy prompt (`_on_copy_prompt` mở dialog → OK mới copy).

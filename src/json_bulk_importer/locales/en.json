@@ -94,8 +94,6 @@
   "help_title": "Help & Usage Guide",
   "help_tab_en": "English",
   "help_tab_vi": "Tiếng Việt",
-  "welcome_title": "Welcome to JSON Bulk Importer!",
-  "welcome_dont_show_again": "Don't show this again",
 
   "section_setup": "Setup",
   "section_basic_setup": "Basic Setup",

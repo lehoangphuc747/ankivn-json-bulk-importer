@@ -132,19 +132,6 @@ def save_batch_history(record: dict) -> str:
     return file_path
 
 
-def get_welcome_shown() -> bool:
-    """Kiểm tra xem người dùng đã chọn 'Don't show this again' cho Welcome popup chưa."""
-    config = _get_config()
-    return config.get("welcome_shown", False)
-
-
-def set_welcome_shown(shown: bool) -> None:
-    """Lưu tuỳ chọn tắt Welcome popup vĩnh viễn."""
-    config = _get_config()
-    config["welcome_shown"] = shown
-    _save_config(config)
-
-
 def get_window_maximized() -> bool:
     """Kiểm tra xem lần trước cửa sổ có được phóng to (maximize) không."""
     config = _get_config()

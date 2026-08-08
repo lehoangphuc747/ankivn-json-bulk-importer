@@ -129,7 +129,7 @@ class BulkCardCreatorDialog(QDialog):
         header_row.addWidget(self.lang_combo, stretch=1)
 
         help_btn = self._make_icon_button(
-            self.style().standardIcon(QStyle.StandardPixmap.SP_DialogHelpButton),
+            get_icon("circle-question-mark"),
             _t("btn_help"),
             self._on_help,
         )
@@ -171,7 +171,7 @@ class BulkCardCreatorDialog(QDialog):
         deck_row.addWidget(self.deck_combo, stretch=1)
 
         new_deck_btn = self._make_icon_button(
-            self.style().standardIcon(QStyle.StandardPixmap.SP_FileDialogNewFolder),
+            get_icon("folder-plus"),
             _t("btn_new_deck"),
             self._on_new_deck,
         )

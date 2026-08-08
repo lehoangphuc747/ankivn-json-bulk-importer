@@ -173,19 +173,22 @@ class BulkCardCreatorDialog(QDialog):
         deck_row.addWidget(new_deck_btn)
         setup_layout.addLayout(deck_row)
 
+        fetch_stats_row = QHBoxLayout()
+        fetch_stats_row.setSpacing(5)
         fetch_deck_btn = self._make_text_button(
             _t("btn_get_deck_data_short"),
             self._on_fetch_deck_data,
             _t("btn_get_deck_data") + "\n" + _t("tooltip_get_deck_data"),
         )
-        setup_layout.addWidget(fetch_deck_btn)
+        fetch_stats_row.addWidget(fetch_deck_btn, stretch=1)
         self.stats_btn = self._make_text_button(
             _t("chk_include_stats_short"),
             self._on_choose_stats,
             _t("tooltip_include_stats"),
         )
+        fetch_stats_row.addWidget(self.stats_btn, stretch=1)
         self._selected_stats: List[str] = list(STAT_KEYS)
-        setup_layout.addWidget(self.stats_btn)
+        setup_layout.addLayout(fetch_stats_row)
 
         tags_row = QHBoxLayout()
         tags_row.setSpacing(5)

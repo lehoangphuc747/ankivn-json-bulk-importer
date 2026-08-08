@@ -5,6 +5,7 @@ Anki addon thuần Python (không webview/React). Chạy **trong Anki**, không 
 ## Vị trí & workflow
 
 - **Repo (dev):** `D:\Vibe Coding\Anki Addons\ankivn-json-bulk-importer` — ngoài `addons21`, chỉ là nơi phát triển.
+- **Remote:** `https://github.com/lehoangphuc747/ankivn-json-bulk-importer.git` (origin).
 - **Bản cài đang chạy trong Anki:** `C:\Users\ADMIN\AppData\Roaming\Anki2\addons21\json_bulk_importer` — giải nén từ `.ankiaddon` (có `__init__.py` ở root). **Không sửa code trực tiếp ở đây**; sửa ở repo rồi build + cài lại.
 - Flow: sửa code trong `src/` → `uvx aadt build -d local` → Anki: Tools → Add-ons → Install from file → chọn `dist/*.ankiaddon` → restart Anki.
 - Anki nhận diện addon bằng `__init__.py` ở root thư mục addon; repo theo layout `src/` nên **không được** để trực tiếp trong `addons21`.

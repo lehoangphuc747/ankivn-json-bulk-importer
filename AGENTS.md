@@ -20,7 +20,8 @@ Toàn bộ source nằm trong `src/json_bulk_importer/` (package module_name tro
 - `media.py` — `smart_download_media()`, `resolve_media_in_text()` (`[media:...]` legacy), `MEDIA_PATTERN`.
 - `config.py` — điểm duy nhất ghi `user_config.json` (media_fields, presets, lang, welcome_shown, window_maximized, window_geometry). Writes atomic qua file `.tmp` + `os.replace`. Preset/history **phải** qua API ở đây, không tự ghi file trong UI.
 - `i18n.py` — `_t(key, **kwargs)`; locale nạp từ `locales/{vi,en}.json`.
-- `prompt.py` — sinh XML prompt cho AI.
+- `prompt.py` — sinh XML prompt cho AI; `generate_ai_prompt()` nhận role/quantity/topic tùy chọn (lấp vào `<role>`, thay `[QUANTITY]`/`[TOPIC]`), nếu bỏ trống dùng placeholder i18n.
+- `gui/prompt_dialog.py` — dialog nhập role, số lượng, chủ đề trước khi copy prompt (`_on_copy_prompt` mở dialog → OK mới copy).
 - `hold.py` — **legacy**, nằm ở repo root ngoài `src/` (không đóng gói), không được import; đừng sửa.
 
 ## Dữ liệu runtime

@@ -8,6 +8,7 @@ from aqt.qt import (
     QPlainTextEdit, QPushButton, QMessageBox, Qt,
     QInputDialog, QFileDialog, QApplication, QSplitter, QWidget, QFontDatabase,
     QScrollArea, QStyle, QSize, QSizePolicy, QIcon, QPixmap, QPainter, QFont,
+    QLineEdit, QCompleter,
 )
 from anki.utils import guid64
 
@@ -146,6 +147,7 @@ class BulkCardCreatorDialog(QDialog):
             QSizePolicy.Policy.Fixed,
         )
         self._load_decks()
+        self.deck_combo.currentTextChanged.connect(self._on_deck_changed)
         deck_row.addWidget(self.deck_combo, stretch=1)
 
         new_deck_btn = self._make_emoji_button(
@@ -226,6 +228,22 @@ class BulkCardCreatorDialog(QDialog):
             _t("btn_add_deck_to_json") + "\n" + _t("tooltip_add_deck_to_json"),
         )
         sync_layout.addWidget(add_deck_btn)
+
+        self.tags_edit = QLineEdit()
+        self.tags_edit.setPlaceholderText(_t("placeholder_tags"))
+        self.tags_edit.setMinimumWidth(0)
+        self.tags_edit.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
+        self.tags_edit.setCompleter(self._make_tags_completer())
+        sync_layout.addWidget(self.tags_edit)
+        add_tags_btn = self._make_text_button(
+            _t("btn_add_tags_to_json_short"),
+            self._on_add_tags_to_json,
+            _t("btn_add_tags_to_json") + "\n" + _t("tooltip_add_tags_to_json"),
+        )
+        sync_layout.addWidget(add_tags_btn)
         advanced_layout.addWidget(sync_group)
 
         media_ai_group = QGroupBox(_t("section_media"))
@@ -734,6 +752,74 @@ class BulkCardCreatorDialog(QDialog):
             _t("msg_deck_added", deck=deck_name, count=changed),
         )
 
+    def _make_tags_completer(self) -> Optional[QCompleter]:
+        if not (mw and mw.col):
+            return None
+        try:
+            tags = mw.col.tags.all()
+        except Exception:
+            tags = []
+        if not tags:
+            return None
+        completer = QCompleter(sorted(tags), self)
+        completer.setCaseSensitivity(Qt.CaseSensitivity.CaseInsensitive)
+        completer.setCompletionMode(QCompleter.CompletionMode.PopupCompletion)
+        return completer
+
+    def _on_add_tags_to_json(self) -> None:
+        """Add __tags__ to all cards in JSON based on entered tags."""
+        raw_text = self.json_input.toPlainText().strip()
+        if not raw_text:
+            QMessageBox.warning(
+                self, _t("title_error"), _t("msg_json_empty")
+            )
+            return
+
+        tags_text = self.tags_edit.text().strip()
+        if not tags_text:
+            QMessageBox.warning(
+                self, _t("title_error"), _t("msg_enter_tags")
+            )
+            return
+
+        import re
+        tags = [t.strip() for t in re.split(r"[\s,]+", tags_text) if t.strip()]
+        if not tags:
+            QMessageBox.warning(
+                self, _t("title_error"), _t("msg_enter_tags")
+            )
+            return
+
+        try:
+            cards = json.loads(raw_text)
+        except json.JSONDecodeError as e:
+            QMessageBox.critical(
+                self, _t("title_json_error"),
+                _t("msg_invalid_json", error=str(e)),
+            )
+            return
+
+        if not isinstance(cards, list):
+            QMessageBox.warning(
+                self, _t("title_error"), _t("msg_json_must_be_array")
+            )
+            return
+
+        changed = 0
+        for card in cards:
+            if not isinstance(card, dict):
+                continue
+            if "__tags__" not in card:
+                card["__tags__"] = tags
+                changed += 1
+
+        self.json_input.setPlainText(json.dumps(cards, indent=2, ensure_ascii=False))
+        QMessageBox.information(
+            self,
+            _t("title_result"),
+            _t("msg_tags_added", count=changed, tags=", ".join(tags)),
+        )
+
     def _on_open_history(self) -> None:
         history_dir = get_history_dir()
         try:
@@ -820,6 +906,33 @@ class BulkCardCreatorDialog(QDialog):
             field_names = ["Front", "Back"]
         dialog = MediaConfigDialog(note_type_name, field_names, parent=self)
         dialog.exec()
+
+    def _on_deck_changed(self, deck_name: str) -> None:
+        """Cập nhật __deck__ trong JSON template khi deck đổi (chỉ khi key đã tồn tại)."""
+        deck_name = deck_name.strip()
+        if not deck_name:
+            return
+        json_input = getattr(self, "json_input", None)
+        if json_input is None:
+            return
+        raw_text = json_input.toPlainText().strip()
+        if not raw_text:
+            return
+        try:
+            cards = json.loads(raw_text)
+        except json.JSONDecodeError:
+            return
+        if not isinstance(cards, list):
+            return
+        changed = False
+        for card in cards:
+            if isinstance(card, dict) and "__deck__" in card:
+                card["__deck__"] = deck_name
+                changed = True
+        if changed:
+            json_input.setPlainText(
+                json.dumps(cards, indent=2, ensure_ascii=False)
+            )
 
     def _on_note_type_changed(self, note_type_name: str) -> None:
         if not note_type_name or not mw or not mw.col:

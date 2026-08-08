@@ -35,6 +35,8 @@ Toàn bộ source nằm trong `src/json_bulk_importer/` (package module_name tro
 - `__guid__` — tìm note cũ bằng `select id from notes where guid = ?`; nhánh UPDATE nếu trúng.
 - `__match_field__` fallback (Smart Sync): build cache `{field_value: note_id}` từ `SELECT id, flds FROM notes WHERE mid = ?`, parse theo delimiter `\x1f`. **Thứ tự: `__guid__` trước, match_field sau** — không đảo.
 - `__deck__` — deck đích mỗi card; `__notetype__` — note type mỗi card; `__tags__` — string hoặc list.
+- Nút "Thêm Tags vào JSON" (cạnh nút Add Deck, trong advanced): nhập tags ở ô phía trên (cách nhau bằng dấu phẩy hoặc khoảng trắng, autocomplete từ `mw.col.tags.all()`) → addon thêm `__tags__` (list) vào object JSON **chưa có** `__tags__`; không ghi đè tags đã có.
+- Đổi deck trong combo sẽ tự cập nhật `__deck__` trong JSON **chỉ khi key `__deck__` đã tồn tại** trên object (template mẫu); không thêm mới key vào object đang thiếu.
 - Mọi key `__x__` khác trong JSON đều bị pop/bỏ qua.
 
 ## Bất biến bắt buộc khi sửa
@@ -44,7 +46,7 @@ Toàn bộ source nằm trong `src/json_bulk_importer/` (package module_name tro
 3. Giữ `mw.checkpoint(...)` + `mw.progress.start/update/finish` + `mw.reset()` trong mọi batch.
 4. Truy cập dữ liệu chỉ qua `mw.col` (models/decks/db/note APIs), không bypass.
 5. Media output chỉ dùng tag Anki chuẩn: `<img src="...">` hoặc `[sound:...]`.
-6. Nút Sinh GUID / Add Deck into JSON: **chỉ thêm cho object thiếu key**, không ghi đè `__guid__`/`__deck__` đã có.
+6. Nút Sinh GUID / Add Deck into JSON / Thêm Tags vào JSON: **chỉ thêm cho object thiếu key**, không ghi đè `__guid__`/`__deck__`/`__tags__` đã có.
 7. Sau batch, nếu bật Write GUID: backfill `__guid__` vào object JSON cả nhánh CREATE lẫn UPDATE.
 8. History ghi file JSON riêng vào `history/` (qua `save_batch_history`), không nhồi vào `user_config.json`.
 

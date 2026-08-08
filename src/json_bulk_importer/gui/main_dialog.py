@@ -200,6 +200,7 @@ class BulkCardCreatorDialog(QDialog):
             QSizePolicy.Policy.Fixed,
         )
         self.tags_edit.setCompleter(self._make_tags_completer())
+        self.tags_edit.textChanged.connect(self._on_tags_auto_apply)
         tags_row.addWidget(self.tags_edit, stretch=1)
         add_tags_btn = self._make_text_button(
             _t("btn_add_tags_to_json_short"),
@@ -943,6 +944,37 @@ class BulkCardCreatorDialog(QDialog):
         for card in cards:
             if isinstance(card, dict) and "__deck__" in card:
                 card["__deck__"] = deck_name
+                changed = True
+        if changed:
+            json_input.setPlainText(
+                json.dumps(cards, indent=2, ensure_ascii=False)
+            )
+
+    def _on_tags_auto_apply(self, tags_text: str) -> None:
+        """Tự cập nhật __tags__ trong JSON khi gõ tags (chỉ khi key đã tồn tại)."""
+        tags_text = tags_text.strip()
+        if not tags_text:
+            return
+        json_input = getattr(self, "json_input", None)
+        if json_input is None:
+            return
+        raw_text = json_input.toPlainText().strip()
+        if not raw_text:
+            return
+        try:
+            cards = json.loads(raw_text)
+        except json.JSONDecodeError:
+            return
+        if not isinstance(cards, list):
+            return
+        import re
+        tags = [t.strip() for t in re.split(r"[\s,]+", tags_text) if t.strip()]
+        if not tags:
+            return
+        changed = False
+        for card in cards:
+            if isinstance(card, dict) and "__tags__" in card:
+                card["__tags__"] = tags
                 changed = True
         if changed:
             json_input.setPlainText(

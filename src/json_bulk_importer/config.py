@@ -1,6 +1,7 @@
 import json
 import os
 from datetime import datetime
+from typing import Optional
 
 
 _CONFIG_PATH = os.path.join(os.path.dirname(__file__), "user_config.json")
@@ -115,5 +116,18 @@ def set_window_maximized(maximized: bool) -> None:
     """Lưu trạng thái phóng to cửa sổ."""
     config = _get_config()
     config["window_maximized"] = maximized
+    _save_config(config)
+
+
+def get_window_geometry() -> Optional[dict]:
+    """Lấy vị trí và kích thước cửa sổ đã lưu lần cuối (None nếu chưa có)."""
+    config = _get_config()
+    return config.get("window_geometry")
+
+
+def set_window_geometry(geometry: dict) -> None:
+    """Lưu vị trí và kích thước cửa sổ (x, y, w, h)."""
+    config = _get_config()
+    config["window_geometry"] = geometry
     _save_config(config)
 

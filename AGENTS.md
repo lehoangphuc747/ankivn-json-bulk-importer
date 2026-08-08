@@ -18,7 +18,7 @@ Toàn bộ source nằm trong `src/json_bulk_importer/` (package module_name tro
 - `gui/*` — chỉ điều phối/validate input và gọi core; **không** để logic DB/media trong dialog.
 - `core.py` — logic Anki DB: `create_cards_logic()`, `create_new_model()`, `export_deck_to_json_logic()`.
 - `media.py` — `smart_download_media()`, `resolve_media_in_text()` (`[media:...]` legacy), `MEDIA_PATTERN`.
-- `config.py` — điểm duy nhất ghi `user_config.json` (media_fields, presets, lang, welcome_shown, window_maximized). Writes atomic qua file `.tmp` + `os.replace`. Preset/history **phải** qua API ở đây, không tự ghi file trong UI.
+- `config.py` — điểm duy nhất ghi `user_config.json` (media_fields, presets, lang, welcome_shown, window_maximized, window_geometry). Writes atomic qua file `.tmp` + `os.replace`. Preset/history **phải** qua API ở đây, không tự ghi file trong UI.
 - `i18n.py` — `_t(key, **kwargs)`; locale nạp từ `locales/{vi,en}.json`.
 - `prompt.py` — sinh XML prompt cho AI.
 - `hold.py` — **legacy**, nằm ở repo root ngoài `src/` (không đóng gói), không được import; đừng sửa.

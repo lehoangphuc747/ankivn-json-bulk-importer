@@ -16,6 +16,7 @@ from ..config import (
     get_media_mappings, get_presets, save_preset,
     get_history_dir, save_batch_history,
     get_window_maximized, set_window_maximized,
+    get_window_geometry, set_window_geometry,
 )
 from ..core import create_cards_logic, export_deck_to_json_logic
 from ..prompt import generate_ai_prompt
@@ -62,13 +63,27 @@ class BulkCardCreatorDialog(QDialog):
         flags &= ~Qt.WindowType.WindowContextHelpButtonHint
         self.setWindowFlags(flags)
 
+        self._restore_window_state()
+
+        self._setup_ui()
+        apply_theme(self)
+
+    def _restore_window_state(self) -> None:
+        geometry = get_window_geometry()
+        if geometry and all(isinstance(geometry.get(k), int) for k in ("x", "y", "w", "h")):
+            self.setGeometry(geometry["x"], geometry["y"], geometry["w"], geometry["h"])
         if get_window_maximized():
             maximized_state = getattr(Qt.WindowState, "WindowMaximized", None) or getattr(Qt, "WindowMaximized", None)
             if maximized_state is not None:
                 self.setWindowState(self.windowState() | maximized_state)
 
-        self._setup_ui()
-        apply_theme(self)
+    def _save_window_state(self) -> None:
+        if self.isMaximized() or self.isMinimized():
+            set_window_maximized(self.isMaximized())
+        else:
+            g = self.geometry()
+            set_window_geometry({"x": g.x(), "y": g.y(), "w": g.width(), "h": g.height()})
+            set_window_maximized(False)
 
     def _setup_ui(self) -> None:
         main_layout = QVBoxLayout(self)
@@ -1187,10 +1202,10 @@ class BulkCardCreatorDialog(QDialog):
             QMessageBox.critical(self, _t("title_deck_export_error"), str(e))
 
     def done(self, r: int) -> None:
-        set_window_maximized(self.isMaximized())
+        self._save_window_state()
         super().done(r)
 
     def closeEvent(self, event) -> None:
-        set_window_maximized(self.isMaximized())
+        self._save_window_state()
         super().closeEvent(event)
 

@@ -2,6 +2,8 @@ from aqt import mw
 from aqt import gui_hooks
 from aqt.qt import QAction, qconnect, QMenu
 
+from .gui.resources import get_icon
+
 
 # ---------------------------------------------------------------------------
 # Menu: tìm hoặc tạo menu "AnkiVN" trên thanh menubar
@@ -86,11 +88,11 @@ gui_hooks.profile_did_open.append(check_and_show_welcome)
 
 
 # ---------------------------------------------------------------------------
-# Đăng ký menu "AnkiVN" > "🚀 JSON Bulk Importer - from AnkiVN with ❤️"
+# Đăng ký menu "AnkiVN" > "JSON Bulk Importer - from AnkiVN"
 # ---------------------------------------------------------------------------
 
 if mw and mw.form:
     ankivn_menu = get_or_create_ankivn_menu()
-    action = QAction("JSON Bulk Importer - from AnkiVN with ❤️", mw)
+    action = QAction(get_icon("rocket"), "JSON Bulk Importer - from AnkiVN", mw)
     qconnect(action.triggered, show_dialog)
     ankivn_menu.addAction(action)

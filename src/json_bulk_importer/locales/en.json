@@ -1,5 +1,5 @@
 {
-  "main_title": "JSON Bulk Importer - from AnkiVN with ❤️",
+  "main_title": "JSON Bulk Importer - from AnkiVN",
   "main_note_type": "Note Type:",
   "main_deck": "Deck:",
   "main_smart_sync": "Smart Sync (match by):",
@@ -172,7 +172,7 @@
   "prompt_quantity_placeholder": "[QUANTITY]",
   "prompt_topic_placeholder": "[TOPIC]",
 
-  "lang_label": "🌐 Language:",
+  "lang_label": "Language:",
   "lang_changed": "Language has been changed.\nPlease close and reopen the Addon to apply.",
   "lang_changed_title": "Language Changed",
   "btn_select": "Select",

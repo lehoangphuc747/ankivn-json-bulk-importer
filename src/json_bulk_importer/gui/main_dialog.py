@@ -187,6 +187,25 @@ class BulkCardCreatorDialog(QDialog):
         self._selected_stats: List[str] = list(STAT_KEYS)
         setup_layout.addWidget(self.stats_btn)
 
+        tags_row = QHBoxLayout()
+        tags_row.setSpacing(5)
+        self.tags_edit = QLineEdit()
+        self.tags_edit.setPlaceholderText(_t("placeholder_tags"))
+        self.tags_edit.setMinimumWidth(0)
+        self.tags_edit.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
+        self.tags_edit.setCompleter(self._make_tags_completer())
+        tags_row.addWidget(self.tags_edit, stretch=1)
+        add_tags_btn = self._make_text_button(
+            _t("btn_add_tags_to_json_short"),
+            self._on_add_tags_to_json,
+            _t("btn_add_tags_to_json") + "\n" + _t("tooltip_add_tags_to_json"),
+        )
+        tags_row.addWidget(add_tags_btn)
+        setup_layout.addLayout(tags_row)
+
         self.advanced_toggle = self._make_text_button(
             _t("section_advanced_collapsed"),
             self._on_toggle_advanced,
@@ -243,22 +262,6 @@ class BulkCardCreatorDialog(QDialog):
             _t("btn_add_deck_to_json") + "\n" + _t("tooltip_add_deck_to_json"),
         )
         sync_layout.addWidget(add_deck_btn)
-
-        self.tags_edit = QLineEdit()
-        self.tags_edit.setPlaceholderText(_t("placeholder_tags"))
-        self.tags_edit.setMinimumWidth(0)
-        self.tags_edit.setSizePolicy(
-            QSizePolicy.Policy.Ignored,
-            QSizePolicy.Policy.Fixed,
-        )
-        self.tags_edit.setCompleter(self._make_tags_completer())
-        sync_layout.addWidget(self.tags_edit)
-        add_tags_btn = self._make_text_button(
-            _t("btn_add_tags_to_json_short"),
-            self._on_add_tags_to_json,
-            _t("btn_add_tags_to_json") + "\n" + _t("tooltip_add_tags_to_json"),
-        )
-        sync_layout.addWidget(add_tags_btn)
         advanced_layout.addWidget(sync_group)
 
         media_ai_group = QGroupBox(_t("section_media"))

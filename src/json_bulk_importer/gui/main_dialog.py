@@ -81,7 +81,6 @@ class BulkCardCreatorDialog(QDialog):
         left_layout.setContentsMargins(0, 0, 5, 0)
         left_layout.setSpacing(8)
 
-        self._build_header_bar(left_layout)
         self._build_setup_panel(left_layout)
         left_layout.addStretch()
 
@@ -113,27 +112,6 @@ class BulkCardCreatorDialog(QDialog):
         first_note_type = self.note_type_combo.currentText()
         if first_note_type:
             self._on_note_type_changed(first_note_type)
-
-    def _build_header_bar(self, parent_layout: QVBoxLayout) -> None:
-        header_row = QHBoxLayout()
-        header_row.addWidget(QLabel(_t("lang_label")))
-        self.lang_combo = QComboBox()
-        supported = get_supported_langs()
-        current_lang = get_current_lang()
-        for code, display in supported.items():
-            self.lang_combo.addItem(display, code)
-            if code == current_lang:
-                self.lang_combo.setCurrentIndex(self.lang_combo.count() - 1)
-        self.lang_combo.currentIndexChanged.connect(self._on_lang_changed)
-        header_row.addWidget(self.lang_combo, stretch=1)
-
-        help_btn = self._make_emoji_button(
-            "🛠️",
-            _t("btn_help"),
-            self._on_help,
-        )
-        header_row.addWidget(help_btn)
-        parent_layout.addLayout(header_row)
 
     def _build_setup_panel(self, parent_layout: QVBoxLayout) -> None:
         self.setup_panel = QWidget()
@@ -177,6 +155,25 @@ class BulkCardCreatorDialog(QDialog):
         deck_row.addWidget(new_deck_btn)
         setup_layout.addLayout(deck_row)
 
+        self.advanced_toggle = self._make_text_button(
+            _t("section_advanced_collapsed"),
+            self._on_toggle_advanced,
+            _t("tooltip_advanced_tools"),
+        )
+        self.advanced_toggle.setObjectName("advancedToggle")
+        self.advanced_toggle.setIcon(get_icon("chevron-down"))
+        setup_layout.addWidget(self.advanced_toggle)
+
+        self.advanced_container = QWidget()
+        self.advanced_container.setMinimumWidth(0)
+        self.advanced_container.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
+        advanced_layout = QVBoxLayout(self.advanced_container)
+        advanced_layout.setContentsMargins(0, 0, 0, 0)
+        advanced_layout.setSpacing(5)
+
         sync_group = QGroupBox(_t("section_sync_update"))
         self._make_sidebar_group_flexible(sync_group)
         sync_layout = QVBoxLayout(sync_group)
@@ -214,7 +211,7 @@ class BulkCardCreatorDialog(QDialog):
             _t("btn_add_deck_to_json") + "\n" + _t("tooltip_add_deck_to_json"),
         )
         sync_layout.addWidget(add_deck_btn)
-        setup_layout.addWidget(sync_group)
+        advanced_layout.addWidget(sync_group)
 
         media_ai_group = QGroupBox(_t("section_media"))
         self._make_sidebar_group_flexible(media_ai_group)
@@ -227,7 +224,7 @@ class BulkCardCreatorDialog(QDialog):
             _t("btn_media_config") + "\n" + _t("tooltip_media_config"),
         )
         media_ai_layout.addWidget(media_cfg_btn)
-        setup_layout.addWidget(media_ai_group)
+        advanced_layout.addWidget(media_ai_group)
 
         tools_group = QGroupBox(_t("section_presets_history"))
         self._make_sidebar_group_flexible(tools_group)
@@ -262,7 +259,7 @@ class BulkCardCreatorDialog(QDialog):
             _t("tooltip_open_history"),
         )
         tools_layout.addWidget(history_btn)
-        setup_layout.addWidget(tools_group)
+        advanced_layout.addWidget(tools_group)
 
         deck_export_group = QGroupBox(_t("section_deck_export"))
         self._make_sidebar_group_flexible(deck_export_group)
@@ -283,7 +280,10 @@ class BulkCardCreatorDialog(QDialog):
         )
         self.include_stats_checkbox.setToolTip(_t("tooltip_include_stats"))
         deck_export_layout.addWidget(self.include_stats_checkbox)
-        setup_layout.addWidget(deck_export_group)
+        advanced_layout.addWidget(deck_export_group)
+
+        setup_layout.addWidget(self.advanced_container)
+        self.advanced_container.setVisible(False)
         setup_layout.addStretch()
 
         self.setup_scroll = QScrollArea()
@@ -349,6 +349,25 @@ class BulkCardCreatorDialog(QDialog):
     def _build_action_bar(self, parent_layout: QVBoxLayout) -> None:
         action_layout = QHBoxLayout()
         action_layout.setContentsMargins(0, 10, 0, 0)
+
+        action_layout.addWidget(QLabel(_t("lang_label")))
+        self.lang_combo = QComboBox()
+        supported = get_supported_langs()
+        current_lang = get_current_lang()
+        for code, display in supported.items():
+            self.lang_combo.addItem(display, code)
+            if code == current_lang:
+                self.lang_combo.setCurrentIndex(self.lang_combo.count() - 1)
+        self.lang_combo.currentIndexChanged.connect(self._on_lang_changed)
+        action_layout.addWidget(self.lang_combo)
+
+        help_btn = self._make_emoji_button(
+            "🛠️",
+            _t("btn_help"),
+            self._on_help,
+        )
+        action_layout.addWidget(help_btn)
+
         action_layout.addStretch()
 
         self.create_btn = QPushButton(_t("btn_create_update"))
@@ -470,6 +489,14 @@ class BulkCardCreatorDialog(QDialog):
     def _on_help(self) -> None:
         dialog = HelpDialog(self)
         dialog.exec()
+
+    def _on_toggle_advanced(self) -> None:
+        expanded = self.advanced_container.isVisible()
+        self.advanced_container.setVisible(not expanded)
+        label = _t("section_advanced_expanded") if not expanded else _t("section_advanced_collapsed")
+        icon = "chevron-up" if not expanded else "chevron-down"
+        self.advanced_toggle.setText(label)
+        self.advanced_toggle.setIcon(get_icon(icon))
 
     # ---- helpers ----
 

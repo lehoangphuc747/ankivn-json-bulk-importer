@@ -70,6 +70,7 @@
   "tooltip_save_update_json": "Save table changes back to the JSON editor.",
   "tooltip_cancel": "Cancel and close without applying changes.",
   "tooltip_close": "Close this dialog.",
+  "tooltip_advanced_tools": "Toggle advanced tools (sync, media, presets, export).",
 
   "dlg_new_deck_title": "New Deck",
   "dlg_new_deck_prompt": "Enter new deck name:",

@@ -96,6 +96,20 @@ QPushButton#primaryButton:pressed {{
     background-color: #1a1a1a;
 }}
 
+QPushButton#advancedToggle {{
+    background-color: {_SURFACE_SOFT};
+    color: {_CHARCOAL};
+    border: 1px solid {_HAIRLINE};
+    border-radius: 12px;
+    padding: 8px 14px;
+    text-align: left;
+    font-weight: 600;
+}}
+QPushButton#advancedToggle:hover {{
+    border-color: {_CHARCOAL};
+    background-color: {_CANVAS};
+}}
+
 QLineEdit, QPlainTextEdit, QTextEdit {{
     background-color: {_CANVAS};
     color: {_INK};

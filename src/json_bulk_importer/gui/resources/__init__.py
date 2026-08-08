@@ -30,16 +30,18 @@ def _read_svg(icon_name: str) -> Optional[str]:
         return None
 
 
-def get_icon(icon_name: str) -> QIcon:
+def get_icon(icon_name: str, color: Optional[str] = None) -> QIcon:
     """Trả về QIcon cho widget, tô nét theo dark/light mode hiện tại.
 
     SVG lưu nét đen; đọc nội dung, thay màu stroke theo theme rồi nạp từ
-    bytes để không phụ thuộc hành vi invertPixels của Anki.
+    bytes để không phụ thuộc hành vi invertPixels của Anki. Truyền `color`
+    để ép màu nét cố định (ví dụ nút trên nền canvas trắng bắt buộc).
     """
     svg = _read_svg(icon_name)
     if not svg:
         return QIcon()
-    svg = svg.replace(_STROKE_COLOR, _current_stroke_color())
+    stroke = color if color is not None else _current_stroke_color()
+    svg = svg.replace(_STROKE_COLOR, stroke)
     pixmap = QPixmap()
     if not pixmap.loadFromData(svg.encode("utf-8")):
         return QIcon()

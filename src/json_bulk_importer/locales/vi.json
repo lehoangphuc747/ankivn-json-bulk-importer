@@ -70,6 +70,7 @@
   "tooltip_save_update_json": "Lưu thay đổi trong bảng về khung JSON.",
   "tooltip_cancel": "Hủy và đóng mà không áp dụng thay đổi.",
   "tooltip_close": "Đóng hộp thoại này.",
+  "tooltip_advanced_tools": "Thu gọn/mở rộng công cụ nâng cao (đồng bộ, media, preset, xuất).",
 
   "dlg_new_deck_title": "Deck mới",
   "dlg_new_deck_prompt": "Nhập tên Deck mới:",

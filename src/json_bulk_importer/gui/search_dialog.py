@@ -4,6 +4,7 @@ from aqt.qt import (
     QListWidget, QPushButton, QStyle, Qt,
 )
 from ..i18n import _t
+from .theme import apply_theme
 
 
 class SearchSelectDialog(QDialog):
@@ -51,6 +52,7 @@ class SearchSelectDialog(QDialog):
         btn_layout.addStretch()
         
         self.select_btn = QPushButton(_t("btn_select") if _t("btn_select") != "btn_select" else "Select")
+        self.select_btn.setObjectName("primaryButton")
         self.select_btn.setIcon(self.style().standardIcon(QStyle.StandardPixmap.SP_DialogApplyButton))
         self.select_btn.clicked.connect(self.on_select)
         btn_layout.addWidget(self.select_btn)
@@ -61,6 +63,7 @@ class SearchSelectDialog(QDialog):
         btn_layout.addWidget(self.close_btn)
         
         layout.addLayout(btn_layout)
+        apply_theme(self)
 
     def populate_list(self, items: List[str]) -> None:
         self.list_widget.clear()

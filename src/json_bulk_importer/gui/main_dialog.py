@@ -24,6 +24,7 @@ from .config_dialog import MediaConfigDialog
 from .table_dialog import TablePreviewDialog
 from .search_dialog import SearchSelectDialog
 from .resources import get_icon
+from .theme import apply_theme
 
 
 class ClickableComboBox(QComboBox):
@@ -65,6 +66,7 @@ class BulkCardCreatorDialog(QDialog):
                 self.setWindowState(self.windowState() | maximized_state)
 
         self._setup_ui()
+        apply_theme(self)
 
     def _setup_ui(self) -> None:
         main_layout = QVBoxLayout(self)
@@ -350,6 +352,7 @@ class BulkCardCreatorDialog(QDialog):
         action_layout.addStretch()
 
         self.create_btn = QPushButton(_t("btn_create_update"))
+        self.create_btn.setObjectName("primaryButton")
         self.create_btn.setIcon(self.style().standardIcon(
             QStyle.StandardPixmap.SP_DialogApplyButton
         ))

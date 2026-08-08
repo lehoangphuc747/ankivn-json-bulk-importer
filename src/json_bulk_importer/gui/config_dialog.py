@@ -7,6 +7,7 @@ from aqt.qt import (
 
 from ..config import get_media_mappings, _get_config, _save_config
 from ..i18n import _t
+from .theme import apply_theme
 
 
 class MediaConfigDialog(QDialog):
@@ -48,6 +49,7 @@ class MediaConfigDialog(QDialog):
         btn_layout = QHBoxLayout()
         btn_layout.addStretch()
         save_btn = QPushButton(_t("btn_save"))
+        save_btn.setObjectName("primaryButton")
         save_btn.setIcon(self.style().standardIcon(
             QStyle.StandardPixmap.SP_DialogApplyButton
         ))
@@ -61,6 +63,7 @@ class MediaConfigDialog(QDialog):
         cancel_btn.clicked.connect(self.reject)
         btn_layout.addWidget(cancel_btn)
         layout.addLayout(btn_layout)
+        apply_theme(self)
 
     def _on_save(self) -> None:
         mapping: dict = {}

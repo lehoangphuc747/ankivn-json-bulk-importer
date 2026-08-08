@@ -12,6 +12,7 @@ from aqt.qt import (
 
 from ..i18n import _t
 from ..media import smart_download_media
+from .theme import apply_theme
 
 
 META_KEY_ORDER = ["__guid__", "__deck__", "__tags__"]
@@ -103,6 +104,7 @@ class TablePreviewDialog(QDialog):
         footer_layout.addStretch()
 
         save_btn = QPushButton(_t("btn_save_update_json"))
+        save_btn.setObjectName("primaryButton")
         save_btn.setToolTip(_t("tooltip_save_update_json"))
         save_btn.clicked.connect(self.accept)
         footer_layout.addWidget(save_btn)
@@ -113,6 +115,7 @@ class TablePreviewDialog(QDialog):
         footer_layout.addWidget(cancel_btn)
 
         layout.addLayout(footer_layout)
+        apply_theme(self)
 
     def eventFilter(self, obj: Any, event: Any) -> bool:
         if obj is self.table and event.type() == QEvent.Type.KeyPress:

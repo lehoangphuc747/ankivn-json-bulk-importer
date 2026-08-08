@@ -9,6 +9,7 @@ from aqt.qt import (
 
 from ..i18n import _t
 from .resources import get_icon
+from .theme import apply_theme
 
 class WelcomeDialog(QDialog):
     def __init__(self, parent: Any = None) -> None:
@@ -100,6 +101,7 @@ class WelcomeDialog(QDialog):
         bottom_layout.addWidget(self.close_btn)
         
         layout.addLayout(bottom_layout)
+        apply_theme(self)
 
     def dont_show_again(self) -> bool:
         return self.dont_show_cb.isChecked()

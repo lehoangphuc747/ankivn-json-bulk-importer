@@ -8,6 +8,7 @@ from aqt.qt import (
 
 from ..i18n import _t
 from .resources import get_icon
+from .theme import apply_theme
 
 
 class HelpDialog(QDialog):
@@ -42,6 +43,7 @@ class HelpDialog(QDialog):
         close_btn.clicked.connect(self.accept)
         footer_layout.addWidget(close_btn)
         layout.addLayout(footer_layout)
+        apply_theme(self)
 
     def _build_browser(self, html: str) -> QTextBrowser:
         browser = QTextBrowser()

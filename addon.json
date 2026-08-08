@@ -1,7 +1,11 @@
 {
-    "name": "🚀 JSON Bulk Importer - from AnkiVN with ❤️",
-    "package": "json_bulk_importer",
-    "ankiweb_id": 829928463,
-    "min_point_version": 1,
-    "max_point_version": 1
+    "display_name": "🚀 JSON Bulk Importer - from AnkiVN with ❤️",
+    "module_name": "json_bulk_importer",
+    "repo_name": "ankivn-json-bulk-importer",
+    "ankiweb_id": "829928463",
+    "author": "AnkiVN",
+    "conflicts": [],
+    "targets": ["qt6"],
+    "min_anki_version": "2.1.1",
+    "tested_anki_version": "2.1.1"
 }

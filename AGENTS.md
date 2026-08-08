@@ -2,7 +2,9 @@
 
 Anki addon thuần Python (không webview/React). Chạy **trong Anki**, không có test runner, lint hay typecheck. Mọi xác minh đều phải qua Anki thật: cài addon → restart Anki → menu `AnkiVN` → mở dialog → import thử JSON.
 
-## Kiến trúc
+## Kiến trúc (cấu trúc `src/` theo AADT)
+
+Toàn bộ source nằm trong `src/json_bulk_importer/` (package module_name trong `addon.json`). Các đường dẫn dưới đây là tương đối với package đó.
 
 - `__init__.py` — entry point: đăng ký menu `AnkiVN` (objectName `sf_ankivn_menu`, dùng chung với SuperFreeTTS) + `show_dialog()` lazy import `gui/main_dialog.py`.
 - `gui/*` — chỉ điều phối/validate input và gọi core; **không** để logic DB/media trong dialog.
@@ -11,7 +13,12 @@ Anki addon thuần Python (không webview/React). Chạy **trong Anki**, không 
 - `config.py` — điểm duy nhất ghi `user_config.json` (media_fields, presets, lang, welcome_shown, window_maximized). Writes atomic qua file `.tmp` + `os.replace`. Preset/history **phải** qua API ở đây, không tự ghi file trong UI.
 - `i18n.py` — `_t(key, **kwargs)`; locale nạp từ `locales/{vi,en}.json`.
 - `prompt.py` — sinh XML prompt cho AI.
-- `hold.py` — **legacy**, không được import; đừng sửa.
+- `hold.py` — **legacy**, nằm ở repo root ngoài `src/` (không đóng gói), không được import; đừng sửa.
+
+## Dữ liệu runtime
+
+- `user_config.json` + `history/` nằm ở **repo root**, ngoài `src/` → tự động bị loại khỏi package khi build.
+- Trong bản cài Anki, chúng được tạo ở ngay thư mục addon (`os.path.dirname(__file__)` trong `config.py`).
 
 ## Meta keys (pop trước khi gán field)
 
@@ -37,22 +44,51 @@ Anki addon thuần Python (không webview/React). Chạy **trong Anki**, không 
 - Mỗi key mới phải thêm vào **cả** `locales/vi.json` và `locales/en.json`.
 - Hỗ trợ format kwargs: `_t("msg", name="Anki")`.
 
-## Build addon
+## Build bằng aadt (Anki Addon Dev ToolKit)
 
-```
-python build_addon.py
+Build tool là `aadt`, chạy qua `uvx` (uv đã cài). Cấu hình ở `addon.json` (schema của aadt: `display_name`, `module_name`, `repo_name`, `ankiweb_id`, `author`, `conflicts`, `targets`, `min_anki_version`, `tested_anki_version`).
+
+```powershell
+# Build local dev package (giữ debug info) → dist/
+$env:PYTHONUTF8 = "1"; $env:PYTHONIOENCODING = "utf-8"
+uvx aadt build -d local
+
+# Build đủ local + ankiweb
+uvx aadt build -d all
 ```
 
-Tạo `JSON_Bulk_Importer_AnkiVN_<timestamp>.ankiaddon` ở repo root. `build_addon.py` liệt kê trắng đen file (exclude `user_config.json`, `history/`, `hold.py`, `.gitignore`, build script). Nếu thêm module/folder mới, cập nhật `INCLUDE_FILES`/`INCLUDE_DIRS`.
+- **Bắt buộc có git tag** (`vX.Y.Z`) — aadt lấy version từ `git describe --tags`; nếu repo có git nhưng chưa có tag, fallback của aadt v1.7.0 bị lỗi. Đặt tag trước khi build: `git tag v0.1.0 && git push --tags`.
+- Output vào `dist/<repo_name>-<version>...ankiaddon` (bị gitignore). Cài qua Anki: Tools → Add-ons → Install from file.
+- `manifest.json` do aadt sinh từ `addon.json` (thay `meta.json` cũ — đã bỏ). Version point: `min_anki_version`/`tested_anki_version` dạng SemVer.
+- `aadt` tự loại khỏi package: `user_config.json`, `history/` (vì ngoài `src/`), `hold.py`, `.git`, `dist/`, `build/`.
+- Muốn đổi version: tạo tag mới (không sửa trong build).
+
+### Các lệnh aadt hữu ích
+
+| Lệnh | Công dụng |
+|---|---|
+| `uvx aadt build -d local\|ankiweb\|all` | Build package (phiên bản mặc định từ tag) |
+| `uvx aadt build v1.2.0 -d all` | Build đúng tag/version |
+| `uvx aadt manifest` | Chỉ sinh `manifest.json` |
+| `uvx aadt clean` | Xóa `dist/` + cache |
+| `uvx aadt link` / `aadt link --unlink` | Symlink `src/<module>` vào thư mục addons21 (dev loop) |
+| `uvx aadt test` | Link + mở Anki để test |
+| `uvx aadt ui` | Compile Qt Designer `.ui` (dự án chưa dùng, `ui/` đang trống) |
+| `uvx aadt claude` | Sinh `CLAUDE.md`, `ANKI.md`, `ankidoc/` (AI dev docs) |
+
+Lưu ý: trên Windows, đặt `PYTHONUTF8=1` + `PYTHONIOENCODING=utf-8` trước khi chạy aadt để tránh lỗi `charmap` encoding với ký tự emoji.
 
 ## Git
 
 - Commit theo convention có sẵn: `feat:`, `fix:`, `refactor:`, `revert:`, `fix(ui):`, `chore:`, `docs:`.
 - `user_config.json` và một số file `history/*` đã được track (từ trước); file mới trong `history/` thường không commit.
-- `AI_AGENT_CONTEXT.md` bị gitignore nhưng vẫn được đóng gói vào `.ankiaddon` qua `build_addon.py`.
+- `AI_AGENT_CONTEXT.md` bị gitignore nhưng vẫn được đóng gói (giờ do aadt copy cả repo, không phải build_addon.py).
+- **Version = git tag.** Tạo tag `vX.Y.Z` khi release.
 
 ## Tài liệu tham khảo
 
 - `docs/PROJECT_BLUEPRINT.md` — kiến trúc, luồng, JSON mẫu (có thể hơi cũ, đối chiếu code).
+- `ANKI.md` + `ankidoc/` — tài liệu Anki core 25.06+ do `aadt claude` sinh.
+- `CLAUDE.md` — guideline AI dev của aadt.
 - `AI_AGENT_CONTEXT.md` — context + guidelines cũ của agent.
 - Chỉ `from aqt.qt import ...` (Anki bundle Qt), không `pip install PyQt`.

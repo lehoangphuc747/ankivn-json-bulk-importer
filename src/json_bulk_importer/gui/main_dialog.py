@@ -7,7 +7,7 @@ from aqt.qt import (
     QDialog, QVBoxLayout, QHBoxLayout, QGroupBox, QLabel, QComboBox, QCheckBox,
     QPlainTextEdit, QPushButton, QMessageBox, Qt,
     QInputDialog, QFileDialog, QApplication, QSplitter, QWidget, QFontDatabase,
-    QScrollArea, QStyle, QSize, QSizePolicy,
+    QScrollArea, QStyle, QSize, QSizePolicy, QIcon, QPixmap, QPainter, QFont,
 )
 from anki.utils import guid64
 
@@ -376,14 +376,25 @@ class BulkCardCreatorDialog(QDialog):
         callback: Any,
         size: int = 28,
     ) -> QPushButton:
-        button = QPushButton(emoji)
+        button = QPushButton()
         button.setFixedSize(size, size)
-        font = button.font()
-        font.setPixelSize(size - 8)
-        button.setFont(font)
+        button.setIcon(self._emoji_icon(emoji, size))
+        button.setIconSize(QSize(size - 8, size - 8))
         button.setToolTip(tooltip)
         button.clicked.connect(callback)
         return button
+
+    def _emoji_icon(self, emoji: str, size: int) -> QIcon:
+        pm = QPixmap(size, size)
+        pm.fill(Qt.GlobalColor.transparent)
+        painter = QPainter(pm)
+        font = QFont("Segoe UI Emoji")
+        font.setPixelSize(size - 6)
+        painter.setFont(font)
+        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+        painter.drawText(pm.rect(), Qt.AlignmentFlag.AlignCenter, emoji)
+        painter.end()
+        return QIcon(pm)
 
     def _make_text_button(
         self,

@@ -21,6 +21,7 @@ from ..prompt import generate_ai_prompt
 from ..i18n import _t, get_supported_langs, get_current_lang, set_lang
 from .help_dialog import HelpDialog
 from .config_dialog import MediaConfigDialog
+from .stats_dialog import StatsConfigDialog, STAT_KEYS
 from .table_dialog import TablePreviewDialog
 from .search_dialog import SearchSelectDialog
 from .resources import get_icon
@@ -161,14 +162,13 @@ class BulkCardCreatorDialog(QDialog):
             _t("btn_get_deck_data") + "\n" + _t("tooltip_get_deck_data"),
         )
         setup_layout.addWidget(fetch_deck_btn)
-        self.include_stats_checkbox = QCheckBox(_t("chk_include_stats_short"))
-        self.include_stats_checkbox.setMinimumWidth(0)
-        self.include_stats_checkbox.setSizePolicy(
-            QSizePolicy.Policy.Ignored,
-            QSizePolicy.Policy.Fixed,
+        self.stats_btn = self._make_text_button(
+            _t("chk_include_stats_short"),
+            self._on_choose_stats,
+            _t("tooltip_include_stats"),
         )
-        self.include_stats_checkbox.setToolTip(_t("tooltip_include_stats"))
-        setup_layout.addWidget(self.include_stats_checkbox)
+        self._selected_stats: List[str] = list(STAT_KEYS)
+        setup_layout.addWidget(self.stats_btn)
 
         self.advanced_toggle = self._make_text_button(
             _t("section_advanced_collapsed"),
@@ -1008,9 +1008,14 @@ class BulkCardCreatorDialog(QDialog):
             if msg_box.clickedButton() == open_btn:
                 self._on_open_history()
 
+    def _on_choose_stats(self) -> None:
+        dialog = StatsConfigDialog(current=self._selected_stats, parent=self)
+        if dialog.exec():
+            self._selected_stats = dialog.selected_stats()
+
     def _on_fetch_deck_data(self) -> None:
         deck_name = self.deck_combo.currentText().strip()
-        include_stats = self.include_stats_checkbox.isChecked()
+        include_stats = bool(self._selected_stats)
         if not deck_name:
             QMessageBox.warning(
                 self, _t("title_error"), _t("msg_select_deck_for_export")
@@ -1019,7 +1024,11 @@ class BulkCardCreatorDialog(QDialog):
             
         try:
             # Gọi hàm xử lý lấy data
-            cards_data, found_note_type = export_deck_to_json_logic(deck_name, include_stats=include_stats)
+            cards_data, found_note_type = export_deck_to_json_logic(
+                deck_name,
+                include_stats=include_stats,
+                stats=self._selected_stats if include_stats else None,
+            )
             
             if not cards_data:
                 QMessageBox.information(

@@ -271,8 +271,16 @@ def create_cards_logic(
     return created, updated, warnings
 
 
-def export_deck_to_json_logic(deck_name: str, include_stats: bool = False) -> Tuple[List[dict], str]:
-    """Xuất tất cả notes trong một deck ra định dạng List[dict] chuẩn của addon."""
+def export_deck_to_json_logic(
+    deck_name: str,
+    include_stats: bool = False,
+    stats: Optional[List[str]] = None,
+) -> Tuple[List[dict], str]:
+    """Xuất tất cả notes trong một deck ra định dạng List[dict] chuẩn của addon.
+
+    `include_stats=True` kèm toàn bộ stat; `stats` (khi include_stats=True) giới hạn
+    theo tên field như "reps", "lapses", "ivl", "ease", "created_at", "modified_at".
+    """
     from aqt import mw
     if not mw or not mw.col:
         raise RuntimeError("Anki collection is not open.")
@@ -338,15 +346,30 @@ def export_deck_to_json_logic(deck_name: str, include_stats: bool = False) -> Tu
             
             if include_stats:
                 ease = factor / 10 if factor else 250
-                note_dict.update({
-                    "__created_at__": nid,
-                    "__modified_at__": mod,
-                    "__reps__": reps,
-                    "__lapses__": lapses,
-                    "__ivl__": ivl,
-                    "__ease__": ease,
-                })
-                
+                if stats:
+                    for key in stats:
+                        if key == "created_at":
+                            note_dict["__created_at__"] = nid
+                        elif key == "modified_at":
+                            note_dict["__modified_at__"] = mod
+                        elif key == "reps":
+                            note_dict["__reps__"] = reps
+                        elif key == "lapses":
+                            note_dict["__lapses__"] = lapses
+                        elif key == "ivl":
+                            note_dict["__ivl__"] = ivl
+                        elif key == "ease":
+                            note_dict["__ease__"] = ease
+                else:
+                    note_dict.update({
+                        "__created_at__": nid,
+                        "__modified_at__": mod,
+                        "__reps__": reps,
+                        "__lapses__": lapses,
+                        "__ivl__": ivl,
+                        "__ease__": ease,
+                    })
+                    
             # Split fields
             field_values = flds_str.split("\x1f")
             field_names = [f["name"] for f in model["flds"]]

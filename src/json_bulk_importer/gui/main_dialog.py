@@ -155,6 +155,21 @@ class BulkCardCreatorDialog(QDialog):
         deck_row.addWidget(new_deck_btn)
         setup_layout.addLayout(deck_row)
 
+        fetch_deck_btn = self._make_text_button(
+            _t("btn_get_deck_data_short"),
+            self._on_fetch_deck_data,
+            _t("btn_get_deck_data") + "\n" + _t("tooltip_get_deck_data"),
+        )
+        setup_layout.addWidget(fetch_deck_btn)
+        self.include_stats_checkbox = QCheckBox(_t("chk_include_stats_short"))
+        self.include_stats_checkbox.setMinimumWidth(0)
+        self.include_stats_checkbox.setSizePolicy(
+            QSizePolicy.Policy.Ignored,
+            QSizePolicy.Policy.Fixed,
+        )
+        self.include_stats_checkbox.setToolTip(_t("tooltip_include_stats"))
+        setup_layout.addWidget(self.include_stats_checkbox)
+
         self.advanced_toggle = self._make_text_button(
             _t("section_advanced_collapsed"),
             self._on_toggle_advanced,
@@ -260,27 +275,6 @@ class BulkCardCreatorDialog(QDialog):
         )
         tools_layout.addWidget(history_btn)
         advanced_layout.addWidget(tools_group)
-
-        deck_export_group = QGroupBox(_t("section_deck_export"))
-        self._make_sidebar_group_flexible(deck_export_group)
-        deck_export_layout = QVBoxLayout(deck_export_group)
-        deck_export_layout.setContentsMargins(8, 8, 8, 8)
-        deck_export_layout.setSpacing(5)
-        fetch_deck_btn = self._make_text_button(
-            _t("btn_get_deck_data_short"),
-            self._on_fetch_deck_data,
-            _t("btn_get_deck_data") + "\n" + _t("tooltip_get_deck_data"),
-        )
-        deck_export_layout.addWidget(fetch_deck_btn)
-        self.include_stats_checkbox = QCheckBox(_t("chk_include_stats_short"))
-        self.include_stats_checkbox.setMinimumWidth(0)
-        self.include_stats_checkbox.setSizePolicy(
-            QSizePolicy.Policy.Ignored,
-            QSizePolicy.Policy.Fixed,
-        )
-        self.include_stats_checkbox.setToolTip(_t("tooltip_include_stats"))
-        deck_export_layout.addWidget(self.include_stats_checkbox)
-        advanced_layout.addWidget(deck_export_group)
 
         setup_layout.addWidget(self.advanced_container)
         self.advanced_container.setVisible(False)

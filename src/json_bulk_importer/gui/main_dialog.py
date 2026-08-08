@@ -399,18 +399,12 @@ class BulkCardCreatorDialog(QDialog):
 
         self.create_btn = QPushButton(_t("btn_create_update"))
         self.create_btn.setObjectName("primaryButton")
-        self.create_btn.setIcon(self.style().standardIcon(
-            QStyle.StandardPixmap.SP_DialogApplyButton
-        ))
         self.create_btn.setDefault(True)
         self.create_btn.setMinimumSize(170, 36)
         self.create_btn.clicked.connect(self._on_submit)
         action_layout.addWidget(self.create_btn)
 
         close_btn = QPushButton(_t("btn_close"))
-        close_btn.setIcon(self.style().standardIcon(
-            QStyle.StandardPixmap.SP_DialogCancelButton
-        ))
         close_btn.setMinimumHeight(36)
         close_btn.setToolTip(_t("tooltip_close"))
         close_btn.clicked.connect(self.close)

@@ -36,7 +36,7 @@
   "chk_write_guids_short": "Tự ghi __guid__",
   "chk_include_stats": "Lấy thêm thống kê ôn tập",
   "chk_include_stats_short": "Kèm thống kê",
-  "btn_create_update": "Tạo / Cập nhật Thẻ",
+  "btn_create_update": "Import",
   "btn_close": "Đóng",
   "btn_save": "Lưu",
   "btn_cancel": "Hủy",

@@ -36,7 +36,7 @@
   "chk_write_guids_short": "Write __guid__ back",
   "chk_include_stats": "Include review stats",
   "chk_include_stats_short": "Include stats",
-  "btn_create_update": "Create / Update Cards",
+  "btn_create_update": "Import",
   "btn_close": "Close",
   "btn_save": "Save",
   "btn_cancel": "Cancel",

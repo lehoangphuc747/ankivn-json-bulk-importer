@@ -25,8 +25,9 @@ Toàn bộ source nằm trong `src/json_bulk_importer/` (package module_name tro
 
 ## Dữ liệu runtime
 
-- `user_config.json` + `history/` nằm ở **repo root**, ngoài `src/` → tự động bị loại khỏi package khi build.
-- Trong bản cài Anki (`addons21\json_bulk_importer\`), chúng được tạo ở ngay thư mục addon (`os.path.dirname(__file__)` trong `config.py`).
+- `config.py` tính đường dẫn từ `os.path.dirname(__file__)` → runtime data nằm **ngay cạnh module**, tức trong folder addon khi cài (`addons21\json_bulk_importer\user_config.json` + `history/`) hoặc khi chạy qua `aadt link`/`aadt test`.
+- `user_config.json` + `history/` ở **repo root** là bản track từ thời layout phẳng (trước khi migrate sang `src/`), **không phải** nơi code hiện tại ghi; không tạo thêm file runtime trong `src/`.
+- Vì cạnh module nên khi build (`aadt` copy `src/<module>`), runtime data **không lọt vào package**.
 - Khi cài bản mới, folder addon được tạo mới (dữ liệu trống) → nếu muốn giữ presets/history, copy `user_config.json` + `history/` từ bản cài cũ sang bản mới.
 
 ## Meta keys (pop trước khi gán field)
@@ -66,6 +67,12 @@ uvx aadt build -d local
 uvx aadt build -d all
 ```
 
+- **Quy trình build có tên version (bắt buộc):** trước khi build, commit xong → **tạo git tag mới** tại HEAD rồi build từ tag đó, để tên file ra đúng `dist/ankivn-json-bulk-importer-vX.Y.Z.ankiaddon`:
+  ```
+  git tag vX.Y.Z
+  uvx aadt build -d local
+  ```
+  Không dùng `aadt build current` hay `aadt build dev` — chúng ra tên file theo commit hash (`...-8385db2.ankiaddon`) hoặc lỗi; aadt chỉ lấy version từ tag.
 - **Bắt buộc có git tag** (`vX.Y.Z`) — aadt lấy version từ `git describe --tags`; nếu repo có git nhưng chưa có tag, fallback của aadt v1.7.0 bị lỗi. Đặt tag trước khi build: `git tag v0.1.0 && git push --tags`.
 - Output vào `dist/<repo_name>-<version>...ankiaddon` (bị gitignore). Cài qua Anki: Tools → Add-ons → Install from file. Anki sẽ giải nén thành folder `json_bulk_importer` trong `addons21`.
 - `manifest.json` do aadt sinh từ `addon.json` (thay `meta.json` cũ — đã bỏ). Version point: `min_anki_version`/`tested_anki_version` dạng SemVer.
@@ -91,13 +98,13 @@ Lưu ý: trên Windows, đặt `PYTHONUTF8=1` + `PYTHONIOENCODING=utf-8` trướ
 
 - Commit theo convention có sẵn: `feat:`, `fix:`, `refactor:`, `revert:`, `fix(ui):`, `chore:`, `docs:`.
 - `user_config.json` và một số file `history/*` đã được track (từ trước); file mới trong `history/` thường không commit.
-- `AI_AGENT_CONTEXT.md` bị gitignore nhưng vẫn được đóng gói (giờ do aadt copy cả repo, không phải build_addon.py).
+- `AI_AGENT_CONTEXT.md` bị gitignore và **không** được đóng gói (aadt chỉ copy `src/<module>`; file ngoài `src/` không vào package).
 - **Version = git tag.** Tạo tag `vX.Y.Z` khi release.
 
 ## Tài liệu tham khảo
 
 - `docs/PROJECT_BLUEPRINT.md` — kiến trúc, luồng, JSON mẫu (có thể hơi cũ, đối chiếu code).
 - `ANKI.md` + `ankidoc/` — tài liệu Anki core 25.06+ do `aadt claude` sinh.
-- `CLAUDE.md` — guideline AI dev của aadt.
+- `CLAUDE.md` — guideline AI dev của aadt. **Cẩn thận:** nó nhắc `uv sync --group dev`, `uv ruff check`, `uv ty check`, pytest và `.venv` — repo này **không có** dev group, `.venv`, `tests/`; `pyproject.toml` chỉ khai báo package. Không chạy những lệnh đó.
 - `AI_AGENT_CONTEXT.md` — context + guidelines cũ của agent.
 - Chỉ `from aqt.qt import ...` (Anki bundle Qt), không `pip install PyQt`.

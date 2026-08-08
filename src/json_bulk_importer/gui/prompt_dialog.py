@@ -2,7 +2,7 @@ from typing import Any
 
 from aqt.qt import (
     QDialog, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
-    QPushButton, QFormLayout, QSpinBox, QStyle,
+    QPushButton, QFormLayout, QStyle,
 )
 
 from ..i18n import _t
@@ -10,12 +10,11 @@ from .theme import apply_theme
 
 
 class PromptConfigDialog(QDialog):
-    """Nhập role + các thông số quan trọng để tạo prompt cho AI."""
+    """Nhập role + chủ đề (tùy chọn) để tạo prompt cho AI."""
 
     def __init__(
         self,
         default_role: str = "",
-        default_quantity: int = 10,
         default_topic: str = "",
         parent: Any = None,
     ) -> None:
@@ -30,11 +29,6 @@ class PromptConfigDialog(QDialog):
         self.role_edit = QLineEdit(default_role)
         self.role_edit.setPlaceholderText(_t("prompt_cfg_role_ph"))
         form.addRow(_t("prompt_cfg_role"), self.role_edit)
-
-        self.quantity_spin = QSpinBox()
-        self.quantity_spin.setRange(1, 9999)
-        self.quantity_spin.setValue(default_quantity)
-        form.addRow(_t("prompt_cfg_quantity"), self.quantity_spin)
 
         self.topic_edit = QLineEdit(default_topic)
         self.topic_edit.setPlaceholderText(_t("prompt_cfg_topic_ph"))
@@ -62,9 +56,6 @@ class PromptConfigDialog(QDialog):
 
     def role(self) -> str:
         return self.role_edit.text().strip()
-
-    def quantity(self) -> int:
-        return self.quantity_spin.value()
 
     def topic(self) -> str:
         return self.topic_edit.text().strip()

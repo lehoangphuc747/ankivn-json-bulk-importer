@@ -5,7 +5,6 @@ def generate_ai_prompt(
     field_names: List[str],
     media_map: dict,
     role: Optional[str] = None,
-    quantity: Optional[int] = None,
     topic: Optional[str] = None,
 ) -> str:
     if not field_names:
@@ -15,8 +14,6 @@ def generate_ai_prompt(
     example_obj = ", ".join(f'"{f}": "..."' for f in field_names)
 
     role_text = role.strip() if role else _t("prompt_expert")
-    if quantity is not None:
-        role_text = role_text.replace("[QUANTITY]", str(quantity)).replace("[SỐ_LƯỢNG]", str(quantity))
     if topic:
         role_text = role_text.replace("[TOPIC]", topic).replace("[CHỦ_ĐỀ]", topic)
 
@@ -38,11 +35,20 @@ def generate_ai_prompt(
     if not media_rules:
         media_rules = f"    <rule>{_t('prompt_no_media_rules')}</rule>"
 
+    topic_block = ""
+    if topic:
+        topic_block = (
+            "  <topic>\n"
+            f"    {topic}\n"
+            "  </topic>\n"
+        )
+
     prompt = (
         "<flashcard_json_prompt>\n"
         "  <role>\n"
         f"    {role_text}\n"
         "  </role>\n"
+        f"{topic_block}"
         "  <output_format>\n"
         "    <type>json_array</type>\n"
         f"    <fields>{fields_str}</fields>\n"

@@ -910,7 +910,6 @@ class BulkCardCreatorDialog(QDialog):
             field_names,
             media_map,
             role=dlg.role(),
-            quantity=dlg.quantity(),
             topic=dlg.topic(),
         )
 

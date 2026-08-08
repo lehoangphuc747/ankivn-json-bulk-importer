@@ -900,7 +900,19 @@ class BulkCardCreatorDialog(QDialog):
             field_names = ["Front", "Back"]
 
         media_map = get_media_mappings(note_type_name)
-        prompt = generate_ai_prompt(field_names, media_map)
+
+        from .prompt_dialog import PromptConfigDialog
+        dlg = PromptConfigDialog(parent=self)
+        if not dlg.exec():
+            return
+
+        prompt = generate_ai_prompt(
+            field_names,
+            media_map,
+            role=dlg.role(),
+            quantity=dlg.quantity(),
+            topic=dlg.topic(),
+        )
 
         clipboard = QApplication.clipboard()
         if clipboard:

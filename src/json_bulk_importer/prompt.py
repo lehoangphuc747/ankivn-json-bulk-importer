@@ -1,12 +1,24 @@
-from typing import List
+from typing import List, Optional
 from .i18n import _t
 
-def generate_ai_prompt(field_names: List[str], media_map: dict) -> str:
+def generate_ai_prompt(
+    field_names: List[str],
+    media_map: dict,
+    role: Optional[str] = None,
+    quantity: Optional[int] = None,
+    topic: Optional[str] = None,
+) -> str:
     if not field_names:
         field_names = ["Front", "Back"]
 
     fields_str = ", ".join(f'"{f}"' for f in field_names)
     example_obj = ", ".join(f'"{f}": "..."' for f in field_names)
+
+    role_text = role.strip() if role else _t("prompt_expert")
+    if quantity is not None:
+        role_text = role_text.replace("[QUANTITY]", str(quantity)).replace("[SỐ_LƯỢNG]", str(quantity))
+    if topic:
+        role_text = role_text.replace("[TOPIC]", topic).replace("[CHỦ_ĐỀ]", topic)
 
     media_notes: List[str] = []
     for f in field_names:
@@ -28,11 +40,9 @@ def generate_ai_prompt(field_names: List[str], media_map: dict) -> str:
 
     prompt = (
         "<flashcard_json_prompt>\n"
-        f"  <role>{_t('prompt_expert')}</role>\n"
-        "  <input>\n"
-        f"    <quantity>{_t('prompt_quantity_placeholder')}</quantity>\n"
-        f"    <topic>{_t('prompt_topic_placeholder')}</topic>\n"
-        "  </input>\n"
+        "  <role>\n"
+        f"    {role_text}\n"
+        "  </role>\n"
         "  <output_format>\n"
         "    <type>json_array</type>\n"
         f"    <fields>{fields_str}</fields>\n"

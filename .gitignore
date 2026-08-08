@@ -3,3 +3,8 @@ __pycache__/
 *.pyo
 *_Zone.Identifier
 AI_AGENT_CONTEXT.md
+.venv/
+dist/
+build/
+*.ankiaddon
+*.zip

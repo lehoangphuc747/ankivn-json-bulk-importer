@@ -25,10 +25,10 @@ Toàn bộ source nằm trong `src/json_bulk_importer/` (package module_name tro
 
 ## Dữ liệu runtime
 
-- `config.py` tính đường dẫn từ `os.path.dirname(__file__)` → runtime data nằm **ngay cạnh module**, tức trong folder addon khi cài (`addons21\json_bulk_importer\user_config.json` + `history/`) hoặc khi chạy qua `aadt link`/`aadt test`.
+- `config.py` ưu tiên lưu runtime data vào **profile folder của Anki** (`mw.pm.profileFolder()/json_bulk_importer_data/`) để **không bị mất khi cài bản addon mới** (Anki thay cả folder addon khi cài `.ankiaddon`). Fallback về `os.path.dirname(__file__)` nếu `mw.pm` chưa sẵn (chạy ngoài Anki).
+- `_migrate_from_legacy()` tự động copy `user_config.json` + `history/` từ vị trí cũ (cạnh module) sang data dir mới nếu file mới chưa tồn tại. Lưu ý: bản cài đã có data trong folder addon từ trước bản này **không** được migrate tự động khi update (folder cũ đã bị Anki xóa trước khi code chạy) — cần copy thủ công trước khi cài.
 - `user_config.json` + `history/` ở **repo root** là bản track từ thời layout phẳng (trước khi migrate sang `src/`), **không phải** nơi code hiện tại ghi; không tạo thêm file runtime trong `src/`.
-- Vì cạnh module nên khi build (`aadt` copy `src/<module>`), runtime data **không lọt vào package**.
-- Khi cài bản mới, folder addon được tạo mới (dữ liệu trống) → nếu muốn giữ presets/history, copy `user_config.json` + `history/` từ bản cài cũ sang bản mới.
+- Vì runtime data nằm ngoài `src/`, khi build (`aadt` copy `src/<module>`) data **không lọt vào package**.
 
 ## Meta keys (pop trước khi gán field)
 

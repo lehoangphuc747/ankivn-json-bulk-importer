@@ -1,11 +1,50 @@
 import json
 import os
+import shutil
 from datetime import datetime
 from typing import Optional
 
 
-_CONFIG_PATH = os.path.join(os.path.dirname(__file__), "user_config.json")
-_HISTORY_DIR = os.path.join(os.path.dirname(__file__), "history")
+def _get_data_dir() -> str:
+    """Thư mục lưu runtime data, ưu tiên profile folder của Anki để không bị mất khi cài bản addon mới."""
+    try:
+        from aqt import mw
+        if mw is not None and getattr(mw, "pm", None) is not None:
+            profile = mw.pm.profileFolder()
+            if profile:
+                data_dir = os.path.join(profile, "json_bulk_importer_data")
+                os.makedirs(data_dir, exist_ok=True)
+                return data_dir
+    except Exception:
+        pass
+    return os.path.dirname(os.path.abspath(__file__))
+
+
+_DATA_DIR = _get_data_dir()
+_CONFIG_PATH = os.path.join(_DATA_DIR, "user_config.json")
+_HISTORY_DIR = os.path.join(_DATA_DIR, "history")
+
+
+def _migrate_from_legacy() -> None:
+    """Di dời user_config.json + history/ từ vị trí cũ (cạnh module) sang data dir mới nếu có."""
+    legacy_dir = os.path.dirname(os.path.abspath(__file__))
+    if os.path.normcase(os.path.abspath(_DATA_DIR)) == os.path.normcase(os.path.abspath(legacy_dir)):
+        return
+    legacy_config = os.path.join(legacy_dir, "user_config.json")
+    if os.path.isfile(legacy_config) and not os.path.isfile(_CONFIG_PATH):
+        try:
+            shutil.copy2(legacy_config, _CONFIG_PATH)
+        except Exception:
+            pass
+    legacy_history = os.path.join(legacy_dir, "history")
+    if os.path.isdir(legacy_history) and not os.path.isdir(_HISTORY_DIR):
+        try:
+            shutil.copytree(legacy_history, _HISTORY_DIR)
+        except Exception:
+            pass
+
+
+_migrate_from_legacy()
 
 
 def _get_config() -> dict:

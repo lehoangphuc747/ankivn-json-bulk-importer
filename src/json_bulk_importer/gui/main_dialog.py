@@ -17,6 +17,7 @@ from ..config import (
     get_history_dir, save_batch_history,
     get_window_maximized, set_window_maximized,
     get_window_geometry, set_window_geometry,
+    get_convert_markdown, set_convert_markdown,
 )
 from ..core import create_cards_logic, export_deck_to_json_logic
 from ..prompt import generate_ai_prompt
@@ -28,6 +29,7 @@ from .table_dialog import TablePreviewDialog
 from .search_dialog import SearchSelectDialog
 from .resources import get_icon
 from .theme import apply_theme
+from .toggle import ToggleSwitch
 
 
 class ClickableComboBox(QComboBox):
@@ -209,6 +211,20 @@ class BulkCardCreatorDialog(QDialog):
         )
         tags_row.addWidget(add_tags_btn)
         setup_layout.addLayout(tags_row)
+
+        md_row = QHBoxLayout()
+        md_row.setSpacing(6)
+        md_label = QLabel(_t("chk_convert_markdown"))
+        md_label.setToolTip(_t("tooltip_convert_markdown"))
+        md_label.setWordWrap(True)
+        md_row.addWidget(md_label, stretch=1)
+        self.markdown_toggle = ToggleSwitch(
+            self, checked=get_convert_markdown()
+        )
+        self.markdown_toggle.setToolTip(_t("tooltip_convert_markdown"))
+        self.markdown_toggle.toggled.connect(self._on_markdown_toggled)
+        md_row.addWidget(self.markdown_toggle)
+        setup_layout.addLayout(md_row)
 
         self.advanced_toggle = self._make_text_button(
             _t("section_advanced_collapsed"),
@@ -934,6 +950,10 @@ class BulkCardCreatorDialog(QDialog):
         dialog = MediaConfigDialog(note_type_name, field_names, parent=self)
         dialog.exec()
 
+    def _on_markdown_toggled(self, checked: bool) -> None:
+        """Lưu tuỳ chọn chuyển Markdown sang HTML."""
+        set_convert_markdown(bool(checked))
+
     def _on_deck_changed(self, deck_name: str) -> None:
         """Cập nhật __deck__ trong JSON template khi deck đổi (chỉ khi key đã tồn tại)."""
         deck_name = deck_name.strip()
@@ -1125,6 +1145,7 @@ class BulkCardCreatorDialog(QDialog):
             created, updated, warnings = create_cards_logic(
                 deck_name, note_type_name, cards,
                 match_field=match_field, media_mappings=mappings,
+                convert_markdown=self.markdown_toggle.isChecked(),
                 on_progress_start=lambda label: mw.progress.start(label=label, immediate=True) if (mw and getattr(mw, "progress", None)) else None,
                 on_progress_update=lambda label: mw.progress.update(label=label) if (mw and getattr(mw, "progress", None)) else None,
                 on_progress_finish=lambda: mw.progress.finish() if (mw and getattr(mw, "progress", None)) else None,

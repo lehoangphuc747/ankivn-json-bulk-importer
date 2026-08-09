@@ -157,3 +157,16 @@ def set_window_geometry(geometry: dict) -> None:
     config["window_geometry"] = geometry
     _save_config(config)
 
+
+def get_convert_markdown() -> bool:
+    """Kiểm tra xem có chuyển Markdown sang HTML khi import không."""
+    config = _get_config()
+    return config.get("convert_markdown", False)
+
+
+def set_convert_markdown(enabled: bool) -> None:
+    """Lưu tuỳ chọn chuyển Markdown sang HTML khi import."""
+    config = _get_config()
+    config["convert_markdown"] = enabled
+    _save_config(config)
+

@@ -1,3 +1,4 @@
+import re
 from typing import Any, List, Tuple, Optional, Callable
 
 from aqt import mw
@@ -17,6 +18,51 @@ def _note_field_str(value: Any) -> str:
     if isinstance(value, str):
         return value
     return str(value)
+
+
+# Dấu hiệu Markdown: chữ đậm, nghiêng, heading, list, link, code, blockquote
+_MD_SIGNAL_PATTERN = re.compile(
+    r"(\*\*|__|~~|`|^#{1,6}\s|^[-*+]\s|^\d+\.\s|^>\s|\[[^\]]+\]\([^)]+\))",
+    re.MULTILINE,
+)
+
+
+def _strip_single_p(html: str) -> str:
+    """Bỏ cặp <p>...</p> bọc ngoài nếu HTML chỉ có đúng 1 đoạn.
+
+    Python-Markdown luôn bọc kết quả trong <p>. Với field ngắn (vd 'Xin chào'
+    thành '<p>Xin chào</p>') thì thẻ <p> thừa gây khoảng trống lạ trong Anki.
+    Giữ <p> khi output có nhiều block (<h1>, <ul>, <div>...) để giữ cấu trúc.
+    """
+    stripped = html.strip()
+    if not (stripped.startswith("<p>") and stripped.endswith("</p>")):
+        return html
+    inner = stripped[3:-4]
+    # Nếu bên trong vẫn còn tag khối → không gỡ <p>
+    if re.search(r"<(h\d|ul|ol|li|div|table|blockquote|pre)\b", inner, re.IGNORECASE):
+        return html
+    return inner
+
+
+def _convert_markdown_if_needed(text: str) -> str:
+    """Chuyển Markdown sang HTML nếu text có dấu hiệu markdown.
+
+    Bỏ qua nếu field rỗng, đã chứa media tag, hoặc thuần HTML không có markdown.
+    Dùng lazy import để chạy được cả khi không có thư viện markdown.
+    """
+    if not text:
+        return text
+    # Field media riêng (đã xử lý ở bước trước) — không đụng tới
+    if "[sound:" in text or "[media:" in text or "<img" in text:
+        return text
+    if not _MD_SIGNAL_PATTERN.search(text):
+        return text
+    try:
+        import markdown
+        html = markdown.markdown(text)
+    except Exception:
+        return text
+    return _strip_single_p(html)
 
 
 def create_new_model(name: str, sample_card: dict, col: Optional[Any] = None) -> Optional[NotetypeDict]:
@@ -58,12 +104,16 @@ def create_cards_logic(
     cards: List[dict],
     match_field: Optional[str] = None,
     media_mappings: Optional[dict] = None,
+    convert_markdown: bool = False,
     on_progress_start: Optional[Callable[[str], None]] = None,
     on_progress_update: Optional[Callable[[str], None]] = None,
     on_progress_finish: Optional[Callable[[], None]] = None,
     col: Optional[Any] = None,
 ) -> Tuple[int, int, List[str]]:
     """Tạo mới hoặc cập nhật thẻ dựa trên __guid__ hoặc Smart Sync (match_field).
+
+    Nếu convert_markdown=True, field text chứa dấu hiệu Markdown sẽ được chuyển
+    sang HTML (bỏ qua field media riêng và field thuần HTML).
 
     Returns:
         (created_count, updated_count, warnings)
@@ -190,6 +240,12 @@ def create_cards_logic(
                 match_value = _note_field_str(card_data.get(match_field, ""))
                 if match_value.strip():
                     existing_note_id = match_cache.get(match_value.strip())
+
+            if convert_markdown:
+                for key in list(card_data.keys()):
+                    val = card_data[key]
+                    if isinstance(val, str):
+                        card_data[key] = _convert_markdown_if_needed(val)
 
             if existing_note_id:
                 note = col.get_note(existing_note_id)

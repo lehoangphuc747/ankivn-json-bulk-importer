@@ -50,7 +50,7 @@ class StatsConfigDialog(QDialog):
         grid.addWidget(QLabel(_t("stats_col_stat")), 0, 0)
         grid.addWidget(QLabel(_t("stats_col_include")), 0, 1)
 
-        selected = set(current or STAT_KEYS)
+        selected = set(current or [])
         for i, key in enumerate(STAT_KEYS):
             grid.addWidget(QLabel(_t(STAT_LABEL_KEYS[key])), i + 1, 0)
             cb = QCheckBox()

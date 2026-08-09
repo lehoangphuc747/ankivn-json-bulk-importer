@@ -189,7 +189,7 @@ class BulkCardCreatorDialog(QDialog):
             _t("tooltip_include_stats"),
         )
         fetch_stats_row.addWidget(self.stats_btn, stretch=1)
-        self._selected_stats: List[str] = list(STAT_KEYS)
+        self._selected_stats: List[str] = []
         setup_layout.addLayout(fetch_stats_row)
 
         tags_row = QHBoxLayout()

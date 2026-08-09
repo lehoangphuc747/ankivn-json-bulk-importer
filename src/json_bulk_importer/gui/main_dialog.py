@@ -18,6 +18,7 @@ from ..config import (
     get_window_maximized, set_window_maximized,
     get_window_geometry, set_window_geometry,
     get_convert_markdown, set_convert_markdown,
+    get_selected_stats, set_selected_stats,
 )
 from ..core import create_cards_logic, export_deck_to_json_logic
 from ..prompt import generate_ai_prompt
@@ -189,7 +190,7 @@ class BulkCardCreatorDialog(QDialog):
             _t("tooltip_include_stats"),
         )
         fetch_stats_row.addWidget(self.stats_btn, stretch=1)
-        self._selected_stats: List[str] = []
+        self._selected_stats: List[str] = list(get_selected_stats())
         setup_layout.addLayout(fetch_stats_row)
 
         tags_row = QHBoxLayout()
@@ -1270,6 +1271,7 @@ class BulkCardCreatorDialog(QDialog):
         dialog = StatsConfigDialog(current=self._selected_stats, parent=self)
         if dialog.exec():
             self._selected_stats = dialog.selected_stats()
+            set_selected_stats(self._selected_stats)
 
     def _on_fetch_deck_data(self) -> None:
         deck_name = self.deck_combo.currentText().strip()

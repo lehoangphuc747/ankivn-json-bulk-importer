@@ -170,3 +170,16 @@ def set_convert_markdown(enabled: bool) -> None:
     config["convert_markdown"] = enabled
     _save_config(config)
 
+
+def get_selected_stats() -> list:
+    """Trả về danh sách stat được chọn khi Kèm thống kê (mặc định rỗng)."""
+    config = _get_config()
+    return config.get("selected_stats", [])
+
+
+def set_selected_stats(stats: list) -> None:
+    """Lưu danh sách stat được chọn khi Kèm thống kê."""
+    config = _get_config()
+    config["selected_stats"] = list(stats)
+    _save_config(config)
+

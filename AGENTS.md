@@ -16,7 +16,7 @@ Toàn bộ source nằm trong `src/json_bulk_importer/` (package module_name tro
 
 - `__init__.py` — entry point: đăng ký menu `AnkiVN` (objectName `sf_ankivn_menu`, dùng chung với SuperFreeTTS) + `show_dialog()` lazy import `gui/main_dialog.py`.
 - `gui/*` — chỉ điều phối/validate input và gọi core; **không** để logic DB/media trong dialog. Gồm: `main_dialog.py` (dialog chính + sidebar), `config_dialog.py` (media fields), `stats_dialog.py` (chọn stat kèm khi Lấy Deck), `table_dialog.py` (xem/sửa JSON dạng bảng), `search_dialog.py`, `help_dialog.py`, `theme.py`, `resources.py`.
-- `core.py` — logic Anki DB: `create_cards_logic()`, `create_new_model()`, `export_deck_to_json_logic()`. Có `convert_markdown` flag (mặc định False): chuyển field text có dấu hiệu Markdown sang HTML qua `_convert_markdown_if_needed()` (lazy import `markdown`, strip `<p>` nếu chỉ 1 đoạn); bỏ qua field media riêng (`[sound:`, `[media:`, `<img`) và field thuần HTML. Chạy SAU bước media mapping + match lookup (match dùng text gốc).
+- `core.py` — logic Anki DB: `create_cards_logic()`, `create_new_model()`, `export_deck_to_json_logic()`. `create_cards_logic()` trả `(created, updated, unchanged, warnings)`: nhánh UPDATE chỉ đếm `updated` khi có thay đổi thực (field, tags, deck); nếu khớp mà không đổi gì → `unchanged`. Có `convert_markdown` flag (mặc định False): chuyển field text có dấu hiệu Markdown sang HTML qua `_convert_markdown_if_needed()` (lazy import `markdown`, strip `<p>` nếu chỉ 1 đoạn); bỏ qua field media riêng (`[sound:`, `[media:`, `<img`) và field thuần HTML. Chạy SAU bước media mapping + match lookup (match dùng text gốc).
 - `media.py` — `smart_download_media()`, `resolve_media_in_text()` (`[media:...]` legacy), `MEDIA_PATTERN`.
 - `config.py` — điểm duy nhất ghi `user_config.json` (media_fields, presets, lang, window_maximized, window_geometry, convert_markdown). Writes atomic qua file `.tmp` + `os.replace`. Preset/history **phải** qua API ở đây, không tự ghi file trong UI.
 - `i18n.py` — `_t(key, **kwargs)`; locale nạp từ `locales/{vi,en}.json`.
@@ -41,6 +41,7 @@ Toàn bộ source nằm trong `src/json_bulk_importer/` (package module_name tro
 - Gõ tags vào ô nhập sẽ **tự động cập nhật** `__tags__` trong JSON qua `_on_tags_auto_apply()` **chỉ khi key `__tags__` đã tồn tại** trên object; không thêm mới key vào object đang thiếu.
 - Đổi deck trong combo sẽ tự cập nhật `__deck__` trong JSON **chỉ khi key `__deck__` đã tồn tại** trên object (template mẫu); không thêm mới key vào object đang thiếu.
 - Template JSON sinh khi chọn Note Type điền sẵn `__notetype__`, `__deck__`, `__tags__`, `__guid__` (mục đích là template mẫu).
+- `_apply_meta_from_json()` (main_dialog, gọi sau khi Import JSON từ file) đọc `__notetype__`/`__deck__` từ object đầu tiên → **tự chọn** combo bên trái (thêm item vào combo nếu chưa có), dùng `blockSignals` để KHÔNG trigger `_on_note_type_changed`/`_on_deck_changed` (tránh ghi đè JSON).
 - Mọi key `__x__` khác trong JSON đều bị pop/bỏ qua.
 
 ## Bất biến bắt buộc khi sửa

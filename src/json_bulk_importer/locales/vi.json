@@ -135,7 +135,7 @@
   "msg_open_collection": "Vui lòng mở collection trước.",
   "msg_saved_to": "Đã lưu tại:\n{path}",
   "msg_prompt_copied": "Prompt XML đã được copy vào clipboard.\nHãy dán vào ChatGPT/Claude.",
-  "msg_done": "Hoàn tất!\n\nĐã tạo: {created}\nĐã cập nhật: {updated}",
+  "msg_done": "Hoàn tất!\n\nĐã tạo: {created}\nĐã cập nhật: {updated}\nKhông thay đổi: {unchanged}",
   "msg_warnings": "\n\nCảnh báo ({count}):\n",
   "msg_warnings_more": "\n... và {count} cảnh báo khác",
   "msg_fix_json": "Sửa lỗi cú pháp JSON trước khi mở bảng:\n{error}",

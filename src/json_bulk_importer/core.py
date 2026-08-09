@@ -109,14 +109,15 @@ def create_cards_logic(
     on_progress_update: Optional[Callable[[str], None]] = None,
     on_progress_finish: Optional[Callable[[], None]] = None,
     col: Optional[Any] = None,
-) -> Tuple[int, int, List[str]]:
+) -> Tuple[int, int, int, List[str]]:
     """Tạo mới hoặc cập nhật thẻ dựa trên __guid__ hoặc Smart Sync (match_field).
 
     Nếu convert_markdown=True, field text chứa dấu hiệu Markdown sẽ được chuyển
     sang HTML (bỏ qua field media riêng và field thuần HTML).
 
     Returns:
-        (created_count, updated_count, warnings)
+        (created_count, updated_count, unchanged_count, warnings)
+        unchanged_count = note đã khớp nhưng không có gì thay đổi.
     """
     if not col:
         if not mw or not mw.col:
@@ -139,6 +140,7 @@ def create_cards_logic(
 
     created = 0
     updated = 0
+    unchanged = 0
     warnings: List[str] = []
 
     # Cache cho các model đã tra cứu theo tên
@@ -250,10 +252,14 @@ def create_cards_logic(
             if existing_note_id:
                 note = col.get_note(existing_note_id)
 
+                changed = False
                 unknown_keys: List[str] = []
                 for key, value in card_data.items():
                     if key in note:
-                        note[key] = _note_field_str(value)
+                        new_val = _note_field_str(value)
+                        if note[key] != new_val:
+                            note[key] = new_val
+                            changed = True
                     else:
                         unknown_keys.append(key)
 
@@ -268,8 +274,10 @@ def create_cards_logic(
                         tnorm = _note_field_str(tag)
                         if tnorm and tnorm not in note.tags:
                             note.tags.append(tnorm)
+                            changed = True
 
-                col.update_note(note)
+                if changed:
+                    col.update_note(note)
 
                 if target_deck:
                     new_deck_id = col.decks.id(target_deck)
@@ -277,11 +285,15 @@ def create_cards_logic(
                         if card_obj.did != new_deck_id:
                             card_obj.did = new_deck_id
                             card_obj.flush()
+                            changed = True
 
                 if note.guid:
                     card["__guid__"] = note.guid
 
-                updated += 1
+                if changed:
+                    updated += 1
+                else:
+                    unchanged += 1
 
             else:
                 note = col.new_note(card_model)
@@ -324,7 +336,7 @@ def create_cards_logic(
 
     if mw:
         mw.reset()
-    return created, updated, warnings
+    return created, updated, unchanged, warnings
 
 
 def export_deck_to_json_logic(

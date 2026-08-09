@@ -874,6 +874,7 @@ class BulkCardCreatorDialog(QDialog):
             with open(path, "r", encoding="utf-8") as f:
                 content = f.read()
             self.json_input.setPlainText(content)
+            self._apply_meta_from_json()
         except Exception as e:
             QMessageBox.critical(
                 self, _t("title_import_error"), str(e)
@@ -1042,10 +1043,63 @@ class BulkCardCreatorDialog(QDialog):
         formatted_json = json.dumps(template, indent=2, ensure_ascii=False)
         self.json_input.setPlainText(formatted_json)
 
+        self._refresh_match_fields(note_type_name)
+
+    def _refresh_match_fields(self, note_type_name: str) -> None:
+        """Đổ lại match_field_combo theo fields của Note Type (không đụng JSON)."""
+        field_names: List[str] = []
+        if mw and mw.col:
+            model = mw.col.models.by_name(note_type_name)
+            if model:
+                field_names = [f['name'] for f in model['flds']]
         self.match_field_combo.clear()
         self.match_field_combo.addItem(_t("main_smart_sync_none"))
         for name in field_names:
             self.match_field_combo.addItem(name)
+
+    def _apply_meta_from_json(self) -> None:
+        """Nhận diện __notetype__ / __deck__ từ JSON và tự chọn combo bên trái.
+
+        Dùng blockSignals để không trigger _on_note_type_changed (ghi đè JSON bằng
+        template) và _on_deck_changed (ghi đè __deck__).
+        """
+        raw_text = self.json_input.toPlainText().strip()
+        if not raw_text:
+            return
+        try:
+            cards = json.loads(raw_text)
+        except json.JSONDecodeError:
+            return
+        if not isinstance(cards, list) or not cards:
+            return
+        first = cards[0]
+        if not isinstance(first, dict):
+            return
+
+        nt = first.get("__notetype__")
+        if isinstance(nt, str) and nt.strip():
+            nt = nt.strip()
+            idx = self.note_type_combo.findText(nt)
+            if idx < 0:
+                self.note_type_combo.addItem(nt)
+                idx = self.note_type_combo.count() - 1
+            if idx >= 0:
+                self.note_type_combo.blockSignals(True)
+                self.note_type_combo.setCurrentIndex(idx)
+                self.note_type_combo.blockSignals(False)
+            self._refresh_match_fields(nt)
+
+        deck = first.get("__deck__")
+        if isinstance(deck, str) and deck.strip():
+            deck = deck.strip()
+            idx = self.deck_combo.findText(deck)
+            if idx < 0:
+                self.deck_combo.addItem(deck)
+                idx = self.deck_combo.count() - 1
+            if idx >= 0:
+                self.deck_combo.blockSignals(True)
+                self.deck_combo.setCurrentIndex(idx)
+                self.deck_combo.blockSignals(False)
 
     # ---- view as table ----
 
@@ -1142,7 +1196,7 @@ class BulkCardCreatorDialog(QDialog):
         mappings = get_media_mappings(note_type_name)
 
         try:
-            created, updated, warnings = create_cards_logic(
+            created, updated, unchanged, warnings = create_cards_logic(
                 deck_name, note_type_name, cards,
                 match_field=match_field, media_mappings=mappings,
                 convert_markdown=self.markdown_toggle.isChecked(),
@@ -1154,7 +1208,7 @@ class BulkCardCreatorDialog(QDialog):
             QMessageBox.critical(self, _t("title_error"), str(e))
             return
 
-        msg = _t("msg_done", created=created, updated=updated)
+        msg = _t("msg_done", created=created, updated=updated, unchanged=unchanged)
         if warnings:
             msg += _t("msg_warnings", count=len(warnings))
             msg += "\n".join(warnings[:10])
@@ -1172,6 +1226,7 @@ class BulkCardCreatorDialog(QDialog):
                 "match_field": match_field,
                 "created": created,
                 "updated": updated,
+                "unchanged": unchanged,
                 "warnings": warnings,
                 "write_guid_backfill": self.write_guid_checkbox.isChecked(),
                 "cards": cards,

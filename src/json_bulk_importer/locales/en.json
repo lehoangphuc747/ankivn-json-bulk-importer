@@ -135,7 +135,7 @@
   "msg_open_collection": "Please open a collection first.",
   "msg_saved_to": "Saved to:\n{path}",
   "msg_prompt_copied": "XML prompt has been copied to clipboard.\nPaste it into ChatGPT/Claude.",
-  "msg_done": "Done!\n\nCreated: {created}\nUpdated: {updated}",
+  "msg_done": "Done!\n\nCreated: {created}\nUpdated: {updated}\nUnchanged: {unchanged}",
   "msg_warnings": "\n\nWarnings ({count}):\n",
   "msg_warnings_more": "\n... and {count} more",
   "msg_fix_json": "Fix JSON syntax before opening table view:\n{error}",
